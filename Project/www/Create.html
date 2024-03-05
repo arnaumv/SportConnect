@@ -28,6 +28,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+		<meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -50,7 +52,7 @@
     </head>
     <body>
 		<!-- page 1 -->
-		<div >
+		<div data-role="page" >
 			<div class="headerIndex">
 				<img src="./img/LOGO.png" alt="Image 1" class="header-logo">
 				<h1>SPORT CONNECT</h1>
@@ -102,7 +104,7 @@
 
 
 			
-			<div data-role="footer" data-position="fixed" class="hidden">
+			<div data-role="footer" data-position="fixed" >
 				<div data-role="navbar">
 					<ul>
 						<li><a href="Index.html" ss>
@@ -124,6 +126,7 @@
 					</ul>
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
+		</div><!-- /page 1 -->
 		
 		<script src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
 			/* For having a faster transition */
