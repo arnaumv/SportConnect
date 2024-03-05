@@ -1,0 +1,246 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+#deviceready.ready .event.listening { display: none; }
+#deviceready.ready .event.received { display: block; }
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
+    }
+}
+
+
+
+/********** HEADER-INDEX **********/
+.headerIndex {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(43, 45, 66, 0.9);
+}
+
+.headerIndex::before {
+    content: "";
+    display: inline-block;
+    width: 100px; /* Increase the width */
+    height: 100px; /* Increase the height */
+    background-image: url('/Project/www/img/LOGO.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 30px; /* Increase the space between the image and the h1 */
+    margin-left: 40px; /* Add more space on the left */
+}
+
+.headerIndex h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px; 
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+}
+
+
+
+
+
+/********** INDEX **********/
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow: hidden; /* Añade esta línea */
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 600px; /* Añade esta línea */
+}
+
+.col {
+    flex: 1; /* Añade esta línea */
+    display: flex; /* Añade esta línea */
+    flex-direction: column; /* Añade esta línea */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.bordered {
+    border: 2px solid #333; /* Add border */
+    border-radius: 10px; /* Add rounded corners */
+    margin-bottom: 20px; /* Add margin to the bottom of each column */
+    margin-right: 10px; /* Add right margin */
+    margin-left: 19px; /* Add left margin */
+    flex: 1; /* Añade esta línea */
+}
+
+.bordered img {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: auto; /* Keep the original aspect ratio of the image */
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+
+
+.small-image {
+    width: 40px; /* Ajusta este valor a la anchura que desees */
+    height: 38px; /* Ajusta este valor a la altura que desees */
+}
+
+[data-role="footer"] p {
+    color: #333; /* Cambia el color del texto */
+    font-size: 14px; /* Cambia el tamaño del texto */
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina los márgenes */
+}
+
+
+.container2 {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1 0 45%; /* Ajusta este valor para cambiar el ancho de las columnas */
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #000; /* Añade esta línea para agregar un borde */
+    margin: 10px; /* Añade esta línea para agregar espacio entre las columnas */
+    border-radius: 10px; /* Añade esta línea para hacer que el borde sea redondeado */
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+}
