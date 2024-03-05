@@ -26,7 +26,31 @@
     font-stretch: expanded;
 }
 
+/********** HEADER - NEW EVENT **********/
+.headerEvent {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Reduced padding */
+    background-color: rgba(43, 45, 66, 0.9);
+}
 
+.headerEvent .header-logo {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    margin-right: 15px; /* Reduced margin */
+}
+
+.headerEvent h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Reduced font size */
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+}
 
 
 /********** INDEX **********/
