@@ -31,41 +31,29 @@
 				position: relative !important;
 		}
 		</style>
-        <title>Sport Connect - Create Event</title>
+        <title>Sport Connect - Create User</title>
     </head>
     <body>
 		<!-- PAGE CREATE -->
 		<div data-role="page" >
 			<div class="headerCreate">
 				<img src="./img/LOGO.png" alt="Image 1" class="header-logo">
-				<h1>Crear evento</h1>
+				<h1>Crear una cuenta</h1>
 			</div>
 			
 	
 			<div class="ui-content">
 
 				<div class="form">
-					<label for="titulo">Título:</label>
-					<input type="text" id="titulo" placeholder="Título del evento"><br><br>
-					<label for="tipoDeporte">Deporte:</label>
-					<select id="tipoDeporte">
-					  <option value="futbol">Fútbol</option>
-					  <option value="baloncesto">Baloncesto</option>
-					  <option value="tenis">Tenis</option>
-					  <option value="natacion">Natación</option>
-					  <!-- Agrega más opciones según tus necesidades -->
-					</select><br><br>
-					<label for="fecha">Fecha:</label>
-					<input type="date" id="fecha"><br><br>
-					<label for="ubicacion">Ubicación:</label>
-					<input type="text" id="ubicacion" placeholder="Ubicación"><br><br>
-					<label for="descripcion">Descripción:</label><br>
-					<textarea id="descripcion" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br><br>
-					<button id="btnEnviar">Crear evento</button>
+					<input type="text" id="nombre" placeholder="Nombre"><br><br>
+					<input type="text" id="apellido" placeholder="Apellido"><br><br>
+					<input type="email" id="email" placeholder="Email"><br><br>
+					<input type="password" id="contrasena" placeholder="Contraseña"><br><br>
+					<input type="text" id="ciudad" placeholder="Ciudad"><br><br>
+					<label for="anioNacimiento">Año de Nacimiento:</label>
+					<input type="date" id="anioNacimiento" placeholder="Año de Nacimiento"><br><br>
+					<button id="btnEnviar">Continuar</button>
 				</div>
-				
-
-
 
 			</div>
 		
@@ -108,7 +96,7 @@
 		</script>
 		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
 		<script src="js/index.js"></script>
-		<script src="js/create.js"></script>
+		<script src="js/newUser.js"></script>
 
 	</body>
 </html>
