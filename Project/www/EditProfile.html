@@ -40,60 +40,32 @@
     <!-- page 1 -->
 
     <div data-role="page">
-        <div class="headerProfile">
+        <div class="headerEditProfile">
             <img src="./img/LOGO.png" alt="Image 1" class="header-logo">
-            <h1>Perfil</h1>
+            <h1>Editar Perfil</h1>
         </div>
 
         <div class="ui-content">
-            <div class="profile-container">
+            <div class="EditProfile-container">
                 <div class="profile-image">
                     <img id="profile-image" src="./img/Profile/User_photo.png" alt="Imagen de Usuario">
                 </div>
-                <div class="profile-info">
-                    <h2 id="username">Nombre de Usuario</h2>
-                    <p id="city">Ciudad</p>
-                    <a href="EditProfile.html" id="edit-profile-btn" class="edit-profile-btn">Editar Perfil</a>
+                <div class="LinkChangePhoto">
+                    <a href="">Cambiar foto de perfil</a>
                 </div>
             </div>
 
-            <!-- SECCIÓN DE EVENTOS -->
-            <div class="events-section">
-                <h3>Sobre Mi</h3>
-                <p>Pequeña biografía sobre el usuario...</p>
 
-                <h3>Eventos:</h3>
-                <div class="events-buttons">
-                    <button id="active-events-btn">Activos</button>
-                    <button id="finished-events-btn">Finalizados</button>
-                </div>
-
-                <!-- LISTA DE EVENTOS -->
-                <ul class="events-list">
-                    <li>
-                        <div>
-                            <h3>Evento 1</h3>
-                            <p>Fecha del Evento...</p>
-                        </div>
-                        <img src="./img/Profile/calendar.png" alt="Evento 3">
-                    </li>
-                    <li>
-                        <div>
-                            <h3>Evento 2</h3>
-                            <p>Fecha del Evento...</p>
-                        </div>
-                        <img src="./img/Profile/calendar.png" alt="Evento 3">
-                    </li>
-                    <li>
-                        <div>
-                            <h3>Evento 3</h3>
-                            <p>Fecha del Evento...</p>
-                        </div>
-                        <img src="./img/Profile/calendar.png" alt="Evento 3">
-
-                    </li>
-                </ul>
+            <div class="formINFO">
+                <h3>Información Personal</h3>
+                <input type="text" id="name_surnames" placeholder="Nombre y apellido"><br>
+                <input type="email" id="email" placeholder="Email"><br>
+                <input type="password" id="password" placeholder="Contraseña"><br>
+                <input type="date" id="FechaNacimiento" placeholder="Fecha de Nacimiento"><BR>
+                <input type="text" id="description" placeholder="Descripción"><br>
+                <button id="btnSave">Guardar</button>
             </div>
+
         </div><!-- end page 1 content -->
 
 
@@ -101,7 +73,7 @@
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="Index.html" >
+                    <li><a href="Index.html">
                             <img class="small-image" src="img/iconoHome.png" alt="Page 1">
                             <p>Inicio</p>
                         </a></li>
