@@ -44,8 +44,9 @@
 .headerCreate {
     display: flex;
     align-items: center;
-    padding: 5px; /* Reduced padding */
+    padding: 13px; /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
 }
 
 .headerCreate .header-logo {
@@ -70,8 +71,9 @@
 .headerNewUser {
     display: flex;
     align-items: center;
-    padding: 5px; /* Reduced padding */
+    padding: 13px; /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
 }
 
 .headerNewUser .header-logo {
@@ -96,8 +98,9 @@
 .headerLogin {
     display: flex;
     align-items: center;
-    padding: 5px; /* Reduced padding */
+    padding: 13px; /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
 }
 
 .headerLogin .header-logo {
@@ -257,8 +260,9 @@ p {
 .headerProfile {
     display: flex;
     align-items: center;
-    padding: 5px; /* Reduced padding */
+    padding: 13px; /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
 }
 
 .headerProfile .header-logo {
@@ -398,8 +402,9 @@ p {
 .headerEditProfile {
     display: flex;
     align-items: center;
-    padding: 5px; /* Reduced padding */
+    padding: 13px; /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
 }
 
 .headerEditProfile .header-logo {
