@@ -251,3 +251,206 @@ p {
 .timeDate .ui-input-text:last-child {
     margin-right: 0 !important; /* Elimina el margen derecho del último input para evitar espacios adicionales */
 }
+
+/********** Profile **********/
+/* Estilos para el header */
+.headerProfile {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Reduced padding */
+    background-color: rgba(43, 45, 66, 0.9);
+}
+
+.headerProfile .header-logo {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    margin-right: 15px; /* Reduced margin */
+}
+
+.headerProfile h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Reduced font size */
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+}
+
+/* Estilos para el contenido del perfil */
+.ui-content {
+    padding: 10px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: -15px;
+
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.edit-profile-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: black !important; /* Color del texto negro */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.edit-profile-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de eventos */
+.events-section {
+    margin-top: 20px;
+}
+
+.events-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.events-buttons button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    font-size: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    background-color: #f8f9fa;
+    padding: 6px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.events-list li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 45%;
+    margin-right: 10px;
+    margin-left: 185px;
+    object-fit: cover;
+}
+
+.events-list li h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.events-list li p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
+
+/********** Edit Profile **********/
+/* Estilos para el header */
+.headerEditProfile {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Reduced padding */
+    background-color: rgba(43, 45, 66, 0.9);
+}
+
+.headerEditProfile .header-logo {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    margin-right: 15px; /* Reduced margin */
+}
+
+.headerEditProfile h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Reduced font size */
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+}
+
+/* **************************************** */
+.EditProfile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.EditProfile-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+
+.formINFO #description {
+    height: 100px;
+}
+
+
+.formINFO button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff !important;
+    color: black !important; /* Color del texto negro */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
