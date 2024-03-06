@@ -1,11 +1,25 @@
 
 
+/********** FOOTER **********/
+.small-image {
+    width: 33px; 
+    height: 32px; 
+}
+
+[data-role="footer"] p {
+    color: #333; 
+    font-size: 12px;
+    text-align: center; 
+    margin: 0; 
+}
+
 /********** HEADER-INDEX **********/
 .headerIndex {
     display: flex;
     align-items: center;
-    padding: 5px; /* Reduced padding */
+    padding: 13px; /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
 }
 
 .headerIndex .header-logo {
@@ -104,7 +118,7 @@
     font-stretch: expanded;
 }
 
-/********** INDEX **********/
+/************** INDEX **************/
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -114,11 +128,11 @@
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: left; /* Aligned text to the left */
 }
 
 h3 {
@@ -133,7 +147,7 @@ h3 {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    height: 400px; /* Añade esta línea */
+    height: 310px; /* Añade esta línea */
 }
 
 .col {
@@ -141,16 +155,17 @@ h3 {
     display: flex; /* Añade esta línea */
     flex-direction: column; /* Añade esta línea */
     padding-right: 15px;
-    padding-left: 15px;
+    /*padding-left: 15px;*/
 }
 
 .bordered {
-    border: 2px solid #333; /* Add border */
-    border-radius: 10px; /* Add rounded corners */
-    margin-bottom: 20px; /* Add margin to the bottom of each column */
-    margin-right: 10px; /* Add right margin */
-    margin-left: 19px; /* Add left margin */
-    flex: 1; /* Añade esta línea */
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 19px;
+    flex: 1;
+    background-size: cover; /* Add this line */
+    background-position: center; /* Add this line */
 }
 
 .bordered img {
@@ -166,41 +181,53 @@ p {
 
 
 
-.small-image {
-    width: 40px; /* Ajusta este valor a la anchura que desees */
-    height: 38px; /* Ajusta este valor a la altura que desees */
-}
-
-[data-role="footer"] p {
-    color: #333; /* Cambia el color del texto */
-    font-size: 14px; /* Cambia el tamaño del texto */
-    text-align: center; /* Centra el texto */
-    margin: 0; /* Elimina los márgenes */
-}
-
-
 .container2 {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 60px;
 }
 
 .column {
-    flex: 1 0 45%; /* Ajusta este valor para cambiar el ancho de las columnas */
-    padding: 15px;
+    flex: 1 0 45%;
     box-sizing: border-box;
     text-align: center;
-    border: 1px solid #000; /* Añade esta línea para agregar un borde */
-    margin: 10px; /* Añade esta línea para agregar espacio entre las columnas */
-    border-radius: 10px; /* Añade esta línea para hacer que el borde sea redondeado */
+    border: 1px solid #000;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .column img {
     max-width: 100%;
     height: auto;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
+
+.column p {
+    color: #000;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.mapa {
+  
+    height: 200px;
+    width: 92%;
+    margin: 0 auto; 
+    border: 1px solid #0000003d; 
+    border-radius: 10px; 
+    margin-bottom: 30px;
+}
+
+/************** CREATE **************/
+
 
 #btnEnviar {
     background-color: rgb(43, 165, 221);
@@ -224,7 +251,3 @@ p {
 .timeDate .ui-input-text:last-child {
     margin-right: 0 !important; /* Elimina el margen derecho del último input para evitar espacios adicionales */
 }
-
-
-
-

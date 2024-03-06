@@ -1,0 +1,171 @@
+{
+    "locations": [
+        {
+            "nombre de ubicacion": "C/ Miquel Roncali, Av. del Baix Llobregat",
+            "ubicacion": {
+                "latitude": 41.353403,
+                "longitude": 2.064821
+            },
+            "actividad": ["Futbol", "Baloncesto", "Tenis Mesa", "Barras"]
+        },
+        {
+            "nombre de ubicacion": "C/ Maria Aurèlia Capmany, 14. Parc del Canal de la Infanta",
+            "ubicacion": {
+                "latitude": 41.3592698,
+                "longitude": 2.0638505
+            },
+            "actividad": ["Futbol", "Tenis Mesa"]
+        },
+
+        {
+            "nombre de ubicacion": "Sampa, San Juan Despí",
+            "ubicacion": {
+                "latitude": 41.365101,
+                "longitude": 2.0624128
+            },
+            "actividad": ["Futbol", "Baloncesto"]
+        },
+
+        {
+            "nombre de ubicacion": "La Jaula, Plaça de la Sardana",
+            "ubicacion": {
+                "latitude": 41.3512363,
+                "longitude": 2.072168
+            },
+            "actividad": ["Futbol", "Baloncesto"]
+        },
+
+        {
+            "nombre de ubicacion": "C/ Verge de Montserrat, 48, Padel Delfos",
+            "ubicacion": {
+                "latitude": 41.3484288,
+                "longitude": 2.0688359
+            },
+            "actividad": ["Padel"]
+        },
+
+        {
+            "nombre de ubicacion": "C/ Verge de Montserrat, Centre Internacional de Tennis",
+            "ubicacion": {
+                "latitude": 41.3490142,
+                "longitude": 2.0684062
+            },
+            "actividad": ["Tenis"]
+        },
+
+        {
+            "nombre de ubicacion": "C/ Verge de Montserrat, 51, Parc de calistènia Cornellà",
+            "ubicacion": {
+                "latitude": 41.348588,
+                "longitude": 2.0687571
+            },
+            "actividad": ["Barras"]
+        },
+
+        {
+            "nombre de ubicacion": " Pg. dels Ferrocarrils Catalans, 177, Pista esportiva",
+            "ubicacion": {
+                "latitude": 41.3531689,
+                "longitude": 2.0842169
+            },
+            "actividad": ["Futbol", "Baloncesto"]
+        }, 
+        
+        {
+            "nombre de ubicacion": " C/ Bonavista, 70",
+            "ubicacion": {
+                "latitude": 41.3559335,
+                "longitude": 2.0747592
+            },
+            "actividad": ["Futbol", "Baloncesto"]
+        }, 
+        
+        {
+            "nombre de ubicacion": " Plaça de Josep Tarradellas",
+            "ubicacion": {
+                "latitude": 41.3623421,
+                "longitude": 2.0714046
+            },
+            "actividad": ["Tenis Mesa"]
+        }, 
+        
+        {
+            "nombre de ubicacion": " Plaça de Pau Casals",
+            "ubicacion": {
+                "latitude": 41.3632773,
+                "longitude": 2.0721183
+            },
+            "actividad": ["Baloncesto"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Av. de Salvador Allende, 4, Pista esportiva",
+            "ubicacion": {
+                "latitude": 41.3571756,
+                "longitude": 2.078195
+            },
+            "actividad": ["Baloncesto"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Parque Can Mercader",
+            "ubicacion": {
+                "latitude": 41.358706,
+                "longitude": 2.0853477
+            },
+            "actividad": ["Barras"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Passatge dels Alps, Aurial Padel Cornellà by Marta Marrero ",
+            "ubicacion": {
+                "latitude": 41.356264,
+                "longitude": 2.081358
+            }, 
+            "actividad": ["Padel"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Av. del Baix Llobregat, 11",
+            "ubicacion": {
+                "latitude":41.353857,
+                "longitude": 2.064640
+            }, 
+            "actividad": ["Tenis Mesa"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Carrer de la Fontsanta, 48,Sant Joan Despí. Soccer and Basketball Court",
+            "ubicacion": {
+                "latitude":41.371874,
+                "longitude": 2.074016
+            }, 
+            "actividad": ["Futbol", "Baloncesto"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Plaça l'Estatut, 5, Sant Joan Despí",
+            "ubicacion": {
+                "latitude":41.372854,
+                "longitude": 2.069475
+            }, 
+            "actividad": ["Tenis Mesa", "Baloncesto"]
+        }, 
+        
+        {
+            "nombre de ubicacion": "Parque de Calistenia, Sant Joan Despí",
+            "ubicacion": {
+                "latitude":41.367568,
+                "longitude": 2.050804
+            }, 
+            "actividad": ["Barras"]
+        }
+
+
+
+
+
+
+        
+    ]
+}
