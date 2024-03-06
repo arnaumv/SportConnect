@@ -52,6 +52,57 @@
     font-stretch: expanded;
 }
 
+/********** HEADER - NEW USER **********/
+.headerNewUser {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Reduced padding */
+    background-color: rgba(43, 45, 66, 0.9);
+}
+
+.headerNewUser .header-logo {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    margin-right: 15px; /* Reduced margin */
+}
+
+.headerNewUser h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Reduced font size */
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+}
+
+/********** HEADER - Login **********/
+.headerLogin {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Reduced padding */
+    background-color: rgba(43, 45, 66, 0.9);
+}
+
+.headerLogin .header-logo {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    margin-right: 15px; /* Reduced margin */
+}
+
+.headerLogin h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; /* Reduced font size */
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+}
 
 /********** INDEX **********/
 .container {
@@ -150,3 +201,30 @@ p {
     max-width: 100%;
     height: auto;
 }
+
+#btnEnviar {
+    background-color: rgb(43, 165, 221);
+}
+
+.timeDate {
+    display: flex; /* Usamos flexbox para alinear los elementos */
+
+}
+
+.timeDate {
+    display: flex;
+}
+
+.timeDate .ui-input-text {
+    width: 50% !important; /* Cada input ocupa el 50% del espacio */
+    box-sizing: border-box !important; /* Incluye el padding y el borde en el ancho total */
+    margin-right: 5px !important; /* Añade un pequeño espacio entre los inputs */
+}
+
+.timeDate .ui-input-text:last-child {
+    margin-right: 0 !important; /* Elimina el margen derecho del último input para evitar espacios adicionales */
+}
+
+
+
+

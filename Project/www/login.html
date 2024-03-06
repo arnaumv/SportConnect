@@ -31,46 +31,29 @@
 				position: relative !important;
 		}
 		</style>
-        <title>Sport Connect - Create Event</title>
+        <title>Sport Connect - Create User</title>
     </head>
     <body>
 		<!-- PAGE CREATE -->
 		<div data-role="page" >
-			<div class="headerCreate">
+			<div class="headerLogin">
 				<img src="./img/LOGO.png" alt="Image 1" class="header-logo">
-				<h1>Crear evento</h1>
+				<h1>Iniciar Sesión</h1>
 			</div>
 			
 	
 			<div class="ui-content">
+                <div class="loginDiv">
+                    <h2>Bienvenido</h2>
 
-				<div class="form">
-					<label for="titulo">Título:</label>
-					<input type="text" id="titulo" placeholder="Título del evento"><br>
-					<label for="tipoDeporte">Deporte:</label>
-					<select id="tipoDeporte">
-					  <option value="futbol">Fútbol</option>
-					  <option value="baloncesto">Baloncesto</option>
-					  <option value="tenis">Tenis</option>
-					  <option value="natacion">Natación</option>
-					  <!-- Agrega más opciones según tus necesidades -->
-					</select><br>
-	
-					<label for="fecha">Fecha y hora:</label>
-					<div class="timeDate">
-						<input type="date" id="fecha">
-						<input type="time" id="hora">
-					</div><br>
-					
-					<label for="ubicacion">Ubicación:</label>
-					<input type="text" id="ubicacion" placeholder="Ubicación"><br>
-					<label for="descripcion">Descripción:</label>
-					<textarea id="descripcion" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
-					<button id="btnEnviar">Crear evento</button>
-				</div>
-				
-
-
+                    <div class="form">
+                        <input type="text" id="nombre" placeholder="Nombre">
+                        <a href="">¿Olvidaste la contraseña?</a><br><br>
+                        <input type="password" id="contrasena" placeholder="Contraseña">
+                        <a href="">Crear una cuenta nueva</a><br><br>
+                        <button id="btnEnviar">Iniciar Sesión</button>
+                    </div>
+                </div>
 
 			</div>
 		
@@ -113,7 +96,7 @@
 		</script>
 		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
 		<script src="js/index.js"></script>
-		<script src="js/create.js"></script>
+		<script src="js/login.js"></script>
 
 	</body>
 </html>
