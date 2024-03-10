@@ -65,6 +65,8 @@
     letter-spacing: 2px; 
     line-height: 1.2;
     font-stretch: expanded;
+    text-align: center !important;
+    margin-left: 10%;
 }
 
 /********** HEADER - NEW USER **********/
@@ -92,6 +94,8 @@
     letter-spacing: 2px; 
     line-height: 1.2;
     font-stretch: expanded;
+    text-align: center !important;
+    margin-left: 5%;
 }
 
 /********** HEADER - Login **********/
@@ -119,8 +123,37 @@
     letter-spacing: 2px; 
     line-height: 1.2;
     font-stretch: expanded;
+    text-align: center !important;
+    margin-left: 10%;
 }
 
+/********** HEADER - Reset Pass and Reset Pass Mail **********/
+.headerResetPass {
+    display: flex;
+    align-items: center;
+    padding: 13px; /* Reduced padding */
+    background-color: rgba(43, 45, 66, 0.9);
+    padding-left: 25px;
+}
+
+.headerResetPass .header-logo {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    margin-right: 15px; /* Reduced margin */
+}
+
+.headerResetPass h1 {
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; /* Reduced font size */
+    font-weight: normal; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    line-height: 1.2;
+    font-stretch: expanded;
+    margin-left: 5%;
+}
 /************** INDEX **************/
 .container {
     max-width: 900px;
@@ -281,6 +314,8 @@ p {
     letter-spacing: 2px; 
     line-height: 1.2;
     font-stretch: expanded;
+    text-align: center !important;
+    margin-left: 20%;
 }
 
 /* Estilos para el contenido del perfil */
@@ -423,6 +458,8 @@ p {
     letter-spacing: 2px; 
     line-height: 1.2;
     font-stretch: expanded;
+    text-align: center !important;
+    margin-left: 12%;
 }
 
 /* **************************************** */
@@ -458,4 +495,32 @@ p {
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s;
+}
+
+/* **************** LOGIN ************************ */
+
+.loginDiv {
+    margin-top: 20%;
+}
+
+.form a {
+    font-size: 12px;
+    color: gray !important;
+}
+
+.form h2 {
+    text-align: center;
+
+}
+
+.centered-link {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* **************** RESET PASS ************************ */
+
+.resetPassDiv {
+    margin-top: 20%;
 }

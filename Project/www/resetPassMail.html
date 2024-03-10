@@ -31,28 +31,24 @@
 				position: relative !important;
 		}
 		</style>
-        <title>Sport Connect - Create User</title>
+        <title>Sport Connect - SEND EMAIL RESET PASSWORD</title>
     </head>
     <body>
 		<!-- PAGE CREATE -->
 		<div data-role="page" >
-			<div class="headerLogin">
+			<div class="headerResetPass">
 				<img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-				<h1>Iniciar Sesión</h1>
+				<h1>Restablecer contraseña</h1>
 			</div>
 			
 	
 			<div class="ui-content">
-                <div class="loginDiv">
+                <div class="resetPassDiv">
 
                     <div class="form">
-						<h2>Bienvenido</h2>
-                        <input type="text" id="nombre" placeholder="Nombre"><br>
-                        <input type="password" id="contrasena" placeholder="Contraseña">
-						<a href="">¿Olvidaste la contraseña?</a><br><br>
-                        <button id="btnEnviar">Iniciar Sesión</button>
-						<a class="centered-link" href="">Crear una cuenta nueva</a><br><br>
-
+						<h2>Introduce tu correo <br> electronico</h2>
+                        <input type="email" id="email" placeholder="Email"><br>
+                        <button id="btnEnviar">Recibir enlace de <br> recuperación</button>
                     </div>
                 </div>
 
@@ -97,7 +93,7 @@
 		</script>
 		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
 		<script src="js/index.js"></script>
-		<script src="js/login.js"></script>
+		<script src="js/resetPassMail.js"></script>
 
 	</body>
 </html>
