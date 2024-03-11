@@ -17,22 +17,22 @@
 .headerIndex {
     display: flex;
     align-items: center;
-    padding: 13px; /* Reduced padding */
+    padding: 13px; 
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
 }
 
 .headerIndex .header-logo {
-    width: 50px; /* Reduced width */
-    height: 50px; /* Reduced height */
-    margin-right: 15px; /* Reduced margin */
+    width: 50px; 
+    height: 50px; 
+    margin-right: 15px; 
 }
 
 .headerIndex h1 {
     margin: 0;
     color: #ffffff; 
     font-family: 'Roboto', sans-serif;
-    font-size: 20px; /* Reduced font size */
+    font-size: 20px; 
     font-weight: normal; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
@@ -44,22 +44,22 @@
 .headerCreate {
     display: flex;
     align-items: center;
-    padding: 13px; /* Reduced padding */
+    padding: 13px; 
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
 }
 
 .headerCreate .header-logo {
-    width: 50px; /* Reduced width */
-    height: 50px; /* Reduced height */
-    margin-right: 15px; /* Reduced margin */
+    width: 50px; 
+    height: 50px; 
+    margin-right: 15px; 
 }
 
 .headerCreate h1 {
     margin: 0;
     color: #ffffff; 
     font-family: 'Roboto', sans-serif;
-    font-size: 20px; /* Reduced font size */
+    font-size: 20px; 
     font-weight: normal; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
@@ -73,22 +73,22 @@
 .headerNewUser {
     display: flex;
     align-items: center;
-    padding: 13px; /* Reduced padding */
+    padding: 13px; 
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
 }
 
 .headerNewUser .header-logo {
-    width: 50px; /* Reduced width */
-    height: 50px; /* Reduced height */
-    margin-right: 15px; /* Reduced margin */
+    width: 50px; 
+    height: 50px; 
+    margin-right: 15px; 
 }
 
 .headerNewUser h1 {
     margin: 0;
     color: #ffffff; 
     font-family: 'Roboto', sans-serif;
-    font-size: 20px; /* Reduced font size */
+    font-size: 20px; 
     font-weight: normal; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
@@ -108,16 +108,16 @@
 }
 
 .headerLogin .header-logo {
-    width: 50px; /* Reduced width */
-    height: 50px; /* Reduced height */
-    margin-right: 15px; /* Reduced margin */
+    width: 50px; 
+    height: 50px; 
+    margin-right: 15px; 
 }
 
 .headerLogin h1 {
     margin: 0;
     color: #ffffff; 
     font-family: 'Roboto', sans-serif;
-    font-size: 20px; /* Reduced font size */
+    font-size: 20px; 
     font-weight: normal; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
@@ -160,7 +160,7 @@
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     color: #333;
-    overflow: hidden; /* Añade esta línea */
+    overflow: hidden; 
 }
 
 h2 {
@@ -168,7 +168,8 @@ h2 {
     font-weight: bold;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    text-align: left; /* Aligned text to the left */
+    text-align: left; 
+    margin-left: 13px;
 }
 
 h3 {
@@ -183,25 +184,27 @@ h3 {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    height: 310px; /* Añade esta línea */
+    height: 310px; 
 }
 
 .col {
-    flex: 1; /* Añade esta línea */
-    display: flex; /* Añade esta línea */
-    flex-direction: column; /* Añade esta línea */
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
     padding-right: 15px;
     /*padding-left: 15px;*/
 }
 
 .bordered {
-    border: 2px solid #333;
+    border: 1px solid #2c2c2c;
     border-radius: 10px;
     margin-bottom: 20px;
     margin-left: 19px;
     flex: 1;
-    background-size: cover; /* Add this line */
-    background-position: center; /* Add this line */
+    background-size: cover; 
+    background-position: center; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37); 
+
 }
 
 .bordered img {
@@ -227,23 +230,25 @@ p {
 }
 
 .column {
-    flex: 1 0 45%;
+    width: 44%; 
     box-sizing: border-box;
     text-align: center;
-    border: 1px solid #000;
-    margin: 10px;
+    border: 1px solid #2c2c2c;
+    margin: 2px; 
+    margin-bottom: 20px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37); 
 }
-
 .column img {
     max-width: 100%;
     height: auto;
     width: 100%;
     height: 80%;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 9px 10px 0 0; 
+    /*margin-bottom: 20px;*/
 }
+
 
 .column p {
     color: #000;
@@ -254,7 +259,7 @@ p {
 
 .mapa {
   
-    height: 200px;
+    height: 230px;
     width: 92%;
     margin: 0 auto; 
     border: 1px solid #0000003d; 
@@ -270,7 +275,7 @@ p {
 }
 
 .timeDate {
-    display: flex; /* Usamos flexbox para alinear los elementos */
+    display: flex; 
 
 }
 
@@ -279,13 +284,13 @@ p {
 }
 
 .timeDate .ui-input-text {
-    width: 50% !important; /* Cada input ocupa el 50% del espacio */
-    box-sizing: border-box !important; /* Incluye el padding y el borde en el ancho total */
-    margin-right: 5px !important; /* Añade un pequeño espacio entre los inputs */
+    width: 50% !important; 
+    box-sizing: border-box !important; 
+    margin-right: 5px !important; 
 }
 
 .timeDate .ui-input-text:last-child {
-    margin-right: 0 !important; /* Elimina el margen derecho del último input para evitar espacios adicionales */
+    margin-right: 0 !important; 
 }
 
 /********** Profile **********/
@@ -293,15 +298,15 @@ p {
 .headerProfile {
     display: flex;
     align-items: center;
-    padding: 13px; /* Reduced padding */
+    padding: 13px; 
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
 }
 
 .headerProfile .header-logo {
-    width: 50px; /* Reduced width */
-    height: 50px; /* Reduced height */
-    margin-right: 15px; /* Reduced margin */
+    width: 50px; 
+    height: 50px;
+    margin-right: 15px; 
 }
 
 .headerProfile h1 {
