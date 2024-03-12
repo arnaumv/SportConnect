@@ -25,19 +25,21 @@
 .headerIndex .header-logo {
     width: 50px; 
     height: 50px; 
-    margin-right: 15px; 
+    margin-right: 9px; 
 }
 
 .headerIndex h1 {
     margin: 0;
     color: #ffffff; 
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px; 
-    font-weight: normal; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px; /* Aumentado el tamaño de la fuente para mayor impacto */
+    font-weight: 545; /* Aumentado el peso de la fuente para un aspecto más audaz */
     text-transform: uppercase; 
-    letter-spacing: 1.5px; 
-    line-height: 2;
-    font-stretch: expanded;
+    letter-spacing: 1px; /* Aumentado el espaciado de las letras para una mejor legibilidad */
+    line-height: 1.5; /* Ajustado el interlineado para una mejor legibilidad */
+    margin-top: 6px;
+    font-stretch: normal; /* Cambiado a normal para evitar la distorsión de la fuente */
+    height: 40px; /* Añadido altura a la letra */
 }
 
 /********** HEADER - NEW EVENT **********/
