@@ -6,7 +6,7 @@ $(document).ready(function() {
         var contrasena = $('#contrasena').val();
 
         $.ajax({
-            url: 'http://localhost:8000/api-token-auth/',  // URL de tu endpoint de autenticación
+            url: 'http://localhost:8000/api/token/',  // URL de tu endpoint de autenticación
             method: 'POST',
             data: {
                 username: nombre,
