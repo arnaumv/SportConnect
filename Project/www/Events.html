@@ -26,27 +26,39 @@
     <div data-role="page">
         <div class="headerEvents">
             <img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-            <h1>Perfil</h1>
+            <h1>Eventos</h1>
+            <a href=""><img src="./img/index/campana.png" alt="Icono de notificación" class="notification-icon"></a>
         </div>
         <div class="ui-content">
             <div class="events-buttons">
-                <button class="waves-effect waves-light btn">Futbol</button>
-                <button class="waves-effect waves-light btn">Baloncesto</button>
-                <button class="waves-effect waves-light btn">Gimnasio</button>
-                <button class="waves-effect waves-light btn">Tenis Mesa</button>
-                <button class="waves-effect waves-light btn">Tenis</button>
-                <button class="waves-effect waves-light btn">Padel</button>
-                <!-- Agrega más botones si es necesario -->
+                <button id="football" class="waves-effect waves-light btn category-btn">Futbol</button>
+                <button id="basketball" class="waves-effect waves-light btn category-btn">Baloncesto</button>
+                <button id="gym" class="waves-effect waves-light btn category-btn">Gimnasio</button>
+                <button id="table-tennis" class="waves-effect waves-light btn category-btn">Tenis Mesa</button>
+                <button id="tennis" class="waves-effect waves-light btn category-btn">Tenis</button>
+                <button id="paddle" class="waves-effect waves-light btn category-btn">Padel</button>
             </div>
             <div class="events-list">
-                <ul>
-                    <li>Evento 1</li>
-                    <li>Evento 2</li>
-                    <li>Evento 3</li>
-                    <li>Evento 4</li>
-                    <!-- Agrega más elementos según sea necesario -->
-                </ul>
+                <div class="event futbol">
+                    <img src="./img/index/pelotaFutbol.png" alt="Imagen del Evento 1">
+                    <h2>Evento 1</h2>
+                    <p>Fecha: 12 de marzo de 2024</p>
+                    <p>Ubicación: Lugar del evento 1</p>
+                    <a href="InfoEvent.html">
+                        <button class="join-btn">Unirse al Evento</button>
+                    </a>
+                </div>
+                <div class="event baloncesto">
+                    <img src="./img/index/pelotaBasquet.png" alt="Imagen del Evento 2">
+                    <h2>Evento 2</h2>
+                    <p>Fecha: 15 de marzo de 2024</p>
+                    <p>Ubicación: Lugar del evento 2</p>
+                    <a href="InfoEvent.html">
+                        <button class="join-btn">Unirse al Evento</button>
+                    </a>
+                </div>
             </div>
+            
         </div><!-- end page 1 content -->
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
@@ -59,11 +71,11 @@
                             <img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
                             <p>Crear</p>
                         </a></li>
-                    <li><a href="Events.html">
+                    <li><a href="Events.html" class="ui-btn-active ui-state-persist">
                             <img class="small-image" src="img/index/calendar.png" alt="Page 3">
                             <p>Eventos</p>
                         </a></li>
-                    <li><a href="Profile.html" class="ui-btn-active ui-state-persist">
+                    <li><a href="Profile.html">
                             <img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
                             <p>Perfil</p>
                         </a></li>
@@ -76,6 +88,7 @@
     <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
     <script type="text/javascript" id="jqm-trans-disable"></script>
     <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+    <script src="js/Events.js"></script>
     <script src="js/index.js"></script>
 </body>
 

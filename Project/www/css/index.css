@@ -46,15 +46,16 @@
     display: flex;
     align-items: center;
     padding: 13px;
+    /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
     position: relative;
 }
 
 .headerCreate .header-logo {
-    width: 55px; 
-    height: 55px; 
-    margin-right: 15px; 
+    width: 50px; 
+    height: 50px; 
+    margin-right: 9px; 
 }
 
 .headerCreate h1 {
@@ -601,23 +602,20 @@ p {
     margin-top: 20%;
 }
 
-/********** Edit Profile **********/
+/********** Events **********/
 .headerEvents {
     display: flex;
     align-items: center;
     padding: 13px;
-    /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
+    position: relative;
 }
 
 .headerEvents .header-logo {
     width: 50px;
-    /* Reduced width */
     height: 50px;
-    /* Reduced height */
     margin-right: 15px;
-    /* Reduced margin */
 }
 
 .headerEvents h1 {
@@ -632,7 +630,7 @@ p {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 12%;
+    margin-left: 20%;
 }
 
 /* **************************************** */
@@ -646,18 +644,68 @@ p {
 }
 
 .events-buttons button {
-    padding: 10px 5px !important;
-    font-size: 16px;
+    padding: 6px 5px !important;
+    font-size: 14px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Espacio entre botones */
-    min-width: 150px;
+    min-width: 120px;
+    margin: 20px 10px 10px;
 }
 
 
+.events-buttons #football{
+    margin-left: 470px;
+}
 
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
+.event {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.event img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-width: 330px;
+    max-width: 330px;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.event h2 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.event p {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.join-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #0056b3;
+}
