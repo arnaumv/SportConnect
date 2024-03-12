@@ -24,42 +24,47 @@
 <body>
     <!-- page 1 -->
     <div data-role="page">
-        <div class="headerEvents">
+        <div class="headerInfoEvents">
             <img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
             <h1>Eventos</h1>
         </div>
         <div class="ui-content">
-            <div class="events-buttons">
-                <button id="football" class="waves-effect waves-light btn">Futbol</button>
-                <button class="waves-effect waves-light btn">Baloncesto</button>
-                <button class="waves-effect waves-light btn">Gimnasio</button>
-                <button class="waves-effect waves-light btn">Tenis Mesa</button>
-                <button class="waves-effect waves-light btn">Tenis</button>
-                <button class="waves-effect waves-light btn">Padel</button>
-                <!-- Agrega más botones si es necesario -->
+            <!-- Inicio del contenido del evento -->
+            <div class="evento">
+                <img src="./img/index/pelotaFutbol.png" alt="Imagen del Evento 1">
+                <h2>Titulo del Evento 1</h2>
+                <p>Fecha: 15 de marzo de 2024</p>
+                <p>Descripción del Evento 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia, lorem at bibendum sagittis, felis odio consectetur justo, at ultricies turpis mi sit amet metus.</p>
             </div>
-            <div class="events-list">
-                <div class="event">
-                    <img src="./img/index/pelotaFutbol.png" alt="Imagen del Evento 1">
-                    <h2>Evento 1</h2>
-                    <p>Fecha: 12 de marzo de 2024</p>
-                    <p>Ubicación: Lugar del evento 1</p>
-                    <a href="InfoEvent.html">
-                        <button class="join-btn">Unirse al Evento</button>
-                    </a>
-                </div>
-                <div class="event">
-                    <img src="./img/index/pelotaBasquet.png" alt="Imagen del Evento 2">
-                    <h2>Evento 2</h2>
-                    <p>Fecha: 15 de marzo de 2024</p>
-                    <p>Ubicación: Lugar del evento 2</p>
-                    <a href="InfoEvent.html">
-                        <button class="join-btn">Unirse al Evento</button>
-                    </a>
-                </div>
-                <!-- Agrega más eventos según sea necesario -->
-            </div>
+            <!-- Fin del contenido del evento -->
 
+            <!-- Inicio de la lista de participantes -->
+            <div class="participantes">
+                <h3>Participantes</h3>
+                <ul>
+                    <li>
+                        <img src="./img/Profile/User_photo.png" alt="Imagen del Participante 1">
+                        <div class="info-participante">
+                            <p>Nombre del Participante 1</p>
+                            <p>Se unió el 10 de marzo de 2024</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./img/Profile/User_photo.png" alt="Imagen del Participante 2">
+                        <div class="info-participante">
+                            <p>Nombre del Participante 2</p>
+                            <p>Se unió el 12 de marzo de 2024</p>
+                        </div>
+                    </li>
+                    <!-- Agrega más participantes según sea necesario -->
+                </ul>
+            </div>
+            <!-- Fin de la lista de participantes -->
+
+            <!-- Botón para unirse al evento -->
+            <div class="unirse-btn">
+                <a href="#" class="btn">Unirme al evento</a>
+            </div>
         </div><!-- end page 1 content -->
         <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
@@ -72,17 +77,18 @@
                             <img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
                             <p>Crear</p>
                         </a></li>
-                    <li><a href="Events.html">
+                    <li><a href="Events.html" class="ui-btn-active ui-state-persist">
                             <img class="small-image" src="img/index/calendar.png" alt="Page 3">
                             <p>Eventos</p>
                         </a></li>
-                    <li><a href="Profile.html" class="ui-btn-active ui-state-persist">
+                    <li><a href="Profile.html">
                             <img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
                             <p>Perfil</p>
                         </a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
+
     </div><!-- /page 1 -->
 
     <script src="cordova.js"></script>
