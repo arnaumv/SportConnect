@@ -26,19 +26,21 @@
 .headerIndex .header-logo {
     width: 50px; 
     height: 50px; 
-    margin-right: 15px; 
+    margin-right: 9px; 
 }
 
 .headerIndex h1 {
     margin: 0;
     color: #ffffff; 
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px; 
-    font-weight: normal; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px; /* Aumentado el tamaño de la fuente para mayor impacto */
+    font-weight: 545; /* Aumentado el peso de la fuente para un aspecto más audaz */
     text-transform: uppercase; 
-    letter-spacing: 2px; 
-    line-height: 1.2;
-    font-stretch: expanded;
+    letter-spacing: 1px; /* Aumentado el espaciado de las letras para una mejor legibilidad */
+    line-height: 1.5; /* Ajustado el interlineado para una mejor legibilidad */
+    margin-top: 6px;
+    font-stretch: normal; /* Cambiado a normal para evitar la distorsión de la fuente */
+    height: 40px; /* Añadido altura a la letra */
 }
 
 /********** HEADER - NEW EVENT **********/
@@ -168,6 +170,45 @@
     margin-left: 5%;
 }
 /************** INDEX **************/
+
+.paragraph1 {
+    font-size: 17px;
+    line-height: 1.1;
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 0.5px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold; /* Added this line to make the text bolder */
+    margin-top: 169px;
+    margin-left: 10px;
+}
+
+.paragraph2 {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #ffffff;
+   
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Added this line to make the text bolder */
+    margin-top: 55px;
+    margin-left: 10px;
+}
+
+.paragraph3 {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #ffffff;
+   
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Added this line to make the text bolder */
+    margin-top: 14px;
+    margin-left: 10px;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -177,7 +218,7 @@
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -197,7 +238,7 @@ h3 {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    height: 310px; 
+    /*height: 310px;*/ 
 }
 
 .col {
@@ -279,7 +320,6 @@ p {
     border-radius: 10px; 
     margin-bottom: 30px;
 }
-
 /************** CREATE **************/
 
 
