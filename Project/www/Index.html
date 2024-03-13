@@ -11,8 +11,16 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; connect-src 'self' http://localhost:8000; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 
+		<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self' data: https://ssl.gstatic.com/ http://localhost:8000/ https://unpkg.com;
+		script-src 'self' 'unsafe-inline' https://unpkg.com/ http://localhost:8000/;
+		connect-src 'self' http://localhost:8000/ https://unpkg.com/;
+		style-src 'self' 'unsafe-inline' https://unpkg.com/ http://localhost:8000/;
+		media-src *;
+		img-src 'self' http://localhost:8000/ https://unpkg.com https://c.tile.openstreetmap.org/ https://a.tile.openstreetmap.org/;
+	  	">
+	  
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -108,30 +116,6 @@
 
 			</div><!-- end page 1 content -->
 			
-		
-			<script>
-				
-				// Map initialization script
-				var json_url = "ubicacion.json";
-			
-				var map = L.map('mapa').setView([41.357805, 2.0379357], 13);
-				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
-				fetch(json_url)
-					.then(response => response.json())
-					.then(data => {
-						if (data.locations && data.locations.length > 0) {
-							data.locations.forEach(ubicacion => {
-								var marker = L.marker([ubicacion.ubicacion.latitude, ubicacion.ubicacion.longitude]).addTo(map);
-								var actividades = ubicacion.actividad.join(', '); // Join the activities into a single string separated by commas
-								marker.bindPopup('<b>' + ubicacion["nombre de ubicacion"] + '</b><br><b>Actividad:</b> ' + actividades);
-							});
-						}
-					});
-			</script>
-
-		
-
-
 
 			
 			<div data-role="footer" data-position="fixed" >
@@ -158,13 +142,8 @@
 			</div><!-- /footer -->
 		</div><!-- /page 1 -->
 		
-		<script src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
-			/* For having a faster transition */
-			$(document).on("mobileinit", function() {
-					$.mobile.defaultPageTransition = "none";
-					$.mobile.defaultDialogTransition = "none";
-			});
-		</script>
+		<script src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
 		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
 		<script src="js/index.js"></script>
 	</body>

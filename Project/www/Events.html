@@ -11,6 +11,14 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+        <meta http-equiv="Content-Security-Policy" content="
+		default-src 'self' data: https://ssl.gstatic.com/ http://localhost:8000/ https://unpkg.com;
+		script-src 'self' 'unsafe-inline' https://unpkg.com/ http://localhost:8000/;
+		connect-src 'self' http://localhost:8000/ https://unpkg.com/;
+		style-src 'self' 'unsafe-inline' https://unpkg.com/ http://localhost:8000/;
+		media-src *;
+		img-src 'self' http://localhost:8000/ https://unpkg.com https://c.tile.openstreetmap.org/ https://a.tile.openstreetmap.org/;
+	  	">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
