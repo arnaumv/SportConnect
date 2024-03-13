@@ -11,8 +11,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-		<meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">
-
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; connect-src 'self' http://localhost:8000; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -45,15 +44,15 @@
 			<div class="ui-content">
                 <div class="loginDiv">
 
-                    <div class="form">
+					<div class="form">
 						<h2>Bienvenido</h2>
-                        <input type="text" id="nombre" placeholder="Nombre"><br>
-                        <input type="password" id="contrasena" placeholder="Contraseña">
+						<input type="email" id="email" placeholder="Correo electrónico"><br>
+						<input type="password" id="contrasena" placeholder="Contraseña">
 						<a href="">¿Olvidaste la contraseña?</a><br><br>
-                        <button id="btnEnviar">Iniciar Sesión</button>
+						<button id="btnEnviar">Iniciar Sesión</button>
 						<a class="centered-link" href="">Crear una cuenta nueva</a><br><br>
-
-                    </div>
+	
+					</div>
                 </div>
 
 			</div>
