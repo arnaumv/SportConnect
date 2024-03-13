@@ -2,14 +2,14 @@ $(document).ready(function() {
     $('#btnEnviar').click(function(e) {
         e.preventDefault();
 
-        var nombre = $('#nombre').val();
+        var email = $('#email').val();
         var contrasena = $('#contrasena').val();
 
         $.ajax({
             url: 'http://localhost:8000/login/',  // URL de tu endpoint de autenticación
             method: 'POST',
             data: {
-                username: nombre,
+                email: email,
                 password: contrasena
             },
             success: function(data) {
