@@ -607,9 +607,9 @@ p {
     display: flex;
     align-items: center;
     padding: 13px;
-    /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
+    position: relative;
 }
 
 .headerEvents .header-logo {
@@ -633,7 +633,7 @@ p {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 12%;
+    margin-left: 20%;
 }
 
 /* **************************************** */
@@ -744,7 +744,7 @@ p {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 12%;
+    margin-left: 20%;
 }
 
 /* **************************************** */
@@ -761,6 +761,10 @@ p {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+    min-width: 330px;
+    max-width: 330px;
+    min-height: 200px;
+    max-height: 200px;
 }
 
 .evento h2 {
@@ -801,6 +805,7 @@ p {
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
+    
 }
 
 
