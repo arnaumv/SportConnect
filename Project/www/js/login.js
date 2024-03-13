@@ -17,13 +17,14 @@ $(document).ready(function() {
                 // Guarda el token en el almacenamiento local del navegador
                 window.localStorage.setItem('token', data.token);
                 // Redirige al usuario a la página principal de tu aplicación
-                window.location.href = 'Index.html';
+                window.location.href = '/Index.html';
             },
             error: function(xhr, status, error) {
                 console.log('Error: ' + error);
                 console.log('Status: ' + status);
                 console.log(xhr);
                 // Aquí puedes manejar el error, por ejemplo mostrando un mensaje al usuario
+                alert('Error: ' + error + '. ' + 'Status: ' + status);
             }
         });
     });
