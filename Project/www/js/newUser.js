@@ -27,6 +27,8 @@ $(document).ready(function(){
           // maneja el éxito
           console.log(result);
           alert('Usuario creado con éxito.');  
+          window.location.href = 'login.html';  // Redirige al usuario a la página de inicio de sesión
+
       },
       error: function(error) {
           // maneja el error

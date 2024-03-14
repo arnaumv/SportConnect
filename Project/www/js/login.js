@@ -2,21 +2,21 @@ $(document).ready(function() {
     $('#btnEnviar').click(function(e) {
         e.preventDefault();
 
-        var name = $('#name').val();
+        var email = $('#email').val();
         var contrasena = $('#contrasena').val();
 
         $.ajax({
-            url: 'http://localhost:8000/api/login/',  // URL de tu endpoint de autenticación
+            url: 'http://localhost:8000/api/login/',
             method: 'POST',
-            contentType: 'application/json',  // Asegúrate de que estás enviando los datos como JSON
-            data: JSON.stringify({  // Convierte tus datos a JSON
-                name: name,
+            contentType: 'application/json',
+            data: JSON.stringify({
+                email: email,
                 password: contrasena
             }),
             success: function(data) {
                 console.log('Token: ' + data.token);
                 window.localStorage.setItem('token', data.token);
-                alert('Login successful!');  // Muestra un alerta cuando el inicio de sesión es exitoso
+                alert('Login successful!');
                 window.location.href = '/Index.html';
             },
             error: function(xhr, status, error) {
