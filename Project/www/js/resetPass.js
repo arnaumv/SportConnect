@@ -1,15 +1,28 @@
 $(document).ready(function(){
-    $('#btnEnviar').click(function(){
-      var contrasena = $('#contrasena').val();
-      var repetirContrasena = $('#repetir-contrasena').val();
+  $('#btnEnviar').click(function(){
+      // Restablecer los mensajes de error
+      $('.error').text('');
+
+      // Obtener los valores de los campos del formulario
+      var contrasena = $('#contrasena').val().trim();
+      var repetirContrasena = $('#repetir-contrasena').val().trim();
       
-      console.log('Contraseña: ' + contrasena);
-      console.log('Repetir Contraseña: ' + repetirContrasena);
-      
-      if (contrasena !== repetirContrasena) {
-          alert('Las contraseñas no coinciden. Por favor, inténtelo de nuevo.');
-          return false; // Evita que el formulario se envíe si las contraseñas no coinciden
+      // Variable para verificar si hay errores
+      var hayErrores = false;
+
+      // Validación de la longitud y coincidencia de las contraseñas
+      if(contrasena.length < 8){
+          $('#error_contrasena').text('La contraseña debe tener al menos 8 caracteres');
+          hayErrores = true;
+      } else if(contrasena !== repetirContrasena){
+          $('#error_repetir_contrasena').text('Las contraseñas no coinciden');
+          hayErrores = true;
       }
-      
-    });
+
+      // Si no hay errores, enviar los datos
+      if(!hayErrores){
+          // Aquí puedes agregar la lógica para enviar el formulario o realizar otras acciones necesarias
+          console.log("Formulario enviado");
+      }
+  });
 });

@@ -828,3 +828,13 @@ p {
 }
 
 
+/* Css Errores formularios */
+
+.error {
+    color: red;
+    background: LightPink;
+  }
+  span.error {
+    display: block;
+    font-size: 15px;
+  }
