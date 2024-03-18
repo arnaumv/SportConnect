@@ -33,6 +33,9 @@ $(document).ready(function() {
                 contentType: 'application/json',
                 success: function(data) {
                     console.log('Login successful:', data);
+                    // Guarda los tokens en el almacenamiento local del navegador
+                    localStorage.setItem('refreshToken', data.refresh);
+                    localStorage.setItem('accessToken', data.access);
                     // Redirige al usuario a index.html
                     window.location.href = 'Index.html';
                 },

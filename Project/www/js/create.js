@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var token = window.localStorage.getItem('token');
+    var token = window.localStorage.getItem('accessToken');  // Cambiado de 'token' a 'accessToken'
 
     if (!token) {
         // Si no hay un token, redirige al usuario a la página de inicio de sesión
@@ -23,7 +23,7 @@ $(document).ready(function(){
             type: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Token ' + token // Aquí se incluye el token en la cabecera de la solicitud
+                'Authorization': 'Bearer ' + token // Aquí se incluye el token en la cabecera de la solicitud
             },
             data: JSON.stringify({
                 title: titulo,
