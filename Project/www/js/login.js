@@ -24,7 +24,7 @@ $(document).ready(function() {
         // Si no hay errores, puedes enviar la solicitud AJAX
         if (!hasErrors) {
             $.ajax({
-                url: 'http://localhost:8000/login/',
+                url: 'http://localhost:8001/login/',
                 method: 'POST',
                 data: JSON.stringify({
                     username: username,
@@ -43,6 +43,8 @@ $(document).ready(function() {
                     console.log('Error:', error);
                 }
             });
+        } else {
+            console.log('Hubo un error al iniciar sesión');
         }
     });
 });

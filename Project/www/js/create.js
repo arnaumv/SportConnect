@@ -19,7 +19,7 @@ $(document).ready(function(){
         var descripcion = $('#descripcion').val();
 
         $.ajax({
-            url: 'http://localhost:8000/events/',  // URL de tu aplicación Django local
+            url: 'http://localhost:8001/events/',  // URL de tu aplicación Django local
             type: 'POST',
             headers: {
                 'Content-Type': 'application/json',
