@@ -1,114 +1,109 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
 
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-		<style>
+<head>
+	<meta charset="utf-8">
+	<!--
+    Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+        https://cordova.apache.org/docs/en/latest/
+    Some notes:
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+	<meta name="color-scheme" content="light dark">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
-				overflow: visible !important;
+			overflow: visible !important;
 		}
+
 		/* For fixing the absolute position issue for the default cordova gen page*/
 		#cjp-accordion1 .app {
-				left: 5px !important;
-				margin: 5px !important;
-				position: relative !important;
+			left: 5px !important;
+			margin: 5px !important;
+			position: relative !important;
 		}
-		</style>
-        <title>Sport Connect - Create Event</title>
-    </head>
-    <body>
-		<!-- PAGE CREATE -->
-		<div data-role="page" >
-			<div class="headerCreate">
-				<img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-				<h1>Crear evento</h1>
-				<a href=""><img src="./img/index/campana.png" alt="Icono de notificación" class="notification-icon"></a>
+	</style>
+	<title>Sport Connect - Create Event</title>
+</head>
+
+<body>
+	<!-- PAGE CREATE -->
+	<div data-role="page" id="create-page">
+		<div class="headerCreate">
+			<img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
+			<h1>Crear evento</h1>
+			<a href=""><img src="./img/index/campana.png" alt="Icono de notificación" class="notification-icon"></a>
+		</div>
+
+		<div class="ui-content">
+			<div class="form">
+				<label for="titulo">Título:</label>
+				<input type="text" id="titulo" placeholder="Título del evento"><br>
+				<label for="tipoDeporte">Deporte:</label>
+				<select id="tipoDeporte">
+					<option value="Futbol">Futbol</option>
+					<option value="Baloncesto">Baloncesto</option>
+					<option value="Barras">Gimnasio</option>
+					<option value="Tenis mesa">Tenis mesa</option>
+					<option value="Tenis">Tenis</option>
+					<option value="Padel">Padel</option>
+					<!-- Agrega más opciones según tus necesidades -->
+				</select><br>
+
+				<label for="fecha">Fecha y hora:</label>
+				<div class="timeDate">
+					<input type="date" id="fecha">
+					<input type="time" id="hora">
+				</div><br>
+
+				<label for="ubicacion">Ubicación:</label>
+				<select id="ubicacion" data-native-menu="false">
+					<option value="">Selecciona una ubicación...</option>
+				</select><br>
+
+				<label for="descripcion">Descripción:</label>
+				<textarea id="descripcion" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
+				<button id="btnEnviar">Crear evento</button>
 			</div>
-			
-	
-			<div class="ui-content">
+		</div>
 
-				<div class="form">
-					<label for="titulo">Título:</label>
-					<input type="text" id="titulo" placeholder="Título del evento"><br>
-					<label for="tipoDeporte">Deporte:</label>
-					<select id="tipoDeporte">
-					  <option value="futbol">Fútbol</option>
-					  <option value="baloncesto">Baloncesto</option>
-					  <option value="tenis">Tenis</option>
-					  <option value="natacion">Natación</option>
-					  <!-- Agrega más opciones según tus necesidades -->
-					</select><br>
-	
-					<label for="fecha">Fecha y hora:</label>
-					<div class="timeDate">
-						<input type="date" id="fecha">
-						<input type="time" id="hora">
-					</div><br>
-					
-					<label for="ubicacion">Ubicación:</label>
-					<input type="text" id="ubicacion" placeholder="Ubicación"><br>
-					<label for="descripcion">Descripción:</label>
-					<textarea id="descripcion" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
-					<button id="btnEnviar">Crear evento</button>
-				</div>
-				
-
-
-
-			</div>
-		
-
-		
-
-
-
-			
-			<div data-role="footer" data-position="fixed" >
-				<div data-role="navbar">
-					<ul>
-						<li><a href="Index.html" ss>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="Index.html" ss>
 							<img class="small-image" src="img/index/iconoHome.png" alt="Page 1">
 							<p>Inicio</p>
 						</a></li>
-						<li><a href="Create.html" class="ui-btn-active ui-state-persist">
+					<li><a href="Create.html" class="ui-btn-active ui-state-persist">
 							<img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
 							<p>Crear</p>
 						</a></li>
-						<li><a href="Events.html">
+					<li><a href="Events.html">
 							<img class="small-image" src="img/index/calendar.png" alt="Page 3">
 							<p>Eventos</p>
 						</a></li>
-						<li><a href="Profile.html">
+					<li><a href="Profile.html">
 							<img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
 							<p>Perfil</p>
 						</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div><!-- /footer -->
-		</div><!-- /PAGE CREATE -->
-		
-		<script src="cordova.js"></script>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<script src="js/index.js"></script>
-		<script src="js/create.js"></script>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div><!-- /PAGE CREATE -->
 
-	</body>
+	<script src="cordova.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/create.js"></script>
+</body>
+
 </html>
