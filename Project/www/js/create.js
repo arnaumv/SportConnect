@@ -1,11 +1,32 @@
 $(document).ready(function(){
     var token = window.localStorage.getItem('token');
 
-    if (!token) {
-        // Si no hay un token, redirige al usuario a la página de inicio de sesión
-        window.location.href = 'login.html';
-        return;
-    }
+    // if (!token) {
+    //     // Si no hay un token, redirige al usuario a la página de inicio de sesión
+    //     window.location.href = 'login.html';
+    //     return;
+    // }
+
+    // $(function () {
+    //     // Realizar una solicitud AJAX para obtener el archivo ubicacion.json
+    //     $.ajax({
+    //         url: 'ubicacion.json',
+    //         dataType: 'json',
+    //         success: function (data) {
+    //             var ubicaciones = data.locations.map(function (ubicacion) {
+    //                 return ubicacion['nombre de ubicacion'];
+    //             });
+
+    //             // Inicializar el autocompletado en el campo de ubicación con los datos del arreglo
+    //             $("#autocomplete-input").autocomplete({
+    //                 source: ubicaciones
+    //             });
+    //         },
+    //         error: function (jqXHR, textStatus, errorThrown) {
+    //             console.error('Error al obtener ubicaciones:', textStatus, errorThrown);
+    //         }
+    //     });
+    // });
 
     $('#btnEnviar').click(function(e){
         e.preventDefault();
