@@ -1,6 +1,6 @@
 [
     {
-        "imagen": "./img/index/pelotaFutbol.png",
+        "imagen": "./img/index/futbol-background.png",
         "titulo": "Evento 1",
         "fecha": "12 de marzo de 2024",
         "ubicacion": "Lugar del evento 1",
@@ -8,7 +8,7 @@
         "categoria": "Futbol"
     },
     {
-        "imagen": "./img/index/pelotaBasquet.png",
+        "imagen": "./img/index/baloncesto-background.png",
         "titulo": "Evento 2",
         "fecha": "15 de marzo de 2024",
         "ubicacion": "Lugar del evento 2",

@@ -7,7 +7,7 @@
                 "longitude": 2.064821
             },
             "actividad": ["Futbol", "Baloncesto", "Tenis Mesa", "Barras"],
-            "imagen": "Project\\www\\img\\Places\\CampDeLesAigues.jpg"
+            "imagen": "./img/Places/CampDeLesAigues.jpg"
 
         },
         {
@@ -17,7 +17,7 @@
                 "longitude": 2.0638505
             },
             "actividad": ["Baloncesto", "Tenis Mesa"],
-            "imagen": "Project\\www\\img\\Places\\ParcDeLaInfanta.png"
+            "imagen": "./img/Places/ParcDeLaInfanta.png"
         },
 
         {
@@ -27,7 +27,7 @@
                 "longitude": 2.0624128
             },
             "actividad": ["Futbol", "Baloncesto"],
-            "imagen": "Project\\www\\img\\Places\\Sampa.png"
+            "imagen": "./img/Places/Sampa.png"
 
         },
 
@@ -38,7 +38,7 @@
                 "longitude": 2.072168
             },
             "actividad": ["Futbol", "Baloncesto"],
-            "imagen": "Project\\www\\img\\Places\\LaJaula.jpg"
+            "imagen": "./img/Places/LaJaula.jpg"
         },
 
         {
@@ -48,7 +48,7 @@
                 "longitude": 2.086180    
             },
             "actividad": ["Futbol"],
-            "imagen": "Project\\www\\img\\Places\\EspaiEsportiuAlmeda.jpg"
+            "imagen": "./img/Places/EspaiEsportiuAlmeda.jpg"
         },
 
 
@@ -59,7 +59,7 @@
                 "longitude": 2.0688359
             },
             "actividad": ["Padel"],
-            "imagen": "Project\\www\\img\\Places\\PadelDelfos.jpg"
+            "imagen": "./img/Places/PadelDelfos.jpg"
         },
 
         {
@@ -69,7 +69,7 @@
                 "longitude": 2.0684062
             },
             "actividad": ["Tenis"],
-            "imagen": "Project\\www\\img\\Places\\FederacioCatalanaTenis.jpeg"
+            "imagen": "./img/Places/FederacioCatalanaTenis.jpeg"
         },
 
         {
@@ -79,7 +79,7 @@
                 "longitude": 2.0687571
             },
             "actividad": ["Barras"],
-            "imagen": "Project\\www\\img\\Places\\Calistenia.jpg"
+            "imagen": "./img/Places/Calistenia.jpg"
         },
 
         {
@@ -89,7 +89,7 @@
                 "longitude": 2.0842169
             },
             "actividad": ["Futbol", "Baloncesto"],
-            "imagen": "Project\\www\\img\\Places\\EspaiEsportiuPasseigAlmeda.jpg"
+            "imagen": "./img/Places/EspaiEsportiuPasseigAlmeda.jpg"
         }, 
         
         {
@@ -117,7 +117,7 @@
                 "longitude": 2.0721183
             },
             "actividad": ["Baloncesto"],
-            "imagen": "Project\\www\\img\\Places\\PistaPauCasals.jpg"
+            "imagen": "./img/Places/PistaPauCasals.jpg"
         }, 
         
         {
@@ -127,7 +127,7 @@
                 "longitude": 2.078195
             },
             "actividad": ["Baloncesto"],
-            "imagen": "Project\\www\\img\\Places\\EspaiEsportiuPauRiera.jpg"
+            "imagen": "./img/Places/EspaiEsportiuPauRiera.jpg"
         },  
         
         {
@@ -137,7 +137,7 @@
                 "longitude": 2.081566
             },  
             "actividad": ["Futbol", "Baloncesto"],
-            "imagen": "Project\\www\\img\\Places\\PlaçaEuropa.jpg"
+            "imagen": "./www/img/Places/PlaçaEuropa.jpg"
         }, 
         
         {
