@@ -6,24 +6,20 @@ $(document).ready(function() {
         var contrasena = $('#contrasena').val();
 
         $.ajax({
-            url: 'http://localhost:8000/api/login/',
+            url: 'http://localhost:8000/login/',
             method: 'POST',
-            contentType: 'application/json',
             data: JSON.stringify({
                 email: email,
-                password: contrasena
+                contrasena: contrasena
             }),
+            contentType: 'application/json',
             success: function(data) {
-                console.log('Token: ' + data.token);
-                window.localStorage.setItem('token', data.token);
-                alert('Login successful!');
-                window.location.href = '/Index.html';
+                console.log('Response data:', data);
+                console.log('Login successful:', data);
+                localStorage.setItem('token', data.token);
             },
-            error: function(xhr, status, error) {
-                console.log('Error: ' + error);
-                console.log('Status: ' + status);
-                console.log(xhr);
-                alert('Error: ' + error + '. ' + 'Status: ' + status);
+            error: function(error) {
+                console.log('Error:', error);
             }
         });
     });

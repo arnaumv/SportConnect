@@ -1,40 +1,32 @@
-$(document).ready(function(){
-  $('#btnEnviar').click(function(){
-    var nombre = $('#nombre').val();
-    var apellido = $('#apellido').val();
-    var email = $('#email').val();
-    var contrasena = $('#contrasena').val();
-    var ciudad = $('#ciudad').val();
-    var añoNacimiento = $('#añoNacimiento').val();
-    console.log('Nombre: ' + nombre);
-    console.log('Apellido: ' + apellido);
-    console.log('Email: ' + email);
-    console.log('Contraseña: ' + contrasena);
-    console.log('Ciudad: ' + ciudad);
-    console.log('Año de Nacimiento: ' + añoNacimiento);
-    $.ajax({
-      url: 'http://localhost:8000/users/',  // URL de tu aplicación Django local
-      type: 'POST',
-      data: {
-          name: nombre,
-          surname: apellido,
-          email: email,
-          password: contrasena,
-          city: ciudad,
-          birth_date: añoNacimiento
-      },
-      success: function(result) {
-          // maneja el éxito
-          console.log(result);
-          alert('Usuario creado con éxito.');  
-          window.location.href = 'login.html';  // Redirige al usuario a la página de inicio de sesión
+$(document).ready(function() {
+  $('#btnEnviar').click(function(e) {
+      e.preventDefault();
 
-      },
-      error: function(error) {
-          // maneja el error
-          console.log(error);
-          alert('Hubo un error al crear el usuario.');  
-      }
-    });
+      var nombre = $('#nombre').val();
+      var apellido = $('#apellido').val();
+      var email = $('#email').val();
+      var contrasena = $('#contrasena').val();
+      var ciudad = $('#ciudad').val();
+      var fecha_nacimiento = $('#añoNacimiento').val();
+
+      $.ajax({
+          url: 'http://localhost:8000/usuario/',
+          method: 'POST',
+          data: JSON.stringify({
+              nombre: nombre,
+              apellido: apellido,
+              email: email,
+              contrasena: contrasena,
+              ciudad: ciudad,
+              fecha_nacimiento: fecha_nacimiento
+          }),
+          contentType: 'application/json',
+          success: function(data) {
+              console.log('Usuario creado con éxito:', data);
+          },
+          error: function(error) {
+              console.log('Error:', error);
+          }
+      });
   });
 });
