@@ -94,33 +94,7 @@ function onDeviceReady() {
 
         // Mostrar todos los eventos al cargar la página
         $('#all').trigger('click');
-    });
-
-
-    //create...
-
-    $(function () {
-        // Realizar una solicitud AJAX para obtener el archivo ubicacion.json
-        $.ajax({
-            url: 'ubicacion.json',
-            dataType: 'json',
-            success: function (data) {
-                var ubicaciones = data.locations.map(function (ubicacion) {
-                    return ubicacion['nombre de ubicacion'];
-                });
-    
-                // Inicializar el autocompletado en el campo de ubicación con los datos del arreglo
-                $("#ubicacion").autocomplete({
-                    source: ubicaciones
-                });
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error('Error al obtener ubicaciones:', textStatus, errorThrown);
-            }
-        });
-    });
-    
-
+    }); 
     
 }
 
