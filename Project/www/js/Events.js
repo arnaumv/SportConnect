@@ -23,6 +23,8 @@ document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
 
+    //// Events.js
+
     $(document).on('pagecreate', function(){
         var json_url = "Events.json";
         console.log("Heii");
@@ -64,6 +66,6 @@ function onDeviceReady() {
 
         // Mostrar todos los eventos al cargar la página
         $('#all').trigger('click');
-    });
+    }); 
 
 }
