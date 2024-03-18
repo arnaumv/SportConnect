@@ -55,26 +55,25 @@ $(document).ready(function(){
 
       // Si no hay errores, enviar los datos
       if(!hayErrores){
-          $.ajax({
-              url: 'http://localhost:8000/users/',
-              type: 'POST',
-              data: {
-                  name: nombre,
-                  surname: apellido,
-                  email: email,
-                  password: contrasena,
-                  city: ciudad,
-                  birth_date: añoNacimiento
-              },
-              success: function(result) {
-                  console.log(result);
-                  alert('Usuario creado con éxito.');  
-              },
-              error: function(error) {
-                  console.log(error);
-                  alert('Hubo un error al crear el usuario.');  
-              }
-          });
+        $.ajax({
+            url: 'http://localhost:8000/usuario/',
+            method: 'POST',
+            data: JSON.stringify({
+                nombre: nombre,
+                apellido: apellido,
+                email: email,
+                contrasena: contrasena,
+                ciudad: ciudad,
+                fecha_nacimiento: fecha_nacimiento
+            }),
+            contentType: 'application/json',
+            success: function(data) {
+                console.log('Usuario creado con éxito:', data);
+            },
+            error: function(error) {
+                console.log('Error:', error);
+            }
+        });
       }
   });
 });
