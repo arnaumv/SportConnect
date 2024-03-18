@@ -24,7 +24,7 @@ $(document).ready(function() {
         // Si no hay errores, puedes enviar la solicitud AJAX
         if (!hasErrors) {
             $.ajax({
-                url: 'http://localhost:8000/login/',
+                url: 'http://localhost:8001/login/',
                 method: 'POST',
                 data: JSON.stringify({
                     username: username,
@@ -33,6 +33,9 @@ $(document).ready(function() {
                 contentType: 'application/json',
                 success: function(data) {
                     console.log('Login successful:', data);
+                    // Guarda los tokens en el almacenamiento local del navegador
+                    localStorage.setItem('refreshToken', data.refresh);
+                    localStorage.setItem('accessToken', data.access);
                     // Redirige al usuario a index.html
                     window.location.href = 'Index.html';
                 },
@@ -40,6 +43,8 @@ $(document).ready(function() {
                     console.log('Error:', error);
                 }
             });
+        } else {
+            console.log('Hubo un error al iniciar sesión');
         }
     });
 });
