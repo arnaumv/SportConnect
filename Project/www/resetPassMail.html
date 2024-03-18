@@ -11,14 +11,13 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-		<meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">
 
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
@@ -43,14 +42,15 @@
 			
 	
 			<div class="ui-content">
-                <div class="resetPassDiv">
-
-                    <div class="form">
-						<h2>Introduce tu correo <br> electronico</h2>
-                        <input type="email" id="email" placeholder="Email"><br>
-                        <button id="btnEnviar">Recibir enlace de <br> recuperación</button>
-                    </div>
-                </div>
+				<div class="resetPassDiv">
+					<div class="form">
+						<h2>Introduce tu correo electrónico</h2>
+						<input type="email" id="email" placeholder="Correo electrónico"><br>
+						<span class="error" id="error_email"></span><br>
+						<button id="btnEnviar">Recibir enlace de recuperación</button>
+					</div>
+				</div>
+				
 
 			</div>
 		
@@ -84,16 +84,10 @@
 			</div><!-- /footer -->
 		</div><!-- /PAGE CREATE -->
 		
-		<script src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
-			/* For having a faster transition */
-			$(document).on("mobileinit", function() {
-					$.mobile.defaultPageTransition = "none";
-					$.mobile.defaultDialogTransition = "none";
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+		<script src="cordova.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/resetPassMail.js"></script>
-
 	</body>
 </html>

@@ -11,12 +11,14 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<meta name="color-scheme" content="light dark">
+		<link rel="icon" href="./img/index/logo1.png">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="css/index.css">
 		<style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
@@ -41,21 +43,19 @@
 			
 	
 			<div class="ui-content">
-                <div class="loginDiv">
-
+				<div class="loginDiv">
 					<div class="form">
 						<h2>Bienvenido</h2>
-						<input type="email" id="email" placeholder="Correo electrónico"><br>
-						<input type="password" id="contrasena" placeholder="Contraseña">
+						<input type="text" id="username" placeholder="Nombre de usuario"><br>
+						<span class="error" id="error_username"></span><br> <!-- Aquí se mostrará el mensaje de error para el nombre de usuario -->
+						<input type="password" id="password" placeholder="Contraseña">
+						<span class="error" id="error_password"></span><br> <!-- Aquí se mostrará el mensaje de error para la contraseña -->
 						<a href="">¿Olvidaste la contraseña?</a><br><br>
-						<button id="btnEnviar">Iniciar Sesión</button>
+						<button id="btnSubmit">Iniciar Sesión</button>
 						<a class="centered-link" href="">Crear una cuenta nueva</a><br><br>
-	
 					</div>
-                </div>
-
+				</div>				
 			</div>
-		
 
 		
 
@@ -86,16 +86,11 @@
 			</div><!-- /footer -->
 		</div><!-- /PAGE CREATE -->
 		
-		<script src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
-			/* For having a faster transition */
-			$(document).on("mobileinit", function() {
-					$.mobile.defaultPageTransition = "none";
-					$.mobile.defaultDialogTransition = "none";
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
-		<script src="js/index.js"></script>
+		<script src="cordova.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/login.js"></script>
+		<script src="js/index.js"></script>
 
 	</body>
 </html>

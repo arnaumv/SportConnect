@@ -11,8 +11,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; connect-src 'self' http://localhost:8000; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-
+		
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -21,7 +20,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
@@ -75,27 +74,38 @@
 				<h2>Descubre los deportes disponibles</h2>
 				<div class="container2">
 					<div class="column">
-						<img src="./img/index/pelotaFutbol.png" alt="Image 1">
+						<img src="./img/index/futbol-background.png" alt="Image 1">
+						<img class="small-img" src="./img/index/pelota.png" alt="Small Image">
 						<p>Futbol</p>
 					</div>
 					<div class="column">
-						<img src="./img/index/pelotaBasquet.png" alt="Image 2">
+						<img src="./img/index/baloncesto-background.png" alt="Image 2">
+						<img class="small-img" src="./img/index/pelota-baloncesto.png" alt="Small Image">
+
 						<p>Baloncesto</p>
 					</div>
 					<div class="column">
-						<img src="./img/index/Gimnasio.png" alt="Image 2">
+						<img src="./img/index/gimnasio-calle.png" alt="Image 2">
+						<img class="small-img" src="./img/index/gym.png" alt="Small Image">
+
 						<p>Gimnasio</p>
 					</div>
 					<div class="column">
-						<img src="./img/index/PingPong.png" alt="Image 2">
+						<img src="./img/index/pingpong-index.png" alt="Image 2">
+						<img class="small-img" src="./img/index/ping-pong.png" alt="Small Image">
+
 						<p>Tenis mesa</p>
 					</div>
 					<div class="column">
 						<img src="./img/index/Tenis.png" alt="Image 2">
+						<img class="small-img" src="./img/index/pelota-tenis.png" alt="Small Image">
+
 						<p>Tenis</p>
 					</div>
 					<div class="column">
 						<img src="./img/index/Padel.png" alt="Image 2">
+						<img class="small-img" src="./img/index/pala-padel.png" alt="Small Image">
+
 						<p>Padel</p>
 					</div>
 					
@@ -108,30 +118,6 @@
 
 			</div><!-- end page 1 content -->
 			
-		
-			<script>
-				
-				// Map initialization script
-				var json_url = "ubicacion.json";
-			
-				var map = L.map('mapa').setView([41.357805, 2.0379357], 13);
-				L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
-				fetch(json_url)
-					.then(response => response.json())
-					.then(data => {
-						if (data.locations && data.locations.length > 0) {
-							data.locations.forEach(ubicacion => {
-								var marker = L.marker([ubicacion.ubicacion.latitude, ubicacion.ubicacion.longitude]).addTo(map);
-								var actividades = ubicacion.actividad.join(', '); // Join the activities into a single string separated by commas
-								marker.bindPopup('<b>' + ubicacion["nombre de ubicacion"] + '</b><br><b>Actividad:</b> ' + actividades);
-							});
-						}
-					});
-			</script>
-
-		
-
-
 
 			
 			<div data-role="footer" data-position="fixed" >
@@ -157,15 +143,10 @@
 				</div><!-- /navbar -->
 			</div><!-- /footer -->
 		</div><!-- /page 1 -->
-		
-		<script src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
-			/* For having a faster transition */
-			$(document).on("mobileinit", function() {
-					$.mobile.defaultPageTransition = "none";
-					$.mobile.defaultDialogTransition = "none";
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+
+		<script src="cordova.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/index.js"></script>
 	</body>
 </html>

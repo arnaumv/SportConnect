@@ -11,14 +11,13 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; connect-src 'self' http://localhost:8000; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
@@ -46,24 +45,18 @@
 			<div class="ui-content">
 
 				<div class="form">
-					<input type="text" id="nombre" placeholder="Nombre"><br><br>
-					<input type="text" id="apellido" placeholder="Apellido"><br><br>
-					<input type="email" id="email" placeholder="Email"><br><br>
-					<input type="password" id="contrasena" placeholder="Contraseña"><br><br>
-					<input type="text" id="ciudad" placeholder="Ciudad"><br><br>
-					<label for="añoNacimiento">Fecha de nacimiento:</label>
-					<input type="date" id="añoNacimiento" placeholder="Año de Nacimiento"><br><br>
-					<button id="btnEnviar">Continuar</button>
+					<input type="text" id="username" placeholder="Nombre de usuario"><span class="error" id="error_username"></span><br><br>
+					<input type="email" id="email" placeholder="Email"><span class="error" id="error_email"></span><br><br>
+					<input type="password" id="password" placeholder="Contraseña"><span class="error" id="error_password"></span><br><br>
+					<input type="text" id="city" placeholder="Ciudad"><span class="error" id="error_city"></span><br><br>
+					<label for="birthdate">Fecha de nacimiento:</label>
+					<input type="date" id="birthdate" placeholder="Fecha de Nacimiento"><span class="error" id="error_birthdate"></span><br><br>
+					<button id="btnSubmit">Continuar</button>
 				</div>
+				
 
 			</div>
 		
-
-		
-
-		
-
-
 
 			
 			<div data-role="footer" data-position="fixed" >
@@ -90,14 +83,9 @@
 			</div><!-- /footer -->
 		</div><!-- /PAGE CREATE -->
 		
-		<script src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
-			/* For having a faster transition */
-			$(document).on("mobileinit", function() {
-					$.mobile.defaultPageTransition = "none";
-					$.mobile.defaultDialogTransition = "none";
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+		<script src="cordova.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/newUser.js"></script>
 
