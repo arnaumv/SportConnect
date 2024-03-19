@@ -1,5 +1,5 @@
-$(document).ready(function(){
-  $('#btnEnviar').click(function(){
+$(document).on('click', '#btnEnviar', function() {
+    $('#btnEnviar').click(function(){
       // Restablecer los mensajes de error
       $('.error').text('');
 
