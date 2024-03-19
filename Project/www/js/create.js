@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 
 
-    var token = window.localStorage.getItem('token');
+   // var token = window.localStorage.getItem('token');
 
     // if (!token) {
     //     // Si no hay un token, redirige al usuario a la página de inicio de sesión
