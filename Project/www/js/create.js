@@ -1,4 +1,4 @@
-$(document).on('click', '#btnEnviar', function() {
+$(document).ready(function(){
     // CREATE
 
     document.addEventListener("deviceready", function() {
