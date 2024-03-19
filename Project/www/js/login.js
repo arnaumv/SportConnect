@@ -41,7 +41,8 @@ $(document).on('click', '#btnSubmit', function() {
                 localStorage.setItem('accessToken', data.access);
                 localStorage.setItem('username', username);
                 // Redirige al usuario a index.html
-                window.location.href = 'Index.html';
+                window.location.href = 'profile.html';
+
             },
             error: function(error) {
                 console.log('Error:', error);

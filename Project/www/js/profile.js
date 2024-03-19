@@ -1,28 +1,23 @@
 $(document).ready(function() {
-    // Obtener el nombre de usuario y el token de acceso del almacenamiento local
+    // Obtener el nombre de usuario del almacenamiento local
     var username = localStorage.getItem('username');
-    var accessToken = localStorage.getItem('accessToken');
 
-    // Imprimir el nombre de usuario y el token de acceso en la consola
+    // Imprimir el nombre de usuario en la consola
     console.log('Username:', username);
-    console.log('Access Token:', accessToken);
 
-    // Si el nombre de usuario o el token de acceso no existen, redirigir al usuario a la página de inicio de sesión
-    if (!username || !accessToken) {
-        console.error('Error: No se pudo cargar el nombre de usuario o el token de acceso');
+    // Si el nombre de usuario no existe, redirigir al usuario a la página de inicio de sesión
+    if (!username) {
+        console.error('Error: No se pudo cargar el nombre de usuario');
         window.location.href = 'login.html';
         return;
     } else {
-        console.log('El nombre de usuario y el token de acceso se cargaron correctamente');
+        console.log('El nombre de usuario se cargó correctamente');
     }
 
     // Hacer una solicitud a la API para obtener los detalles del usuario
     $.ajax({
         url: 'http://127.0.0.1:8000/profile/' + username + '/',
         method: 'GET',
-        headers: {
-            'Authorization': 'Bearer ' + accessToken
-        },
         success: function(data) {
             // Mostrar los detalles del usuario en la página
             $('#username').text(data.username);
