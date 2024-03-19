@@ -12,7 +12,9 @@ $(document).ready(function(){
         
         // Variable para verificar si hay errores
         var hasErrors = false;
-  
+        
+        //8 caracteres, min y may, y numeros...
+
         // Validación del nombre de usuario
         if(username === ''){
             $('#error_username').text('Por favor, introduce tu nombre de usuario');
