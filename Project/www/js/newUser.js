@@ -1,6 +1,7 @@
 $(document).ready(function() {
+    console.log("NewUser");
   // Validación del nombre de usuario al perder el foco
-  $('#username').on('focusout', function() {
+  $('.formNewUser #username').on('focusout', function() {
       var username = $(this).val().trim();
       if(username === ''){
           $('#error_username').text('Por favor, introduce tu nombre de usuario');
@@ -10,7 +11,7 @@ $(document).ready(function() {
   });
 
   // Validación del correo electrónico al perder el foco
-  $('#email').on('focusout', function() {
+  $('.formNewUser #email').on('focusout', function() {
       var email = $(this).val().trim();
       if(email === ''){
           $('#error_email').text('Por favor, introduce tu correo electrónico');
@@ -22,7 +23,7 @@ $(document).ready(function() {
   });
 
   // Validación de la contraseña al perder el foco
-  $('#password').on('focusout', function() {
+  $('.formNewUser #password').on('focusout', function() {
       var password = $(this).val().trim();
       if(password.length < 8 || password.length > 128){
           $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');
@@ -32,8 +33,8 @@ $(document).ready(function() {
   });
 
   // Confirmación de la contraseña al perder el foco
-  $('#confirm_password').on('focusout', function() {
-      var password = $('#password').val().trim();
+  $('.formNewUser #confirm_password').on('focusout', function() {
+      var password = $('.formNewUser #password').val().trim();
       var confirm_password = $(this).val().trim();
       if(password !== confirm_password){
           $('#error_confirm_password').text('Las contraseñas no coinciden');
@@ -43,7 +44,7 @@ $(document).ready(function() {
   });
 
   // Validación de la ciudad al perder el foco
-  $('#city').on('focusout', function() {
+  $('.formNewUser #city').on('focusout', function() {
       var city = $(this).val().trim();
       if(city.length < 2){
           $('#error_city').text('La ciudad debe tener al menos 2 caracteres');
@@ -53,27 +54,27 @@ $(document).ready(function() {
   });
 
   // Validación de la fecha de nacimiento al perder el foco
-  $('#birthdate').on('focusout', function() {
+  $('.formNewUser #birthdate').on('focusout', function() {
       var birthdate = $(this).val().trim();
       if(birthdate === ''){
-          $('#error_birthdate').text('Por favor, introduce tu fecha de nacimiento');
+          $('.formNewUser #error_birthdate').text('Por favor, introduce tu fecha de nacimiento');
       } else if(!isValidDate(birthdate)){
-          $('#error_birthdate').text('La fecha de nacimiento no es válida');
+          $('.formNewUser #error_birthdate').text('La fecha de nacimiento no es válida');
       } else {
           $('#error_birthdate').text('');
       }
   });
 
-  $('#btnSubmit').on('click', function() {
+  $('.formNewUser #btnSubmit').on('click', function() {
       console.log("El botón ha sido presionado");
 
       // Obtener los valores de los campos del formulario
-      var username = $('#username').val().trim();
-      var email = $('#email').val().trim();
-      var password = $('#password').val().trim();
-      var confirm_password = $('#confirm_password').val().trim();
-      var city = $('#city').val().trim();
-      var birthdate = $('#birthdate').val().trim();
+      var username = $('.formNewUser #username').val().trim();
+      var email = $('.formNewUser #email').val().trim();
+      var password = $('.formNewUser #password').val().trim();
+      var confirm_password = $('.formNewUser #confirm_password').val().trim();
+      var city = $('.formNewUser #city').val().trim();
+      var birthdate = $('.formNewUser #birthdate').val().trim();
       console.log(username, email, password, confirm_password, city, birthdate);
 
       // Variable para verificar si hay errores
@@ -86,28 +87,30 @@ $(document).ready(function() {
 
       // Si no hay errores, enviar los datos
       if(!hasErrors){
-          // Aquí podrías enviar los datos a través de AJAX o realizar otra acción
-          alert('¡Formulario enviado correctamente!');
-          $.ajax({
-            url: 'http://127.0.0.1:8000/usuario/', 
+        $.ajax({
+            url: 'http://127.0.0.1:8000/login/',
             method: 'POST',
-            data: {
-              username: username,
-              email: email,
-              password: password,
-              city: city,
-              birthdate: birthdate
-            },
+            contentType: 'application/json',
+            data: JSON.stringify({
+                username: username,
+                password: password
+            }),
             success: function(data) {
-              console.log('Usuario creado con éxito:', data);
-              // Redirige al usuario a login.html
-              window.location.href = 'login.html';
+                console.log('Login successful:', data);
+                // Guarda los tokens y el nombre de usuario en el almacenamiento local del navegador
+                localStorage.setItem('refreshToken', data.refresh);
+                localStorage.setItem('accessToken', data.access);
+                localStorage.setItem('username', username);
+                // Redirige al usuario a index.html
+                window.location.href = 'profile.html';
             },
             error: function(error) {
-              console.log('Error:', error);
+                console.log('Error:', error);
             }
-          });
-      } 
+        });
+    } else {
+        console.log('Hubo un error al iniciar sesión');
+    }
   });
 
   // Función para validar el formato del correo electrónico

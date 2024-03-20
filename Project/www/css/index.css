@@ -600,16 +600,15 @@ p {
     margin-top: 20%;
 }
 
-.form a {
+.formNewUser a {
     font-size: 12px;
     color: gray !important;
 }
 
-.form h2 {
+.formNewUser h2 {
     text-align: center;
 
 }
-
 .centered-link {
     margin-top: 20px;
     display: block;

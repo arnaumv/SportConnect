@@ -19,19 +19,23 @@
 
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
-document.addEventListener('deviceready', onDeviceReady, false);
-
-function onDeviceReady() {
-
-    //// Events.js
 
     $(document).on('pagecreate', function(){
         var json_url = "Events.json";
         console.log("Heii");
-        // Cargar el JSON externo y mostrar todos los eventos al principio
-        $.getJSON(json_url, function(eventos) {
-            mostrarEventos(eventos);
-        });
+
+        // Verificar si hay datos almacenados en el localStorage
+        var eventosGuardados = localStorage.getItem('eventos');
+        if (eventosGuardados) {
+            mostrarEventos(JSON.parse(eventosGuardados));
+        } else {
+            // Cargar el JSON externo y mostrar todos los eventos al principio
+            $.getJSON(json_url, function(eventos) {
+                mostrarEventos(eventos);
+                // Guardar eventos en el localStorage
+                localStorage.setItem('eventos', JSON.stringify(eventos));
+            });
+        }
 
         // Función para mostrar todos los eventos
         function mostrarEventos(eventos) {
@@ -68,4 +72,3 @@ function onDeviceReady() {
         $('#all').trigger('click');
     }); 
 
-}

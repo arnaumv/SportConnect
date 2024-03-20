@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Validación del nombre de usuario al perder el foco
-    $('#username').on('focusout', function() {
+    $('.formLogin #username').on('focusout', function() {
         var username = $(this).val().trim();
         if(username === ''){
             $('#error_username').text('Por favor, introduce tu nombre de usuario');
@@ -10,7 +10,7 @@ $(document).ready(function() {
     });
 
     // Validación de la contraseña al perder el foco
-    $('#password').on('focusout', function() {
+    $('.formLogin #password').on('focusout', function() {
         var password = $(this).val().trim();
         if(password.length < 8 || password.length > 128){
             $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');
@@ -19,12 +19,12 @@ $(document).ready(function() {
         }
     });
 
-    $('#btnSubmit').on('click', function() {
+    $('.formLogin #btnSubmit').on('click', function() {
         console.log("El botón ha sido presionado");
 
         // Obtener los valores de los campos del formulario
-        var username = $('#username').val().trim();
-        var password = $('#password').val().trim();
+        var username = $('.formLogin #username').val().trim();
+        var password = $('.formLogin #password').val().trim();
         console.log(username, password);
 
         // Variable para verificar si hay errores
@@ -61,5 +61,15 @@ $(document).ready(function() {
         } else {
             console.log('Hubo un error al iniciar sesión');
         }
+    });
+});
+
+$(document).ready(function() {
+    // Seleccionar todos los elementos con la clase "centered-link"
+    $(".centered-link").click(function(event) {
+
+        
+        // Redirigir a la nueva URL
+        window.location.href = "newUser.html";
     });
 });
