@@ -52,7 +52,7 @@ $(document).ready(function() {
                     localStorage.setItem('accessToken', data.access);
                     localStorage.setItem('username', username);
                     // Redirige al usuario a index.html
-                    window.location.href = 'profile.html';
+                    window.location.href = 'Profile.html';
                 },
                 error: function(error) {
                     console.log('Error:', error);
