@@ -64,32 +64,25 @@ $(document).on('click', '#btnEnviar', function() {
 
 
 
-   // var token = window.localStorage.getItem('token');
-
-    // if (!token) {
-    //     // Si no hay un token, redirige al usuario a la página de inicio de sesión
-    //     window.location.href = 'login.html';
-    //     return;
-    // }
-
-
     $('#btnEnviar').click(function(e){
         e.preventDefault();
-
-        // Si hay un token, procede a crear el evento
+    
+        // Obtén el nombre de usuario del almacenamiento local
+        var username = localStorage.getItem('username');
+    
+        // Si hay un nombre de usuario, procede a crear el evento
         var titulo = $('#titulo').val();
         var tipoDeporte = $('#tipoDeporte').val();
         var fecha = $('#fecha').val();
         var hora = $('#hora').val();
         var ubicacion = $('#ubicacion').val();
         var descripcion = $('#descripcion').val();
-
+    
         $.ajax({
-            url: 'http://localhost:8001/events/',  // URL de tu aplicación Django local
+            url: 'http://127.0.0.1:8000/events/',  // URL de tu aplicación Django local
             type: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + token // Aquí se incluye el token en la cabecera de la solicitud
             },
             data: JSON.stringify({
                 title: titulo,
@@ -97,7 +90,8 @@ $(document).on('click', '#btnEnviar', function() {
                 date: fecha,
                 time: hora,
                 location: ubicacion,
-                description: descripcion
+                description: descripcion,
+                username: username  // Añade el nombre de usuario aquí
             }),
             success: function(result) {
                 // maneja el éxito
