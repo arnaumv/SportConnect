@@ -1,4 +1,6 @@
-$(document).on('click', '#btnSubmit', function() {
+$(document).on('click', '#btnSubmit', function(event) {
+  event.preventDefault();
+
     console.log("El botón ha sido presionado");
 
     // Restablecer los mensajes de error
