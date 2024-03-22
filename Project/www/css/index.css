@@ -16,6 +16,32 @@ body .ui-btn, body label.ui-btn  {
     border-style: none !important;
 }
 
+/********** INDEX **********/
+
+.colorIndex {
+    background-color: #2b2d42 !important;
+}
+
+.pIndex {
+    margin-top: 50px; /* Ajusta este valor según tus necesidades */
+    color: #ffffff;
+    text-shadow: 0 0px 0 #f3f3f3;
+    margin-left: 30px;
+
+}
+
+#buttonCreate, #buttonLogin {
+    font-weight: 700;
+    border-width: 1px;
+    border-style: solid !important; /* Esto agrega un borde */
+    border-color: white !important; /* Esto hace que el borde sea blanco */
+    background-color: transparent !important; /* Esto hace que el fondo sea transparente */
+    color: white !important; /* Esto hace que el texto sea blanco */
+    display: block; /* Esto convierte los botones en bloques */
+    margin: auto; /* Esto centra los botones horizontalmente */
+    width: 85%; /* Esto limita el ancho de los botones al 80% */
+    text-shadow: none !important; /* Esto elimina la sombra del texto */
+}
 
 /********** HEADER-LANDINGPAGE **********/
 .headerIndex {
