@@ -1,4 +1,5 @@
-$(document).ready(function() {
+console.log('updateProfile.js loaded');
+$(document).on('pagecreate', function() {
     var storedUsername = localStorage.getItem('username');
     var storedCity = localStorage.getItem('city');
 

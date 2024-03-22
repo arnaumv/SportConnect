@@ -82,6 +82,7 @@ $(document).ready(function() {
                                 success: function(result) {
                                     console.log('AJAX request successful. Event created:', result);
                                     alert('Evento creado con éxito.');
+                                    window.location.href = 'landingpage.html'; // Redirige al usuario a 'create.html'
                                 },
                                 error: function(error) {
                                     console.log('AJAX request failed. Error creating event:', error);

@@ -15,145 +15,54 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
-		<link rel="icon" href="./img/index/logo1.png">
-		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <link rel="icon" href="./img/index/logo1.png">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-		<style>
-		/* For avoiding title truncation in wp8 */
-		.ui-header .ui-title {
-				overflow: visible !important;
-		}
-		/* For fixing the absolute position issue for the default cordova gen page*/
-		#cjp-accordion1 .app {
-				left: 5px !important;
-				margin: 5px !important;
-				position: relative !important;
-		}
-		</style>
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <style>
+        /* For avoiding title truncation in wp8 */
+        .ui-header .ui-title {
+                overflow: visible !important;
+        }
+        /* For fixing the absolute position issue for the default cordova gen page*/
+        #cjp-accordion1 .app {
+                left: 5px !important;
+                margin: 5px !important;
+                position: relative !important;
+        }
+        </style>
         <title>Sport Connect - Index</title>
     </head>
     <body>
-		<!-- page 1 -->
-		
-		<div data-role="page" id="page1">
-			<div class="headerIndex">
-				<img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-				<h1>SPORT CONNECT</h1>
-				<a href=""><img src="./img/index/campana.png" alt="Icono de notificación" class="notification-icon"></a>
-			</div>
+        <!-- page 1 -->
+        
+        <div data-role="page" id="page1">
+            <div class="headerIndex">
+                <img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
+                <h1>SPORT CONNECT</h1>
+                <a href=""><img src="./img/index/campana.png" alt="Icono de notificación" class="notification-icon"></a>
+            </div>
+            <!-- Add login and create account links -->
+            <div>
+                <a href="login.html">Iniciar sesión</a>
+                <a href="newUser.html">Crear cuenta</a>
+            </div>
+                        
+        </div><!-- /page 1 -->
 
-			<div class="ui-content">
-				<div class="container">
-					<H2>Sacale todo el partido a sportconnect</H2>
-
-					<!--<h2>Saca todo el partido a Playtomic</h2> -->
-					<div class="row">
-						<div class="col bordered"  style="background-image: url('./img/index/imgIndex1.png');">
-							<h3></h3>
-							<p class="paragraph1">Mantente activo y conectado a través del deporte.</p>
-						</div>
-						<div class="col">
-							<div class="col bordered" style="background-image: url('./img/index/FUTBOL.png');">
-								<h3></h3>
-								<p class="paragraph2">Organiza y unete a eventos deportivos locales.
-								</p>
-							</div>
-							<div class="col bordered" style="background-image: url('./img/index/imgIndex3.png');">
-								<h3></h3>
-								<p class="paragraph3">Conoce a personas con intereses similares.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<h2>Descubre los deportes disponibles</h2>
-				<div class="container2">
-					<div class="column">
-						<img src="./img/index/futbol-background.png" alt="Image 1">
-						<img class="small-img" src="./img/index/pelota.png" alt="Small Image">
-						<p>Futbol</p>
-					</div>
-					<div class="column">
-						<img src="./img/index/baloncesto-background.png" alt="Image 2">
-						<img class="small-img" src="./img/index/pelota-baloncesto.png" alt="Small Image">
-
-						<p>Baloncesto</p>
-					</div>
-					<div class="column">
-						<img src="./img/index/gimnasio-calle.png" alt="Image 2">
-						<img class="small-img" src="./img/index/gym.png" alt="Small Image">
-
-						<p>Gimnasio</p>
-					</div>
-					<div class="column">
-						<img src="./img/index/pingpong-index.png" alt="Image 2">
-						<img class="small-img" src="./img/index/ping-pong.png" alt="Small Image">
-
-						<p>Tenis mesa</p>
-					</div>
-					<div class="column">
-						<img src="./img/index/Tenis.png" alt="Image 2">
-						<img class="small-img" src="./img/index/pelota-tenis.png" alt="Small Image">
-
-						<p>Tenis</p>
-					</div>
-					<div class="column">
-						<img src="./img/index/Padel.png" alt="Image 2">
-						<img class="small-img" src="./img/index/pala-padel.png" alt="Small Image">
-
-						<p>Padel</p>
-					</div>
-					
-				</div>
-
-				
-				<h2>Ubicaciones cerca de ti  </h2>
-				<div id="mapa" class="mapa"></div>		
-			
-
-			</div><!-- end page 1 content -->
-			
-
-			
-			<div data-role="footer" data-position="fixed" >
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#page1" class="ui-btn-active ui-state-persist">
-							<img class="small-image" src="img/index/iconoHome.png" alt="Page 1">
-							<p>Inicio</p>
-						</a></li>
-						<li><a href="Create.html">
-							<img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
-							<p>Crear</p>
-						</a></li>
-						<li><a href="Events.html">
-							<img class="small-image" src="img/index/calendar.png" alt="Page 3">
-							<p>Eventos</p>
-						</a></li>
-						<li><a href="Profile.html">
-							<img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
-							<p>Perfil</p>
-						</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div><!-- /footer -->
-		</div><!-- /page 1 -->
-
-		<script src="cordova.js"></script>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<script src="js/index.js"></script>
-		<script src="js/create.js"></script>
-		<script src="js/Events.js"></script>
-		<script src="js/login.js"></script>
-		<script src="js/newUser.js"></script>
-		<script src="js/resetPass.js"></script>
-		<script src="js/resetPassMail.js"></script>	
-		<script src="js/Profile.js"></script>
+        <script src="cordova.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
 		<script src="js/updateProfile.js"></script>	
-	</body>
+        <script src="js/create.js"></script>
+        <script src="js/Events.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/newUser.js"></script>
+        <script src="js/resetPass.js"></script>
+        <script src="js/resetPassMail.js"></script>	
+        <script src="js/Profile.js"></script>
+        
+    </body>
 </html>

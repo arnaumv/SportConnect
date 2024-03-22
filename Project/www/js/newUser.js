@@ -1,3 +1,5 @@
+console.log("CREATE USER JS CARGADO");
+
 $(document).on('click', '#btnSubmit', function(event) {
   event.preventDefault();
 
