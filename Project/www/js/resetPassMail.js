@@ -1,38 +1,9 @@
-$(document).ready(function() {
+$(document).on('pagecreate', function() {
+    console.log("FICHERO RESETPASSMAILJS");  // Console log here
 
-    //Movilidad entre paginas
-    $('#landingpage').on('click', function() {
-        window.location.href = 'landingpage.html';
-    });
+    $('#btnEnviarMail').on('vclick', function() {
+        console.log("Button clicked");  // Console log here
 
-    $('#create').on('click', function() {
-        window.location.href = 'Create.html';
-    });
-
-    $('#events').on('click', function() {
-        window.location.href = 'Events.html';
-    });
-
-    $('#profile').on('click', function() {
-        window.location.href = 'Profile.html';
-    });
-    
-    $('#email').on('input', function() {
-        console.log("escribiendo...")
-        // Restablecer los mensajes de error
-        $('.error').text('');
-
-        // Obtener el valor del campo de correo electrónico
-        var email = $(this).val().trim();
-
-        // Validación del correo electrónico
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            $('#error_email').text('Introduce un correo electrónico válido');
-        }
-    });
-
-    $('#btnEnviarMail').click(function() {
         // Restablecer los mensajes de error
         $('.error').text('');
 
@@ -52,8 +23,22 @@ $(document).ready(function() {
         // Si no hay errores, puedes continuar con el proceso
         if (!hayErrores) {
             // Aquí puedes agregar la lógica para enviar la solicitud AJAX
-        console.log("ejecutar ajax");
+            console.log("ejecutar ajax");
+
+            $.ajax({
+                url: 'http://127.0.0.1:8000/reset_password/',  // URL de la vista que envía el correo
+                method: 'POST',
+                data: {
+                    email: email,
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                },
+                success: function() {
+                    alert('Correo de restablecimiento de contraseña enviado');
+                },
+                error: function() {
+                    alert('Hubo un error al enviar el correo de restablecimiento de contraseña');
+                }
+            });
         }
     });
 });
-
