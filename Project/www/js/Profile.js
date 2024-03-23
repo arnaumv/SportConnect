@@ -21,6 +21,10 @@ function onDeviceReady() {
     $('#profile').on('click', function() {
         window.location.href = 'Profile.html';
     });
+
+    $('#EditProfile').on('click', function() {
+        window.location.href = 'EditProfile.html';
+    });
     
     $(document).on('pageinit', function() {
         var json_url = "Events.json";
