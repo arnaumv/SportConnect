@@ -26,6 +26,14 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
 
+
+    $('#buttonLogin').on('click', function() {
+        window.location.href = 'login.html';
+    });
+
+    $('#buttonRegister').on('click', function() {
+        window.location.href = 'newUser.html';
+    });
     // Map initialization script
     var json_url = "ubicacion.json";
                 

@@ -1,4 +1,5 @@
-$(document).ready(function() {
+console.log('login.js loaded');
+$(document).on('pagecreate', function() {
     // Validación del nombre de usuario al perder el foco
     $('.formLogin #username').on('focusout', function() {
         var username = $(this).val().trim();
@@ -51,8 +52,8 @@ $(document).ready(function() {
                     localStorage.setItem('refreshToken', data.refresh);
                     localStorage.setItem('accessToken', data.access);
                     localStorage.setItem('username', username);
-                    // Redirige al usuario a index.html
-                    window.location.href = 'profile.html';
+
+                    window.location.href = 'landingpage.html';
                 },
                 error: function(error) {
                     console.log('Error:', error);

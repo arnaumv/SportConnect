@@ -2,7 +2,7 @@
     {
         "imagen": "./img/index/futbol-background.png",
         "titulo": "Evento 1",
-        "fecha": "12 de marzo de 2024",
+        "fecha": "2024-03-20",
         "ubicacion": "Lugar del evento 1",
         "enlace": "InfoEvent.html",
         "categoria": "Futbol"
@@ -10,9 +10,17 @@
     {
         "imagen": "./img/index/baloncesto-background.png",
         "titulo": "Evento 2",
-        "fecha": "15 de marzo de 2024",
+        "fecha": "2024-03-15",
         "ubicacion": "Lugar del evento 2",
         "enlace": "InfoEvent.html",
         "categoria": "Baloncesto"
+    },
+    {
+        "imagen": "./img/index/gimnasio-calle.png",
+        "titulo": "Evento 3",
+        "fecha": "2024-03-22",
+        "ubicacion": "Lugar del evento 3",
+        "enlace": "InfoEvent.html",
+        "categoria": "Gimnasio"
     }
 ]
