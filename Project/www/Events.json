@@ -10,7 +10,7 @@
     {
         "imagen": "./img/index/baloncesto-background.png",
         "titulo": "Evento 2",
-        "fecha": "2024-03-15",
+        "fecha": "2024-04-15",
         "ubicacion": "Lugar del evento 2",
         "enlace": "InfoEvent.html",
         "categoria": "Baloncesto"
