@@ -22,25 +22,74 @@ body .ui-btn, body label.ui-btn  {
     background-color: #2b2d42 !important;
 }
 
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.div-logo-title, .pIndex, #buttonCreate, #buttonLogin {
+    animation: slideUp 1s ease-out;
+}
+
 .pIndex {
-    margin-top: 50px; /* Ajusta este valor según tus necesidades */
+    margin-top: 1px; 
     color: #ffffff;
     text-shadow: 0 0px 0 #f3f3f3;
     margin-left: 30px;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
 
+.span-large {
+    font-size: 1.8em; 
 }
 
 #buttonCreate, #buttonLogin {
     font-weight: 700;
     border-width: 1px;
-    border-style: solid !important; /* Esto agrega un borde */
-    border-color: white !important; /* Esto hace que el borde sea blanco */
-    background-color: transparent !important; /* Esto hace que el fondo sea transparente */
-    color: white !important; /* Esto hace que el texto sea blanco */
-    display: block; /* Esto convierte los botones en bloques */
-    margin: auto; /* Esto centra los botones horizontalmente */
-    width: 85%; /* Esto limita el ancho de los botones al 80% */
-    text-shadow: none !important; /* Esto elimina la sombra del texto */
+    border-style: solid !important; 
+    border-color: white !important; 
+    background-color: transparent !important; 
+    color: white !important; 
+    display: block;
+    margin: auto; 
+    width: 85%; 
+    text-shadow: none !important; 
+    border-radius: 20px; 
+}
+
+#buttonCreate {
+    background-color: rgba(46, 165, 245, 0.336) !important; 
+}
+
+.pTitleIndex {
+    margin-top: 200px;
+    font-family: Arial, sans-serif; 
+    font-size: 2.1em; 
+    letter-spacing: 0.1em; 
+    text-transform: uppercase; 
+    text-align: center; 
+    color: aliceblue;
+}
+
+.div-logo-title {
+    display: flex;
+    align-items: center;
+    margin: auto; 
+}
+
+.img-index {
+    width: 40px;
+    height: auto;
+    margin-top: 175px;
+    margin-left: 20px;
+    margin-right: 3px;
 }
 
 /********** HEADER-LANDINGPAGE **********/
