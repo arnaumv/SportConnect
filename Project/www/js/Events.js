@@ -21,6 +21,24 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 
     $(document).on('pagecreate', function(){
+
+        //Movilidad entre paginas
+        $('#landingpage').on('click', function() {
+            window.location.href = 'landingpage.html';
+        });
+
+        $('#create').on('click', function() {
+            window.location.href = 'Create.html';
+        });
+
+        $('#events').on('click', function() {
+            window.location.href = 'Events.html';
+        });
+
+        $('#profile').on('click', function() {
+            window.location.href = 'Profile.html';
+        });
+
         var json_url = "Events.json";
         console.log("Heii");
 

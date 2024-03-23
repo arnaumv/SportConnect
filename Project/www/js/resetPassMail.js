@@ -1,4 +1,22 @@
 $(document).ready(function() {
+
+    //Movilidad entre paginas
+    $('#landingpage').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
+
+    $('#create').on('click', function() {
+        window.location.href = 'Create.html';
+    });
+
+    $('#events').on('click', function() {
+        window.location.href = 'Events.html';
+    });
+
+    $('#profile').on('click', function() {
+        window.location.href = 'Profile.html';
+    });
+    
     $('#email').on('input', function() {
         console.log("escribiendo...")
         // Restablecer los mensajes de error

@@ -1,5 +1,23 @@
 console.log('login.js loaded');
 $(document).on('pagecreate', function() {
+
+    //Movilidad entre paginas
+    $('#landingpage').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
+
+    $('#create').on('click', function() {
+        window.location.href = 'Create.html';
+    });
+
+    $('#events').on('click', function() {
+        window.location.href = 'Events.html';
+    });
+
+    $('#profile').on('click', function() {
+        window.location.href = 'Profile.html';
+    });
+    
     // Validación del nombre de usuario al perder el foco
     $('.formLogin #username').on('focusout', function() {
         var username = $(this).val().trim();

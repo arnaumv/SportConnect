@@ -35,6 +35,9 @@ function onDeviceReady() {
         window.location.href = 'newUser.html';
     });
     
+    $('#buttonCreate').on('click', function() {
+        window.location.href = 'newUser.html';
+    });
 
     /* For having a faster transition */
     $(document).on("mobileinit", function() {

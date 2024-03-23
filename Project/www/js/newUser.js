@@ -1,5 +1,22 @@
 $(document).ready(function() {
     console.log("NewUser");
+
+    //Movilidad entre paginas
+    $('#landingpage').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
+
+    $('#create').on('click', function() {
+        window.location.href = 'Create.html';
+    });
+
+    $('#events').on('click', function() {
+        window.location.href = 'Events.html';
+    });
+
+    $('#profile').on('click', function() {
+        window.location.href = 'Profile.html';
+    });
   // Validación del nombre de usuario al perder el foco
   $('.formNewUser #username').on('focusout', function() {
       var username = $(this).val().trim();
@@ -89,30 +106,26 @@ $(document).ready(function() {
       // Si no hay errores, enviar los datos
       if(!hasErrors){
         $.ajax({
-            url: 'http://127.0.0.1:8000/login/',
+            url: 'http://127.0.0.1:8000/usuario/', 
             method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({
-                username: username,
-                password: password
-            }),
+            data: {
+              username: username,
+              email: email,
+              password: password,
+              city: city,
+              birthdate: birthdate
+            },
             success: function(data) {
-                console.log('Login successful:', data);
-                // Guarda los tokens y el nombre de usuario en el almacenamiento local del navegador
-                localStorage.setItem('refreshToken', data.refresh);
-                localStorage.setItem('accessToken', data.access);
-                localStorage.setItem('username', username);
-                // Redirige al usuario a index.html
-                window.location.href = 'profile.html';
+              console.log('Usuario creado con éxito:', data);
+              // Redirige al usuario a login.html
+              window.location.href = 'login.html';
             },
             error: function(error) {
-                console.log('Error:', error);
+              console.log('Error:', error);
             }
-        });
-    } else {
-        console.log('Hubo un error al iniciar sesión');
+          });
     }
-  });
+});
 
   // Función para validar el formato del correo electrónico
   function isValidEmail(email) {

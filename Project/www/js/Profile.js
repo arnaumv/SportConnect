@@ -4,6 +4,24 @@ document.addEventListener('deviceready', onDeviceReady, false);
 var eventosCargados = false;
 
 function onDeviceReady() {
+
+    //Movilidad entre paginas
+    $('#landingpage').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
+
+    $('#create').on('click', function() {
+        window.location.href = 'Create.html';
+    });
+
+    $('#events').on('click', function() {
+        window.location.href = 'Events.html';
+    });
+
+    $('#profile').on('click', function() {
+        window.location.href = 'Profile.html';
+    });
+    
     $(document).on('pageinit', function() {
         var json_url = "Events.json";
 
