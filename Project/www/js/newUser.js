@@ -75,6 +75,7 @@ $(document).ready(function() {
       var confirm_password = $('.formNewUser #confirm_password').val().trim();
       var city = $('.formNewUser #city').val().trim();
       var birthdate = $('.formNewUser #birthdate').val().trim();
+
       console.log(username, email, password, confirm_password, city, birthdate);
 
       // Variable para verificar si hay errores
