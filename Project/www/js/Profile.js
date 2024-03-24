@@ -70,7 +70,7 @@ $(document).ready(function() {
     function agregarEvento(evento) {
         console.log("añadirlos");
         var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
-        eventHtml += '<img src="' + evento.imagen + '" alt="Imagen del Evento">';
+        eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';  
         eventHtml += '<h2>' + evento.title  + '</h2>';
         eventHtml += '<p>Fecha: ' + evento.date + '</p>';
         eventHtml += '<p>Ubicación: ' + evento.location  + '</p>';
