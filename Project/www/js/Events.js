@@ -1,92 +1,82 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+$(document).on('pagecreate', function(){
 
-// Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
+    //Movilidad entre paginas
+    $('#landingpage').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
 
-    $(document).on('pagecreate', function(){
+    $('#create').on('click', function() {
+        window.location.href = 'Create.html';
+    });
 
-        //Movilidad entre paginas
-        $('#landingpage').on('click', function() {
-            window.location.href = 'landingpage.html';
-        });
+    $('#events').on('click', function() {
+        window.location.href = 'Events.html';
+    });
 
-        $('#create').on('click', function() {
-            window.location.href = 'Create.html';
-        });
+    $('#profile').on('click', function() {
+        window.location.href = 'Profile.html';
+    });
 
-        $('#events').on('click', function() {
-            window.location.href = 'Events.html';
-        });
+    console.log("Heii");
 
-        $('#profile').on('click', function() {
-            window.location.href = 'Profile.html';
-        });
-
-        var json_url = "Events.json";
-        console.log("Heii");
-
-        // Verificar si hay datos almacenados en el localStorage
-        var eventosGuardados = localStorage.getItem('eventos');
-        if (eventosGuardados) {
-            mostrarEventos(JSON.parse(eventosGuardados));
-        } else {
-            // Cargar el JSON externo y mostrar todos los eventos al principio
-            $.getJSON(json_url, function(eventos) {
-                mostrarEventos(eventos);
-                // Guardar eventos en el localStorage
-                localStorage.setItem('eventos', JSON.stringify(eventos));
-            });
+    // Hacer una solicitud AJAX para obtener los eventos
+    $.ajax({
+        url: 'http://127.0.0.1:8000/event-filter/',  // URL de tu API
+        type: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        success: function(eventos) {
+            mostrarEventos(eventos);
+            // Guardar eventos en el localStorage
+            localStorage.setItem('eventos', JSON.stringify(eventos));
+            console.log("Mostrando eventos");
+        },
+        error: function(error) {
+            console.log('Error getting events:', error);
+            console.log("Error al mostrar eventos");
         }
+    });
 
-        // Función para mostrar todos los eventos
-        function mostrarEventos(eventos) {
-            var eventsList = $('.events-list');
-            eventsList.empty(); // Limpiar la lista antes de agregar los eventos
+    // Función para mostrar todos los eventos
+    function mostrarEventos(eventos) {
+        var eventsList = $('.events-list');
+        eventsList.empty(); // Limpiar la lista antes de agregar los eventos
 
-            // Agregar eventos al DOM
-            eventos.forEach(function(evento) {
-                var eventHtml = '<div class="event" data-categoria="' + evento.categoria + '">';
-                eventHtml += '<img src="' + evento.imagen + '" alt="Imagen del Evento">';
-                eventHtml += '<h2>' + evento.titulo + '</h2>';
-                eventHtml += '<p>Fecha: ' + evento.fecha + '</p>';
-                eventHtml += '<p>Ubicación: ' + evento.ubicacion + '</p>';
-                eventHtml += '<a href="' + evento.enlace + '">';
-                eventHtml += '<button class="join-btn">Unirse al Evento</button>';
-                eventHtml += '</a>';
-                eventHtml += '</div>';
-                eventsList.append(eventHtml);
-            });
-        }
+        // Agregar eventos al DOM
+        eventos.forEach(function(evento) {
+            var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
+            eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
+            eventHtml += '<h2>' + evento.title + '</h2>';
+            eventHtml += '<p>Fecha: ' + evento.date + '</p>';
+            eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
+            eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Unirse al Evento</button>';
+            eventHtml += '</div>';
+            eventsList.append(eventHtml);
+        });
 
-        // Mostrar u ocultar eventos según la categoría seleccionada
-        $('.waves-effect').click(function() {
-            var categoriaSeleccionada = $(this).attr('id');
-            $('.event').hide();
-            if (categoriaSeleccionada === 'all') {
-                $('.event').show();
-            } else {
-                $('.event[data-categoria="' + categoriaSeleccionada + '"]').show();
+        // Agregar controlador de eventos de clic a los botones de unirse
+        $('.join-btn').on('click', function() {
+            var eventId = $(this).data('event-id');
+            // Guardar el ID del evento en el localStorage
+            localStorage.setItem('selectedEventId', eventId);
+            // Redirigir al usuario a la página de información del evento
+            window.location.href = 'infoEvent.html';
+        });
+    }
+
+    // Mostrar u ocultar eventos según la categoría seleccionada
+    $('.waves-effect').click(function() {
+        var categoriaSeleccionada = $(this).attr('id').toLowerCase();
+        $('.event').hide();
+        $('.event').each(function() {
+            var categoriaEvento = $(this).data('categoria').toLowerCase();
+            if (categoriaSeleccionada === 'all' || categoriaSeleccionada === categoriaEvento) {
+                $(this).show();
             }
         });
+    });
 
-        // Mostrar todos los eventos al cargar la página
-        $('#all').trigger('click');
-    }); 
-
+    // Mostrar todos los eventos al cargar la página
+    $('#all').trigger('click');
+});
