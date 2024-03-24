@@ -96,7 +96,7 @@ $(document).ready(function() {
 
         // Hacer una solicitud AJAX para unirse al evento
         $.ajax({
-            url: 'http://127.0.0.1:8000/join-event/',  // URL de tu API para unirse a un evento
+            url: 'http://127.0.0.1:8000/join-event/', 
             type: 'POST',
             data: JSON.stringify({
                 username: username,
@@ -111,6 +111,8 @@ $(document).ready(function() {
             success: function(response) {
                 console.log('Successfully joined event:', response);
                 // Aquí puedes actualizar la lista de participantes o hacer cualquier otra cosa que necesites
+                window.location.href = 'Events.html';
+
             },
             error: function(error) {
                 console.log('Error joining event:', error);
