@@ -70,7 +70,9 @@ $('#titulo').on('focusout', function() {
 
 $('#btnEnviar').click(function(e){
     e.preventDefault();
+    var hasErrors = false;
     console.log('Button clicked.');  // Log the button click event
+
 
     if($('#error_titulo').text() !== ''){
         hasErrors = true;
