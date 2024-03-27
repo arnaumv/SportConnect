@@ -1,27 +1,32 @@
 $(document).on('pagecreate', function() {
     console.log("FICHERO RESETPASSMAILJS");  // Console log here
 
+    $('#email').on('focusout', function() {
+
+        var email = $('#email').val().trim();
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            $('#error_email').text('Introduce un correo electrónico válido');
+            $(this).addClass('error-input'); // Agregar clase de error al input
+
+        } else {
+            $('#error_email').text('');
+            $(this).removeClass('error-input'); // Eliminar clase de error del input
+        }
+    });
+
     $('#btnEnviarMail').on('vclick', function() {
         console.log("Button clicked");  // Console log here
-
-        // Restablecer los mensajes de error
-        $('.error').text('');
+        var hasErrors = false;
+        if($('#error_email').text() !== ''){
+            hasErrors = true;
+        }
 
         // Obtener el valor del campo de correo electrónico
         var email = $('#email').val().trim();
 
-        // Variable para verificar si hay errores
-        var hayErrores = false;
-
-        // Validación del correo electrónico
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            $('#error_email').text('Introduce un correo electrónico válido');
-            hayErrores = true;
-        }
-
         // Si no hay errores, puedes continuar con el proceso
-        if (!hayErrores) {
+        if (!hasErrors) {
             // Aquí puedes agregar la lógica para enviar la solicitud AJAX
             console.log("ejecutar ajax");
 
@@ -40,5 +45,6 @@ $(document).on('pagecreate', function() {
                 }
             });
         }
+        
     });
 });

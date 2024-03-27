@@ -1,7 +1,7 @@
 $(document).ready(function() {
     console.log("NewUser");
 
-    //Movilidad entre paginas
+   /*  //Movilidad entre paginas
     $('#landingpage').on('click', function() {
         window.location.href = 'landingpage.html';
     });
@@ -16,15 +16,18 @@ $(document).ready(function() {
 
     $('#profile').on('click', function() {
         window.location.href = 'Profile.html';
-    });
+    }); */
+
   // Validación del nombre de usuario al perder el foco
   $('.formNewUser #username').on('focusout', function() {
       var username = $(this).val().trim();
       if(username === ''){
           $('#error_username').text('Por favor, introduce tu nombre de usuario');
-      } else {
+          $(this).addClass('error-input'); // Agregar clase de error al input
+        } else {
           $('#error_username').text('');
-      }
+          $(this).removeClass('error-input'); // Eliminar clase de error del input
+        }
   });
 
   // Validación del correo electrónico al perder el foco
@@ -32,10 +35,13 @@ $(document).ready(function() {
       var email = $(this).val().trim();
       if(email === ''){
           $('#error_email').text('Por favor, introduce tu correo electrónico');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else if(!isValidEmail(email)){
           $('#error_email').text('El correo electrónico no es válido');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else {
           $('#error_email').text('');
+          $(this).removeClass('error-input'); // Eliminar clase de error del input
       }
   });
 
@@ -44,8 +50,10 @@ $(document).ready(function() {
       var password = $(this).val().trim();
       if(password.length < 8 || password.length > 128){
           $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else {
           $('#error_password').text('');
+          $(this).removeClass('error-input'); // Eliminar clase de error del input
       }
   });
 
@@ -55,8 +63,10 @@ $(document).ready(function() {
       var confirm_password = $(this).val().trim();
       if(password !== confirm_password){
           $('#error_confirm_password').text('Las contraseñas no coinciden');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else {
           $('#error_confirm_password').text('');
+          $(this).removeClass('error-input'); // Eliminar clase de error del input
       }
   });
 
@@ -65,8 +75,10 @@ $(document).ready(function() {
       var city = $(this).val().trim();
       if(city.length < 2){
           $('#error_city').text('La ciudad debe tener al menos 2 caracteres');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else {
           $('#error_city').text('');
+          $(this).removeClass('error-input'); // Eliminar clase de error del input
       }
   });
 
@@ -75,10 +87,13 @@ $(document).ready(function() {
       var birthdate = $(this).val().trim();
       if(birthdate === ''){
           $('.formNewUser #error_birthdate').text('Por favor, introduce tu fecha de nacimiento');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else if(!isValidDate(birthdate)){
           $('.formNewUser #error_birthdate').text('La fecha de nacimiento no es válida');
+          $(this).addClass('error-input'); // Agregar clase de error al input
       } else {
           $('#error_birthdate').text('');
+          $(this).removeClass('error-input'); // Eliminar clase de error del input
       }
   });
 

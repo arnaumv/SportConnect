@@ -450,6 +450,28 @@ p {
     margin-right: 0 !important;
 }
 
+/********botnones de enviar *********/
+
+#btnSave {
+    background-color: rgb(43, 165, 221);
+    text-shadow: none;
+}
+
+#btnSubmit {
+    background-color: rgb(43, 165, 221);
+    text-shadow: none;
+}
+
+#btnEnviarMail {
+    background-color: rgb(43, 165, 221);
+    text-shadow: none;
+}
+
+#btnEnviarPass {
+    background-color: rgb(43, 165, 221);
+    text-shadow: none;
+}
+
 /********** Profile **********/
 /* Estilos para el header */
 .headerProfile {
@@ -512,8 +534,10 @@ p {
 }
 
 .profile-info h2 {
+    text-align: center;
     font-size: 18px;
     margin-bottom: 5px;
+    margin-left: 0;
 }
 
 .profile-info p {
@@ -526,13 +550,14 @@ p {
     display: inline-block;
     padding: 8px 16px;
     font-size: 14px;
-    background-color: rgb(43, 165, 221);;
+    background-color: rgb(43, 165, 221);
     color: black !important;
-    /* Color del texto negro */
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s;
+    text-shadow: none; /* Quitar sombra de texto */
 }
+
 
 .edit-profile-btn:hover {
     background-color: #0056b3;
@@ -675,12 +700,12 @@ p {
     margin-top: 20%;
 }
 
-.formNewUser a {
+.formLogin a {
     font-size: 12px;
     color: gray !important;
 }
 
-.formNewUser h2 {
+.formLogin h2 {
     text-align: center;
 
 }
@@ -925,9 +950,15 @@ p {
 
 .error {
     color: red;
-    background: LightPink;
-  }
-  span.error {
+    text-shadow: none; /* Quitar sombra de texto */
+}
+  
+span.error {
     display: block;
     font-size: 15px;
-  }
+}
+
+.error-input {
+    border: 2px solid red !important; /* Cambiar al color rosa deseado */
+}
+

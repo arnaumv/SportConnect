@@ -21,6 +21,7 @@ $(document).ready(function() {
 
         // Restablecer los mensajes de error
         $('.error').text('');
+        $(this).removeClass('error-input'); // Eliminar clase de error del input
 
             // Obtener los valores de los campos del formulario
             var contrasena = $('#contrasena').val().trim();
@@ -32,9 +33,11 @@ $(document).ready(function() {
             // Validación de la longitud y coincidencia de las contraseñas
         if(contrasena.length < 8){
             $('#error_contrasena').text('La contraseña debe tener al menos 8 caracteres');
+            $(this).addClass('error-input'); // Agregar clase de error al input
             hayErrores = true;
         } else if(contrasena !== repetirContrasena){
             $('#error_repetir_contrasena').text('Las contraseñas no coinciden');
+            $(this).addClass('error-input'); // Agregar clase de error al input
             hayErrores = true;
         }
 

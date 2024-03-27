@@ -47,13 +47,13 @@
 				<div class="loginDiv">
 					<div class="formLogin">
 						<h2>Bienvenido</h2>
-						<input type="text" id="username" placeholder="Nombre de usuario"><br>
+						<input type="text" id="username" placeholder="Nombre de usuario">
 						<span class="error" id="error_username"></span><br> <!-- Aquí se mostrará el mensaje de error para el nombre de usuario -->
 						<input type="password" id="password" placeholder="Contraseña">
 						<span class="error" id="error_password"></span><br> <!-- Aquí se mostrará el mensaje de error para la contraseña -->
-						<a href="resetPassMail.html">¿Olvidaste la contraseña?</a><br><br>
+						<a class="toResetPassMail">¿Olvidaste la contraseña?</a><br><br>
 						<button id="btnSubmit">Iniciar Sesión</button>
-						<a class="centered-link" >Crear una cuenta nueva</a><br><br>
+						<a class="toNewUser" >Crear una cuenta nueva</a><br><br>
 					</div>
 				</div>				
 			</div>
@@ -90,9 +90,6 @@
 		<script src="cordova.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		
 		<script src="js/login.js"></script>
-		<script src="js/resetPassMail.js"></script>
-
 	</body>
 </html>

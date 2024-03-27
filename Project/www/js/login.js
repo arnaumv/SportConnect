@@ -1,7 +1,7 @@
 console.log('login.js loaded');
 $(document).on('pagecreate', function() {
 
-    //Movilidad entre paginas
+   /*  //Movilidad entre paginas
     $('#landingpage').on('click', function() {
         window.location.href = 'landingpage.html';
     });
@@ -16,15 +16,17 @@ $(document).on('pagecreate', function() {
 
     $('#profile').on('click', function() {
         window.location.href = 'Profile.html';
-    });
+    }); */
     
     // Validación del nombre de usuario al perder el foco
     $('.formLogin #username').on('focusout', function() {
         var username = $(this).val().trim();
         if(username === ''){
             $('#error_username').text('Por favor, introduce tu nombre de usuario');
+            $(this).addClass('error-input'); // Agregar clase de error al input
         } else {
             $('#error_username').text('');
+            $(this).removeClass('error-input'); // Eliminar clase de error del input
         }
     });
 
@@ -33,8 +35,10 @@ $(document).on('pagecreate', function() {
         var password = $(this).val().trim();
         if(password.length < 8 || password.length > 128){
             $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');
+            $(this).addClass('error-input'); // Agregar clase de error al input
         } else {
             $('#error_password').text('');
+            $(this).removeClass('error-input'); // Eliminar clase de error del input
         }
     });
 
@@ -84,11 +88,19 @@ $(document).on('pagecreate', function() {
 });
 
 $(document).ready(function() {
-    // Seleccionar todos los elementos con la clase "centered-link"
-    $(".centered-link").click(function(event) {
+    // Seleccionar todos los elementos con la clase "toNewUser"
+    $(".toNewUser").click(function(event) {
 
         
         // Redirigir a la nueva URL
         window.location.href = "newUser.html";
+    });
+
+    // Seleccionar todos los elementos con la clase "toResetPassMail"
+    $(".toResetPassMail").click(function(event) {
+
+        
+        // Redirigir a la nueva URL
+        window.location.href = "resetPassMail.html";
     });
 });
