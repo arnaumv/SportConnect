@@ -1,122 +1,153 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  // Obtener el ID del evento del localStorage
+  var eventId = localStorage.getItem("selectedEventId");
 
-    //Movilidad entre paginas
-    $('#landingpage').on('click', function() {
-        window.location.href = 'landingpage.html';
-    });
-
-    $('#create').on('click', function() {
-        window.location.href = 'Create.html';
-    });
-
-    $('#events').on('click', function() {
-        window.location.href = 'Events.html';
-    });
-
-    $('#profile').on('click', function() {
-        window.location.href = 'Profile.html';
-    });
-
-    console.log('Document is ready');
-
-    // Obtener el ID del evento del localStorage
-    var eventId = localStorage.getItem('selectedEventId');
-    console.log('Event ID:', eventId);
-
-    // Hacer una solicitud AJAX para obtener la información del evento
+  // Función para cargar la lista de participantes
+  function loadParticipants() {
     $.ajax({
-        url: 'http://127.0.0.1:8000/event-filter/' + eventId + '/get_event',  // URL de tu API
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        beforeSend: function() {
-            console.log('Sending AJAX request');
-        },
-        success: function(evento) {
-            console.log('AJAX request succeeded');
-            // Actualizar el HTML de la página con la información del evento
-            $('.evento img').attr('src', evento.image_path);
-            $('.evento h2').text(evento.title);
-            $('.evento p').first().text('Fecha: ' + evento.date);
-            $('.evento p').last().text(evento.description);
-        },
-        error: function(error) {
-            console.log('Error getting event:', error);
-        }
-    });
+      url: "http://127.0.0.1:8000/event/" + eventId + "/participants",
+      type: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      success: function (participants) {
+        console.log("Successfully got participants:", participants);
 
-    // Hacer una solicitud AJAX para obtener la lista de participantes del evento
-    $.ajax({
-        url: 'http://127.0.0.1:8000/event/' + eventId + '/participants',  // URL de tu API
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        beforeSend: function() {
-            console.log('Sending AJAX request to get participants');
-        },
-        success: function(participants) {
-            console.log('Successfully got participants:', participants);
+        // Limpiar la lista de participantes
+        $(".participantes ul").empty();
 
-            // Limpiar la lista de participantes
-            $('.participantes ul').empty();
+        // Agregar cada participante a la lista
+        participants.forEach(function (participant) {
+          var listItem = $("<li></li>");
+          var img = $("<img>").attr("src", "./img/Profile/User_photo.png"); // Asume que todos los usuarios tienen la misma imagen de perfil
+          var infoDiv = $("<div></div>").addClass("info-participante");
+          var nameP = $("<p></p>").text(participant.username);
 
-            // Agregar cada participante a la lista
-            participants.forEach(function(participant) {
-                var listItem = $('<li></li>');
-                var img = $('<img>').attr('src', './img/Profile/User_photo.png');  // Asume que todos los usuarios tienen la misma imagen de perfil
-                var infoDiv = $('<div></div>').addClass('info-participante');
-                var nameP = $('<p></p>').text(participant.username);
+          // Crear un objeto Date a partir de la fecha de unión del participante
+          var joinDate = new Date(participant.join_date);
 
-                // Crear un objeto Date a partir de la fecha de unión del participante
-                var joinDate = new Date(participant.join_date);
+          // Formatear la fecha a día/mes/año
+          var formattedJoinDate =
+            joinDate.getDate() +
+            "/" +
+            (joinDate.getMonth() + 1) +
+            "/" +
+            joinDate.getFullYear();
 
-                // Formatear la fecha a día/mes/año
-                var formattedJoinDate = joinDate.getDate() + '/' + (joinDate.getMonth() + 1) + '/' + joinDate.getFullYear();
+          var joinDateP = $("<p></p>").text("Se unió el " + formattedJoinDate);
 
-                var joinDateP = $('<p></p>').text('Se unió el ' + formattedJoinDate);
-
-                infoDiv.append(nameP, joinDateP);
-                listItem.append(img, infoDiv);
-                $('.participantes ul').append(listItem);
-            });
-        },
-        error: function(error) {
-            console.log('Error getting participants:', error);
-        }
-    });
-
-    // Controlador de eventos de clic para el botón "Unirme al evento"
-    $('.unirse-btn .btn').on('click', function(e) {
-        e.preventDefault();  // Prevenir la acción por defecto del botón
-
-        // Obtener el nombre de usuario del localStorage (o de donde lo tengas almacenado)
-        var username = localStorage.getItem('username');
-
-        // Hacer una solicitud AJAX para unirse al evento
-        $.ajax({
-            url: 'http://127.0.0.1:8000/join-event/', 
-            type: 'POST',
-            data: JSON.stringify({
-                username: username,
-                event: eventId
-            }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            beforeSend: function() {
-                console.log('Sending AJAX request to join event');
-            },
-            success: function(response) {
-                console.log('Successfully joined event:', response);
-                // Aquí puedes actualizar la lista de participantes o hacer cualquier otra cosa que necesites
-                window.location.href = 'Events.html';
-
-            },
-            error: function(error) {
-                console.log('Error joining event:', error);
-            }
+          infoDiv.append(nameP, joinDateP);
+          listItem.append(img, infoDiv);
+          $(".participantes ul").append(listItem);
         });
+      },
+      error: function (error) {
+        console.log("Error getting participants:", error);
+      },
     });
+  }
+
+  // Función para verificar si el usuario ya está unido al evento
+  function checkIfJoined() {
+    var username = localStorage.getItem("username");
+    $.ajax({
+      url: "http://127.0.0.1:8000/check-joined/",
+      type: "POST",
+      data: JSON.stringify({
+        username: username,
+        event: eventId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      success: function (response) {
+        console.log("Check joined response:", response);
+        if (response.joined) {
+          $("#joinEventBtn").hide();
+          $("#cancelEventBtn").show();
+        } else {
+          $("#joinEventBtn").show();
+          $("#cancelEventBtn").hide();
+        }
+      },
+      error: function (error) {
+        console.log("Error checking joined:", error);
+      },
+    });
+  }
+
+  // Llamar a la función para cargar participantes y verificar si el usuario está unido cuando se carga la página
+  loadParticipants();
+  checkIfJoined();
+
+  // Controlador de eventos de clic para el botón "Unirme al evento"
+  $("#joinEventBtn").on("click", function (e) {
+    e.preventDefault();
+    var username = localStorage.getItem("username");
+    $.ajax({
+      url: "http://127.0.0.1:8000/join-event/",
+      type: "POST",
+      data: JSON.stringify({
+        username: username,
+        event: eventId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      success: function (response) {
+        console.log("Successfully joined event:", response);
+        loadParticipants();
+        $("#joinEventBtn").hide();
+        $("#cancelEventBtn").show();
+        // Aquí puedes agregar redirecciones o acciones adicionales después de unirse
+      },
+      error: function (error) {
+        console.log("Error joining event:", error);
+      },
+    });
+  });
+
+  // Controlador de eventos de clic para el botón "Cancelar"
+  $("#cancelEventBtn").on("click", function (e) {
+    e.preventDefault();
+    var username = localStorage.getItem("username");
+    $.ajax({
+      url: "http://127.0.0.1:8000/cancel-event/",
+      type: "POST",
+      data: JSON.stringify({
+        username: username,
+        event: eventId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      success: function (response) {
+        console.log("Successfully canceled event:", response);
+        loadParticipants();
+        $("#joinEventBtn").show();
+        $("#cancelEventBtn").hide();
+        // Aquí puedes agregar redirecciones o acciones adicionales después de cancelar
+      },
+      error: function (error) {
+        console.log("Error canceling event:", error);
+      },
+    });
+  });
+
+  // Controlador de eventos de clic para los enlaces de navegación
+  $("#landingpage").on("click", function () {
+    window.location.href = "landingpage.html";
+  });
+
+  $("#create").on("click", function () {
+    window.location.href = "Create.html";
+  });
+
+  $("#events").on("click", function () {
+    window.location.href = "Events.html";
+  });
+
+  $("#profile").on("click", function () {
+    window.location.href = "Profile.html";
+  });
 });

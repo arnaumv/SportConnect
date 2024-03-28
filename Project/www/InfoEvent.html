@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <!--
         Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
             https://cordova.apache.org/docs/en/latest/
@@ -12,91 +11,142 @@
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
 
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <meta name="color-scheme" content="light dark">
-    <link rel="icon" href="./img/index/logo1.png">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./img/index/logo1.png" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Sport Connect - Eventos</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- page 1 -->
     <div data-role="page">
-        <div class="headerInfoEvents">
-            <img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-            <h1>Eventos</h1>
+      <div class="headerInfoEvents">
+        <img src="./img/index/LOGO.png" alt="Image 1" class="header-logo" />
+        <h1>Eventos</h1>
+      </div>
+      <div class="ui-content">
+        <!-- Inicio del contenido del evento -->
+        <div class="evento">
+          <img src="./img/index/pelotaFutbol.png" alt="Imagen del Evento 1" />
+          <h2>Titulo del Evento 1</h2>
+          <p>Fecha: 15 de marzo de 2024</p>
+          <p>
+            Descripción del Evento 1. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Nullam lacinia, lorem at bibendum sagittis, felis
+            odio consectetur justo, at ultricies turpis mi sit amet metus.
+          </p>
         </div>
-        <div class="ui-content">
-            <!-- Inicio del contenido del evento -->
-            <div class="evento">
-                <img src="./img/index/pelotaFutbol.png" alt="Imagen del Evento 1">
-                <h2>Titulo del Evento 1</h2>
-                <p>Fecha: 15 de marzo de 2024</p>
-                <p>Descripción del Evento 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia, lorem at bibendum sagittis, felis odio consectetur justo, at ultricies turpis mi sit amet metus.</p>
-            </div>
-            <!-- Fin del contenido del evento -->
+        <!-- Fin del contenido del evento -->
 
-            <!-- Inicio de la lista de participantes -->
-            <div class="participantes">
-                <h3>Participantes</h3>
-                <ul>
-                    <li>
-                        <img src="./img/Profile/User_photo.png" alt="Imagen del Participante 1">
-                        <div class="info-participante">
-                            <p>Nombre del Participante 1</p>
-                            <p>Se unió el 10 de marzo de 2024</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/Profile/User_photo.png" alt="Imagen del Participante 2">
-                        <div class="info-participante">
-                            <p>Nombre del Participante 2</p>
-                            <p>Se unió el 12 de marzo de 2024</p>
-                        </div>
-                    </li>
-                    <!-- Agrega más participantes según sea necesario -->
-                </ul>
-            </div>
-            <!-- Fin de la lista de participantes -->
+        <!-- Inicio de la lista de participantes -->
+        <div class="participantes">
+          <h3>Participantes</h3>
+          <ul>
+            <li>
+              <img
+                src="./img/Profile/User_photo.png"
+                alt="Imagen del Participante 1"
+              />
+              <div class="info-participante">
+                <p>Nombre del Participante 1</p>
+                <p>Se unió el 10 de marzo de 2024</p>
+              </div>
+            </li>
+            <li>
+              <img
+                src="./img/Profile/User_photo.png"
+                alt="Imagen del Participante 2"
+              />
+              <div class="info-participante">
+                <p>Nombre del Participante 2</p>
+                <p>Se unió el 12 de marzo de 2024</p>
+              </div>
+            </li>
+            <!-- Agrega más participantes según sea necesario -->
+          </ul>
+        </div>
+        <!-- Fin de la lista de participantes -->
 
-            <!-- Botón para unirse al evento -->
-            <div class="unirse-btn">
-                <button class="btn">Unirme al evento</button>
-            </div>
-        </div><!-- end page 1 content -->
-        <div data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li><a id="landingpage" >
-                        <img class="small-image" src="img/index/iconoHome.png" alt="Page 1">
-                        <p>Inicio</p>
-                    </a></li>
-                    <li><a id="create">
-                        <img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
-                        <p>Crear</p>
-                    </a></li>
-                    <li><a id="events" class="ui-btn-active ui-state-persist">
-                        <img class="small-image" src="img/index/calendar.png" alt="Page 3">
-                        <p>Eventos</p>
-                    </a></li>
-                    <li><a id="profile">
-                        <img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
-                        <p>Perfil</p>
-                    </a></li>
-                </ul>
-            </div><!-- /navbar -->
-        </div><!-- /footer -->
-
-    </div><!-- /page 1 -->
+        <!-- Botón para unirse al evento -->
+        <div class="unirse-btn">
+          <button id="joinEventBtn" class="btn">Unirme al evento</button>
+          <button id="cancelEventBtn" class="btn" style="display: none">
+            Cancelar
+          </button>
+        </div>
+      </div>
+      <!-- end page 1 content -->
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a id="landingpage">
+                <img
+                  class="small-image"
+                  src="img/index/iconoHome.png"
+                  alt="Page 1"
+                />
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li>
+              <a id="create">
+                <img
+                  class="small-image"
+                  src="img/index/iconoCreate.png"
+                  alt="Page 2"
+                />
+                <p>Crear</p>
+              </a>
+            </li>
+            <li>
+              <a id="events" class="ui-btn-active ui-state-persist">
+                <img
+                  class="small-image"
+                  src="img/index/calendar.png"
+                  alt="Page 3"
+                />
+                <p>Eventos</p>
+              </a>
+            </li>
+            <li>
+              <a id="profile">
+                <img
+                  class="small-image"
+                  src="img/index/iconoProfile.png"
+                  alt="Page 4"
+                />
+                <p>Perfil</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /navbar -->
+      </div>
+      <!-- /footer -->
+    </div>
+    <!-- /page 1 -->
 
     <script src="cordova.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"
+    ></script>
     <script src="js/index.js"></script>
-    <script src="js/infoEvent.js"></script>  
-</body>
-
+    <script src="js/infoEvent.js"></script>
+  </body>
 </html>
