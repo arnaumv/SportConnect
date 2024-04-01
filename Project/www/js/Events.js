@@ -50,7 +50,7 @@ $(document).on('pagecreate', function(){
             eventHtml += '<h2>' + evento.title + '</h2>';
             eventHtml += '<p>Fecha: ' + evento.date + '</p>';
             eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
-            eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Unirse al Evento</button>';
+            eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Ver Evento</button>';
             eventHtml += '</div>';
             eventsList.append(eventHtml);
         });
