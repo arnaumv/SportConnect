@@ -120,6 +120,7 @@ body .ui-btn, body label.ui-btn  {
     margin-top: 6px;
     font-stretch: normal; /* Cambiado a normal para evitar la distorsión de la fuente */
     height: 40px; /* Añadido altura a la letra */
+    margin-left: 25px;
 }
 
 /********** HEADER - NEW EVENT **********/
