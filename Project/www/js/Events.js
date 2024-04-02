@@ -55,6 +55,7 @@ $(document).on('pagecreate', function(){
             eventsList.append(eventHtml);
         });
 
+        
         // Agregar controlador de eventos de clic a los botones de unirse
         $('.join-btn').on('click', function() {
             var eventId = $(this).data('event-id');

@@ -35,7 +35,6 @@ $(document).on('pagecreate', function() {
                 method: 'POST',
                 data: {
                     email: email,
-                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                 },
                 success: function() {
                     alert('Correo de restablecimiento de contraseña enviado');
