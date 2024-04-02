@@ -160,6 +160,17 @@ body .ui-btn, body label.ui-btn  {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    margin-right: 50px;
+}
+
+.options-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+
 }
 
 /********** HEADER - NEW USER **********/
@@ -962,3 +973,63 @@ span.error {
     border: 2px solid red !important; /* Cambiar al color rosa deseado */
 }
 
+/********** Options **********/
+.headerOptions {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    /* Reduced padding */
+    padding-left: 25px;
+}
+
+.headerOptions #deleteX{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5%;
+    transform: translateY(-50%);
+    margin-right: 50px;
+}
+
+
+/* **************************************** */
+
+/* Estilos adicionales */
+.headerOptions {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#deleteX {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-title {
+    margin-top: 20px;
+    color: #000;
+}
+
+.menu-items {
+    padding-left: 20px;
+}
+
+.menu-items a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.menu-items a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-items img {
+    width: 30px;
+    margin-right: 10px;
+}

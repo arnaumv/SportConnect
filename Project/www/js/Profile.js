@@ -25,6 +25,10 @@ function onDeviceReady() {
     $('#EditProfile').on('click', function() {
         window.location.href = 'EditProfile.html';
     });
+
+    $('#options').on('click', function() {
+        window.location.href = 'Options.html';
+    });
     
     
 }

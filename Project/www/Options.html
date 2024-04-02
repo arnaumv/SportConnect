@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="./img/index/logo1.png">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <title>Sport Connect - Options</title>
+
+</head>
+
+<body>
+    <!-- Solo contenido principal, sin encabezado ni pie de página -->
+    <div class="headerOptions">
+        <!-- Este enlace te llevará a Profile.html -->
+        <a href="#" class="delete-link"><img src="./img/Options/eliminar.png" id="deleteX"></a>
+    </div>
+
+    <div class="content">
+
+        <h3 class="menu-title">Tu cuenta</h3>
+        <div id="Menu-Profile" class="menu-items">
+            <a href="#"><img src="./img/index/iconoProfile.png">Editar Perfil</a>
+            <a href="#"><img src="./img/Options/contraseña.png" >Cambiar Contraseña</a>
+        </div>
+
+        <h3 class="menu-title">Soporte</h3>
+        <div id="Menu-Support" class="menu-items">
+            <a href="#"><img src="./img/index/chat.png">Contactar Soporte</a>
+        </div>
+
+        <h3 class="menu-title">Información Legal</h3>
+        <div id="Menu-Legal" class="menu-items">
+            <a href="#"><img src="./img/Options/terms.png">Términos y Condiciones</a>
+            <a href="#"><img src="./img/index/iconoPrivacidad2.png">Política de Privacidad</a>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/Profile.js"></script>
+</body>
+
+</html>

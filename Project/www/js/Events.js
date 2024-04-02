@@ -61,7 +61,7 @@ $(document).on('pagecreate', function(){
             // Guardar el ID del evento en el localStorage
             localStorage.setItem('selectedEventId', eventId);
             // Redirigir al usuario a la página de información del evento
-            window.location.href = 'infoEvent.html';
+            window.location.href = 'InfoEvent.html';
         });
     }
 
