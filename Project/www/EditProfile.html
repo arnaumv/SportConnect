@@ -59,12 +59,16 @@
 
 
             <div class="formINFO">
-                <h3>Información Personal</h3>
-                <input type="text" id="name_surnames" placeholder="Nombre y apellido"><br>
-                <input type="email" id="email" placeholder="Email"><br>
-                <input type="password" id="password" placeholder="Contraseña"><br>
-                <input type="date" id="FechaNacimiento" placeholder="Fecha de Nacimiento"><BR>
-                <input type="text" id="description" placeholder="Descripción"><br>
+                <h3>Información Personal de <span id="username"></span></h3>            
+                <input type="email" id="email" placeholder="Email">
+                <span class="error" id="error_email"></span><br>
+                <input type="password" id="password" placeholder="Contraseña">
+                <span class="error" id="error_password"></span><br> 
+                <input type="text" id="description" placeholder="Descripción">
+                <span class="error" id="error_description"></span><br>
+                <level>Fecha de Nacimiento:</level>
+                <input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
+                <span class="error" id="error_birthdate"></span><br>
                 <button id="btnSave">Guardar</button>
             </div>
 
@@ -97,10 +101,9 @@
     </div><!-- /page 1 -->
 
     <script src="cordova.js"></script>
-   <script src="cordova.js"></script>
-   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-   <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-   <script src="js/editProfile.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/editProfile.js"></script>
 </body>
 
 </html>
