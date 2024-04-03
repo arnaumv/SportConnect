@@ -158,12 +158,12 @@ body label.ui-btn {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 10%;
+    margin-left: 13%;
 }
 
 .notification-icon {
@@ -534,12 +534,12 @@ p {
     font-size: 20px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 20%;
+    margin-left: 24%;
 }
 
 /* Estilos para el contenido del perfil */
@@ -699,12 +699,12 @@ p {
     font-size: 20px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 12%;
+    margin-left: 14%;
 }
 
 /* **************************************** */
