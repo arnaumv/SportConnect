@@ -88,18 +88,22 @@ $(document).ready(function() {
 
   // Validación de la fecha de nacimiento al perder el foco
   $('.formNewUser #birthdate').on('focusout', function() {
-      var birthdate = $(this).val().trim();
-      if(birthdate === ''){
-          $('.formNewUser #error_birthdate').text('Por favor, introduce tu fecha de nacimiento');
-          $(this).addClass('error-input'); // Agregar clase de error al input
-      } else if(!isValidDate(birthdate)){
-          $('.formNewUser #error_birthdate').text('La fecha de nacimiento no es válida');
-          $(this).addClass('error-input'); // Agregar clase de error al input
-      } else {
-          $('#error_birthdate').text('');
-          $(this).removeClass('error-input'); // Eliminar clase de error del input
-      }
-  });
+    var birthdate = new Date($(this).val());
+    var today = new Date();
+    if($(this).val().trim() === ''){
+        $('.formNewUser #error_birthdate').text('Por favor, introduce tu fecha de nacimiento');
+        $(this).addClass('error-input'); // Agregar clase de error al input
+    } else if(!isValidDate(birthdate)){
+        $('.formNewUser #error_birthdate').text('La fecha de nacimiento no es válida');
+        $(this).addClass('error-input'); // Agregar clase de error al input
+    } else if(birthdate > today){
+        $('.formNewUser #error_birthdate').text('La fecha de nacimiento no puede ser mayor al día actual');
+        $(this).addClass('error-input'); // Agregar clase de error al input
+    } else {
+        $('#error_birthdate').text('');
+        $(this).removeClass('error-input'); // Eliminar clase de error del input
+    }
+    });
 
   $('.formNewUser #btnSubmit').on('click', function() {
       console.log("El botón ha sido presionado");
