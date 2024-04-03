@@ -231,16 +231,16 @@ body .ui-btn, body label.ui-btn  {
     padding: 13px;
     /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
-    padding-left: 25px;
+    padding-left: 10px;
+    height: 45px;
 }
 
-.headerResetPass .header-logo {
-    width: 50px;
-    /* Reduced width */
-    height: 50px;
-    /* Reduced height */
-    margin-right: 15px;
-    /* Reduced margin */
+.headerResetPass .flecha-izquierda {
+    width: 37px !important;
+    height: 27px;
+    filter: invert(1); 
+
+   
 }
 
 .headerResetPass h1 {
@@ -250,11 +250,17 @@ body .ui-btn, body label.ui-btn  {
     font-size: 15px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
-    margin-left: 5%;
+    margin-left: 60px;
+}
+
+.pResetPassMail{
+  
+    margin-top: -40px;
+    margin-bottom: 50px;
 }
 
 /************** INDEX **************/
