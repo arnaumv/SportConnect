@@ -55,13 +55,14 @@ $(document).on('pagecreate', function(){
             eventsList.append(eventHtml);
         });
 
+        
         // Agregar controlador de eventos de clic a los botones de unirse
         $('.join-btn').on('click', function() {
             var eventId = $(this).data('event-id');
             // Guardar el ID del evento en el localStorage
             localStorage.setItem('selectedEventId', eventId);
             // Redirigir al usuario a la página de información del evento
-            window.location.href = 'infoEvent.html';
+            window.location.href = 'InfoEvent.html';
         });
     }
 

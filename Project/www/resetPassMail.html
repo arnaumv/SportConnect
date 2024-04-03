@@ -36,19 +36,21 @@
 		<!-- PAGE CREATE -->
 		<div data-role="page" >
 			<div class="headerResetPass">
-				<img src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
+				<img id="flecha-izquierda" src="./img/index/flecha-izquierda.png" alt="Image 1" class="flecha-izquierda">
 				<h1>Restablecer contraseña</h1>
 			</div>
 			
 	
 			<div class="ui-content">
 				<div class="resetPassDiv">
+					<p class="pResetPassMail">Introduce la dirección de correo electrónico asociada a tu cuenta y te enviaremos un enlace para restablecer tu contraseña</p>
+					
 					<div class="form">
-						<h2>Introduce tu correo electrónico</h2>
+						<h2>Email</h2>
 						<input type="email" id="email" placeholder="Correo electrónico">
 						<span class="error" id="error_email"></span><br>
 						<!-- Aquí está el botón que debe activar la validación -->
-						<button id="btnEnviarMail">Recibir enlace de recuperación</button>
+						<button id="btnEnviarMail">Enviar enlace</button>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,11 @@
 $(document).on('pagecreate', function() {
     console.log("FICHERO RESETPASSMAILJS");  // Console log here
 
+     //Movilidad entre paginas
+     $('#flecha-izquierda').on('click', function() {
+        window.location.href = 'login.html';
+        });
+
     $('#email').on('focusout', function() {
 
         var email = $('#email').val().trim();
@@ -21,30 +26,44 @@ $(document).on('pagecreate', function() {
         if($('#error_email').text() !== ''){
             hasErrors = true;
         }
-
+    
         // Obtener el valor del campo de correo electrónico
         var email = $('#email').val().trim();
-
+    
         // Si no hay errores, puedes continuar con el proceso
         if (!hasErrors) {
-            // Aquí puedes agregar la lógica para enviar la solicitud AJAX
-            console.log("ejecutar ajax");
-
+            // Check if the email exists in the User table
             $.ajax({
-                url: 'http://127.0.0.1:8000/reset_password/',  // URL de la vista que envía el correo
+                url: 'http://127.0.0.1:8000/check_email/',  // URL of the view that checks if the email exists
                 method: 'POST',
                 data: {
                     email: email,
-                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                 },
-                success: function() {
-                    alert('Correo de restablecimiento de contraseña enviado');
+                success: function(response) {
+                    if (response.exists) {
+                        // If the email exists, send the password reset email
+                        $.ajax({
+                            url: 'http://127.0.0.1:8000/reset_password/',  // URL of the view that sends the email
+                            method: 'POST',
+                            data: {
+                                email: email,
+                            },
+                            success: function() {
+                                alert('Correo de restablecimiento de contraseña enviado');
+                            },
+                            error: function() {
+                                alert('Hubo un error al enviar el correo de restablecimiento de contraseña');
+                            }
+                        });
+                    } else {
+                        // If the email does not exist, show an error message
+                        alert('Este correo electrónico no existe');
+                    }
                 },
                 error: function() {
-                    alert('Hubo un error al enviar el correo de restablecimiento de contraseña');
+                    alert('Hubo un error al verificar el correo electrónico');
                 }
             });
         }
-        
     });
 });
