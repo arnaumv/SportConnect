@@ -103,4 +103,8 @@ $(document).ready(function() {
         // Redirigir a la nueva URL
         window.location.href = "resetPassMail.html";
     });
+
+    $('#redirectToIndex').on('click', function() {
+        window.location.href = 'Index.html';
+        });
 });

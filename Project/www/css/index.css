@@ -173,10 +173,11 @@ body .ui-btn, body label.ui-btn  {
     position: relative;
 }
 
-.headerNewUser .header-logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
+.headerNewUser .header-flecha {
+    width: 37px;
+    height: 37px;
+    margin-right: 45px;
+    filter: invert(1); 
 }
 
 .headerNewUser h1 {
@@ -185,7 +186,7 @@ body .ui-btn, body label.ui-btn  {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
@@ -200,14 +201,15 @@ body .ui-btn, body label.ui-btn  {
     padding: 13px;
     /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
-    padding-left: 25px;
+    padding-left: 15px;
     position: relative;
 }
 
-.headerLogin .header-logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
+.headerLogin .header-flecha {
+    width: 37px;
+    height: 37px;
+    margin-right: 45px;
+    filter: invert(1); 
 }
 
 .headerLogin h1 {
@@ -216,7 +218,7 @@ body .ui-btn, body label.ui-btn  {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
