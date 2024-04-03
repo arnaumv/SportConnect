@@ -26,6 +26,9 @@ function onDeviceReady() {
         window.location.href = 'EditProfile.html';
     });
     
+    $('#redirectToLanding').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
     
 }
 $(document).ready(function() {

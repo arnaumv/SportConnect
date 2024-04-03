@@ -169,7 +169,7 @@ body .ui-btn, body label.ui-btn  {
     align-items: center;
     padding: 13px;
     background-color: rgba(43, 45, 66, 0.9);
-    padding-left: 25px;
+    padding-left: 15px;
     position: relative;
 }
 
@@ -753,7 +753,7 @@ p {
     font-size: 20px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
@@ -807,7 +807,7 @@ p {
     border-radius: 5px;
     margin-bottom: 10px;
     min-width: 330px;
-    max-width: 330px;
+    /*max-width: 330px;*/
     min-height: 150px;
     max-height: 150px;
 }
@@ -864,7 +864,7 @@ p {
     font-size: 20px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;

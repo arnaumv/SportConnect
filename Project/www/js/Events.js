@@ -17,6 +17,10 @@ $(document).on('pagecreate', function(){
         window.location.href = 'Profile.html';
     });
 
+    $('#redirectToLanding').on('click', function() {
+        window.location.href = 'landingpage.html';
+    });
+
     console.log("Heii");
 
     // Hacer una solicitud AJAX para obtener los eventos

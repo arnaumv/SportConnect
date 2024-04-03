@@ -21,7 +21,7 @@ $(document).ready(function(){
     // Map initialization script
     var json_url = "ubicacion.json";
                     
-    var map = L.map('mapa').setView([41.357805, 2.0379357], 13);
+    var map = L.map('mapa').setView([41.355464, 2.070481], 13);   
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
     fetch(json_url)
         .then(response => response.json())
