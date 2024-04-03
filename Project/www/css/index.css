@@ -753,7 +753,7 @@ p {
     font-size: 20px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
@@ -864,7 +864,7 @@ p {
     font-size: 20px;
     /* Reduced font size */
     font-weight: normal;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;

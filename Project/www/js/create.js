@@ -20,6 +20,7 @@ $(document).ready(function(){
     $('#redirectToLanding').on('click', function() {
         window.location.href = 'landingpage.html';
     });
+    
     console.log("Script create.js loaded and deviceready fired.");
 
     $(document).on("mobileinit", function() {
