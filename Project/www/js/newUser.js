@@ -18,6 +18,10 @@ $(document).ready(function() {
         window.location.href = 'Profile.html';
     }); */
 
+    $('#redirectToIndex').on('click', function() {
+        window.location.href = 'Index.html';
+        });
+
   // Validación del nombre de usuario al perder el foco
   $('.formNewUser #username').on('focusout', function() {
       var username = $(this).val().trim();
