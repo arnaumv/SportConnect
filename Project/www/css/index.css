@@ -10,7 +10,9 @@
     text-align: center;
     margin: 0;
 }
-body .ui-btn, body label.ui-btn  {
+
+body .ui-btn,
+body label.ui-btn {
     font-weight: 700;
     border-width: 1px;
     border-style: none !important;
@@ -27,18 +29,22 @@ body .ui-btn, body label.ui-btn  {
         transform: translateY(100px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-.div-logo-title, .pIndex, #buttonCreate, #buttonLogin {
+.div-logo-title,
+.pIndex,
+#buttonCreate,
+#buttonLogin {
     animation: slideUp 1s ease-out;
 }
 
 .pIndex {
-    margin-top: 1px; 
+    margin-top: 1px;
     color: #ffffff;
     text-shadow: 0 0px 0 #f3f3f3;
     margin-left: 30px;
@@ -47,41 +53,42 @@ body .ui-btn, body label.ui-btn  {
 }
 
 .span-large {
-    font-size: 1.8em; 
+    font-size: 1.8em;
 }
 
-#buttonCreate, #buttonLogin {
+#buttonCreate,
+#buttonLogin {
     font-weight: 700;
     border-width: 1px;
-    border-style: solid !important; 
-    border-color: white !important; 
-    background-color: transparent !important; 
-    color: white !important; 
+    border-style: solid !important;
+    border-color: white !important;
+    background-color: transparent !important;
+    color: white !important;
     display: block;
-    margin: auto; 
-    width: 85%; 
-    text-shadow: none !important; 
-    border-radius: 20px; 
+    margin: auto;
+    width: 85%;
+    text-shadow: none !important;
+    border-radius: 20px;
 }
 
 #buttonCreate {
-    background-color: rgba(46, 165, 245, 0.336) !important; 
+    background-color: rgba(46, 165, 245, 0.336) !important;
 }
 
 .pTitleIndex {
     margin-top: 200px;
-    font-family: Arial, sans-serif; 
-    font-size: 2.1em; 
-    letter-spacing: 0.1em; 
-    text-transform: uppercase; 
-    text-align: center; 
+    font-family: Arial, sans-serif;
+    font-size: 2.1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
     color: aliceblue;
 }
 
 .div-logo-title {
     display: flex;
     align-items: center;
-    margin: auto; 
+    margin: auto;
 }
 
 .img-index {
@@ -103,23 +110,30 @@ body .ui-btn, body label.ui-btn  {
 }
 
 .headerIndex .header-logo {
-    width: 50px; 
-    height: 50px; 
-    margin-right: 9px; 
+    width: 50px;
+    height: 50px;
+    margin-right: 9px;
 }
 
 .headerIndex h1 {
     margin: 0;
-    color: #ffffff; 
-    font-family: 'Roboto', sans-serif; /* Añadido la fuente Roboto */
-    font-size: 24px; /* Aumentado el tamaño de la fuente para mayor impacto */
-    font-weight: 545; /* Aumentado el peso de la fuente para un aspecto más audaz */
-    text-transform: uppercase; 
-    letter-spacing: 1px; /* Aumentado el espaciado de las letras para una mejor legibilidad */
-    line-height: 1.5; /* Ajustado el interlineado para una mejor legibilidad */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    /* Añadido la fuente Roboto */
+    font-size: 24px;
+    /* Aumentado el tamaño de la fuente para mayor impacto */
+    font-weight: 545;
+    /* Aumentado el peso de la fuente para un aspecto más audaz */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Aumentado el espaciado de las letras para una mejor legibilidad */
+    line-height: 1.5;
+    /* Ajustado el interlineado para una mejor legibilidad */
     margin-top: 6px;
-    font-stretch: normal; /* Cambiado a normal para evitar la distorsión de la fuente */
-    height: 40px; /* Añadido altura a la letra */
+    font-stretch: normal;
+    /* Cambiado a normal para evitar la distorsión de la fuente */
+    height: 40px;
+    /* Añadido altura a la letra */
 }
 
 /********** HEADER - NEW EVENT **********/
@@ -134,9 +148,9 @@ body .ui-btn, body label.ui-btn  {
 }
 
 .headerCreate .header-logo {
-    width: 50px; 
-    height: 50px; 
-    margin-right: 9px; 
+    width: 50px;
+    height: 50px;
+    margin-right: 9px;
 }
 
 .headerCreate h1 {
@@ -160,7 +174,6 @@ body .ui-btn, body label.ui-btn  {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    margin-right: 50px;
 }
 
 .options-icon {
@@ -276,7 +289,8 @@ body .ui-btn, body label.ui-btn  {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     letter-spacing: 0.5px;
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold; /* Added this line to make the text bolder */
+    font-weight: bold;
+    /* Added this line to make the text bolder */
     margin-top: 169px;
     margin-left: 10px;
 }
@@ -285,11 +299,12 @@ body .ui-btn, body label.ui-btn  {
     font-size: 14px;
     line-height: 1.3;
     color: #ffffff;
-   
+
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold; /* Added this line to make the text bolder */
+    font-weight: bold;
+    /* Added this line to make the text bolder */
     margin-top: 55px;
     margin-left: 10px;
 }
@@ -298,11 +313,12 @@ body .ui-btn, body label.ui-btn  {
     font-size: 14px;
     line-height: 1.3;
     color: #ffffff;
-   
+
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold; /* Added this line to make the text bolder */
+    font-weight: bold;
+    /* Added this line to make the text bolder */
     margin-top: 14px;
     margin-left: 10px;
 }
@@ -336,7 +352,7 @@ h3 {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-    /*height: 310px;*/ 
+    /*height: 310px;*/
 }
 
 .col {
@@ -403,18 +419,21 @@ p {
     border-radius: 9px 10px 0 0;
     /*margin-bottom: 20px;*/
 }
+
 .column .small-img {
     position: absolute;
     background-color: #c4c7c7;
     padding: 2px;
     filter: invert(1);
 
-    width: 40px; /* Ajusta el tamaño según sea necesario */
+    width: 40px;
+    /* Ajusta el tamaño según sea necesario */
     height: auto;
     display: block;
     margin: -31px auto;
     margin-left: 10px;
-    border-radius: 8px; /* Ajusta para obtener el nivel de redondeo que desees */
+    border-radius: 8px;
+    /* Ajusta para obtener el nivel de redondeo que desees */
 }
 
 
@@ -434,6 +453,7 @@ p {
     border-radius: 10px;
     margin-bottom: 30px;
 }
+
 /************** CREATE **************/
 
 
@@ -516,6 +536,16 @@ p {
 }
 
 /* Estilos para el contenido del perfil */
+
+.notification-icon-profile {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    margin-right: 50px;
+}
 .ui-content {
     padding: 10px;
 }
@@ -566,7 +596,7 @@ p {
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s;
-    text-shadow: none; /* Quitar sombra de texto */
+    text-shadow: none;
 }
 
 
@@ -589,7 +619,8 @@ p {
     padding: 8px 12px;
     margin: 0 5px;
     font-size: 12px;
-    background-color: rgb(43, 165, 221);;
+    background-color: rgb(43, 165, 221);
+    ;
     color: white;
     border: none;
     border-radius: 3px;
@@ -720,6 +751,7 @@ p {
     text-align: center;
 
 }
+
 .centered-link {
     margin-top: 20px;
     display: block;
@@ -776,7 +808,8 @@ p {
 .events-buttons button {
     padding: 6px 5px !important;
     font-size: 14px;
-    background-color: rgb(43, 165, 221);;
+    background-color: rgb(43, 165, 221);
+    ;
     color: white;
     border: none;
     border-radius: 5px;
@@ -786,7 +819,7 @@ p {
 }
 
 
-.events-buttons #all{
+.events-buttons #all {
     margin-left: 630px;
 }
 
@@ -827,7 +860,8 @@ p {
 .join-btn {
     display: inline-block;
     padding: 8px 20px;
-    background-color: rgb(43, 165, 221);;
+    background-color: rgb(43, 165, 221);
+    ;
     color: white;
     border: none;
     border-radius: 5px;
@@ -932,7 +966,7 @@ p {
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
-    
+
 }
 
 
@@ -948,7 +982,8 @@ p {
 .unirse-btn .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgb(43, 165, 221);;
+    background-color: rgb(43, 165, 221);
+    ;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
@@ -961,50 +996,48 @@ p {
 
 .error {
     color: red;
-    text-shadow: none; /* Quitar sombra de texto */
+    text-shadow: none;
+    /* Quitar sombra de texto */
 }
-  
+
 span.error {
     display: block;
     font-size: 15px;
 }
 
 .error-input {
-    border: 2px solid red !important; /* Cambiar al color rosa deseado */
+    border: 2px solid red !important;
+    /* Cambiar al color rosa deseado */
 }
 
 /********** Options **********/
 .headerOptions {
     display: flex;
     align-items: center;
-    padding: 13px;
-    /* Reduced padding */
+    padding: 43px;
     padding-left: 25px;
-}
-
-.headerOptions #deleteX{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 5%;
-    transform: translateY(-50%);
-    margin-right: 50px;
-}
-
-
-/* **************************************** */
-
-/* Estilos adicionales */
-.headerOptions {
     text-align: right;
     margin-bottom: 20px;
 }
 
-#deleteX {
+.headerOptions #deleteX {
     width: 30px;
     height: 30px;
     cursor: pointer;
+    position: absolute;
+    top: 5%;
+    transform: translateY(-50%);
+    margin-right: 50px;
+    margin-bottom: 10px;
 }
+
+.contentOptions {
+    margin-left: 40px;
+}
+
+/* **************************************** */
+
+/* Estilos adicionales */
 
 .menu-title {
     margin-top: 20px;
@@ -1012,10 +1045,11 @@ span.error {
 }
 
 .menu-items {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .menu-items a {
+    width: 300px;
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -1023,6 +1057,7 @@ span.error {
     text-decoration: none;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s ease;
+
 }
 
 .menu-items a:hover {
@@ -1033,3 +1068,76 @@ span.error {
     width: 30px;
     margin-right: 10px;
 }
+
+
+/********** Terms **********/
+
+.headerTerms {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.headerTerms img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+
+.containerTerms {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.containerTerms h1 {
+    color: #333;
+}
+
+.containerTerms p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/********** Privacy **********/
+
+/* Estilos para el encabezado de la Política de Privacidad (headerPrivacy) */
+.headerPrivacy {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.headerPrivacy img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.contentPrivacy {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contentPrivacy h1 {
+    color: #333;
+}
+
+.contentPrivacy p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+

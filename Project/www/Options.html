@@ -25,34 +25,32 @@
 <body>
     <!-- Solo contenido principal, sin encabezado ni pie de página -->
     <div class="headerOptions">
-        <!-- Este enlace te llevará a Profile.html -->
-        <a href="#" class="delete-link"><img src="./img/Options/eliminar.png" id="deleteX"></a>
+        <a class="delete-link" id="deleteX"><img src="./img/Options/eliminar.png"></a>
     </div>
 
-    <div class="content">
+    <div class="contentOptions">
 
         <h3 class="menu-title">Tu cuenta</h3>
         <div id="Menu-Profile" class="menu-items">
-            <a href="#"><img src="./img/index/iconoProfile.png">Editar Perfil</a>
-            <a href="#"><img src="./img/Options/contraseña.png" >Cambiar Contraseña</a>
+            <a id="Edit_Profile"><img src="./img/index/iconoProfile.png">Editar Perfil</a>
         </div>
 
         <h3 class="menu-title">Soporte</h3>
         <div id="Menu-Support" class="menu-items">
-            <a href="#"><img src="./img/index/chat.png">Contactar Soporte</a>
+            <a id="support"><img src="./img/index/chat.png">Contactar Soporte</a>
         </div>
 
         <h3 class="menu-title">Información Legal</h3>
         <div id="Menu-Legal" class="menu-items">
-            <a href="#"><img src="./img/Options/terms.png">Términos y Condiciones</a>
-            <a href="#"><img src="./img/index/iconoPrivacidad2.png">Política de Privacidad</a>
+            <a id="a_terms"><img src="./img/Options/terms.png">Términos y Condiciones</a>
+            <a id="a_privac"><img src="./img/Options/polit.png">Política de Privacidad</a>
         </div>
     </div>
 
     <script src="cordova.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/Profile.js"></script>
+    <script src="js/Options.js"></script>
 </body>
 
 </html>
