@@ -807,7 +807,7 @@ p {
     border-radius: 5px;
     margin-bottom: 10px;
     min-width: 330px;
-    max-width: 330px;
+    /*max-width: 330px;*/
     min-height: 150px;
     max-height: 150px;
 }
