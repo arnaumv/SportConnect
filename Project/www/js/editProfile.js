@@ -82,6 +82,7 @@ $(document).ready(function() {
             $(this).removeClass('error-input'); // Eliminar clase de error del input
         }
     });
+    
     $('#btnSave').on('click', function() {
         var hasErrors = false;
 
@@ -109,11 +110,13 @@ $(document).ready(function() {
                 },
                 success: function(response) {
                     // Manejar la respuesta de éxito
-                    alert(response.message);
+                    showPopup2(response.message);
+                    //alert(response.message);
                 },
                 error: function(xhr, status, error) {
                     // Manejar errores
-                    console.error(error);
+                    //console.error(error);
+                    showPopup(error);
                 }
             });    
         } else {
@@ -134,4 +137,14 @@ function isValidDate(dateString) {
     var today = new Date();
     var birthdate = new Date(dateString);
     return birthdate < today;
+}
+
+function showPopup(message) {
+    $('#popup-message').text(message);
+    $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}
+
+function showPopup2(message) {
+    $('#popup-message2').text(message);
+    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
 }
