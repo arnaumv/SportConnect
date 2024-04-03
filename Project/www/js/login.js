@@ -76,13 +76,19 @@ $(document).on('pagecreate', function() {
                     localStorage.setItem('username', username);
 
                     window.location.href = 'landingpage.html';
+
+                    //showPopup2(data.message);
+
                 },
                 error: function(error) {
-                    console.log('Error:', error);
+                    //console.log('Error:', error);
+                    showPopup("Nombre de usuario o contraseña incorectos");
                 }
             });
         } else {
-            console.log('Hubo un error al iniciar sesión');
+            //console.log('Hubo un error al iniciar sesión');                    
+            showPopup('Hubo un error al iniciar sesión');
+
         }
     });
 });
@@ -108,3 +114,13 @@ $(document).ready(function() {
         window.location.href = 'Index.html';
         });
 });
+
+function showPopup(message) {
+    $('#popup-message').text(message);
+    $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}
+
+function showPopup2(message) {
+    $('#popup-message2').text(message);
+    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}

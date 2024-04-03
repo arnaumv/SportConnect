@@ -49,21 +49,35 @@ $(document).on('pagecreate', function() {
                                 email: email,
                             },
                             success: function() {
-                                alert('Correo de restablecimiento de contraseña enviado');
+                                //alert('Correo de restablecimiento de contraseña enviado');
+                                showPopup2('Correo de restablecimiento de contraseña enviado');
                             },
                             error: function() {
-                                alert('Hubo un error al enviar el correo de restablecimiento de contraseña');
+                                //alert('Hubo un error al enviar el correo de restablecimiento de contraseña');
+                                showPopup('Hubo un error al enviar el correo de restablecimiento de contraseña');
                             }
                         });
                     } else {
                         // If the email does not exist, show an error message
-                        alert('Este correo electrónico no existe');
+                        //alert('Este correo electrónico no existe');
+                        showPopup('Este correo electrónico no existe');
                     }
                 },
                 error: function() {
-                    alert('Hubo un error al verificar el correo electrónico');
+                    //alert('Hubo un error al verificar el correo electrónico');
+                    showPopup('Hubo un error al verificar el correo electrónico');
                 }
             });
         }
     });
 });
+
+function showPopup(message) {
+    $('#popup-message').text(message);
+    $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}
+
+function showPopup2(message) {
+    $('#popup-message2').text(message);
+    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}
