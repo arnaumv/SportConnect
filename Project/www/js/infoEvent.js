@@ -150,4 +150,8 @@ $(document).ready(function () {
   $("#profile").on("click", function () {
     window.location.href = "Profile.html";
   });
+
+  $('#redirectToLanding').on('click', function() {
+    window.location.href = 'landingpage.html';
+});
 });

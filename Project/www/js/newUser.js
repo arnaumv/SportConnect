@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $('#redirectToIndex').on('click', function() {
         window.location.href = 'Index.html';
-        });
+    });
 
   // Validación del nombre de usuario al perder el foco
   $('.formNewUser #username').on('focusout', function() {
