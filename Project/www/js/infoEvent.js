@@ -1,7 +1,28 @@
 $(document).ready(function () {
   // Obtener el ID del evento del localStorage
   var eventId = localStorage.getItem("selectedEventId");
-
+  // Hacer una solicitud AJAX para obtener la información del evento
+  $.ajax({
+    url: 'http://127.0.0.1:8000/event-filter/' + eventId + '/get_event',  // URL de tu API
+    type: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    beforeSend: function() {
+        console.log('Sending AJAX request');
+    },
+    success: function(evento) {
+        console.log('AJAX request succeeded');
+        // Actualizar el HTML de la página con la información del evento
+        $('.evento img').attr('src', evento.image_path);
+        $('.evento h2').text(evento.title);
+        $('.evento p').first().text('Fecha: ' + evento.date);
+        $('.evento p').last().text(evento.description);
+    },
+    error: function(error) {
+        console.log('Error getting event:', error);
+    }
+  });
   // Función para cargar la lista de participantes
   function loadParticipants() {
     $.ajax({
