@@ -1,6 +1,11 @@
 $(document).on('pagecreate', function() {
     console.log("FICHERO RESETPASSMAILJS");  // Console log here
 
+     //Movilidad entre paginas
+     $('#flecha-izquierda').on('click', function() {
+        window.location.href = 'login.html';
+        });
+
     $('#email').on('focusout', function() {
 
         var email = $('#email').val().trim();

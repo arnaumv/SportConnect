@@ -247,14 +247,14 @@ body .ui-btn, body label.ui-btn  {
     margin: 0;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     /* Reduced font size */
     font-weight: normal;
     /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
-    margin-left: 60px;
+    margin-left: 47px;
 }
 
 .pResetPassMail{
