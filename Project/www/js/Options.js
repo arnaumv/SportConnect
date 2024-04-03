@@ -17,8 +17,14 @@ $(document).ready(function() {
     $('#a_privac').on('click', function() {
         window.location.href = 'Privacy.html';
     });
-    
-    
+
+    document.getElementById("a_logout").addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        localStorage.removeItem("username");
+        
+        window.location.href = "Index.html";
+    });
 
 });
 

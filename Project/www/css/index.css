@@ -1021,21 +1021,14 @@ span.error {
 .headerOptions {
     display: flex;
     align-items: center;
-    padding: 43px;
-    padding-left: 25px;
-    text-align: right;
-    margin-bottom: 20px;
+    padding: 10px;
+    color: #fff;
 }
 
-.headerOptions #deleteX {
+.headerOptions img {
     width: 30px;
     height: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 5%;
-    transform: translateY(-50%);
-    margin-right: 50px;
-    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .contentOptions {
@@ -1064,7 +1057,6 @@ span.error {
     text-decoration: none;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s ease;
-
 }
 
 .menu-items a:hover {
@@ -1072,6 +1064,26 @@ span.error {
 }
 
 .menu-items img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.menu-logOut {
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+.menu-logOut a {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: red !important;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.menu-logOut img {
     width: 30px;
     margin-right: 10px;
 }
@@ -1148,7 +1160,7 @@ span.error {
     margin-bottom: 15px;
 }
 
-/* popap de notificacion */
+/* popup de notificacion */
 
 .popup {
     display: none;
