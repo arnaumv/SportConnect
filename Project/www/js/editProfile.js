@@ -92,6 +92,30 @@ $(document).ready(function() {
         // Si no hay errores, enviar los datos
         if(!hasErrors){
             console.log("Comprobacion perfecta...");
+            var storedUsername = localStorage.getItem('username');
+            var email = $('#email').val();
+            var password = $('#password').val();
+            var description = $('#description').val();
+            var birthdate = $('#birthdate').val();
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:8000/update-user/' + storedUsername + '/',
+                data: {
+                    email: email,
+                    password: password,
+                    description: description,
+                    birthdate: birthdate
+                },
+                success: function(response) {
+                    // Manejar la respuesta de éxito
+                    alert(response.message);
+                },
+                error: function(xhr, status, error) {
+                    // Manejar errores
+                    console.error(error);
+                }
+            });    
         } else {
             console.log('Comprobacion Fallida...');
         }
