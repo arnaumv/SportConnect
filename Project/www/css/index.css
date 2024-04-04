@@ -713,6 +713,7 @@ p {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 14%;
+    text-shadow: none;
 }
 
 /* **************************************** */
