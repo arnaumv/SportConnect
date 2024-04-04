@@ -164,6 +164,8 @@ body label.ui-btn {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 13%;
+    text-shadow: none;
+
 }
 
 .notification-icon {
@@ -214,6 +216,8 @@ body label.ui-btn {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 5%;
+    text-shadow: none;
+
 }
 
 /********** HEADER - Login **********/
@@ -246,6 +250,7 @@ body label.ui-btn {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 10%;
+    text-shadow: none;
 }
 
 /********** HEADER - Reset Pass and Reset Pass Mail **********/
@@ -279,6 +284,8 @@ body label.ui-btn {
     line-height: 1.2;
     font-stretch: expanded;
     margin-left: 47px;
+    text-shadow: none;
+
 }
 
 .pResetPassMail{
@@ -498,6 +505,7 @@ p {
 #btnSubmit {
     background-color: rgb(43, 165, 221);
     text-shadow: none;
+    border-radius: 25px; /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
 }
 
 #btnEnviarMail {
@@ -755,7 +763,7 @@ p {
 }
 
 .formLogin h2 {
-    text-align: center;
+    text-align: left;
 
 }
 
@@ -763,6 +771,58 @@ p {
     margin-top: 20px;
     display: block;
     text-align: center;
+}
+
+
+
+.ui-input-text input:focus, .ui-input-search input:focus {
+    border-bottom: 2px solid rgb(0, 16, 156) !important; /* Change the border color to blue when focused */
+}
+
+
+
+.ui-input-text input, .ui-input-search input {
+    margin: 0  !important;
+    min-height: 2.2em !important;
+    text-align: left !important;
+    border: none !important; /* Remove all borders */
+    border-bottom: 1px solid #000 !important; /* Add a border at the bottom */
+    background: transparent none !important;
+    -webkit-appearance: none  !important;
+    -webkit-border-radius: inherit  !important;
+    border-radius: 1px  !important;
+}
+
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text {
+    padding: .4em  !important;
+    line-height: 1.4em  !important;
+    display: block  !important;
+    width: 100%  !important;
+    -webkit-box-sizing: border-box  !important;
+    -moz-box-sizing: border-box  !important;
+    box-sizing: border-box  !important;
+    outline: 0  !important;
+}
+
+
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #333 !important;
+    text-shadow: 0 1px 0 #f3f3f300 !important;
+}
+
+.ui-shadow-inset {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 3px rgb(247 247 247 / 20%);
+}
+
+.ui-page-theme-a .ui-btn:focus,html .ui-bar-a .ui-btn:focus,html .ui-body-a .ui-btn:focus,html body .ui-group-theme-a .ui-btn:focus,html head+body .ui-btn.ui-btn-a:focus,.ui-page-theme-a .ui-focus,html .ui-bar-a .ui-focus,html .ui-body-a .ui-focus,html body .ui-group-theme-a .ui-focus,html head+body .ui-btn-a.ui-focus,html head+body .ui-body-a.ui-focus {
+    -webkit-box-shadow: 0 0 12px rgb(255, 255, 255) !important;
+    -moz-box-shadow: 0 0 12px rgb(255, 255, 255) !important;
+    box-shadow: 0 0 12px rgb(255, 255, 255) !important;
 }
 
 /* **************** RESET PASS ************************ */
@@ -1012,9 +1072,8 @@ span.error {
     font-size: 15px;
 }
 
-.error-input {
-    border: 2px solid red !important;
-    /* Cambiar al color rosa deseado */
+.ui-input-text input.error-input, .ui-input-search input.error-input {
+    border-bottom: 2px solid red !important; /* Cambiar el color del borde a rojo cuando tiene la clase error-input */
 }
 
 /********** Options **********/
