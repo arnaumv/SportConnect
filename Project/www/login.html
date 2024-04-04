@@ -34,27 +34,25 @@
         <title>Sport Connect - Create User</title>
 		
     </head>
-    <body>
+    <body >
 		<!-- PAGE CREATE -->
-		<div data-role="page" >
+		<div data-role="page" class="colorLogin" >
 			<div class="headerLogin">
 				<img id="redirectToIndex" src="./img/index/flecha.png" alt="Image 1" class="header-flecha">
-				<h1>Iniciar Sesión</h1>
+				<h1></h1>
 			</div>
 			
 	
-			<div class="ui-content">
+			<div class="ui-content login-page">
 				<div class="loginDiv">
 					<div class="formLogin">
 						<h2>Identifícate</h2>
-						<input type="text" id="username" placeholder="Nombre de usuario">
-						<span class="error" id="error_username"></span><br> <!-- Aquí se mostrará el mensaje de error para el nombre de usuario -->
-						<input type="password" id="password" placeholder="Contraseña">
-						<span class="error" id="error_password"></span><br> <!-- Aquí se mostrará el mensaje de error para la contraseña -->
-						
+						<input type="text" id="username" placeholder="Nombre de usuario" class="inputLogin">
+						<span class="error" id="error_username"></span><br>
+						<input type="password" id="password" placeholder="Contraseña" class="inputLogin">
+						<span class="error" id="error_password"></span><br>
 						<button id="btnSubmit">Iniciar Sesión</button>
 						<a class="toResetPassMail">¿Has olvidado la contraseña?</a><br><br>
-						<!--<a class="toNewUser" >Crear una cuenta nueva</a><br><br>-->
 					</div>
 				</div>				
 			</div>
