@@ -933,7 +933,10 @@ p {
     text-align: left !important;
 }
 
-
+.formNewUser input::placeholder {
+    color: #333; /* or any darker color you prefer */
+    opacity: 1; /* Firefox needs this to change placeholder color */
+}
 
 /* **************** RESET PASS ************************ */
 
