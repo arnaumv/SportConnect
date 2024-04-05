@@ -192,7 +192,7 @@ body label.ui-btn {
     display: flex;
     align-items: center;
     padding: 13px;
-    background-color: rgba(43, 45, 66, 0.9);
+    background-color: #f9f9f9;
     padding-left: 15px;
     position: relative;
 }
@@ -201,7 +201,7 @@ body label.ui-btn {
     width: 37px;
     height: 37px;
     margin-right: 45px;
-    filter: invert(1); 
+     
 }
 
 .headerNewUser h1 {
@@ -761,10 +761,14 @@ p {
     margin-top: 20%;
 }
 
-.formLogin a {
-    font-size: 12px;
-    color: rgb(255, 255, 255) !important;
+.toResetPassMail, ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    font-size: 13px;
+    border-color: #bbb;
+    color: #ffffff !important;
+    text-shadow: none;
+    text-align: center;
 }
+
 
 .formLogin h2 {
     text-align: left;
@@ -774,6 +778,7 @@ p {
     font-family: 'Roboto', sans-serif;
     text-shadow: none;
     letter-spacing: 1px;
+    margin-left: 5px;
 
 }
 
@@ -845,7 +850,16 @@ p {
 
 /* **************** CREATE USER ************************ */
 
-
+.formNewUser h2 {
+    text-align: left;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
 
 .register-page .ui-input-text input, .create-page .ui-input-search input, .create-page .inputLogin 
 
@@ -900,7 +914,23 @@ p {
     text-shadow: inherit;
 }
 
+.labelBirthdate {
+    font-size: 13px;
+    border-color: #bbb;
+    color: #181818ce !important;
+    text-shadow: none;
+    text-align: left !important;
+}
 
+
+
+.ui-mobile label, div.ui-controlgroup-label {
+    font-weight: 400;
+    font-size: 16px;
+    color: black !important;
+   
+    text-align: left !important;
+}
 
 /* **************** RESET PASS ************************ */
 
@@ -1139,7 +1169,7 @@ p {
 /* Css Errores formularios */
 
 .error {
-    color: red;
+    color: #ff4f4f;
     text-shadow: none;
     /* Quitar sombra de texto */
 }
