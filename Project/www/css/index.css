@@ -100,6 +100,8 @@ body label.ui-btn {
     margin-right: 3px;
 }
 
+
+
 /********** HEADER-LANDINGPAGE **********/
 .headerIndex {
     display: flex;
@@ -298,31 +300,30 @@ body label.ui-btn {
 }
 
 /************** INDEX **************/
-
 .paragraph1 {
     font-size: 17px;
     line-height: 1.1;
     color: #ffffff;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
     letter-spacing: 0.5px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
-    /* Added this line to make the text bolder */
-    margin-top: 169px;
-    margin-left: 10px;
+    margin-top: 179px;
+    margin-left: 15px;
+    text-align: start;
 }
 
 .paragraph2 {
     font-size: 14px;
     line-height: 1.3;
     color: #ffffff;
-
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     /* Added this line to make the text bolder */
-    margin-top: 55px;
+    margin-top: 40px;
     margin-left: 10px;
 }
 
@@ -331,7 +332,8 @@ body label.ui-btn {
     line-height: 1.3;
     color: #ffffff;
 
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
+    text-align: left;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -1281,6 +1283,7 @@ span.error {
 .menu-title {
     margin-top: 20px;
     color: #000;
+    text-align: left;
 }
 
 .menu-items {
