@@ -353,6 +353,7 @@ h2 {
     margin-bottom: 2rem;
     text-align: left;
     margin-left: 13px;
+    color: black;
 }
 
 h3 {
@@ -632,6 +633,25 @@ p {
     text-shadow: none;
 }
 
+
+.events-section h3 {
+    font-size: 1.5em;
+    font-weight:lighter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.miniDescription {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #000;
+    text-align: left;
+    margin-left: 25px;
+}
 
 .edit-profile-btn:hover {
     background-color: #0056b3;

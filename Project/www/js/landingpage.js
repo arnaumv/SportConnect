@@ -30,10 +30,11 @@ $(document).ready(function(){
                 data.locations.forEach(ubicacion => {
                     var marker = L.marker([ubicacion.ubicacion.latitude, ubicacion.ubicacion.longitude]).addTo(map);
                     var actividades = ubicacion.actividad.join(', '); // Join the activities into a single string separated by commas
-                    marker.bindPopup('<b>' + ubicacion["nombre de ubicacion"] + '</b><br><b>Actividad:</b> ' + actividades);
+                    var imagen = ubicacion.imagen ? '<img src="' + ubicacion.imagen + '" alt="Imagen de ubicación"  width="170" height="100">' : ''; // Add image if it exists, with width and height
+                    marker.bindPopup('<b>' + ubicacion["nombre de ubicacion"] + '</b><br><b>Actividad:</b> ' + actividades + '<br>' + imagen);
                 });
             }
-    });
+        });
 });
 
 
