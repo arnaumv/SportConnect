@@ -47,10 +47,10 @@
 		<div class="ui-content">
 			<div class="form">
 				<label for="titulo">Título:</label>
-				<input type="text" id="titulo" placeholder="Título del evento">
+				<input type="text" id="titulo" class="input-text" placeholder="Título del evento">
 				<span id="error_titulo" class="error"></span><br>
 				<label for="tipoDeporte">Deporte:</label>
-				<select id="tipoDeporte">
+				<select id="tipoDeporte" class="input-text">
 					<option value="Futbol">Futbol</option>
 					<option value="Baloncesto">Baloncesto</option>
 					<option value="Barras">Gimnasio</option>
@@ -59,20 +59,20 @@
 					<option value="Padel">Padel</option>
 					<!-- Agrega más opciones según tus necesidades -->
 				</select><br>
-
+			
 				<label for="fecha">Fecha y hora:</label>
 				<div class="timeDate">
-					<input type="date" id="fecha">
-					<input type="time" id="hora">
+					<input type="date" id="fecha" class="custom-input input-text">
+					<input type="time" id="hora" class="custom-input input-text">
 				</div><br>
-
+			
 				<label for="ubicacion">Ubicación:</label>
-				<select id="ubicacion" data-native-menu="false">
+				<select id="ubicacion" class="input-text" data-native-menu="false">
 					<option value="">Selecciona una ubicación...</option>
 				</select><br>
-
+			
 				<label for="descripcion">Descripción:</label>
-				<textarea id="descripcion" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
+				<textarea id="descripcion" class="text-area-create" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
 				<button id="btnEnviar">Crear evento</button>
 			</div>
 		</div>

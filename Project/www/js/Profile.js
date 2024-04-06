@@ -85,7 +85,7 @@ $(document).ready(function() {
         eventHtml += '<p>Ubicación: ' + evento.location  + '</p>';
         // Add "View" button for active events
         if (eventDate >= currentDate) {
-            eventHtml += '<button class="join-btn" onclick="window.location.href=\'InfoEvent.html?eventId=' + evento.id + '\'">Ver</button>';
+            eventHtml += '<button class="join-btn-profile" onclick="window.location.href=\'InfoEvent.html?eventId=' + evento.id + '\'">Ver</button>';
         }
         eventHtml += '</div>';
         $('.events-list').append(eventHtml);
