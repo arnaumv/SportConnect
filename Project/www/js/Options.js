@@ -22,6 +22,7 @@ $(document).ready(function() {
         event.preventDefault();
         
         localStorage.removeItem("username");
+        localStorage.clear();
         
         window.location.href = "Index.html";
     });
