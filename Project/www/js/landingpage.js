@@ -17,6 +17,11 @@ $(document).ready(function(){
         window.location.href = 'Profile.html';
     });
 
+    $('#redirectToNotify').on('click', function() {
+        window.location.href = 'notify.html';
+    });
+
+
 
     // Map initialization script
     var json_url = "ubicacion.json";
