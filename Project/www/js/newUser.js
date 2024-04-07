@@ -87,17 +87,23 @@ $(document).ready(function() {
     });
 
   // Validación de la fecha de nacimiento al perder el foco
-  $('.formNewUser #birthdate').on('focusout', function() {
+$('.formNewUser #birthdate').on('focusout', function() {
     var birthdate = new Date($(this).val());
     var today = new Date();
-    if($(this).val().trim() === ''){
+    var minDate = new Date();
+    minDate.setFullYear(minDate.getFullYear() - 12); // Restar 12 años a la fecha actual para obtener la fecha mínima de nacimiento
+
+    if ($(this).val().trim() === '') {
         $('.formNewUser #error_birthdate').text('Por favor, introduce tu fecha de nacimiento');
         $(this).addClass('error-input'); // Agregar clase de error al input
-    } else if(!isValidDate(birthdate)){
+    } else if (!isValidDate(birthdate)) {
         $('.formNewUser #error_birthdate').text('La fecha de nacimiento no es válida');
         $(this).addClass('error-input'); // Agregar clase de error al input
-    } else if(birthdate > today){
+    } else if (birthdate > today) {
         $('.formNewUser #error_birthdate').text('La fecha de nacimiento no puede ser mayor al día actual');
+        $(this).addClass('error-input'); // Agregar clase de error al input
+    } else if (birthdate > minDate) {
+        $('.formNewUser #error_birthdate').text('Debes tener al menos 12 años');
         $(this).addClass('error-input'); // Agregar clase de error al input
     } else {
         $('#error_birthdate').text('');
@@ -140,15 +146,22 @@ $(document).ready(function() {
             },
             success: function(data) {
               console.log('Usuario creado con éxito:', data);
+              showPopup2('Usuario creado con éxito');
               // Redirige al usuario a login.html
-              window.location.href = 'login.html';
+              setTimeout(function() {
+                window.location.href = 'login.html';
+            }, 6200); // 6200 milisegundos = 6.2 segundos
+            
             },
             error: function(error) {
-              console.log('Error:', error);
+              console.log('Error:', error.responseText);
+              //showPopup("Debe rellenar todos los campos para poder crear un usuario");
+              handleAjaxError(error);
+
             }
           });
-    }
-});
+        }
+    });
 
   // Función para validar el formato del correo electrónico
   function isValidEmail(email) {
@@ -156,11 +169,33 @@ $(document).ready(function() {
       return emailRegex.test(email);
   }
 
-  // Función para validar la fecha de nacimiento
-  function isValidDate(dateString) {
-      var today = new Date();
-      var birthdate = new Date(dateString);
-      return birthdate < today;
-  }
+    // Función para validar la fecha de nacimiento
+    function isValidDate(dateString) {
+        var today = new Date();
+        var birthdate = new Date(dateString);
+        return birthdate < today;
+    }
+
+    function handleAjaxError(error) {
+        var errorData = JSON.parse(error.responseText);
+        $.each(errorData, function(field, messages) {
+            var errorMessage = messages.join(', '); // Concatenar los mensajes de error si hay más de uno
+            $('#error_' + field).text(errorMessage); // Insertar el mensaje de error en el span correspondiente
+            $("#"+field).addClass('error-input'); // Agregar clase de error al input
+        });
+    }
+
+    
+
 });
+
+function showPopup(message) {
+    $('#popup-message').text(message);
+    $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}
+
+function showPopup2(message) {
+    $('#popup-message2').text(message);
+    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+}
 

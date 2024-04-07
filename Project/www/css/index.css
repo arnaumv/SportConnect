@@ -637,7 +637,6 @@ p {
     text-shadow: none;
 }
 
-
 .events-section h3 {
     font-size: 1.5em;
     font-weight:lighter;
@@ -1239,6 +1238,16 @@ p {
     text-shadow: none;
 }
 
+.btnCancelar  {
+    display: inline-block ;
+    padding: 10px 20px !important;
+    background-color: rgb(221, 43, 43) !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+}
 
 /* Css Errores formularios */
 

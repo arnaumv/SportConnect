@@ -64,7 +64,8 @@
 				<div class="timeDate">
 					<input type="date" id="fecha" class="custom-input input-text">
 					<input type="time" id="hora" class="custom-input input-text">
-				</div><br>
+				</div>
+				<span class="error" id="error_event_date"></span><br>
 			
 				<label for="ubicacion">Ubicación:</label>
 				<select id="ubicacion" class="input-text" data-native-menu="false">
@@ -72,10 +73,26 @@
 				</select><br>
 			
 				<label for="descripcion">Descripción:</label>
-				<textarea id="descripcion" class="text-area-create" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
+				<textarea id="descripcion" class="text-area-create" rows="4" cols="50" placeholder="Descripción del evento"></textarea>
+				<span class="error" id="error_descripcion"></span><br>
+
 				<button id="btnEnviar">Crear evento</button>
 			</div>
 		</div>
+
+		<div id="popup" class="popup">
+            <div class="popup-content">
+                <img id="popup-close" class="popup-close" src="img/Profile/error-ventana.png">
+                <span id="popup-message"></span>
+            </div>
+        </div>
+
+        <div id="popup2" class="popup2">
+            <div class="popup-content2">
+                <img id="popup-close2" class="popup-close2" src="img/Profile/ok-ventana.png">
+                <span id="popup-message2"></span>
+            </div>
+        </div>
 
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
