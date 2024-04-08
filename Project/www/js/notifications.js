@@ -18,6 +18,11 @@ $(document).ready(function(){
         success: function(events) {
             console.log(events);
             events.forEach(function(event) {
+                // Si notify_deleted es true, no mostrar la notificación
+                if (event.notify_deleted) {
+                    return;
+                }
+
                 var now = new Date();
                 var joinDate = new Date(event.join_date);
                 var eventDate = new Date(event.event__date);
@@ -39,10 +44,37 @@ $(document).ready(function(){
                     var location = $('<p></p>').text('Ubicación: ' + event.event__location);
                     var time = $('<p></p>').text('Fecha y hora del evento: ' + eventDate.toLocaleDateString() + ' ' + eventHours + ':' + eventMinutes);
 
+                    // Crear el botón de eliminar y agregarlo a la notificación
+                    var deleteButton = $('<button></button>').text('Eliminar').css('position', 'absolute').css('right', '0');
+                    deleteButton.on('click', function() {
+                        notification.remove();
+
+                        // Hacer una petición AJAX para marcar la notificación como eliminada
+                        $.ajax({
+                            url: 'http://127.0.0.1:8000/api/eventsjoined/delete/',
+                            type: 'POST',
+                            data: {
+                                username: username,
+                                eventId: event.id,
+                                notify_deleted: true
+                            },
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            success: function(response) {
+                                console.log('Notificación marcada como eliminada:', response);
+                            },
+                            error: function(error) {
+                                console.error('Error al marcar la notificación como eliminada:', error);
+                            }
+                        });
+                    });
+
                     notification.append(joinMessage);
                     // notification.append(title);
                     notification.append(location);
                     notification.append(time);
+                    notification.append(deleteButton);  // Agregar el botón de eliminar a la notificación
 
                     console.log(notification);
 
@@ -51,9 +83,6 @@ $(document).ready(function(){
                     console.log($('#notifications'));
                 }
             });
-
-            // Efecto de deslizamiento a la izquierda después de generar el contenido
-            $("body").hide().show("slide", { direction: "right" }, 1000);
         },
         error: function(error) {
             console.error('Error al obtener los eventos a los que se ha unido el usuario:', error);
