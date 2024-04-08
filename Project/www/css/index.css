@@ -845,9 +845,8 @@ p {
 }
 
 
-
-.ui-input-text input:focus, .ui-input-search input:focus {
-    border-bottom: 2px solid rgb(0, 16, 156) !important; /* Change the border color to blue when focused */
+.login-page .ui-input-text input:focus, .login-page .ui-input-search input:focus, .login-page .inputLogin:focus {
+    border-bottom: 2px solid rgb(66, 103, 228) !important; /* Change the border color to blue when focused */
 }
 
 
@@ -1263,10 +1262,18 @@ span.error {
     text-align: left;
 }
 
-.ui-input-text input.error-input, .ui-input-search input.error-input {
-    border-bottom: 2px solid red !important; /* Cambiar el color del borde a rojo cuando tiene la clase error-input */
+.login-page .ui-input-text input.error-input, .login-page .ui-input-search input.error-input, .login-page .inputLogin.error-input {
+    border-bottom: 2px solid red !important; /* Change the border color to red when there is an error */
 }
 
+ 
+.formNewUser input:focus {
+    border-bottom: 2px solid rgb(18, 63, 209) !important; 
+}
+
+.formNewUser input.error-input {
+    border-bottom: 2px solid red !important; 
+}
 /********** Options **********/
 .headerOptions {
     display: flex;
