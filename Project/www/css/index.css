@@ -229,7 +229,7 @@ body label.ui-btn {
     align-items: center;
     padding: 13px;
     /* Reduced padding */
-    background-color: rgba(43, 45, 66, 0.9);
+    background-color: #2b2d4275;
     padding-left: 15px;
     position: relative;
 }
