@@ -48,24 +48,22 @@ $(document).ready(function(){
                     var deleteButton = $('<button></button>').text('Eliminar').css('position', 'absolute').css('right', '0');
                     deleteButton.on('click', function() {
                         notification.remove();
-
-                        // Hacer una petición AJAX para marcar la notificación como eliminada
+                    
+                        // Make an AJAX call to set notify_deleted to true
                         $.ajax({
-                            url: 'http://127.0.0.1:8000/api/eventsjoined/delete/',
+                            url: 'http://127.0.0.1:8000/api/deleteNotification/',
                             type: 'POST',
-                            data: {
-                                username: username,
-                                eventId: event.id,
-                                notify_deleted: true
-                            },
-                            xhrFields: {
-                                withCredentials: true
-                            },
+                            data: JSON.stringify({
+                                username: username,  // Use the username variable
+                                event_id: event.event__id  // Use the event__id property of the event object
+                            }),
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
                             success: function(response) {
-                                console.log('Notificación marcada como eliminada:', response);
+                                console.log('Notification deleted successfully');
                             },
                             error: function(error) {
-                                console.error('Error al marcar la notificación como eliminada:', error);
+                                console.error('Error deleting the notification:', error);
                             }
                         });
                     });
