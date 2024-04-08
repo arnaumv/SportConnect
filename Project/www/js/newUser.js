@@ -150,7 +150,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
               // Redirige al usuario a login.html
               setTimeout(function() {
                 window.location.href = 'login.html';
-            }, 6200); // 6200 milisegundos = 6.2 segundos
+            }, 2200); // 2200 milisegundos = 2.2 segundos
             
             },
             error: function(error) {
@@ -191,11 +191,11 @@ $('.formNewUser #birthdate').on('focusout', function() {
 
 function showPopup(message) {
     $('#popup-message').text(message);
-    $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    $('#popup').slideDown('slow').delay(2000).slideUp('slow'); // Transición más lenta
 }
 
 function showPopup2(message) {
     $('#popup-message2').text(message);
-    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    $('#popup2').slideDown('slow').delay(2000).slideUp('slow'); // Transición más lenta
 }
 

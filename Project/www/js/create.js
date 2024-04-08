@@ -61,7 +61,7 @@ fetch("ubicacion.json")
     .catch(error => console.error('Error getting locations:', error));
 
 
-    $('#titulo').on('focusout', function() {
+    $('#titulo').on('input focusout', function() {
         var titulo = $(this).val().trim();
         if (titulo === '') {
             $('#error_titulo').text('Por favor, introduce un título para el evento');
@@ -77,7 +77,7 @@ fetch("ubicacion.json")
     
 
 // Validación de la fecha del evento al perder el foco
-$('.timeDate input').on('focusout', function() {
+$('.timeDate input').on('input focusout', function() {
     var dateValue = $('#fecha').val();
     var timeValue = $('#hora').val();
     var eventDate = new Date(dateValue + ' ' + timeValue);
@@ -98,7 +98,7 @@ $('.timeDate input').on('focusout', function() {
     }
 });
 
-$('#descripcion').on('focusout', function() {
+$('#descripcion').on('input focusout', function() {
     var description = $(this).val().trim();
     if (description.length >= 10) {
         $('#error_descripcion').text('');
@@ -170,7 +170,7 @@ $('#btnEnviar').click(function(e){
                             showPopup2('Evento creado con éxito');
                             setTimeout(function() {
                                 window.location.href = 'landingpage.html';
-                            }, 6200); // 6200 milisegundos = 6.2 segundos
+                            }, 2200); // 2200 milisegundos = 2.2 segundos
                                                     },
                         error: function(error) {
                             console.log('AJAX request failed. Error creating event:', error);
@@ -201,10 +201,10 @@ function isValidDate(eventDate) {
 
 function showPopup(message) {
     $('#popup-message').text(message);
-    $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    $('#popup').slideDown('slow').delay(2000).slideUp('slow'); // Transición más lenta
 }
 
 function showPopup2(message) {
     $('#popup-message2').text(message);
-    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    $('#popup2').slideDown('slow').delay(2000).slideUp('slow'); // Transición más lenta
 }

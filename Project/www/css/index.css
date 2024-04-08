@@ -480,6 +480,7 @@ p {
 #btnEnviar {
     background-color: rgb(43, 165, 221);
     text-shadow: none;
+    border-radius: 25px;
 }
 
 .timeDate {
@@ -992,6 +993,97 @@ p {
     opacity: 1; /* Firefox needs this to change placeholder color */
 }
 
+
+/****************** CREAR EVENT  *********************/
+
+.create-page label {
+    text-align: left !important;
+    font-weight: normal !important;
+    color: rgb(0, 0, 0) !important;
+    font-family: inherit !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-shadow: none !important;
+    letter-spacing: 1px !important;
+    margin-left: 5px !important;
+}
+
+.create-page #tipoDeporte.input-text{
+    text-align: left !important;
+    font-weight: normal !important;
+    color: rgb(0, 0, 0) !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-shadow: none !important;
+    letter-spacing: 1px !important;
+    margin-left: 5px !important;
+}
+
+.create-page .ui-input-text input, .create-page .ui-input-search input {
+    margin: 0  !important;
+    min-height: 2em !important;
+    text-align: left !important;
+    border: none !important; /* Remove all borders */
+    border-bottom: 1px solid #7e7e7e !important; /* Add a border at the bottom */
+    background: transparent none !important;
+    -webkit-appearance: none  !important;
+    -webkit-border-radius: inherit  !important;
+    border-radius: 0px  !important;
+}
+
+.create-page .ui-input-text input, .create-page .ui-input-search input, .create-page textarea.ui-input-text {
+    padding: .4em  !important;
+    line-height: 1.4em  !important;
+    min-height: 2em !important;
+    display: block  !important;
+    width: 100%  !important;
+    -webkit-box-sizing: border-box  !important;
+    -moz-box-sizing: border-box  !important;
+    box-sizing: border-box  !important;
+    outline: 0  !important;
+}
+
+.create-page .ui-body-a, .create-page .ui-page-theme-a .ui-body-inherit, .create-page html .ui-bar-a .ui-body-inherit, .create-page html .ui-body-a .ui-body-inherit, .create-page html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #0f0f0f !important;
+    text-shadow: none !important;
+}
+
+.create-page .ui-shadow-inset {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+    box-shadow: none;
+}
+
+.create-page .ui-page-theme-a .ui-btn:focus, .create-page html .ui-bar-a .ui-btn:focus, .create-page html .ui-body-a .ui-btn:focus, .create-page html body .ui-group-theme-a .ui-btn:focus, .create-page html head+body .ui-btn.ui-btn-a:focus, .create-page .ui-page-theme-a .ui-focus, .create-page html .ui-bar-a .ui-focus, .create-page html .ui-body-a .ui-focus, .create-page html body .ui-group-theme-a .ui-focus, .create-page html head+body .ui-btn-a.ui-focus, .create-page html head+body .ui-body-a.ui-focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.create-page .legend, .create-page .ui-input-text input, .create-page .ui-input-search input {
+    color: black; 
+    text-shadow: inherit;
+}
+
+.create-page .input-text,.create-page ui-input-text input,.create-page .ui-input-search input {
+    margin: 0 !important;
+    min-height: 0.2em !important; 
+    text-align: left;
+    border: 0 !important;
+    background: transparent none !important;
+    -webkit-appearance: none !important;
+    -webkit-border-radius: inherit !important;
+    border-radius: inherit !important;
+    color: #000 !important;
+}
+
+.create-page #descripcion {
+    background-color: #eeeeeef2 !important;
+    border: 2px solid rgb(97, 97, 97) !important; /* Cambia el color del borde a azul cuando está enfocado */
+    border-radius: 10px !important;
+}
+
+
 /* **************** RESET PASS ************************ */
 
 .resetPassDiv {
@@ -1274,6 +1366,23 @@ span.error {
 .formNewUser input.error-input {
     border-bottom: 2px solid red !important; 
 }
+
+.create-page input:focus {
+    border-bottom: 2px solid rgb(18, 63, 209) !important; 
+}
+
+.create-page input.error-input {
+    border-bottom: 2px solid red !important; 
+}
+
+.create-page #descripcion:focus {
+    border: 2px solid rgb(18, 63, 209) !important; 
+}
+
+.create-page #descripcion.error-input {
+    border: 2px solid red !important; 
+}
+
 /********** Options **********/
 .headerOptions {
     display: flex;
