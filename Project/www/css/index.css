@@ -133,8 +133,10 @@ body label.ui-btn {
     line-height: 1.5;
     /* Ajustado el interlineado para una mejor legibilidad */
     margin-top: 6px;
-    font-stretch: normal; /* Cambiado a normal para evitar la distorsión de la fuente */
-    height: 40px; /* Añadido altura a la letra */
+    font-stretch: normal;
+    /* Cambiado a normal para evitar la distorsión de la fuente */
+    height: 40px;
+    /* Añadido altura a la letra */
     margin-left: 25px;
 }
 
@@ -204,7 +206,7 @@ body label.ui-btn {
     width: 37px;
     height: 37px;
     margin-right: 45px;
-     
+
 }
 
 .headerNewUser h1 {
@@ -238,7 +240,7 @@ body label.ui-btn {
     width: 37px;
     height: 37px;
     margin-right: 45px;
-    filter: invert(1); 
+    filter: invert(1);
 }
 
 .headerLogin h1 {
@@ -270,9 +272,9 @@ body label.ui-btn {
 .headerResetPass .flecha-izquierda {
     width: 37px !important;
     height: 27px;
-    filter: invert(1); 
+    filter: invert(1);
 
-   
+
 }
 
 .headerResetPass h1 {
@@ -291,8 +293,8 @@ body label.ui-btn {
 
 }
 
-.pResetPassMail{
-  
+.pResetPassMail {
+
     margin-top: -40px;
     margin-bottom: 50px;
     color: #000;
@@ -304,7 +306,8 @@ body label.ui-btn {
     font-size: 17px;
     line-height: 1.1;
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5);
+    /* Add text shadow for a slight relief effect */
     letter-spacing: 0.5px;
     font-family: sans-serif;
     font-weight: bold;
@@ -318,7 +321,8 @@ body label.ui-btn {
     line-height: 1.3;
     color: #ffffff;
     text-align: left;
-    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5);
+    /* Add text shadow for a slight relief effect */
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -332,7 +336,8 @@ body label.ui-btn {
     line-height: 1.3;
     color: #ffffff;
 
-    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5);
+    /* Add text shadow for a slight relief effect */
     text-align: left;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
@@ -496,16 +501,18 @@ p {
     width: 50% !important;
     box-sizing: border-box !important;
     margin-right: 5px !important;
-    
+
 }
 
 .timeDate .ui-input-text:last-child {
     margin-right: 0 !important;
-   
+
 }
 
 
-.input-text, ui-input-text input, .ui-input-search input {
+.input-text,
+ui-input-text input,
+.ui-input-search input {
     margin: 0;
     min-height: 2.2em;
     text-align: left;
@@ -529,7 +536,8 @@ p {
 #btnSubmit {
     background-color: rgb(43, 165, 221);
     text-shadow: none;
-    border-radius: 25px; /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
+    border-radius: 25px;
+    /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
 }
 
 #btnEnviarMail {
@@ -585,6 +593,7 @@ p {
     transform: translateY(-50%);
     margin-right: 50px;
 }
+
 .ui-content {
     padding: 10px;
 }
@@ -630,17 +639,15 @@ p {
     display: inline-block;
     padding: 8px 16px;
     font-size: 14px;
-    background-color: rgb(43, 165, 221);
     color: black !important;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    border: 1px solid black;
     text-shadow: none;
 }
 
 .events-section h3 {
     font-size: 1.5em;
-    font-weight:lighter;
+    font-weight: lighter;
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: #000;
@@ -657,9 +664,6 @@ p {
     margin-left: 25px;
 }
 
-.edit-profile-btn:hover {
-    background-color: #0056b3;
-}
 
 /* Estilos para la sección de eventos */
 .events-section {
@@ -725,7 +729,7 @@ p {
     display: inline-block;
     padding: 8px 20px;
     background-color: rgb(43, 165, 221);
-    
+
     color: white;
     border: none;
     border-radius: 5px;
@@ -733,7 +737,13 @@ p {
     font-size: 14px;
     transition: background-color 0.3s ease;
     margin-left: -270px;
-    
+
+}
+
+.ButtonsEventsProfile {
+    text-shadow: none !important;
+    font: inherit !important;
+    font-size: 16px;
 }
 
 /********** Edit Profile **********/
@@ -792,7 +802,7 @@ p {
     border: 2px solid #007bff;
 }
 
-.formINFO #description {
+/* .formINFO #description {
     height: 100px;
 }
 
@@ -803,11 +813,97 @@ p {
     font-size: 14px;
     background-color: rgb(43, 165, 221);
     color: black !important;
-    /* Color del texto negro */
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s;
+} */
+
+.info_user_editProfile {
+    color: black;
+    font-size: 14px;
+    text-align: left;
 }
+
+/* Estilos para los inputs personalizados */
+.custom-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-input input {
+    width: 100%;
+    padding: 20px;
+    height: 65px;
+    /* Ajusta la altura del input */
+    border: none;
+    /* Quita el borde */
+    background-color: #c2c2c2 !important;
+    /* Fondo gris */
+    font-size: 16px;
+    color: #333;
+    /* Color del texto por defecto */
+    outline: none;
+    box-sizing: border-box;
+    /* Asegura que el padding no incremente el ancho */
+}
+
+.custom-input input::placeholder {
+    margin: 55px !important; /* Márgenes al texto del placeholder dentro del input */
+  }  
+
+.custom-input span {
+    margin: 10px 0px 0px 10px !important;
+}
+
+.custom-input input::placeholder {
+    color: #999;
+}
+
+.custom-input .input-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.custom-input input:focus+.input-text,
+.custom-input input:not(:placeholder-shown)+.input-text {
+    top: -15px;
+    /* Ajusta la posición cuando se enfoca o tiene texto */
+    font-size: 10px;
+    color: #007bff;
+    /* Cambia el color del texto cuando el input tiene foco o contenido */
+}
+
+/* Estilos para los errores */
+.error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    /* Ajusta la altura del botón */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 
 /* **************** LOGIN ************************ */
 .colorLogin {
@@ -818,7 +914,10 @@ p {
     margin-top: 20%;
 }
 
-.toResetPassMail, ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+.toResetPassMail,
+ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
     font-size: 13px;
     border-color: #bbb;
     color: #ffffff !important;
@@ -846,40 +945,54 @@ p {
 }
 
 
-.login-page .ui-input-text input:focus, .login-page .ui-input-search input:focus, .login-page .inputLogin:focus {
-    border-bottom: 2px solid rgb(66, 103, 228) !important; /* Change the border color to blue when focused */
+.login-page .ui-input-text input:focus,
+.login-page .ui-input-search input:focus,
+.login-page .inputLogin:focus {
+    border-bottom: 2px solid rgb(66, 103, 228) !important;
+    /* Change the border color to blue when focused */
 }
 
 
 
-.login-page .ui-input-text input, .login-page .ui-input-search input, .login-page .inputLogin 
-    {
-    margin: 0  !important;
+.login-page .ui-input-text input,
+.login-page .ui-input-search input,
+.login-page .inputLogin {
+    margin: 0 !important;
     min-height: 2.2em !important;
     text-align: left !important;
-    border: none !important; /* Remove all borders */
-    border-bottom: 1px solid #e7e7e7 !important; /* Add a border at the bottom */
+    border: none !important;
+    /* Remove all borders */
+    border-bottom: 1px solid #e7e7e7 !important;
+    /* Add a border at the bottom */
     background: transparent none !important;
-    -webkit-appearance: none  !important;
-    -webkit-border-radius: inherit  !important;
-    border-radius: 0px  !important;
+    -webkit-appearance: none !important;
+    -webkit-border-radius: inherit !important;
+    border-radius: 0px !important;
 }
 
-.login-page .ui-input-text input, .login-page .ui-input-search input, .login-page textarea.ui-input-text, .login-page .inputLogin {
+.login-page .ui-input-text input,
+.login-page .ui-input-search input,
+.login-page textarea.ui-input-text,
+.login-page .inputLogin {
 
-    padding: .4em  !important;
-    line-height: 1.4em  !important;
-    display: block  !important;
-    width: 100%  !important;
-    -webkit-box-sizing: border-box  !important;
-    -moz-box-sizing: border-box  !important;
-    box-sizing: border-box  !important;
-    outline: 0  !important;
+    padding: .4em !important;
+    line-height: 1.4em !important;
+    display: block !important;
+    width: 100% !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    outline: 0 !important;
 }
 
 
 
-.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+.ui-body-a,
+.ui-page-theme-a .ui-body-inherit,
+html .ui-bar-a .ui-body-inherit,
+html .ui-body-a .ui-body-inherit,
+html body .ui-group-theme-a .ui-body-inherit,
+html .ui-panel-page-container-a {
     background-color: #f7f7f700 !important;
     border-color: #fbfbfb00 !important;
     color: #000000 !important;
@@ -887,20 +1000,32 @@ p {
 }
 
 .ui-shadow-inset {
-    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
     box-shadow: none;
 }
 
-.ui-page-theme-a .ui-btn:focus,html .ui-bar-a .ui-btn:focus,html .ui-body-a .ui-btn:focus,html body .ui-group-theme-a .ui-btn:focus,html head+body .ui-btn.ui-btn-a:focus,.ui-page-theme-a .ui-focus,html .ui-bar-a .ui-focus,html .ui-body-a .ui-focus,html body .ui-group-theme-a .ui-focus,html head+body .ui-btn-a.ui-focus,html head+body .ui-body-a.ui-focus {
+.ui-page-theme-a .ui-btn:focus,
+html .ui-bar-a .ui-btn:focus,
+html .ui-body-a .ui-btn:focus,
+html body .ui-group-theme-a .ui-btn:focus,
+html head+body .ui-btn.ui-btn-a:focus,
+.ui-page-theme-a .ui-focus,
+html .ui-bar-a .ui-focus,
+html .ui-body-a .ui-focus,
+html body .ui-group-theme-a .ui-focus,
+html head+body .ui-btn-a.ui-focus,
+html head+body .ui-body-a.ui-focus {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
 
 
-.login-page .legend, .login-page .ui-input-text input, .login-page .ui-input-search input {
-    color: white; 
+.login-page .legend,
+.login-page .ui-input-text input,
+.login-page .ui-input-search input {
+    color: white;
     text-shadow: inherit;
 }
 
@@ -917,36 +1042,46 @@ p {
     margin-left: 5px;
 }
 
-.register-page .ui-input-text input, .create-page .ui-input-search input, .create-page .inputLogin 
-
-    {
-    margin: 0  !important;
+.register-page .ui-input-text input,
+.create-page .ui-input-search input,
+.create-page .inputLogin {
+    margin: 0 !important;
     min-height: 2.2em !important;
     text-align: left !important;
-    border: none !important; /* Remove all borders */
-    border-bottom: 1px solid #7e7e7e !important; /* Add a border at the bottom */
+    border: none !important;
+    /* Remove all borders */
+    border-bottom: 1px solid #7e7e7e !important;
+    /* Add a border at the bottom */
     background: transparent none !important;
-    -webkit-appearance: none  !important;
-    -webkit-border-radius: inherit  !important;
-    border-radius: 0px  !important;
+    -webkit-appearance: none !important;
+    -webkit-border-radius: inherit !important;
+    border-radius: 0px !important;
 }
 
-.register-page .ui-input-text input, .create-page .ui-input-search input, .create-page textarea.ui-input-text, .create-page .inputLogin {
+.register-page .ui-input-text input,
+.create-page .ui-input-search input,
+.create-page textarea.ui-input-text,
+.create-page .inputLogin {
 
 
-    padding: .4em  !important;
-    line-height: 1.4em  !important;
-    display: block  !important;
-    width: 100%  !important;
-    -webkit-box-sizing: border-box  !important;
-    -moz-box-sizing: border-box  !important;
-    box-sizing: border-box  !important;
-    outline: 0  !important;
+    padding: .4em !important;
+    line-height: 1.4em !important;
+    display: block !important;
+    width: 100% !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    outline: 0 !important;
 }
 
 
 
-.register-page .ui-body-a, .create-page .ui-page-theme-a .ui-body-inherit, .create-page html .ui-bar-a .ui-body-inherit, .create-page html .ui-body-a .ui-body-inherit, .create-page html body .ui-group-theme-a .ui-body-inherit, .create-page html .ui-panel-page-container-a {
+.register-page .ui-body-a,
+.create-page .ui-page-theme-a .ui-body-inherit,
+.create-page html .ui-bar-a .ui-body-inherit,
+.create-page html .ui-body-a .ui-body-inherit,
+.create-page html body .ui-group-theme-a .ui-body-inherit,
+.create-page html .ui-panel-page-container-a {
     background-color: #f7f7f700 !important;
     border-color: #fbfbfb00 !important;
     color: #0f0f0f !important;
@@ -954,19 +1089,31 @@ p {
 }
 
 .register-page .ui-shadow-inset {
-    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
     -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
     box-shadow: none;
 }
 
-.register-page .ui-page-theme-a .ui-btn:focus, .create-page html .ui-bar-a .ui-btn:focus, .create-page html .ui-body-a .ui-btn:focus, .create-page html body .ui-group-theme-a .ui-btn:focus, .create-page html head+body .ui-btn.ui-btn-a:focus, .create-page .ui-page-theme-a .ui-focus, .create-page html .ui-bar-a .ui-focus, .create-page html .ui-body-a .ui-focus, .create-page html body .ui-group-theme-a .ui-focus, .create-page html head+body .ui-btn-a.ui-focus, .create-page html head+body .ui-body-a.ui-focus {
+.register-page .ui-page-theme-a .ui-btn:focus,
+.create-page html .ui-bar-a .ui-btn:focus,
+.create-page html .ui-body-a .ui-btn:focus,
+.create-page html body .ui-group-theme-a .ui-btn:focus,
+.create-page html head+body .ui-btn.ui-btn-a:focus,
+.create-page .ui-page-theme-a .ui-focus,
+.create-page html .ui-bar-a .ui-focus,
+.create-page html .ui-body-a .ui-focus,
+.create-page html body .ui-group-theme-a .ui-focus,
+.create-page html head+body .ui-btn-a.ui-focus,
+.create-page html head+body .ui-body-a.ui-focus {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
 
-.register-page .legend, .register-page .ui-input-text input, .register-page .ui-input-search input {
-    color: black; 
+.register-page .legend,
+.register-page .ui-input-text input,
+.register-page .ui-input-search input {
+    color: black;
     text-shadow: inherit;
 }
 
@@ -980,17 +1127,20 @@ p {
 
 
 
-.ui-mobile label, div.ui-controlgroup-label {
+.ui-mobile label,
+div.ui-controlgroup-label {
     font-weight: 400;
     font-size: 16px;
     color: black !important;
-   
+
     text-align: left !important;
 }
 
 .formNewUser input::placeholder {
-    color: #333; /* or any darker color you prefer */
-    opacity: 1; /* Firefox needs this to change placeholder color */
+    color: #333;
+    /* or any darker color you prefer */
+    opacity: 1;
+    /* Firefox needs this to change placeholder color */
 }
 
 
@@ -1190,7 +1340,7 @@ p {
     display: inline-block;
     padding: 8px 20px;
     background-color: rgb(43, 165, 221);
-    
+
     color: white;
     border: none;
     border-radius: 5px;
@@ -1198,7 +1348,7 @@ p {
     font-size: 14px;
     transition: background-color 0.3s ease;
     margin-left: -230px;
-    
+
 }
 
 .join-btn:hover {
@@ -1284,7 +1434,7 @@ p {
 .participantes h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    
+
 }
 
 .participantes ul {
@@ -1329,8 +1479,8 @@ p {
     text-shadow: none;
 }
 
-.btnCancelar  {
-    display: inline-block ;
+.btnCancelar {
+    display: inline-block;
     padding: 10px 20px !important;
     background-color: rgb(221, 43, 43) !important;
     color: #000 !important;
@@ -1354,17 +1504,20 @@ span.error {
     text-align: left;
 }
 
-.login-page .ui-input-text input.error-input, .login-page .ui-input-search input.error-input, .login-page .inputLogin.error-input {
-    border-bottom: 2px solid red !important; /* Change the border color to red when there is an error */
+.login-page .ui-input-text input.error-input,
+.login-page .ui-input-search input.error-input,
+.login-page .inputLogin.error-input {
+    border-bottom: 2px solid red !important;
+    /* Change the border color to red when there is an error */
 }
 
- 
+
 .formNewUser input:focus {
-    border-bottom: 2px solid rgb(18, 63, 209) !important; 
+    border-bottom: 2px solid rgb(18, 63, 209) !important;
 }
 
 .formNewUser input.error-input {
-    border-bottom: 2px solid red !important; 
+    border-bottom: 2px solid red !important;
 }
 
 .create-page input:focus {
@@ -1532,31 +1685,43 @@ span.error {
 .popup {
     display: none;
     position: fixed;
-    bottom: 30px; /* Agregado un margen de 10px desde abajo */
-    left: 15px; /* Agregado un margen de 10px desde el lado izquierdo */
-    right: 15px; 
-    width: calc(100% - 30px); /* Resta de 30px del ancho total para tener 15px de margen en cada lado */
+    bottom: 30px;
+    /* Agregado un margen de 10px desde abajo */
+    left: 15px;
+    /* Agregado un margen de 10px desde el lado izquierdo */
+    right: 15px;
+    width: calc(100% - 30px);
+    /* Resta de 30px del ancho total para tener 15px de margen en cada lado */
     background-color: #2b2d42;
-    color: white; /* Cambio del color de texto a blanco */
-   /* text-align: center;*/
+    color: white;
+    /* Cambio del color de texto a blanco */
+    /* text-align: center;*/
     z-index: 9999;
-    text-shadow: none; /* Quitar sombra de texto */
-    border-radius: 20px; /* Aplicar un radio de borde circular */
+    text-shadow: none;
+    /* Quitar sombra de texto */
+    border-radius: 20px;
+    /* Aplicar un radio de borde circular */
     font-size: 15px;
 }
 
 .popup-content {
     position: relative;
     margin: 10px;
-    display: flex; /* Utilizar flexbox para alinear elementos */
-    align-items: center; /* Centrar verticalmente los elementos */
-    justify-content: center; /* Centrar horizontalmente los elementos */
+    display: flex;
+    /* Utilizar flexbox para alinear elementos */
+    align-items: center;
+    /* Centrar verticalmente los elementos */
+    justify-content: center;
+    /* Centrar horizontalmente los elementos */
 }
 
 .popup-close {
-    margin-right: 10px; /* Agregar margen a la derecha del botón de cierre */
-    border-radius: 20px; /* Aplicar un radio de borde circular */
-    overflow: hidden; /* Asegurar que el radio de borde se aplique correctamente */
+    margin-right: 10px;
+    /* Agregar margen a la derecha del botón de cierre */
+    border-radius: 20px;
+    /* Aplicar un radio de borde circular */
+    overflow: hidden;
+    /* Asegurar que el radio de borde se aplique correctamente */
     width: 35px;
 }
 
@@ -1565,31 +1730,43 @@ span.error {
 .popup2 {
     display: none;
     position: fixed;
-    bottom: 30px; /* Agregado un margen de 10px desde abajo */
-    left: 15px; /* Agregado un margen de 10px desde el lado izquierdo */
-    right: 15px; 
-    width: calc(100% - 30px); /* Resta de 30px del ancho total para tener 15px de margen en cada lado */
+    bottom: 30px;
+    /* Agregado un margen de 10px desde abajo */
+    left: 15px;
+    /* Agregado un margen de 10px desde el lado izquierdo */
+    right: 15px;
+    width: calc(100% - 30px);
+    /* Resta de 30px del ancho total para tener 15px de margen en cada lado */
     background-color: #2b2d42;
-    color: white; /* Cambio del color de texto a blanco */
+    color: white;
+    /* Cambio del color de texto a blanco */
     /*text-align: center;*/
     z-index: 9999;
-    text-shadow: none; /* Quitar sombra de texto */
-    border-radius: 20px; /* Aplicar un radio de borde circular */
+    text-shadow: none;
+    /* Quitar sombra de texto */
+    border-radius: 20px;
+    /* Aplicar un radio de borde circular */
     font-size: 15px;
 }
 
 .popup-content2 {
     position: relative;
     margin: 10px;
-    display: flex; /* Utilizar flexbox para alinear elementos */
-    align-items: center; /* Centrar verticalmente los elementos */
-    justify-content: center; /* Centrar horizontalmente los elementos */
+    display: flex;
+    /* Utilizar flexbox para alinear elementos */
+    align-items: center;
+    /* Centrar verticalmente los elementos */
+    justify-content: center;
+    /* Centrar horizontalmente los elementos */
 }
 
 .popup-close2 {
-    margin-right: 10px; /* Agregar margen a la derecha del botón de cierre */
-    border-radius: 20px; /* Aplicar un radio de borde circular */
-    overflow: hidden; /* Asegurar que el radio de borde se aplique correctamente */
+    margin-right: 10px;
+    /* Agregar margen a la derecha del botón de cierre */
+    border-radius: 20px;
+    /* Aplicar un radio de borde circular */
+    overflow: hidden;
+    /* Asegurar que el radio de borde se aplique correctamente */
     width: 35px;
 }
 
@@ -1622,7 +1799,7 @@ span.error {
     align-items: center;
     padding: 13px;
     /* Reduced padding */
-    background-color:  #ececec;
+    background-color: #ececec;
     padding-left: 10px;
     height: 35px;
 }
@@ -1630,9 +1807,9 @@ span.error {
 .headerNotify .flecha-izquierda-notify {
     width: 37px !important;
     height: 27px;
-   
 
-   
+
+
 }
 
 .headerNotify h1 {

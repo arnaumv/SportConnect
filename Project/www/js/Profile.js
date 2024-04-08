@@ -6,36 +6,36 @@ var eventosCargados = false;
 function onDeviceReady() {
 
     //Movilidad entre paginas
-    $('#landingpage').on('click', function() {
+    $('#landingpage').on('click', function () {
         window.location.href = 'landingpage.html';
     });
 
-    $('#create').on('click', function() {
+    $('#create').on('click', function () {
         window.location.href = 'Create.html';
     });
 
-    $('#events').on('click', function() {
+    $('#events').on('click', function () {
         window.location.href = 'Events.html';
     });
 
-    $('#profile').on('click', function() {
+    $('#profile').on('click', function () {
         window.location.href = 'Profile.html';
     });
 
-    $('#EditProfile').on('click', function() {
+    $('#EditProfile').on('click', function () {
         window.location.href = 'EditProfile.html';
     });
 
-    $('#options').on('click', function() {
+    $('#options').on('click', function () {
         window.location.href = 'Options.html';
     });
-    
-    $('#redirectToLanding').on('click', function() {
+
+    $('#redirectToLanding').on('click', function () {
         window.location.href = 'landingpage.html';
     });
-    
+
 }
-$(document).ready(function() {
+$(document).ready(function () {
     // Obtener el nombre de usuario desde el localStorage
     var username = localStorage.getItem("username");
     if (!username) {
@@ -52,8 +52,8 @@ $(document).ready(function() {
         $.ajax({
             url: "http://127.0.0.1:8000/events/user_subscribed_events/?username=" + username,
             type: "GET",
-            success: function(eventos) {
-                eventos.forEach(function(evento) {
+            success: function (eventos) {
+                eventos.forEach(function (evento) {
                     var currentDate = Date.now();
                     var eventDate = new Date(evento.date).getTime();
 
@@ -63,7 +63,7 @@ $(document).ready(function() {
                     }
                 });
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error("Error al obtener los eventos del usuario:", error);
             }
         });
@@ -79,10 +79,10 @@ $(document).ready(function() {
         var currentDate = Date.now();
         var eventDate = new Date(evento.date).getTime();
         var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
-        eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';  
-        eventHtml += '<h2>' + evento.title  + '</h2>';
+        eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
+        eventHtml += '<h2>' + evento.title + '</h2>';
         eventHtml += '<p>Fecha: ' + evento.date + '</p>';
-        eventHtml += '<p>Ubicación: ' + evento.location  + '</p>';
+        eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
         // Add "View" button for active events
         if (eventDate >= currentDate) {
             eventHtml += '<button class="join-btn-profile" onclick="window.location.href=\'InfoEvent.html?eventId=' + evento.id + '\'">Ver</button>';
@@ -91,20 +91,57 @@ $(document).ready(function() {
         $('.events-list').append(eventHtml);
     }
 
+
     // Manejar clic en botón "Activos"
-    $('#active-events-btn').off('click').on('click', function() {
+    $('#active-events-btn').off('click').on('click', function () {
+        // Cambiar el color de fondo y el color del texto del botón "Activos"
+        $(this).css({
+            'background-color': 'rgba(43, 45, 66, 0.9)',
+            'color': 'white'
+        });
+
+        // Restablecer el color de fondo y el color del texto del botón "Finalizados"
+        $('#finished-events-btn').css({
+            'background-color': '',
+            'color': 'black'
+        });
+
         console.log("ookkactivos")
         mostrarEventosPorCategoria("Activos");
     });
 
     // Manejar clic en botón "Finalizados"
-    $('#finished-events-btn').off('click').on('click', function() {
+    $('#finished-events-btn').off('click').on('click', function () {
+        // Cambiar el color de fondo y el color del texto del botón "Finalizados"
+        $(this).css({
+            'background-color': 'rgba(43, 45, 66, 0.9)',
+            'color': 'white'
+        });
+
+        // Restablecer el color de fondo y el color del texto del botón "Activos"
+        $('#active-events-btn').css({
+            'background-color': '',
+            'color': 'black'
+        });
+
+        console.log("ookkfinalizados")
         mostrarEventosPorCategoria("Finalizados");
     });
 
+    // Manejar clic en botón "Activos"
+    // $('#active-events-btn').off('click').on('click', function() {
+    //     console.log("ookkactivos")
+    //     mostrarEventosPorCategoria("Activos");
+    // });
+
+    // // Manejar clic en botón "Finalizados"
+    // $('#finished-events-btn').off('click').on('click', function() {
+    //     mostrarEventosPorCategoria("Finalizados");
+    // });
+
     // Mostrar eventos activos al cargar la página, solo si no se han cargado antes
     if (!eventosCargados) {
-        setTimeout(function() {
+        setTimeout(function () {
             mostrarEventosPorCategoria("Activos");
             $('#active-events-btn').addClass('active');
             eventosCargados = true;

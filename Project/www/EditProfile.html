@@ -59,19 +59,38 @@
 
 
             <div class="formINFO">
-                <h3>Información Personal de <span id="username"></span></h3>            
-                <input type="email" id="email" placeholder="Email">
-                <span class="error" id="error_email"></span><br>
-                <input type="password" id="password" placeholder="Contraseña">
-                <span class="error" id="error_password"></span><br> 
-                <input type="text" id="description" placeholder="Descripción">
-                <span class="error" id="error_description"></span><br>
-                <level>Fecha de Nacimiento:</level>
-                <input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
-                <span class="error" id="error_birthdate"></span><br>
+                <h3 class="info_user_editProfile">Información Personal de <span id="username"></span></h3>            
+                <div class="custom-input">
+                  <input type="email" id="email" placeholder=" ">
+                  <span class="input-text">Email</span>
+                  <span class="error" id="error_email"></span>
+                </div>
+                
+                <div class="custom-input">
+                  <input type="password" id="password" placeholder=" ">
+                  <span class="input-text">Contraseña</span>
+                  <span class="error" id="error_password"></span>
+                </div>
+                
+                <div class="custom-input">
+                  <input type="text" id="description" placeholder=" ">
+                  <span class="input-text">Descripción</span>
+                  <span class="error" id="error_description"></span>
+                </div>
+                
+                <div class="custom-input">
+                  <input type="date" id="birthdate" placeholder=" ">
+                  <span class="input-text">Fecha de Nacimiento</span>
+                  <span class="error" id="error_birthdate"></span>
+                </div>
+                
                 <button id="btnSave">Guardar</button>
-            </div>
-
+              </div>
+              
+              
+              
+              
+              
         </div><!-- end page 1 content -->
 
         <div id="popup" class="popup">
