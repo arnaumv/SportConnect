@@ -18,8 +18,8 @@ $(document).on('pagecreate', function() {
         window.location.href = 'Profile.html';
     }); */
     
-    // Validación del nombre de usuario al perder el foco
-    $('.formLogin #username').on('focusout', function() {
+    // Validación del nombre de usuario mientras se está escribiendo y al perder el foco
+    $('.formLogin #username').on('input focusout', function() {
         var username = $(this).val().trim();
         if(username === ''){
             $('#error_username').text('Por favor, introduce tu nombre de usuario');
@@ -30,8 +30,8 @@ $(document).on('pagecreate', function() {
         }
     });
 
-    // Validación de la contraseña al perder el foco
-    $('.formLogin #password').on('focusout', function() {
+    // Validación de la contraseña mientras se está escribiendo
+    $('.formLogin #password').on('input', function() {
         var password = $(this).val().trim();
         if(password.length < 8 || password.length > 128){
             $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');

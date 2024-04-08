@@ -38,51 +38,61 @@
 		<div data-role="page" >
 			<div class="headerNewUser">
 				<img id="redirectToIndex" src="./img/index/flecha.png" alt="Image 1" class="header-flecha">
-				<h1>Crear una cuenta</h1>
+				<h1></h1>
 			</div>
 			
 	
 			
-			<div class="ui-content">
+			<div class="ui-content register-page">
+
 
 				<div class="formNewUser">
-					<input type="text" id="username" placeholder="Nombre de usuario"><span class="error" id="error_username"></span><br><br>
-					<input type="email" id="email" placeholder="Email"><span class="error" id="error_email"></span><br><br>
-					<input type="password" id="password" placeholder="Contraseña"><span class="error" id="error_password"></span><br><br>
-					<input type="password" id="confirm_password" placeholder="Confirmar Contraseña"><span class="error" id="error_confirm_password"></span><br><br>
-					<input type="text" id="city" placeholder="Ciudad"><span class="error" id="error_city"></span><br><br>
-					<label for="birthdate">Fecha de nacimiento:</label>
-					<input type="date" id="birthdate" placeholder="Fecha de Nacimiento"><span class="error" id="error_birthdate"></span><br><br>
-					<button id="btnSubmit">Continuar</button>
+					<h2 class="h2Register">Regístrate</h2>
+					<label for="username">Nombre de usuario:</label>
+					<input type="text" id="username" placeholder="Carolina Valera">
+					<span class="error" id="error_username"></span><br><br>
+				
+					<label for="email">Email:</label>
+					<input type="email" id="email" placeholder="hola@sportconnect.com">
+					<span class="error" id="error_email"></span><br><br>
+				
+					<label for="password">Contraseña:</label>
+					<input type="password" id="password" placeholder="********">
+					<span class="error" id="error_password"></span><br><br>
+				
+					<label for="confirm_password">Confirmar Contraseña:</label>
+					<input type="password" id="confirm_password" placeholder="********">
+					<span class="error" id="error_confirm_password"></span><br><br>
+				
+					<label for="city">Ciudad:</label>
+					<input type="text" id="city" placeholder="Sant Feliu de Llobregat">
+					<span class="error" id="error_city"></span><br><br>
+				
+					<label class="labelBirthdate" for="birthdate">Fecha de nacimiento:</label>
+					<input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
+					<span class="error" id="error_birthdate"></span><br><br>
+				
+					<button id="btnSubmit">Crear una cuenta</button>
 				</div>
 				
 
 			</div>
 		
-
+			<div id="popup" class="popup">
+				<div class="popup-content">
+					<img id="popup-close" class="popup-close" src="img/Profile/error-ventana.png">
+					<span id="popup-message"></span>
+				</div>
+			</div>
+	
+			<div id="popup2" class="popup2">
+				<div class="popup-content2">
+					<img id="popup-close2" class="popup-close2" src="img/Profile/ok-ventana.png">
+					<span id="popup-message2"></span>
+				</div>
+			</div>
 			
-			<div data-role="footer" data-position="fixed" >
-				<div data-role="navbar">
-					<ul>
-						<li><a id="landingpage">
-							<img class="small-image" src="img/index/iconoHome.png" alt="Page 1">
-							<p>Inicio</p>
-						</a></li>
-						<li><a id="create">
-							<img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
-							<p>Crear</p>
-						</a></li>
-						<li><a id="events">
-							<img class="small-image" src="img/index/calendar.png" alt="Page 3">
-							<p>Eventos</p>
-						</a></li>
-						<li><a id="profile" class="ui-btn-active ui-state-persist">
-							<img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
-							<p>Perfil</p>
-						</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div><!-- /footer -->
+			
 		</div><!-- /PAGE CREATE -->
 		
 		<script src="cordova.js"></script>

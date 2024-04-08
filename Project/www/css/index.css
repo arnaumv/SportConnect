@@ -50,6 +50,7 @@ body label.ui-btn {
     margin-left: 30px;
     font-size: 17px;
     margin-bottom: 40px;
+    text-align: left;
 }
 
 .span-large {
@@ -98,6 +99,8 @@ body label.ui-btn {
     margin-left: 20px;
     margin-right: 3px;
 }
+
+
 
 /********** HEADER-LANDINGPAGE **********/
 .headerIndex {
@@ -164,6 +167,8 @@ body label.ui-btn {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 13%;
+    text-shadow: none;
+
 }
 
 .notification-icon {
@@ -190,7 +195,7 @@ body label.ui-btn {
     display: flex;
     align-items: center;
     padding: 13px;
-    background-color: rgba(43, 45, 66, 0.9);
+    background-color: #f9f9f9;
     padding-left: 15px;
     position: relative;
 }
@@ -199,7 +204,7 @@ body label.ui-btn {
     width: 37px;
     height: 37px;
     margin-right: 45px;
-    filter: invert(1); 
+     
 }
 
 .headerNewUser h1 {
@@ -214,6 +219,8 @@ body label.ui-btn {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 5%;
+    text-shadow: none;
+
 }
 
 /********** HEADER - Login **********/
@@ -246,6 +253,7 @@ body label.ui-btn {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 10%;
+    text-shadow: none;
 }
 
 /********** HEADER - Reset Pass and Reset Pass Mail **********/
@@ -279,40 +287,43 @@ body label.ui-btn {
     line-height: 1.2;
     font-stretch: expanded;
     margin-left: 47px;
+    text-shadow: none;
+
 }
 
 .pResetPassMail{
   
     margin-top: -40px;
     margin-bottom: 50px;
+    color: #000;
+    text-align: left;
 }
 
 /************** INDEX **************/
-
 .paragraph1 {
     font-size: 17px;
     line-height: 1.1;
     color: #ffffff;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
     letter-spacing: 0.5px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: sans-serif;
     font-weight: bold;
-    /* Added this line to make the text bolder */
-    margin-top: 169px;
-    margin-left: 10px;
+    margin-top: 179px;
+    margin-left: 15px;
+    text-align: start;
 }
 
 .paragraph2 {
     font-size: 14px;
     line-height: 1.3;
     color: #ffffff;
-
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     /* Added this line to make the text bolder */
-    margin-top: 55px;
+    margin-top: 40px;
     margin-left: 10px;
 }
 
@@ -321,7 +332,8 @@ body label.ui-btn {
     line-height: 1.3;
     color: #ffffff;
 
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: 1px 1px 2px rgba(3, 3, -1, 0.5); /* Add text shadow for a slight relief effect */
+    text-align: left;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -345,6 +357,7 @@ h2 {
     margin-bottom: 2rem;
     text-align: left;
     margin-left: 13px;
+    color: black;
 }
 
 h3 {
@@ -482,11 +495,28 @@ p {
     width: 50% !important;
     box-sizing: border-box !important;
     margin-right: 5px !important;
+    
 }
 
 .timeDate .ui-input-text:last-child {
     margin-right: 0 !important;
+   
 }
+
+
+.input-text, ui-input-text input, .ui-input-search input {
+    margin: 0;
+    min-height: 2.2em;
+    text-align: left;
+    border: 0;
+    background: transparent none;
+    -webkit-appearance: none;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    color: #000 !important;
+}
+
+
 
 /********botnones de enviar *********/
 
@@ -498,6 +528,7 @@ p {
 #btnSubmit {
     background-color: rgb(43, 165, 221);
     text-shadow: none;
+    border-radius: 25px; /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
 }
 
 #btnEnviarMail {
@@ -606,6 +637,24 @@ p {
     text-shadow: none;
 }
 
+.events-section h3 {
+    font-size: 1.5em;
+    font-weight:lighter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.miniDescription {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #000;
+    text-align: left;
+    margin-left: 25px;
+}
 
 .edit-profile-btn:hover {
     background-color: #0056b3;
@@ -671,6 +720,21 @@ p {
     margin: 0;
 }
 
+.join-btn-profile {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgb(43, 165, 221);
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-left: -270px;
+    
+}
+
 /********** Edit Profile **********/
 /* Estilos para el header */
 .headerEditProfile {
@@ -705,6 +769,7 @@ p {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 14%;
+    text-shadow: none;
 }
 
 /* **************************************** */
@@ -744,18 +809,32 @@ p {
 }
 
 /* **************** LOGIN ************************ */
+.colorLogin {
+    background: linear-gradient(to bottom, #2b2d42, #494b66) !important;
+}
 
 .loginDiv {
     margin-top: 20%;
 }
 
-.formLogin a {
-    font-size: 12px;
-    color: gray !important;
+.toResetPassMail, ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    font-size: 13px;
+    border-color: #bbb;
+    color: #ffffff !important;
+    text-shadow: none;
+    text-align: center;
 }
 
+
 .formLogin h2 {
-    text-align: center;
+    text-align: left;
+    font-weight: normal;
+    color: white;
+    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+    letter-spacing: 1px;
+    margin-left: 5px;
 
 }
 
@@ -763,6 +842,154 @@ p {
     margin-top: 20px;
     display: block;
     text-align: center;
+}
+
+
+.login-page .ui-input-text input:focus, .login-page .ui-input-search input:focus, .login-page .inputLogin:focus {
+    border-bottom: 2px solid rgb(66, 103, 228) !important; /* Change the border color to blue when focused */
+}
+
+
+
+.login-page .ui-input-text input, .login-page .ui-input-search input, .login-page .inputLogin 
+    {
+    margin: 0  !important;
+    min-height: 2.2em !important;
+    text-align: left !important;
+    border: none !important; /* Remove all borders */
+    border-bottom: 1px solid #e7e7e7 !important; /* Add a border at the bottom */
+    background: transparent none !important;
+    -webkit-appearance: none  !important;
+    -webkit-border-radius: inherit  !important;
+    border-radius: 0px  !important;
+}
+
+.login-page .ui-input-text input, .login-page .ui-input-search input, .login-page textarea.ui-input-text, .login-page .inputLogin {
+
+    padding: .4em  !important;
+    line-height: 1.4em  !important;
+    display: block  !important;
+    width: 100%  !important;
+    -webkit-box-sizing: border-box  !important;
+    -moz-box-sizing: border-box  !important;
+    box-sizing: border-box  !important;
+    outline: 0  !important;
+}
+
+
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+.ui-shadow-inset {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+    box-shadow: none;
+}
+
+.ui-page-theme-a .ui-btn:focus,html .ui-bar-a .ui-btn:focus,html .ui-body-a .ui-btn:focus,html body .ui-group-theme-a .ui-btn:focus,html head+body .ui-btn.ui-btn-a:focus,.ui-page-theme-a .ui-focus,html .ui-bar-a .ui-focus,html .ui-body-a .ui-focus,html body .ui-group-theme-a .ui-focus,html head+body .ui-btn-a.ui-focus,html head+body .ui-body-a.ui-focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+
+.login-page .legend, .login-page .ui-input-text input, .login-page .ui-input-search input {
+    color: white; 
+    text-shadow: inherit;
+}
+
+/* **************** CREATE USER ************************ */
+
+.formNewUser h2 {
+    text-align: left;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    font-family: inherit;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+.register-page .ui-input-text input, .create-page .ui-input-search input, .create-page .inputLogin 
+
+    {
+    margin: 0  !important;
+    min-height: 2.2em !important;
+    text-align: left !important;
+    border: none !important; /* Remove all borders */
+    border-bottom: 1px solid #7e7e7e !important; /* Add a border at the bottom */
+    background: transparent none !important;
+    -webkit-appearance: none  !important;
+    -webkit-border-radius: inherit  !important;
+    border-radius: 0px  !important;
+}
+
+.register-page .ui-input-text input, .create-page .ui-input-search input, .create-page textarea.ui-input-text, .create-page .inputLogin {
+
+
+    padding: .4em  !important;
+    line-height: 1.4em  !important;
+    display: block  !important;
+    width: 100%  !important;
+    -webkit-box-sizing: border-box  !important;
+    -moz-box-sizing: border-box  !important;
+    box-sizing: border-box  !important;
+    outline: 0  !important;
+}
+
+
+
+.register-page .ui-body-a, .create-page .ui-page-theme-a .ui-body-inherit, .create-page html .ui-bar-a .ui-body-inherit, .create-page html .ui-body-a .ui-body-inherit, .create-page html body .ui-group-theme-a .ui-body-inherit, .create-page html .ui-panel-page-container-a {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #0f0f0f !important;
+    text-shadow: none !important;
+}
+
+.register-page .ui-shadow-inset {
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+    box-shadow: none;
+}
+
+.register-page .ui-page-theme-a .ui-btn:focus, .create-page html .ui-bar-a .ui-btn:focus, .create-page html .ui-body-a .ui-btn:focus, .create-page html body .ui-group-theme-a .ui-btn:focus, .create-page html head+body .ui-btn.ui-btn-a:focus, .create-page .ui-page-theme-a .ui-focus, .create-page html .ui-bar-a .ui-focus, .create-page html .ui-body-a .ui-focus, .create-page html body .ui-group-theme-a .ui-focus, .create-page html head+body .ui-btn-a.ui-focus, .create-page html head+body .ui-body-a.ui-focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.register-page .legend, .register-page .ui-input-text input, .register-page .ui-input-search input {
+    color: black; 
+    text-shadow: inherit;
+}
+
+.labelBirthdate {
+    font-size: 13px;
+    border-color: #bbb;
+    color: #181818ce !important;
+    text-shadow: none;
+    text-align: left !important;
+}
+
+
+
+.ui-mobile label, div.ui-controlgroup-label {
+    font-weight: 400;
+    font-size: 16px;
+    color: black !important;
+   
+    text-align: left !important;
+}
+
+.formNewUser input::placeholder {
+    color: #333; /* or any darker color you prefer */
+    opacity: 1; /* Firefox needs this to change placeholder color */
 }
 
 /* **************** RESET PASS ************************ */
@@ -857,24 +1084,29 @@ p {
 .event h2 {
     font-size: 18px;
     margin: 0 0 5px;
+    color: #2b2b2bc5 !important;
 }
 
 .event p {
     font-size: 14px;
     margin: 0 0 10px;
+    color: #2b2b2bc5;
+    text-align: left;
 }
 
 .join-btn {
     display: inline-block;
     padding: 8px 20px;
     background-color: rgb(43, 165, 221);
-    ;
+    
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    margin-left: -230px;
+    
 }
 
 .join-btn:hover {
@@ -933,27 +1165,34 @@ p {
     max-width: 330px;
     min-height: 200px;
     max-height: 200px;
+    color: #000;
 }
 
 .evento h2 {
     font-size: 20px;
     margin: 0 0 10px;
+    color: #000;
 }
 
 .evento p {
     font-size: 16px;
     margin: 0 0 5px;
+    color: #000;
+    text-align: left;
 }
 
 .participantes {
     margin-top: 20px;
     margin-left: 20px;
+    color: #000;
+    text-align: left;
 
 }
 
 .participantes h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    
 }
 
 .participantes ul {
@@ -998,11 +1237,21 @@ p {
     text-shadow: none;
 }
 
+.btnCancelar  {
+    display: inline-block ;
+    padding: 10px 20px !important;
+    background-color: rgb(221, 43, 43) !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+}
 
 /* Css Errores formularios */
 
 .error {
-    color: red;
+    color: #ff4f4f;
     text-shadow: none;
     /* Quitar sombra de texto */
 }
@@ -1010,13 +1259,21 @@ p {
 span.error {
     display: block;
     font-size: 15px;
+    text-align: left;
 }
 
-.error-input {
-    border: 2px solid red !important;
-    /* Cambiar al color rosa deseado */
+.login-page .ui-input-text input.error-input, .login-page .ui-input-search input.error-input, .login-page .inputLogin.error-input {
+    border-bottom: 2px solid red !important; /* Change the border color to red when there is an error */
 }
 
+ 
+.formNewUser input:focus {
+    border-bottom: 2px solid rgb(18, 63, 209) !important; 
+}
+
+.formNewUser input.error-input {
+    border-bottom: 2px solid red !important; 
+}
 /********** Options **********/
 .headerOptions {
     display: flex;
@@ -1042,6 +1299,7 @@ span.error {
 .menu-title {
     margin-top: 20px;
     color: #000;
+    text-align: left;
 }
 
 .menu-items {
@@ -1171,10 +1429,11 @@ span.error {
     width: calc(100% - 30px); /* Resta de 30px del ancho total para tener 15px de margen en cada lado */
     background-color: #2b2d42;
     color: white; /* Cambio del color de texto a blanco */
-    text-align: center;
+   /* text-align: center;*/
     z-index: 9999;
     text-shadow: none; /* Quitar sombra de texto */
     border-radius: 20px; /* Aplicar un radio de borde circular */
+    font-size: 15px;
 }
 
 .popup-content {
@@ -1189,6 +1448,7 @@ span.error {
     margin-right: 10px; /* Agregar margen a la derecha del botón de cierre */
     border-radius: 20px; /* Aplicar un radio de borde circular */
     overflow: hidden; /* Asegurar que el radio de borde se aplique correctamente */
+    width: 35px;
 }
 
 /**********/
@@ -1202,10 +1462,11 @@ span.error {
     width: calc(100% - 30px); /* Resta de 30px del ancho total para tener 15px de margen en cada lado */
     background-color: #2b2d42;
     color: white; /* Cambio del color de texto a blanco */
-    text-align: center;
+    /*text-align: center;*/
     z-index: 9999;
     text-shadow: none; /* Quitar sombra de texto */
     border-radius: 20px; /* Aplicar un radio de borde circular */
+    font-size: 15px;
 }
 
 .popup-content2 {
@@ -1220,4 +1481,63 @@ span.error {
     margin-right: 10px; /* Agregar margen a la derecha del botón de cierre */
     border-radius: 20px; /* Aplicar un radio de borde circular */
     overflow: hidden; /* Asegurar que el radio de borde se aplique correctamente */
+    width: 35px;
+}
+
+/********** Notificaciones **********/
+
+.notification {
+    border: 1px solid #3250d5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.notification h2 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.notification p {
+    margin: 0;
+    color: #666;
+}
+
+.headerNotify {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    /* Reduced padding */
+    background-color:  #ececec;
+    padding-left: 10px;
+    height: 35px;
+}
+
+.headerNotify .flecha-izquierda-notify {
+    width: 37px !important;
+    height: 27px;
+   
+
+   
+}
+
+.headerNotify h1 {
+    margin: 0;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    /* Reduced font size */
+    font-weight: normal;
+    /*text-transform: uppercase;*/
+    letter-spacing: 2px;
+    line-height: 1.2;
+    font-stretch: expanded;
+    margin-left: 120px;
+    text-shadow: none;
+
 }

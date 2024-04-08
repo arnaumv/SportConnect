@@ -34,26 +34,25 @@
         <title>Sport Connect - Create User</title>
 		
     </head>
-    <body>
+    <body >
 		<!-- PAGE CREATE -->
-		<div data-role="page" >
+		<div data-role="page" class="colorLogin" >
 			<div class="headerLogin">
 				<img id="redirectToIndex" src="./img/index/flecha.png" alt="Image 1" class="header-flecha">
-				<h1>Iniciar Sesión</h1>
+				<h1></h1>
 			</div>
 			
 	
-			<div class="ui-content">
+			<div class="ui-content login-page">
 				<div class="loginDiv">
 					<div class="formLogin">
-						<h2>Bienvenido</h2>
-						<input type="text" id="username" placeholder="Nombre de usuario">
-						<span class="error" id="error_username"></span><br> <!-- Aquí se mostrará el mensaje de error para el nombre de usuario -->
-						<input type="password" id="password" placeholder="Contraseña">
-						<span class="error" id="error_password"></span><br> <!-- Aquí se mostrará el mensaje de error para la contraseña -->
-						<a class="toResetPassMail">¿Olvidaste la contraseña?</a><br><br>
+						<h2>Identifícate</h2>
+						<input type="text" id="username" placeholder="Nombre de usuario" class="inputLogin">
+						<span class="error" id="error_username"></span><br>
+						<input type="password" id="password" placeholder="Contraseña" class="inputLogin">
+						<span class="error" id="error_password"></span><br>
 						<button id="btnSubmit">Iniciar Sesión</button>
-						<a class="toNewUser" >Crear una cuenta nueva</a><br><br>
+						<a class="toResetPassMail">¿Has olvidado la contraseña?</a><br><br>
 					</div>
 				</div>				
 			</div>
@@ -75,28 +74,7 @@
 
 
 			
-			<div data-role="footer" data-position="fixed" >
-				<div data-role="navbar">
-					<ul>
-						<li><a id="landingpage" >
-							<img class="small-image" src="img/index/iconoHome.png" alt="Page 1">
-							<p>Inicio</p>
-						</a></li>
-						<li><a id="create">
-							<img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
-							<p>Crear</p>
-						</a></li>
-						<li><a id="events">
-							<img class="small-image" src="img/index/calendar.png" alt="Page 3">
-							<p>Eventos</p>
-						</a></li>
-						<li><a id="profile" class="ui-btn-active ui-state-persist">
-							<img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
-							<p>Perfil</p>
-						</a></li>
-					</ul>
-				</div><!-- /navbar -->
-			</div><!-- /footer -->
+			
 		</div><!-- /PAGE CREATE -->
 		
 		<script src="cordova.js"></script>

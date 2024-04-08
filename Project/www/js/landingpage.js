@@ -17,6 +17,11 @@ $(document).ready(function(){
         window.location.href = 'Profile.html';
     });
 
+    $('#redirectToNotify').on('click', function() {
+        window.location.href = 'notify.html';
+    });
+
+
 
     // Map initialization script
     var json_url = "ubicacion.json";
@@ -30,10 +35,11 @@ $(document).ready(function(){
                 data.locations.forEach(ubicacion => {
                     var marker = L.marker([ubicacion.ubicacion.latitude, ubicacion.ubicacion.longitude]).addTo(map);
                     var actividades = ubicacion.actividad.join(', '); // Join the activities into a single string separated by commas
-                    marker.bindPopup('<b>' + ubicacion["nombre de ubicacion"] + '</b><br><b>Actividad:</b> ' + actividades);
+                    var imagen = ubicacion.imagen ? '<img src="' + ubicacion.imagen + '" alt="Imagen de ubicación"  width="170" height="100">' : ''; // Add image if it exists, with width and height
+                    marker.bindPopup('<b>' + ubicacion["nombre de ubicacion"] + '</b><br><b>Actividad:</b> ' + actividades + '<br>' + imagen);
                 });
             }
-    });
+        });
 });
 
 

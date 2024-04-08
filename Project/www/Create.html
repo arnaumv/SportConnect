@@ -47,10 +47,10 @@
 		<div class="ui-content">
 			<div class="form">
 				<label for="titulo">Título:</label>
-				<input type="text" id="titulo" placeholder="Título del evento">
+				<input type="text" id="titulo" class="input-text" placeholder="Título del evento">
 				<span id="error_titulo" class="error"></span><br>
 				<label for="tipoDeporte">Deporte:</label>
-				<select id="tipoDeporte">
+				<select id="tipoDeporte" class="input-text">
 					<option value="Futbol">Futbol</option>
 					<option value="Baloncesto">Baloncesto</option>
 					<option value="Barras">Gimnasio</option>
@@ -59,23 +59,40 @@
 					<option value="Padel">Padel</option>
 					<!-- Agrega más opciones según tus necesidades -->
 				</select><br>
-
+			
 				<label for="fecha">Fecha y hora:</label>
 				<div class="timeDate">
-					<input type="date" id="fecha">
-					<input type="time" id="hora">
-				</div><br>
-
+					<input type="date" id="fecha" class="custom-input input-text">
+					<input type="time" id="hora" class="custom-input input-text">
+				</div>
+				<span class="error" id="error_event_date"></span><br>
+			
 				<label for="ubicacion">Ubicación:</label>
-				<select id="ubicacion" data-native-menu="false">
+				<select id="ubicacion" class="input-text" data-native-menu="false">
 					<option value="">Selecciona una ubicación...</option>
 				</select><br>
-
+			
 				<label for="descripcion">Descripción:</label>
-				<textarea id="descripcion" rows="4" cols="50" placeholder="Descripción del evento"></textarea><br>
+				<textarea id="descripcion" class="text-area-create" rows="4" cols="50" placeholder="Descripción del evento"></textarea>
+				<span class="error" id="error_descripcion"></span><br>
+
 				<button id="btnEnviar">Crear evento</button>
 			</div>
 		</div>
+
+		<div id="popup" class="popup">
+            <div class="popup-content">
+                <img id="popup-close" class="popup-close" src="img/Profile/error-ventana.png">
+                <span id="popup-message"></span>
+            </div>
+        </div>
+
+        <div id="popup2" class="popup2">
+            <div class="popup-content2">
+                <img id="popup-close2" class="popup-close2" src="img/Profile/ok-ventana.png">
+                <span id="popup-message2"></span>
+            </div>
+        </div>
 
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
