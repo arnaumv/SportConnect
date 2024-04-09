@@ -645,6 +645,14 @@ ui-input-text input,
     text-shadow: none;
 }
 
+.headerEditProfile .flecha-izquierda-Edit {
+    width: 37px !important;
+    height: 27px;
+    filter: invert(1);
+
+
+}
+
 .events-section h3 {
     font-size: 1.5em;
     font-weight: lighter;
@@ -736,9 +744,8 @@ ui-input-text input,
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
-    width: 120px;
     margin-left: -230px;
-
+    width: 120px !important;
 
 }
 
@@ -781,7 +788,7 @@ ui-input-text input,
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 14%;
+    margin-left: 20%;
     text-shadow: none;
 }
 
@@ -1618,7 +1625,7 @@ span.error {
     display: flex;
     align-items: center;
     padding: 10px;
-    color: #fff;
+    color: white;
 }
 
 .headerTerms img {
@@ -1632,10 +1639,8 @@ span.error {
 .containerTerms {
     max-width: 800px;
     margin: auto;
-    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .containerTerms h1 {
@@ -1655,7 +1660,7 @@ span.error {
     display: flex;
     align-items: center;
     padding: 10px;
-    color: #fff;
+    color: white;
 }
 
 .headerPrivacy img {
@@ -1666,11 +1671,9 @@ span.error {
 
 .contentPrivacy {
     max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
+    margin: auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contentPrivacy h1 {

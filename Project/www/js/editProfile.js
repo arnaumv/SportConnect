@@ -1,6 +1,10 @@
 $(document).ready(function() {
     console.log("Barraeditperfil")
     //Movilidad entre paginas
+    $('#flecha-izquierda').on('click', function() {
+        window.location.href = 'Profile.html';
+        });
+
     $('#landingpage').on('click', function() {
         window.location.href = 'landingpage.html';
         console.log("okkedit")

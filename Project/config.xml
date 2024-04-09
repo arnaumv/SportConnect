@@ -6,6 +6,9 @@
         Apache Cordova Team
     </author>
     <content src="Index.html" />
+    <platform name="android">
+        <allow-intent href="mailto:*" />
+    </platform>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 </widget>

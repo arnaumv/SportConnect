@@ -39,6 +39,10 @@ function onDeviceReady() {
         window.location.href = 'newUser.html';
     });
 
+    $('#options').on('click', function () {
+        window.location.href = 'Options.html';
+    });
+
     /* For having a faster transition */
     $(document).on("mobileinit", function() {
         $.mobile.defaultPageTransition = "none";
