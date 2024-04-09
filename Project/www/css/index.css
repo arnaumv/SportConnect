@@ -1639,10 +1639,8 @@ span.error {
 .containerTerms {
     max-width: 800px;
     margin: auto;
-    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .containerTerms h1 {
@@ -1673,11 +1671,9 @@ span.error {
 
 .contentPrivacy {
     max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
+    margin: auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contentPrivacy h1 {
