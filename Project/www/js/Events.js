@@ -21,6 +21,9 @@ $(document).on('pagecreate', function(){
         window.location.href = 'landingpage.html';
     });
 
+    $('#redirectToNotify').on('click', function() {
+        window.location.href = 'notify.html';
+    });
     console.log("Heii");
 
     // Hacer una solicitud AJAX para obtener los eventos

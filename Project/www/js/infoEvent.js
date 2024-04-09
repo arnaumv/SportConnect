@@ -174,5 +174,11 @@ $(document).ready(function () {
 
   $('#redirectToLanding').on('click', function() {
     window.location.href = 'landingpage.html';
-});
+  });
+
+  $('#redirectToNotify').on('click', function() {
+    window.location.href = 'notify.html';
+  });
+
+
 });
