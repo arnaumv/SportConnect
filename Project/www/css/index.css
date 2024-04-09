@@ -1399,6 +1399,17 @@ div.ui-controlgroup-label {
     margin-left: 20%;
 }
 
+.notification-icon-InfoEvents{
+    width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  margin-bottom: 900px;
+  margin-top: -460px;
+
+}
 /* **************************************** */
 
 .evento {
@@ -1829,7 +1840,7 @@ span.error {
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
-    margin-left: 120px;
+    margin-left: 90px;
     text-shadow: none;
 
 }
