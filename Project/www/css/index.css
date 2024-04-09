@@ -645,6 +645,14 @@ ui-input-text input,
     text-shadow: none;
 }
 
+.headerEditProfile .flecha-izquierda-Edit {
+    width: 37px !important;
+    height: 27px;
+    filter: invert(1);
+
+
+}
+
 .events-section h3 {
     font-size: 1.5em;
     font-weight: lighter;
@@ -780,7 +788,7 @@ ui-input-text input,
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 14%;
+    margin-left: 20%;
     text-shadow: none;
 }
 
@@ -1617,7 +1625,7 @@ span.error {
     display: flex;
     align-items: center;
     padding: 10px;
-    color: #fff;
+    color: white;
 }
 
 .headerTerms img {
@@ -1654,7 +1662,7 @@ span.error {
     display: flex;
     align-items: center;
     padding: 10px;
-    color: #fff;
+    color: white;
 }
 
 .headerPrivacy img {

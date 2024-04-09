@@ -14,7 +14,7 @@ $(document).ready(function() {
         window.location.href = 'Terms.html';
     });
 
-    $('#a_privac').on('click', function() {
+    $('#a_privacy').on('click', function() {
         window.location.href = 'Privacy.html';
     });
 
