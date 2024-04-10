@@ -58,7 +58,7 @@ $(document).on('pagecreate', function(){
             eventHtml += '<h2>' + evento.title + '</h2>';
             eventHtml += '<p>Fecha: ' + evento.date + '</p>';
             eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
-            eventHtml += '<p>Creado por: ' + evento.user.username + '</p>';  // Agregamos el nombre de usuario del creador del evento
+            eventHtml += '<p>Creado por: ' + evento.creator_username + '</p>';  // Agregamos el nombre de usuario del creador del evento
             eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Ver Evento</button>';
             eventHtml += '</div>';
             eventsList.append(eventHtml);
