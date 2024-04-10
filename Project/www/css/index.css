@@ -149,11 +149,12 @@ body label.ui-btn {
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
     position: relative;
+    height: 25px;
 }
 
 .headerCreate .header-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-right: 9px;
 }
 
@@ -564,11 +565,12 @@ ui-input-text input,
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
     position: relative;
+    height: 25px;
 }
 
 .headerProfile .header-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-right: 15px;
 }
 
@@ -949,6 +951,8 @@ ui-overlay-a,
     text-shadow: none;
     letter-spacing: 1px;
     margin-left: 5px;
+    /*font-size: 22px;*/
+    font-weight: bold;
 
 }
 
@@ -1054,6 +1058,7 @@ html head+body .ui-body-a.ui-focus {
     text-shadow: none;
     letter-spacing: 1px;
     margin-left: 5px;
+    font-weight: bold;
 }
 
 .register-page .ui-input-text input,
@@ -1324,11 +1329,12 @@ div.ui-controlgroup-label {
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
     position: relative;
+    height: 25px;
 }
 
 .headerEvents .header-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-right: 15px;
 }
 
@@ -1440,12 +1446,13 @@ div.ui-controlgroup-label {
     /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
+    height: 25px;
 }
 
 .headerInfoEvents .header-logo {
-    width: 50px;
+    width: 45px;
     /* Reduced width */
-    height: 50px;
+    height: 45px;
     /* Reduced height */
     margin-right: 15px;
     /* Reduced margin */
@@ -1474,7 +1481,7 @@ div.ui-controlgroup-label {
   right: 20px;
   transform: translateY(-50%);
   margin-bottom: 900px;
-  margin-top: -420px;
+  margin-top: -437px;
 
 }
 /* **************************************** */
@@ -1885,12 +1892,12 @@ span.error {
     /* Reduced padding */
     background-color: #ececec;
     padding-left: 10px;
-    height: 35px;
+    height: 25px;
 }
 
 .headerNotify .flecha-izquierda-notify {
-    width: 37px !important;
-    height: 27px;
+    width: 25px !important;
+    height: 25px !important;
 
 
 
