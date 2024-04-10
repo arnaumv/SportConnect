@@ -43,12 +43,22 @@ $(document).ready(function(){
                     var title = $('<h2></h2>').text(event.event__title);
                     var location = $('<p></p>').text('Ubicación: ' + event.event__location);
                     var time = $('<p></p>').text('Fecha y hora del evento: ' + eventDate.toLocaleDateString() + ' ' + eventHours + ':' + eventMinutes);
-
+                
                     // Crear el botón de eliminar y agregarlo a la notificación
-                    var deleteButton = $('<button></button>').text('Eliminar').css('position', 'absolute').css('right', '0');
+                    var deleteButton = $('<button></button>').css({
+                        'position': 'absolute',
+                        'top': '0',
+                        'right': '0',
+                        'background': 'url(./img/Options/eliminar.png) no-repeat center center',
+                        'background-size': 'cover',  // Asegúrate de que la imagen cubra todo el botón
+                        'width': '20px',  // Establece el ancho del botón
+                        'height': '20px',  // Establece la altura del botón
+                        'border': 'none',  // Elimina el borde del botón
+                    });
+                
                     deleteButton.on('click', function() {
                         notification.remove();
-                    
+                
                         // Make an AJAX call to set notify_deleted to true
                         $.ajax({
                             url: 'http://127.0.0.1:8000/api/deleteNotification/',
@@ -67,17 +77,19 @@ $(document).ready(function(){
                             }
                         });
                     });
-
+                
+                    // Agregar el botón de eliminar al principio de la notificación
+                    notification.prepend(deleteButton);
+                
                     notification.append(joinMessage);
                     // notification.append(title);
                     notification.append(location);
                     notification.append(time);
-                    notification.append(deleteButton);  // Agregar el botón de eliminar a la notificación
-
+                
                     console.log(notification);
-
+                
                     $('#notifications').append(notification);
-
+                
                     console.log($('#notifications'));
                 }
             });
