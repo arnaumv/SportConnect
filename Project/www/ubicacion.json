@@ -98,7 +98,8 @@
                 "latitude": 41.3559335,
                 "longitude": 2.0747592
             },
-            "actividad": ["Futbol", "Baloncesto"]
+            "actividad": ["Futbol", "Baloncesto"],
+            "imagen": "./img/Places/Futbol_Predef.jpg"
         }, 
         
         {
@@ -107,7 +108,8 @@
                 "latitude": 41.3623421,
                 "longitude": 2.0714046
             },
-            "actividad": ["Tenis Mesa"]
+            "actividad": ["Tenis Mesa"],
+            "imagen": "./img/Places/TenisMesa_Predef.jpg"
         }, 
         
         {
@@ -117,7 +119,7 @@
                 "longitude": 2.0721183
             },
             "actividad": ["Baloncesto"],
-            "imagen": "./img/Places/PistaPauCasals.jpg"
+            "imagen": "./img/Places/PISTA_PAUCASALS.JPG"
         }, 
         
         {
@@ -127,7 +129,7 @@
                 "longitude": 2.078195
             },
             "actividad": ["Baloncesto"],
-            "imagen": "./img/Places/EspaiEsportiuPauRiera.jpg"
+            "imagen": "./img/Places/Baloncesto_Predef.jpeg"
         },  
         
         {
@@ -137,7 +139,7 @@
                 "longitude": 2.081566
             },  
             "actividad": ["Futbol", "Baloncesto"],
-            "imagen": "./www/img/Places/PlaçaEuropa.jpg"
+            "imagen": "./www/img/Places/Futbol_Predef.jpg"
         }, 
         
         {
@@ -146,7 +148,8 @@
                 "latitude": 41.358706,
                 "longitude": 2.0853477
             },
-            "actividad": ["Barras"]
+            "actividad": ["Barras"],
+            "imagen": "./img/Places/Barras_Predef.jpeg"
         }, 
         
         {
@@ -155,7 +158,8 @@
                 "latitude": 41.356264,
                 "longitude": 2.081358
             }, 
-            "actividad": ["Padel"]
+            "actividad": ["Padel"],
+            "imagen":"./img/Places/Aurial_Padel.jpeg"
         }, 
         
         {
@@ -164,7 +168,8 @@
                 "latitude":41.353857,
                 "longitude": 2.064640
             }, 
-            "actividad": ["Tenis Mesa"]
+            "actividad": ["Tenis Mesa"],
+            "imagen": "./img/Places/TenisMesa_Predef.jpg"
         }, 
         
         {
@@ -173,7 +178,8 @@
                 "latitude":41.371874,
                 "longitude": 2.074016
             }, 
-            "actividad": ["Futbol", "Baloncesto"]
+            "actividad": ["Futbol", "Baloncesto"],
+            "imagen": "./img/Places/Futbol_Predef.jpg"
         }, 
         
         {
@@ -182,7 +188,8 @@
                 "latitude":41.372854,
                 "longitude": 2.069475
             }, 
-            "actividad": ["Tenis Mesa", "Baloncesto"]
+            "actividad": ["Tenis Mesa", "Baloncesto"],
+            "imagen": "./img/Places/Baloncesto_Predef.jpeg"
         }, 
         
         {
@@ -191,7 +198,8 @@
                 "latitude":41.367568,
                 "longitude": 2.050804
             }, 
-            "actividad": ["Barras"]
+            "actividad": ["Barras"],
+            "imagen":"./img/Places/Barras_Predef.jpeg"
         }, 
         
         {
@@ -200,7 +208,8 @@
                 "latitude":41.3764435,
                 "longitude": 2.0821609
             }, 
-            "actividad": ["Futbol"]
+            "actividad": ["Futbol"],
+            "imagen": "./img/Places/Futbol_Predef.jpg"
         }, 
         
         {
@@ -209,7 +218,8 @@
                 "latitude":41.3706173,
                 "longitude": 2.0525969
             }, 
-            "actividad": ["Tenis"]
+            "actividad": ["Tenis", "Padel"],
+            "imagen": "./img/Places/elmoli.jpeg"
         }, 
         
         {
@@ -218,7 +228,8 @@
                 "latitude":41.371445,
                 "longitude": 2.069749
             }, 
-            "actividad": ["Tenis"]
+            "actividad": ["Tenis", "Padel"],
+            "imagen": "./img/Places/tennis-sant-joan-despi.jpg"
         }, 
         
         {
@@ -227,7 +238,8 @@
                 "latitude":41.389112,
                 "longitude": 2.060393
             }, 
-            "actividad": ["Padel"]
+            "actividad": ["Padel"],
+            "imagen": "./img/Places/santjust.jpeg"
         }, 
         
         {
@@ -236,7 +248,8 @@
                 "latitude":41.376118,
                 "longitude": 2.097020
             }, 
-            "actividad": ["Futbol"]
+            "actividad": ["Futbol"],
+            "imagen":"./img/Places/cruyff.jpeg"
         }, 
         
         {
@@ -245,7 +258,8 @@
                 "latitude":41.388237,
                 "longitude": 2.047785
             }, 
-            "actividad": ["Futbol"]
+            "actividad": ["Futbol"],
+            "imagen":"./img/Places/Riera.png"
         }, 
         
         {
@@ -254,7 +268,8 @@
                 "latitude":41.368098,
                 "longitude": 2.115184
             }, 
-            "actividad": ["Futbol"]
+            "actividad": ["Futbol"],
+            "imagen":"./img/Places/cruyff_hospitalet.jpg"
         }, 
         
         {
@@ -263,16 +278,28 @@
                 "latitude":41.344797,
                 "longitude": 2.113111
             }, 
-            "actividad": ["Futbol"]
+            "actividad": ["Futbol"],
+            "imagen":"./img/Places/PauRedo.jpeg"
         }, 
         
+        {
+            "nombre de ubicacion": "Camí Pau Redó, 10, 08908 L'Hospitalet de Llobregat, Barcelona",
+            "ubicacion": {
+                "latitude":41.3442731,
+                "longitude": 2.1115648
+            }, 
+            "actividad": ["Tenis","Padel"],
+            "imagen":"./img/Places/tenis_redo.jpeg"
+        }, 
+
         {
             "nombre de ubicacion": "Carrer del Crom, 100, L'Hospitalet de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.3499183,
                 "longitude": 2.0984353
             }, 
-            "actividad": ["Futbol"]
+            "actividad": ["Futbol"],
+            "imagen":"./img/Places/golagol.jpeg"
         }, 
         
         {
@@ -281,7 +308,8 @@
                 "latitude":41.383279,
                 "longitude": 2.037862
             }, 
-            "actividad": ["Baloncesto"]
+            "actividad": ["Baloncesto", "Futbol"],
+            "imagen": "./img/Places/Baloncesto_Predef.jpeg"
         }, 
         
         {
@@ -290,7 +318,9 @@
                 "latitude":41.385299,
                 "longitude": 2.054068
             }, 
-            "actividad": ["Baloncesto"]
+            "actividad": ["Baloncesto"],
+            "imagen":"./img/Places/dicia.png"
+
         }, 
         
         {
@@ -299,34 +329,28 @@
                 "latitude":41.386210,
                 "longitude": 2.058667
             }, 
-            "actividad": ["Futbol", "Baloncesto"]
+            "actividad": ["Futbol", "Baloncesto"],
+            "imagen":"./img/Places/Futbol_Predef.jpg"
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Tenerife, 18, 08950 Barcelona",
+            "nombre de ubicacion": "Carrer de Tenerife, Horta-Guinardó, 08024 Barcelona",
             "ubicacion": {
                 "latitude":41.385989,
                 "longitude": 2.101456
             }, 
-            "actividad": ["Futbol", "Baloncesto"]
+            "actividad": ["Futbol", "Baloncesto"],
+            "imagen":"./img/Places/Futbol_Predef.jpg"
+        },
+        {
+            "nombre de ubicacion": "Horta-Guinardó, 08024 Barcelona",
+            "ubicacion": {
+                "latitude":41.4165692,
+                "longitude": 2.1644985
+            }, 
+            "actividad": ["Tenis Mesa"],
+            "imagen":"./img/Places/Tenerife.png"
         }
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     ]
 }
