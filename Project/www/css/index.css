@@ -691,17 +691,17 @@ ui-input-text input,
     margin-bottom: 10px;
 }
 
-.events-buttons button {
+/* .events-buttons button {
     padding: 8px 12px;
     margin: 0 5px;
     font-size: 12px;
     background-color: rgb(43, 165, 221);
-    ;
+
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-}
+} */
 
 .events-list {
     list-style: none;
@@ -1373,7 +1373,7 @@ div.ui-controlgroup-label {
     border-radius: 5px;
     cursor: pointer;
     min-width: 120px;
-    margin: 20px 10px 10px;
+    margin: 10px 10px 10px 7px;
 }
 
 
