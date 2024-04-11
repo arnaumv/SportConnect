@@ -679,17 +679,23 @@ ui-input-text input,
     margin-left: 25px;
 }
 
+.events-buttons-Profile{
+    display: flex;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    /* flex-direction: column; */
 
+}
 /* Estilos para la sección de eventos */
 .events-section {
     margin-top: 20px;
 }
-
+/* 
 .events-buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-}
+} */
 
 /* .events-buttons button {
     padding: 8px 12px;
@@ -1357,10 +1363,74 @@ div.ui-controlgroup-label {
 
 /* Otros estilos que puedas tener */
 
-.events-buttons {
+/* .events-buttons {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
+} */
+
+
+
+element.style {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(255 254 254);
+    margin-left: -12px;
+}
+.events-buttons {
+    display: flex;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    flex-direction: column;
+}
+.events-buttons div {
+    width: 100%; /* Asegura que los div de los botones ocupen el ancho máximo */
+    margin-left: 10px;
+}
+.filterDiv {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 505px;
+    height: 60%;
+    background-color: #ffffff;
+    margin-left: -18px;
+}
+.ui-checkbox .ui-btn, .ui-radio .ui-btn {
+    margin: 0;
+    text-align: left;
+    white-space: normal;
+    z-index: 2;
+    background-color: white !important;
+}
+#acceptFilterButton {
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 35px;
+    align-items: center;
+    margin-left: 24px;
+    background-color: rgba(43, 45, 66, 0.9);
+    color: white;
+    text-shadow: none;
+    font-size: larger;
+    font-family: inherit;
+}
+
+#filterButton {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    font-size: 12px;
+    background-color: rgba(43, 45, 66, 0.9);
+    color: white;
+    text-shadow: none;
+    border-radius: 35px;
+    margin-left: 7px;
+    font-size: larger;
 }
 
 .events-buttons button {
@@ -1918,3 +1988,4 @@ span.error {
     text-shadow: none;
 
 }
+

@@ -23,7 +23,6 @@
 </head>
 
 <body>
-    <!-- page 1 -->
     <div data-role="page">
         <div class="headerEvents">
             <img id="redirectToLanding" src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
@@ -32,21 +31,48 @@
 
             
         </div>
+        <!-- page 1 -->
         <div class="ui-content">
-            <div class="events-buttons">
-                <button id="all" class="waves-effect waves-light btn">Todos</button>
-                <button id="Futbol" class="waves-effect waves-light btn">Futbol</button>
-                <button id="Baloncesto" class="waves-effect waves-light btn">Baloncesto</button>
-                <button id="Gimnasio" class="waves-effect waves-light btn">Gimnasio</button>
-                <button id="Tenis Mesa" class="waves-effect waves-light btn">Tenis Mesa</button>
-                <button id="Tenis" class="waves-effect waves-light btn">Tenis</button>
-                <button id="Padel" class="waves-effect waves-light btn">Padel</button>
+            <button id="filterButton" class="waves-effect waves-light btn">Filtrar ▼</button>
+            <div id="filterDiv" class="filterDiv">
+                <div class="events-buttons">
+                    <div>
+                        <input type="radio" id="all" name="sport" value="all" checked>
+                        <label for="all">Todos</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Futbol" name="sport" value="Futbol">
+                        <label for="Futbol">Futbol</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Baloncesto" name="sport" value="Baloncesto">
+                        <label for="Baloncesto">Baloncesto</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Barras" name="sport" value="Barras">
+                        <label for="Barras">Barras</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="TenisMesa" name="sport" value="Tenis Mesa">
+                        <label for="TenisMesa">Tenis Mesa</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Tenis" name="sport" value="Tenis">
+                        <label for="Tenis">Tenis</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Padel" name="sport" value="Padel">
+                        <label for="Padel">Padel</label>
+                    </div>
+                    <button id="acceptFilterButton" class="waves-effect waves-light btn">Ver resultados</button>
+
+                </div>
+                
             </div>
             <div class="events-list">
                 
             </div>
-
-        </div>
+    </div>
 
 
         <div data-role="footer" data-position="fixed">

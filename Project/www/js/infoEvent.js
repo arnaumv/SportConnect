@@ -17,7 +17,7 @@ $(document).ready(function () {
         $('.evento img').attr('src', evento.image_path);
         $('.evento h2').text(evento.title);
         $('.evento p').first().text('Fecha: ' + evento.date);
-        $('.evento p').last().text(evento.description);
+        $('.evento p').last().text('Descripción: ' + evento.description);
     },
     error: function(error) {
         console.log('Error getting event:', error);

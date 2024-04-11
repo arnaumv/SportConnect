@@ -27,7 +27,6 @@ $(document).on('pagecreate', function(){
     console.log("Heii");
 
     // Hacer una solicitud AJAX para obtener los eventos
-    // Hacer una solicitud AJAX para obtener los eventos
     $.ajax({
         url: 'http://127.0.0.1:8000/event-filter/',  // URL de tu API
         type: 'GET',
@@ -64,7 +63,16 @@ $(document).on('pagecreate', function(){
             eventsList.append(eventHtml);
         });
 
-        
+        // Aplicar el filtro
+        var categoriaSeleccionada = $('input[name="sport"]:checked').val().toLowerCase();
+        $('.event').hide();
+        $('.event').each(function() {
+            var categoriaEvento = $(this).data('categoria').toLowerCase();
+            if (categoriaSeleccionada === 'all' || categoriaSeleccionada === categoriaEvento) {
+                $(this).show();
+            }
+        });
+
         // Agregar controlador de eventos de clic a los botones de unirse
         $('.join-btn').on('click', function() {
             var eventId = $(this).data('event-id');
@@ -75,18 +83,32 @@ $(document).on('pagecreate', function(){
         });
     }
 
-    // Mostrar u ocultar eventos según la categoría seleccionada
-    $('.waves-effect').click(function() {
-        var categoriaSeleccionada = $(this).attr('id').toLowerCase();
-        $('.event').hide();
-        $('.event').each(function() {
-            var categoriaEvento = $(this).data('categoria').toLowerCase();
-            if (categoriaSeleccionada === 'all' || categoriaSeleccionada === categoriaEvento) {
-                $(this).show();
-            }
-        });
+    // Show or hide the filter div when the filter button is clicked
+    $('#filterButton').on('click', function() {
+        $('#filterDiv').slideToggle();
     });
 
-    // Mostrar todos los eventos al cargar la página
-    $('#all').trigger('click');
+    // Filter events when a radio button is selected
+    $('input[name="sport"]').on('change', function() {
+        // Recargar los eventos cuando se selecciona una nueva categoría
+        var eventos = JSON.parse(localStorage.getItem('eventos'));
+        mostrarEventos(eventos);
+
+        // Cambiar el texto del botón "Filtrar" al deporte seleccionado
+        var deporteSeleccionado = $(this).val();
+        if (deporteSeleccionado === 'all') {
+            deporteSeleccionado = 'Todos ▼';
+        }
+        $('#filterButton').text(deporteSeleccionado);
+    });
+
+    // Trigger the change event for the 'all' radio button when the page loads
+    $(document).ready(function() {
+        $('#all').trigger('change');
+    });
+    // Ocultar el div de filtrado cuando se hace clic en el botón de aceptar
+    $('#acceptFilterButton').on('click', function() {
+        $('#filterDiv').slideToggle();
+    });
+
 });
