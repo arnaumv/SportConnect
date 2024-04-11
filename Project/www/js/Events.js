@@ -109,6 +109,8 @@ $(document).on('pagecreate', function(){
     // Ocultar el div de filtrado cuando se hace clic en el botón de aceptar
     $('#acceptFilterButton').on('click', function() {
         $('#filterDiv').slideToggle();
+        //$('#filterDiv').css('z-index', '1000'); // Asegurarse de que el div de filtro se superponga sobre el footer
+
     });
 
 });
