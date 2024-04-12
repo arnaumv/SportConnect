@@ -97,7 +97,8 @@ $(document).ready(function () {
         // Cambiar el color de fondo y el color del texto del botón "Activos"
         $(this).css({
             'background-color': 'rgba(43, 45, 66, 0.9)',
-            'color': 'white'
+            'color': 'white',
+            'margin-left' : '10px;'
         });
 
         // Restablecer el color de fondo y el color del texto del botón "Finalizados"
