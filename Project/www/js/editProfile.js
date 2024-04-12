@@ -116,12 +116,16 @@ $(document).ready(function() {
                     // Manejar la respuesta de éxito
                     showPopup2(response.message);
                     //alert(response.message);
+                    setTimeout(function() {
+                        window.location.href = 'Profile.html';
+                    }, 2200);
                 },
                 error: function(xhr, status, error) {
                     // Manejar errores
                     //console.error(error);
                     showPopup(error);
                 }
+                
             });    
         } else {
             console.log('Comprobacion Fallida...');
@@ -150,5 +154,5 @@ function showPopup(message) {
 
 function showPopup2(message) {
     $('#popup-message2').text(message);
-    $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    $('#popup2').slideDown('slow').delay(2000).slideUp('slow'); // Transición más lenta
 }
