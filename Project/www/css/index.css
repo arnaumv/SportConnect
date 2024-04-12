@@ -114,10 +114,11 @@ body label.ui-btn {
 }
 
 .headerIndex .header-logo {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin-right: 9px;
-}
+    margin-left: -10px;
+  }
 
 .headerIndex h1 {
     margin: 0;
@@ -1343,6 +1344,7 @@ div.ui-controlgroup-label {
     width: 45px;
     height: 45px;
     margin-right: 15px;
+    margin-left: -10px;
 }
 
 .headerEvents h1 {
