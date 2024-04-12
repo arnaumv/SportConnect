@@ -110,6 +110,7 @@ body label.ui-btn {
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 25px;
     position: relative;
+    height: 25px;
 }
 
 .headerIndex .header-logo {
