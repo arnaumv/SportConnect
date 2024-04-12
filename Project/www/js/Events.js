@@ -114,28 +114,39 @@ $(document).on('pagecreate', function(){
     });
 
     // Show or hide the date filter div when the filter by date button is clicked
-    $('#filterDateButton').on('click', function() {
-        $('#filterDateDiv').slideToggle();
+$('#filterDateButton').on('click', function() {
+    $('#filterDateDiv').slideToggle();
+});
+
+// Change the text of the filter by date button when a date is selected
+$('#customDateFilter').on('change', function() {
+    var selectedDate = $(this).val();
+
+    if (selectedDate) {
+        $('#filterDateButton').text(selectedDate);
+    } else {
+        $('#filterDateButton').text('Fecha ▼');
+    }
+});
+
+// Filter events when a date is selected
+$('#acceptDateFilterButton').on('click', function() {
+    // Get the selected date
+    var selectedDate = $('#customDateFilter').val();
+
+    // Get the events from the localStorage
+    var eventos = JSON.parse(localStorage.getItem('eventos'));
+
+    // Filter the events by the selected date
+    var filteredEvents = eventos.filter(function(evento) {
+        return evento.date === selectedDate;
     });
 
-    // Filter events when a date is selected
-    $('#acceptDateFilterButton').on('click', function() {
-        // Get the selected date
-        var selectedDate = $('#dateFilter').val();
+    // Show the filtered events
+    mostrarEventos(filteredEvents);
 
-        // Get the events from the localStorage
-        var eventos = JSON.parse(localStorage.getItem('eventos'));
-
-        // Filter the events by the selected date
-        var filteredEvents = eventos.filter(function(evento) {
-            return evento.date === selectedDate;
-        });
-
-        // Show the filtered events
-        mostrarEventos(filteredEvents);
-
-        // Hide the date filter div
-        $('#filterDateDiv').slideToggle();
-    });
+    // Hide the date filter div
+    $('#filterDateDiv').slideToggle();
+});
 
 });

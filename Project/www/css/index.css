@@ -1405,7 +1405,7 @@ element.style {
     position: fixed;
     bottom: 0;
     width: 505px;
-    height: 45%;
+    height: 35%;
     background-color: #ffffff;
     margin-left: -18px;
 }
@@ -1428,9 +1428,25 @@ element.style {
     background-color: rgba(43, 45, 66, 0.9);
     color: white;
     text-shadow: none;
-    font-size: larger;
-    font-family: inherit;
+    font-size: medium;
+    font-family: sans-serif;
 }
+
+#acceptDateFilterButton {
+    width: 350px;
+    height: 40px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 35px;
+    align-items: center;
+    margin-left: 40px;
+    background-color: rgba(43, 45, 66, 0.9);
+    color: white;
+    text-shadow: none;
+    font-size: medium;
+    font-family: sans-serif;
+}
+
 
 #filterButton {
     width: 100px;
@@ -1459,6 +1475,44 @@ element.style {
     margin-top: -37px;
 }
 
+/* 
+#dateFilter {
+    margin: 0;
+    min-height: 2.2em;
+    text-align: left;
+    border: 0;
+    background: transparent none;
+    -webkit-appearance: none;
+    border-radius: inherit;
+    padding: .4em;
+    line-height: 1.4em;
+    width: 50%;
+    box-sizing: border-box;
+    outline: 0;
+    color: #000;
+    font-size: 1em;
+    margin-left: 20px;
+    height: 40px;
+} */
+
+
+.customDateFilterClass {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+    width: 200px !important;
+    margin-left: 30px !important;
+    height: 40px !important;
+} 
+input#customDateFilter {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+    /* width: 303px !important;
+    margin-left: 30px !important; */
+}
 .events-buttons button {
     padding: 6px 5px !important;
     font-size: 14px;
