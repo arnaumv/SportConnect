@@ -757,7 +757,7 @@ ui-input-text input,
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
-    margin-left: -230px;
+    margin-left: -210px;
     width: 120px !important;
 
 }
@@ -1357,6 +1357,7 @@ div.ui-controlgroup-label {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 20%;
+    text-shadow: none;
 }
 
 /* **************************************** */
