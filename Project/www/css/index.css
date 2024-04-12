@@ -574,6 +574,7 @@ ui-input-text input,
     width: 45px;
     height: 45px;
     margin-right: 15px;
+    margin-left: -10px;
 }
 
 .headerProfile h1 {
