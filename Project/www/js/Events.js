@@ -113,4 +113,29 @@ $(document).on('pagecreate', function(){
 
     });
 
+    // Show or hide the date filter div when the filter by date button is clicked
+    $('#filterDateButton').on('click', function() {
+        $('#filterDateDiv').slideToggle();
+    });
+
+    // Filter events when a date is selected
+    $('#acceptDateFilterButton').on('click', function() {
+        // Get the selected date
+        var selectedDate = $('#dateFilter').val();
+
+        // Get the events from the localStorage
+        var eventos = JSON.parse(localStorage.getItem('eventos'));
+
+        // Filter the events by the selected date
+        var filteredEvents = eventos.filter(function(evento) {
+            return evento.date === selectedDate;
+        });
+
+        // Show the filtered events
+        mostrarEventos(filteredEvents);
+
+        // Hide the date filter div
+        $('#filterDateDiv').slideToggle();
+    });
+
 });
