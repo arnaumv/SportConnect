@@ -1384,15 +1384,31 @@ div.ui-controlgroup-label {
     overflow-x: auto;
     white-space: nowrap;
 } */
+body:has(.ui-content.events-page) {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    padding: 1em;
+   /* background-color: #d9d9d93b !important;*/
+    /* Add your custom styles here */
+}
 
-.ui-content.events-page {
+body.events-page-body, div.events-page-div {
+    display: block;
+    overflow: visible;
+    overflow-x: hidden;
+    background-color: #d9d9d93b !important;
+    /* Add your custom styles here */
+}
+
+/* .ui-content.events-page {
     border-width: 0;
     overflow: visible;
     overflow-x: hidden;
     padding: 1em;
     background-color: #d9d9d93b !important;
-    /* Add your custom styles here */
-}
+    /* Add your custom styles here 
+} */
 
 element.style {
     position: fixed;
