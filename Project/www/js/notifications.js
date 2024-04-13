@@ -49,6 +49,7 @@ $(document).ready(function(){
                     'width': '20px',  // Establece el ancho del botón
                     'height': '20px',  // Establece la altura del botón
                     'border': 'none',  // Elimina el borde del botón
+                    'margin-top': '0px',
                 });
 
                 deleteButton.on('click', function() {
