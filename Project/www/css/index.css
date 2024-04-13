@@ -687,7 +687,17 @@ ui-input-text input,
     /* overflow-x: auto; */
     white-space: nowrap;
     /* flex-direction: column; */
+    margin-block: 20px !important;
 
+}
+
+.events-buttons-Profile .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
+    background-color: #f6f6f6;
+    border-color: #ddd;
+    color: #333;
+    text-shadow: 0 1px 0 #f3f3f3;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
 }
 /* Estilos para la sección de eventos */
 .events-section {
@@ -1389,10 +1399,12 @@ element.style {
     /* overflow-x: auto; */
     white-space: nowrap;
     flex-direction: column;
+    margin-top: 15px;
 }
 .events-buttons div {
     width: 100%; /* Asegura que los div de los botones ocupen el ancho máximo */
-    margin-left: 10px;
+    margin-left: 13px;
+    margin-bottom: 0px;
 }
 .filterDiv {
     display: none;
@@ -1434,6 +1446,7 @@ element.style {
     text-shadow: none;
     font-size: medium;
     font-family: sans-serif;
+    margin-top: 25px;
 }
 
 #acceptDateFilterButton {
