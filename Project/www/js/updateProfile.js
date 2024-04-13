@@ -16,7 +16,11 @@ $(document).on('pagecreate', function () {
             localStorage.setItem('username', data.username);
             $('#username').text(data.username);
             $('#city').text(data.city);
-            $('#miniDescription').text(data.description);
+            if (data.description != null) {
+                console.log("no es null");
+                $('#miniDescription').text(data.description);
+            }            
+            
         })
         .catch(error => {
             console.error('Error:', error);

@@ -36,6 +36,7 @@ function onDeviceReady() {
 
 }
 $(document).ready(function () {
+    $("active-events-btn").addClass("active");
     // Obtener el nombre de usuario desde el localStorage
     var username = localStorage.getItem("username");
     if (!username) {
@@ -93,37 +94,18 @@ $(document).ready(function () {
 
 
     // Manejar clic en botón "Activos"
-    $('#active-events-btn').off('click').on('click', function () {
-        // Cambiar el color de fondo y el color del texto del botón "Activos"
-        $(this).css({
-            'background-color': 'rgba(43, 45, 66, 0.9)',
-            'color': 'white',
-            'margin-left' : '10px;'
-        });
-
-        // Restablecer el color de fondo y el color del texto del botón "Finalizados"
-        $('#finished-events-btn').css({
-            'background-color': '',
-            'color': 'black'
-        });
+    $("#active-events-btn").click(function(){
+        $(this).addClass("active");
+        $("#finished-events-btn").removeClass("active");
 
         console.log("ookkactivos")
         mostrarEventosPorCategoria("Activos");
     });
 
     // Manejar clic en botón "Finalizados"
-    $('#finished-events-btn').off('click').on('click', function () {
-        // Cambiar el color de fondo y el color del texto del botón "Finalizados"
-        $(this).css({
-            'background-color': 'rgba(43, 45, 66, 0.9)',
-            'color': 'white'
-        });
-
-        // Restablecer el color de fondo y el color del texto del botón "Activos"
-        $('#active-events-btn').css({
-            'background-color': '',
-            'color': 'black'
-        });
+    $("#finished-events-btn").click(function(){
+        $(this).addClass("active");
+        $("#active-events-btn").removeClass("active");
 
         console.log("ookkfinalizados")
         mostrarEventosPorCategoria("Finalizados");

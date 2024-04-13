@@ -488,7 +488,14 @@ p {
 #btnEnviar {
     background-color: rgb(43, 165, 221);
     text-shadow: none;
-    border-radius: 25px;
+    border-radius: 25px !important;
+    display: inline-block;
+    padding: 10px 20px !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+    width: 83% !important;
 }
 
 .timeDate {
@@ -534,6 +541,14 @@ ui-input-text input,
 #btnSave {
     background-color: rgb(43, 165, 221);
     text-shadow: none;
+    border-radius: 25px !important;
+    display: inline-block;
+    padding: 10px 20px !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+    width: 83% !important;
 }
 
 #btnSubmit {
@@ -683,15 +698,6 @@ ui-input-text input,
     margin-left: 25px;
 }
 
-.events-buttons-Profile{
-    display: flex;
-    /* overflow-x: auto; */
-    white-space: nowrap;
-    /* flex-direction: column; */
-    margin-block: 20px !important;
-
-}
-
 .events-buttons-Profile .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
     background-color: #f6f6f6;
     border-color: #ddd;
@@ -776,11 +782,36 @@ ui-input-text input,
 
 }
 
-.ButtonsEventsProfile {
-    text-shadow: none !important;
-    font: inherit !important;
-    font-size: 16px;
+.events-buttons-Profile {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin-block: 20px !important;
+    text-align: center !important;
 }
+
+.ButtonsEventsProfile {
+    width: 100px !important;
+    height: 30px !important;
+    padding: 5px !important;
+    background-color: rgba(70, 72, 94, 0.9) !important;
+    color: white !important;
+    text-shadow: none !important;
+    border-radius: 35px !important;
+    margin-left: 10px !important; /* Ajuste para centrar los botones */
+    font-size: larger !important;
+    margin-bottom: 23px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+}
+
+.ButtonsEventsProfile.active {
+    outline: 3px solid rgb(0, 0, 0) !important; /* Estilo de foco para el botón activo */
+    background-color: rgba(43, 45, 66, 0.9) !important;
+
+}
+
 
 /********** Edit Profile **********/
 /* Estilos para el header */
@@ -1593,9 +1624,6 @@ input#customDateFilter {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
-    min-width: 330px;
-    /*max-width: 330px;*/
-    min-height: 150px;
     max-height: 150px;
 }
 
@@ -1776,9 +1804,10 @@ input#customDateFilter {
     background-color: rgb(221, 43, 43) !important;
     color: #000 !important;
     text-decoration: none !important;
-    border-radius: 5px !important;
+    border-radius: 25px !important;
     font-weight: bold !important;
     text-shadow: none !important;
+    width: 83% !important;
 }
 
 /* Css Errores formularios */
@@ -2116,3 +2145,13 @@ span.error {
 
 }
 
+
+/*CSS ICONO BORRAR */
+
+.borrarEvent{
+    width: 36px !important;
+    height: 35px !important;
+    float: right !important;
+    margin-top: 10px !important;
+    cursor: pointer;
+}

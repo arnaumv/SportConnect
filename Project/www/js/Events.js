@@ -25,25 +25,28 @@ $(document).on('pagecreate', function(){
         window.location.href = 'notify.html';
     });
     console.log("Heii");
-
-    // Hacer una solicitud AJAX para obtener los eventos
-    $.ajax({
-        url: 'http://127.0.0.1:8000/event-filter/',  // URL de tu API
-        type: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        success: function(eventos) {
-            mostrarEventos(eventos);
-            // Guardar eventos en el localStorage
-            localStorage.setItem('eventos', JSON.stringify(eventos));
-            console.log("Mostrando eventos");
-        },
-        error: function(error) {
-            console.log('Error getting events:', error);
-            console.log("Error al mostrar eventos");
-        }
-    });
+    llamadaAjax();
+    function llamadaAjax(){
+        // Hacer una solicitud AJAX para obtener los eventos
+        $.ajax({
+            url: 'http://127.0.0.1:8000/event-filter/',  // URL de tu API
+            type: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            success: function(eventos) {
+                mostrarEventos(eventos);
+                // Guardar eventos en el localStorage
+                localStorage.setItem('eventos', JSON.stringify(eventos));
+                console.log("Mostrando eventos");
+            },
+            error: function(error) {
+                console.log('Error getting events:', error);
+                console.log("Error al mostrar eventos");
+            }
+        }); 
+    }
+      
 
     // Función para mostrar todos los eventos
     function mostrarEventos(eventos) {
@@ -52,14 +55,26 @@ $(document).on('pagecreate', function(){
 
         // Agregar eventos al DOM
         eventos.forEach(function(evento) {
+            var storedUsername = localStorage.getItem('username');
+
             var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
             eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
             eventHtml += '<h2>' + evento.title + '</h2>';
             eventHtml += '<p>Fecha: ' + evento.date + '</p>';
             eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
-            eventHtml += '<p>Creado por: ' + evento.creator_username + '</p>';  // Agregamos el nombre de usuario del creador del evento
+            if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
+                eventHtml += '<p>Creado por ti</p>';  
+            }
+             else {
+                eventHtml += '<p>Creado por: ' + evento.creator_username + '</p>';  // Agregamos el nombre de usuario del creador del evento
+            };
             eventHtml += '<hr>';
             eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Ver Evento</button>';
+
+            if (evento.creator_username.toLowerCase()==storedUsername.toLowerCase()){
+                eventHtml += '<img class="borrarEvent" id="borrarEvent" src="img/Options/eliminarEvent.png">';
+            };
+
             eventHtml += '</div>';
             eventsList.append(eventHtml);
         });
@@ -82,6 +97,32 @@ $(document).on('pagecreate', function(){
             // Redirigir al usuario a la página de información del evento
             window.location.href = 'InfoEvent.html';
         });
+
+        //Borrar evento creado por ti
+        $('#borrarEvent').on('click', function() {
+            var eventIdBorrar = $(".join-btn").data("event-id"); 
+            var storedUsername = localStorage.getItem('username');
+            console.log("borrar evento: "+ eventIdBorrar+ "por: "+ storedUsername);
+            $.ajax({
+                url: 'http://127.0.0.1:8000/delete_event/',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    username: storedUsername, 
+                    event_id: eventIdBorrar
+                },
+                success: function(response) {
+                    //alert(response.message); 
+                    showPopup2(response.message);
+                    llamadaAjax();
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error al intentar borrar el evento:", error);
+                    //alert("Error al intentar borrar el evento. Por favor, inténtalo de nuevo más tarde.");
+                    showPopup("Error al intentar borrar el evento. Por favor, inténtalo de nuevo más tarde.");
+                }
+            });
+        }); 
     }
 
     // Show or hide the filter div when the filter button is clicked
@@ -115,39 +156,48 @@ $(document).on('pagecreate', function(){
     });
 
     // Show or hide the date filter div when the filter by date button is clicked
-$('#filterDateButton').on('click', function() {
-    $('#filterDateDiv').slideToggle();
-});
-
-// Change the text of the filter by date button when a date is selected
-$('#customDateFilter').on('change', function() {
-    var selectedDate = $(this).val();
-
-    if (selectedDate) {
-        $('#filterDateButton').text(selectedDate);
-    } else {
-        $('#filterDateButton').text('Fecha ▼');
-    }
-});
-
-// Filter events when a date is selected
-$('#acceptDateFilterButton').on('click', function() {
-    // Get the selected date
-    var selectedDate = $('#customDateFilter').val();
-
-    // Get the events from the localStorage
-    var eventos = JSON.parse(localStorage.getItem('eventos'));
-
-    // Filter the events by the selected date
-    var filteredEvents = eventos.filter(function(evento) {
-        return evento.date === selectedDate;
+    $('#filterDateButton').on('click', function() {
+        $('#filterDateDiv').slideToggle();
     });
 
-    // Show the filtered events
-    mostrarEventos(filteredEvents);
+    // Change the text of the filter by date button when a date is selected
+    $('#customDateFilter').on('change', function() {
+        var selectedDate = $(this).val();
 
-    // Hide the date filter div
-    $('#filterDateDiv').slideToggle();
-});
+        if (selectedDate) {
+            $('#filterDateButton').text(selectedDate);
+        } else {
+            $('#filterDateButton').text('Fecha ▼');
+        }
+    });
 
+    // Filter events when a date is selected
+    $('#acceptDateFilterButton').on('click', function() {
+        // Get the selected date
+        var selectedDate = $('#customDateFilter').val();
+
+        // Get the events from the localStorage
+        var eventos = JSON.parse(localStorage.getItem('eventos'));
+
+        // Filter the events by the selected date
+        var filteredEvents = eventos.filter(function(evento) {
+            return evento.date === selectedDate;
+        });
+
+        // Show the filtered events
+        mostrarEventos(filteredEvents);
+
+        // Hide the date filter div
+        $('#filterDateDiv').slideToggle();
+    });
+
+    function showPopup(message) {
+        $('#popup-message').text(message);
+        $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    }
+    
+    function showPopup2(message) {
+        $('#popup-message2').text(message);
+        $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    }
 });
