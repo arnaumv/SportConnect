@@ -1486,7 +1486,7 @@ element.style {
     margin-top: 15px;
 }
 .events-buttons div {
-    width: 100%; /* Asegura que los div de los botones ocupen el ancho máximo */
+    width: 380px; /* Asegura que los div de los botones ocupen el ancho máximo */
     margin-left: 13px;
     margin-bottom: 0px;
 }
@@ -1494,20 +1494,23 @@ element.style {
     display: none;
     position: fixed;
     bottom: 0;
-    width: 505px;
+    width: 420px;
     height: 60%;
     background-color: #ffffff;
     margin-left: -18px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 35%);
 }
 
 #filterDateDiv {
     display: none;
     position: fixed;
     bottom: 0;
-    width: 505px;
+    width: 420px;
     height: 35%;
     background-color: #ffffff;
     margin-left: -18px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 35%);
 }
 
 .ui-checkbox .ui-btn, .ui-radio .ui-btn {
@@ -1614,6 +1617,10 @@ input#customDateFilter {
     border-color: #fbfbfb00 !important;
     color: #000000 !important;
     text-shadow: none !important;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    /*width: 290px; */
+    /*margin-left: 70px; */
     /* width: 303px !important;
     margin-left: 30px !important; */
 }
