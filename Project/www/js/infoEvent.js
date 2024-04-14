@@ -17,8 +17,19 @@ $(document).ready(function () {
         $('.evento img').attr('src', evento.image_path);
         $('.evento h2').text(evento.title);
         $('.evento p').first().text('Fecha: ' + evento.date);
-        $('.evento p').last().text('Descripción: ' + evento.description);
-    },
+        $('.evento p').last().text('Descripción:' + evento.description);
+        
+        // Obtener el nombre de usuario almacenado
+        var storedUsername = localStorage.getItem("username");
+        // Comprobar si el nombre de usuario del creador del evento es el mismo que el nombre de usuario almacenado
+        if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
+            // Si es el mismo, agregar el texto "Creado por ti"
+            $('.evento').append('<p>Creado por tí</p>');
+        } else {
+            // Si no es el mismo, agregar el texto "Creado por " seguido del nombre de usuario del creador del evento
+            $('.evento').append('<p>Creado por: ' + evento.creator_username + '</p>');
+        }
+      },
     error: function(error) {
         console.log('Error getting event:', error);
     }
