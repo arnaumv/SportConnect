@@ -34,10 +34,10 @@ $(document).ready(function(){
                 console.log('Creating HTML for notification');  // Added console log
                 
                 var notification = $('<div class="notification" style="position: relative;"></div>');
-                var createMessage = $('<p></p>').text('Has creado un evento de "' + event.sport + '"');
+                var createMessage = $('<p class="pNotification"></p>').text('Has creado un evento de "' + event.sport + '"');
                 var title = $('<h2></h2>').text(event.title);
-                var location = $('<p></p>').text('Ubicación: ' + event.location);
-                var time = $('<p></p>').text('Fecha y hora del evento: ' + eventDate.toISOString().split('T')[0] + ' ' + eventHours + ':' + eventMinutes);
+                var location = $('<p class="pNotification"></p>').text('Ubicación: ' + event.location);
+                var time = $('<p class="pNotification"></p>').text('Fecha y hora del evento: ' + eventDate.toISOString().split('T')[0] + ' ' + eventHours + ':' + eventMinutes);
                 
                 // Create the delete button and add it to the notification
                 var deleteButton = $('<button></button>').css({
@@ -78,7 +78,7 @@ $(document).ready(function(){
                 notification.prepend(deleteButton);
 
                 notification.append(createMessage);
-                notification.append(title);
+                //notification.append(title);
                 notification.append(location);
                 notification.append(time);
                 
@@ -124,10 +124,10 @@ $(document).ready(function(){
 
                 if (joinDate.toLocaleDateString() === now.toLocaleDateString() || eventDate.toLocaleDateString() === now.toLocaleDateString()) {
                     var notification = $('<div class="notification" style="position: relative;"></div>');
-                    var joinMessage = $('<p></p>').text('Te has unido a un evento de "' + event.event__sport + '" a las ' + joinDate.toLocaleTimeString());
+                    var joinMessage = $('<p class="pNotification"></p>').text('Te has unido a un evento de "' + event.event__sport + '" a las ' + joinDate.toLocaleTimeString());
                     var title = $('<h2></h2>').text(event.event__title);
-                    var location = $('<p></p>').text('Ubicación: ' + event.event__location);
-                    var time = $('<p></p>').text('Fecha y hora del evento: ' + eventDate.toLocaleDateString() + ' ' + eventHours + ':' + eventMinutes);
+                    var location = $('<p class="pNotification"></p>').text('Ubicación: ' + event.event__location);
+                    var time = $('<p class="pNotification"></p>').text('Fecha y hora del evento: ' + eventDate.toLocaleDateString() + ' ' + eventHours + ':' + eventMinutes);
                 
                     // Crear el botón de eliminar y agregarlo a la notificación
                     var deleteButton = $('<button></button>').css({
@@ -139,6 +139,8 @@ $(document).ready(function(){
                         'width': '20px',  // Establece el ancho del botón
                         'height': '20px',  // Establece la altura del botón
                         'border': 'none',  // Elimina el borde del botón
+                        'margin-top': '0px',
+
                     });
                 
                     deleteButton.on('click', function() {
