@@ -833,9 +833,9 @@ ui-input-text input,
     line-height: 1.5;
     margin-bottom: 1rem;
     margin-top: 80px;
-    color: black;
+    color: #000000b8;
     text-shadow: none;
-    font-family: monospace;
+    font-family: math;
     font-size: medium;
 }
 
@@ -1457,7 +1457,7 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    background-color: #d9d9d93b !important;
+    background-color: #ffffff82 !important;
     /* Add your custom styles here */
 }
 
