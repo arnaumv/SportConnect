@@ -52,7 +52,11 @@ $(document).on('pagecreate', function(){
     function mostrarEventos(eventos) {
         var eventsList = $('.events-list');
         eventsList.empty(); // Limpiar la lista antes de agregar los eventos
-
+          // Verificar si la lista de eventos está vacía
+    if (eventos.length === 0) {
+        eventsList.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
+        return;
+    }
         // Agregar eventos al DOM
         eventos.forEach(function(evento) {
             var storedUsername = localStorage.getItem('username');
@@ -88,6 +92,11 @@ $(document).on('pagecreate', function(){
                 $(this).show();
             }
         });
+
+        // Verificar si hay algún evento visible después de aplicar el filtro
+        if ($('.event:visible').length === 0) {
+            $('.events-list').append('<p class="pEventsFilterError">No se encontraron eventos para la categoría seleccionada.</p>');
+        }
 
         // Agregar controlador de eventos de clic a los botones de unirse
         $('.join-btn').on('click', function() {
@@ -186,6 +195,9 @@ $(document).on('pagecreate', function(){
 
         // Show the filtered events
         mostrarEventos(filteredEvents);
+
+         // Verificar si hay algún evento visible después de aplicar el filtro
+  
 
         // Hide the date filter div
         $('#filterDateDiv').slideToggle();

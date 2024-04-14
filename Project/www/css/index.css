@@ -812,6 +812,33 @@ ui-input-text input,
 
 }
 
+.pEvents {
+    
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        /* margin-top: 60px; */
+        color: black;
+        text-shadow: none;
+        /* font-family: math; */
+        font-size: large;
+        text-align: left;
+        margin-left: 10px;
+        font-style: unset;
+        font-family: system-ui;
+    
+}
+.pEventsFilterError {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    margin-top: 80px;
+    color: black;
+    text-shadow: none;
+    font-family: monospace;
+    font-size: medium;
+}
+
 
 /********** Edit Profile **********/
 /* Estilos para el header */
