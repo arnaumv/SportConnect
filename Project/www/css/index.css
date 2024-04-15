@@ -1255,11 +1255,13 @@ html head+body .ui-body-a.ui-focus {
 
 
 
+
 .ui-mobile label,
 div.ui-controlgroup-label {
     font-weight: 400;
     font-size: 16px;
     color: black !important;
+    margin-left: 8px;
 
     text-align: left !important;
 }
