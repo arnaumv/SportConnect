@@ -142,6 +142,19 @@ body label.ui-btn {
     margin-left: 25px;
 }
 
+/* map */
+
+/* Estilo para el botón de pantalla completa con imagen de fondo */
+.leaflet-control-fullscreen-button {
+    background-image: url('../img/index/mapBigger.png');
+    background-size: contain; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    width: 20px; /* Ancho de la imagen */
+    height: 20px; /* Altura de la imagen */
+}
+
+
+
 /********** HEADER - NEW EVENT **********/
 .headerCreate {
     display: flex;
@@ -629,10 +642,10 @@ ui-input-text input,
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa;
     padding: 15px;
     border-radius: 5px;
 }
+
 
 .profile-image img {
     width: 100px;

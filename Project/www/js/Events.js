@@ -65,6 +65,7 @@ $(document).on('pagecreate', function(){
             eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
             eventHtml += '<h2>' + evento.title + '</h2>';
             eventHtml += '<p>Fecha: ' + evento.date + '</p>';
+            eventHtml += '<p>Actividad: ' + evento.sport + '</p>';
             eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
             if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
                 eventHtml += '<p>Creado por ti</p>';  
