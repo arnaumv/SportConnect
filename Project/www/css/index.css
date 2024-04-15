@@ -840,6 +840,21 @@ ui-input-text input,
     font-size: medium;
 }
 
+.pFilterSport {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    /* margin-top: 60px; */
+    color: black;
+    text-shadow: none;
+    /* font-family: math; */
+    font-size: large;
+    text-align: left;
+    margin-left: 40px;
+    font-style: unset;
+    font-family: system-ui;
+    margin-top: 30px;
+}
 
 /********** Edit Profile **********/
 /* Estilos para el header */
@@ -1094,6 +1109,8 @@ html .ui-panel-page-container-a {
     border-color: #fbfbfb00 !important;
     color: #000000 !important;
     text-shadow: none !important;
+   
+    
 }
 
 .ui-shadow-inset {
@@ -1485,6 +1502,7 @@ element.style {
     white-space: nowrap;
     flex-direction: column;
     margin-top: 15px;
+    margin-top: -10px;
 }
 .events-buttons div {
     width: 380px; /* Asegura que los div de los botones ocupen el ancho máximo */
@@ -1534,7 +1552,7 @@ element.style {
     text-shadow: none;
     font-size: medium;
     font-family: sans-serif;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
 }
 
 #acceptDateFilterButton {
@@ -1613,6 +1631,13 @@ element.style {
     margin-left: 30px !important;
     height: 40px !important;
 } 
+#customDateFilter {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+    margin-top: 100px; /* Ajusta este valor según tus necesidades */
+}
 input#customDateFilter {
     background-color: #f7f7f700 !important;
     border-color: #fbfbfb00 !important;
@@ -1625,6 +1650,20 @@ input#customDateFilter {
     /* width: 303px !important;
     margin-left: 30px !important; */
 }
+
+/* #filterDateDiv.customDateFilterClass .ui-body-a,
+#filterDateDiv.customDateFilterClass .ui-page-theme-a .ui-body-inherit,
+#filterDateDiv.customDateFilterClass html .ui-bar-a .ui-body-inherit,
+#filterDateDiv.customDateFilterClass html .ui-body-a .ui-body-inherit,
+#filterDateDiv.customDateFilterClass html body .ui-group-theme-a .ui-body-inherit,
+#filterDateDiv.customDateFilterClass html .ui-panel-page-container-a {
+    background-color: #f7f7f700 !important;
+    border-color: #fbfbfb00 !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+    margin-left: 20px;
+} */
+
 .events-buttons button {
     padding: 6px 5px !important;
     font-size: 14px;

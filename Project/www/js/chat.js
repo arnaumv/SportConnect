@@ -34,4 +34,8 @@ $(document).ready(function () {
         }
         messageInputDom.value = '';
     };
+
+    $('#redirectToInfoEvent').on('click', function() {
+        window.location.href = 'InfoEvent.html';
+    });
 });

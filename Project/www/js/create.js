@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
 
     $('#redirectToLanding').on('click', function() {
-        window.location.href = 'landingpage.html';
+        window.location.href = 'Create.html';
     });
     
     console.log("Script create.js loaded and deviceready fired.");
