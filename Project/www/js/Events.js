@@ -107,9 +107,8 @@ $(document).on('pagecreate', function(){
             window.location.href = 'InfoEvent.html';
         });
 
-        //Borrar evento creado por ti
-        $('#borrarEvent').on('click', function() {
-            var eventIdBorrar = $(".join-btn").data("event-id"); 
+        $('.borrarEvent').on('click', function() {
+            var eventIdBorrar = $(this).siblings(".join-btn").data("event-id"); 
             var storedUsername = localStorage.getItem('username');
             console.log("borrar evento: "+ eventIdBorrar+ "por: "+ storedUsername);
             $.ajax({
@@ -131,7 +130,8 @@ $(document).on('pagecreate', function(){
                     showPopup("Error al intentar borrar el evento. Por favor, inténtalo de nuevo más tarde.");
                 }
             });
-        }); 
+        });
+        
     }
 
     // Show or hide the filter div when the filter button is clicked

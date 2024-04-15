@@ -33,10 +33,9 @@
     </style>
     <title>Sport Connect - Perfil</title>
 </head>
-<body>
-    <!-- page 1 -->
+<body class="profile-page-body">
 
-    <div data-role="page">
+    <div class="profile-page-div" data-role="page">
         <div class="headerProfile">
             <img id="redirectToLanding" src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
             <h1>Perfil</h1>
@@ -58,19 +57,25 @@
 
             <!-- SECCIÓN DE EVENTOS -->
             <div class="events-section">
-                <h3>Sobre Mi</h3>
-                <p class="miniDescription" id="miniDescription">Descripción</p>
-
-                <h3>Eventos:</h3>
-                <div class="events-buttons-Profile">
-                    <button id="active-events-btn" class="ButtonsEventsProfile">Activos</button>
-                    <button id="finished-events-btn" class="ButtonsEventsProfile">Finalizados</button>
+                <div class="abautme">
+                    <h3 class="titulosprofile">Sobre Mi</h3>
+                    <p class="miniDescription" id="miniDescription">No hay descripción insertada</p>
+                    <h3 class="titulosprofile">Eventos</h3>
+                    <div class="events-buttons-Profile">
+                        <button id="active-events-btn" class="ButtonsEventsProfile">Activos</button>
+                        <button id="finished-events-btn" class="ButtonsEventsProfile">Finalizados</button>
+                    </div>
                 </div>
-
+                
+                <hr class="hrclass">
                 <!-- LISTA DE EVENTOS -->
-                <ul class="events-list">
-                    <!-- Aquí se agregarán dinámicamente los eventos -->
-                </ul>
+
+                    <ul class="events-list">
+                        <!-- Aquí se agregarán dinámicamente los eventos -->
+                    </ul>
+                    <div class="eventerror">
+
+                    </div>
             </div>
         </div><!-- end page 1 content -->
 

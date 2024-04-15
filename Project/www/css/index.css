@@ -629,9 +629,9 @@ ui-input-text input,
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa;
+    /* background-color: white; */
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .profile-image img {
@@ -646,7 +646,6 @@ ui-input-text input,
 .profile-info {
     text-align: center;
     margin-top: -15px;
-
 }
 
 .profile-info h2 {
@@ -657,9 +656,13 @@ ui-input-text input,
 }
 
 .profile-info p {
-    font-size: 14px;
-    color: #777;
+    font-size: 15px;
+    color: black;
     margin-bottom: 10px;
+}
+
+#EditProfile {
+    background-color: white;
 }
 
 .edit-profile-btn {
@@ -710,7 +713,29 @@ ui-input-text input,
 /* Estilos para la sección de eventos */
 .events-section {
     margin-top: 20px;
+    
 }
+
+.abautme {
+    /* background-color: white !important; */
+    border-radius: 10px;
+}
+
+.events-section .events-list {
+    background-color: white !important;
+    border-radius: 10px;
+}
+
+.hrclass {
+    border-color: black; /* Color más oscuro (negro) */
+    border-width: 0.7px; /* Grosor aumentado */
+}
+
+.titulosprofile {
+    font-weight: bold !important; /* Hace que el texto sea más grueso */
+    color: black !important; /* Color más oscuro */
+}
+
 /* 
 .events-buttons {
     display: flex;
@@ -1475,9 +1500,18 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    background-color: #ffffff82 !important;
-    /* Add your custom styles here */
+    background-color: #ffffff00 !important;
 }
+
+/*FONDO PERFILE */
+
+.profile-page-body, .profile-page-div{
+    display: block;
+    overflow: visible;
+    overflow-x: hidden;
+    background-color: #e5e5e5 !important;
+}
+
 
 /* .ui-content.events-page {
     border-width: 0;
@@ -2248,3 +2282,15 @@ span.error {
     /*margin-top: 10px !important;*/
     cursor: pointer;
 }
+
+
+/*FOOTEER FIJO*/
+
+.ui-header-fixed, .ui-footer-fixed {
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed !important;
+    z-index: 1000;
+}
+
