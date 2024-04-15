@@ -184,7 +184,7 @@ body label.ui-btn {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 13%;
+    margin-left: 16%;
     text-shadow: none;
 
 }
@@ -205,6 +205,7 @@ body label.ui-btn {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    margin-right: -7px;
 
 }
 
