@@ -1,25 +1,25 @@
-$(document).ready(function() {
+$(document).ready(function () {
     console.log("Barraeditperfil")
     //Movilidad entre paginas
-    $('#flecha-izquierda').on('click', function() {
+    $('#flecha-izquierda').on('click', function () {
         window.location.href = 'Profile.html';
-        });
+    });
 
-    $('#landingpage').on('click', function() {
+    $('#landingpage').on('click', function () {
         window.location.href = 'landingpage.html';
         console.log("okkedit")
-    
+
     });
-    
-    $('#create').on('click', function() {
+
+    $('#create').on('click', function () {
         window.location.href = 'Create.html';
     });
-    
-    $('#events').on('click', function() {
+
+    $('#events').on('click', function () {
         window.location.href = 'Events.html';
     });
-    
-    $('#profile').on('click', function() {
+
+    $('#profile').on('click', function () {
         window.location.href = 'Profile.html';
     });
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
         $('#username').text(storedUsername);
     }
 
-    $('#email').on('focusout', function() {
+    $('#email').on('focusout', function () {
         var email = $(this).val().trim();
         if (email === "") {
             $('#error_email').text('');
@@ -42,11 +42,11 @@ $(document).ready(function() {
             $(this).removeClass('error-input'); // Eliminar clase de error del input
         }
     });
-    
 
-    $('#password').on('focusout', function() {
+
+    $('#password').on('focusout', function () {
         var password = $(this).val().trim();
-        if(password === "") {
+        if (password === "") {
             // La contraseña está vacía
             $('#error_password').text('');
             $(this).removeClass('error-input');
@@ -59,7 +59,7 @@ $(document).ready(function() {
         }
     });
 
-    $('#description').on('focusout', function() {
+    $('#description').on('focusout', function () {
         var description = $(this).val().trim();
         if (description === "" || description.length >= 10) {
             $('#error_description').text('');
@@ -69,10 +69,10 @@ $(document).ready(function() {
             $(this).addClass('error-input');
         }
     });
-    
-    
 
-    $('#birthdate').on('focusout', function() {
+
+
+    $('#birthdate').on('focusout', function () {
         var birthdate = $(this).val().trim();
         console.log(birthdate);
         if (birthdate === "") {
@@ -86,8 +86,8 @@ $(document).ready(function() {
             $(this).removeClass('error-input'); // Eliminar clase de error del input
         }
     });
-    
-    $('#btnSave').on('click', function() {
+
+    $('#btnSave').on('click', function () {
         var hasErrors = false;
 
         if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '') {
@@ -95,7 +95,7 @@ $(document).ready(function() {
         }
 
         // Si no hay errores, enviar los datos
-        if(!hasErrors){
+        if (!hasErrors) {
             console.log("Comprobacion perfecta...");
             var storedUsername = localStorage.getItem('username');
             var email = $('#email').val();
@@ -112,26 +112,65 @@ $(document).ready(function() {
                     description: description,
                     birthdate: birthdate
                 },
-                success: function(response) {
+                success: function (response) {
                     // Manejar la respuesta de éxito
                     showPopup2(response.message);
                     //alert(response.message);
-                    setTimeout(function() {
+                    setTimeout(function () {
                         window.location.href = 'Profile.html';
                     }, 2200);
                 },
-                error: function(xhr, status, error) {
+                error: function (xhr, status, error) {
                     // Manejar errores
                     //console.error(error);
                     showPopup(error);
                 }
-                
-            });    
+
+            });
         } else {
             console.log('Comprobacion Fallida...');
         }
 
     });
+
+    $(document).ready(function () {
+        // Cuando se hace clic en el enlace para cambiar la foto de perfil
+        $('#cambiarFotoPerfil').on('click', function (e) {
+            e.preventDefault();
+            $('#inputFotoPerfil').click();
+        });
+
+        // Cuando se selecciona una imagen en el input de tipo file
+        $('#inputFotoPerfil').on('change', function () {
+            var file = this.files[0];
+            var formData = new FormData();
+            formData.append('foto_perfil', file);
+
+            // Enviar la imagen al servidor
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'upload_profile_picture' %}",  // Django generará la URL correcta
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    // Manejar la respuesta del servidor
+                    console.log('Foto de perfil actualizada:', response);
+                    showPopup2(response.message);
+                    setTimeout(function () {
+                        window.location.href = 'Profile.html';
+                    }, 2200);
+                },
+                error: function (xhr, status, error) {
+                    // Manejar errores
+                    console.error('Error al cargar la foto de perfil:', error);
+                    showPopup(error);
+                }
+            });
+            
+        });
+    });
+
 });
 
 // Función para validar el formato del correo electrónico
@@ -156,3 +195,4 @@ function showPopup2(message) {
     $('#popup-message2').text(message);
     $('#popup2').slideDown('slow').delay(2000).slideUp('slow'); // Transición más lenta
 }
+

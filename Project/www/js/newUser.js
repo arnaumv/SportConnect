@@ -121,6 +121,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
       var confirm_password = $('.formNewUser #confirm_password').val().trim();
       var city = $('.formNewUser #city').val().trim();
       var birthdate = $('.formNewUser #birthdate').val().trim();
+      var image_path = "./img/Profile/User_photo.png";
 
       console.log(username, email, password, confirm_password, city, birthdate);
 
@@ -142,7 +143,8 @@ $('.formNewUser #birthdate').on('focusout', function() {
               email: email,
               password: password,
               city: city,
-              birthdate: birthdate
+              birthdate: birthdate,
+              image_path: image_path,
             },
             success: function(data) {
               console.log('Usuario creado con éxito:', data);
