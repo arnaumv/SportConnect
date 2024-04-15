@@ -1744,6 +1744,18 @@ input#customDateFilter {
   margin-top: -432px;
 
 }
+.notification-icon-Chat{
+    width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  margin-bottom: 900px;
+  margin-top: -432px;
+  margin-right: 35px;
+
+}
 /* **************************************** */
 
 .evento {

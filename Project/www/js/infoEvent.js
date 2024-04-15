@@ -191,5 +191,8 @@ $(document).ready(function () {
     window.location.href = 'notify.html';
   });
 
+  $('#redirectToChat').on('click', function() {
+    window.location.href = 'Chat.html';
+});
 
 });
