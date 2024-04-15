@@ -569,6 +569,7 @@ ui-input-text input,
     background-color: rgb(43, 165, 221);
     text-shadow: none;
     border-radius: 25px;
+    margin-top: -5px;
     /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
 }
 
@@ -636,6 +637,7 @@ ui-input-text input,
 
 .ui-content {
     padding: 10px;
+
 }
 
 .profile-container {
