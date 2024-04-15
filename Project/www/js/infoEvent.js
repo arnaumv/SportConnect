@@ -17,6 +17,7 @@ $(document).ready(function () {
         $('.evento img').attr('src', evento.image_path);
         $('.evento h2').text(evento.title);
         $('.evento p').first().text('Fecha: ' + evento.date);
+        $('.evento p').eq(1).text('Actividad: ' + evento.sport); // Usamos eq(1) para seleccionar el segundo párrafo
         $('.evento p').last().text('Descripción:' + evento.description);
         
         // Obtener el nombre de usuario almacenado

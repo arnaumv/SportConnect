@@ -142,6 +142,19 @@ body label.ui-btn {
     margin-left: 25px;
 }
 
+/* map */
+
+/* Estilo para el botón de pantalla completa con imagen de fondo */
+.leaflet-control-fullscreen-button {
+    background-image: url('../img/index/mapBigger.png');
+    background-size: contain; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    width: 20px; /* Ancho de la imagen */
+    height: 20px; /* Altura de la imagen */
+}
+
+
+
 /********** HEADER - NEW EVENT **********/
 .headerCreate {
     display: flex;
@@ -234,7 +247,7 @@ body label.ui-btn {
     align-items: center;
     padding: 13px;
     /* Reduced padding */
-    background-color: #2b2d4275;
+    /*background-color: #2b2d4275;*/
     padding-left: 15px;
     position: relative;
 }
@@ -269,7 +282,7 @@ body label.ui-btn {
     /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 10px;
-    height: 45px;
+    height: 25px;
 }
 
 .headerResetPass .flecha-izquierda {
@@ -556,6 +569,7 @@ ui-input-text input,
     background-color: rgb(43, 165, 221);
     text-shadow: none;
     border-radius: 25px;
+    margin-top: -5px;
     /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
 }
 
@@ -623,16 +637,17 @@ ui-input-text input,
 
 .ui-content {
     padding: 10px;
+
 }
 
 .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: white; */
     padding: 15px;
     border-radius: 15px;
 }
+
 
 .profile-image img {
     width: 100px;
@@ -1267,11 +1282,13 @@ html head+body .ui-body-a.ui-focus {
 
 
 
+
 .ui-mobile label,
 div.ui-controlgroup-label {
     font-weight: 400;
     font-size: 16px;
     color: black !important;
+    margin-left: 8px;
 
     text-align: left !important;
 }
@@ -2229,12 +2246,15 @@ span.error {
 
 .notification p {
     margin: 0;
-    color: #666;
+    color: #131313;
+    font-size: 13px;
+
 }
 
 .pNotification {
     text-align: left;
     color: #666;
+    
 }
 
 .headerNotify {
@@ -2267,7 +2287,7 @@ span.error {
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
-    margin-left: 90px;
+    margin-left: 106px;
     text-shadow: none;
 
 }

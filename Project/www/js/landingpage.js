@@ -1,23 +1,23 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //Movilidad entre paginas
-    $('#landingpage').on('click', function() {
+    $('#landingpage').on('click', function () {
         window.location.href = 'landingpage.html';
     });
 
-    $('#create').on('click', function() {
+    $('#create').on('click', function () {
         window.location.href = 'Create.html';
     });
 
-    $('#events').on('click', function() {
+    $('#events').on('click', function () {
         window.location.href = 'Events.html';
     });
 
-    $('#profile').on('click', function() {
+    $('#profile').on('click', function () {
         window.location.href = 'Profile.html';
     });
 
-    $('#redirectToNotify').on('click', function() {
+    $('#redirectToNotify').on('click', function () {
         window.location.href = 'notify.html';
     });
 
@@ -25,9 +25,19 @@ $(document).ready(function(){
 
     // Map initialization script
     var json_url = "ubicacion.json";
-                    
-    var map = L.map('mapa').setView([41.355464, 2.070481], 13);   
+
+    var map = L.map('mapa').setView([41.355464, 2.070481], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
+
+    // Añadir el control de pantalla completa
+    var fullscreenControl = L.control.fullscreen({
+        position: 'bottomright',
+        title: 'Ver en pantalla completa',
+        titleCancel: 'Salir de pantalla completa',
+        forceSeparateButton: true
+    }).addTo(map);
+
+
     fetch(json_url)
         .then(response => response.json())
         .then(data => {
@@ -40,6 +50,8 @@ $(document).ready(function(){
                 });
             }
         });
+
+
 });
 
 
