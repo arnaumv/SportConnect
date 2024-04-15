@@ -987,7 +987,7 @@ ui-input-text input,
     /* Ajusta la altura del input */
     border: none;
     /* Quita el borde */
-    background-color: #c2c2c2 !important;
+    background-color: #e5e5e5 !important;
     /* Fondo gris */
     font-size: 16px;
     color: #333;
@@ -1013,7 +1013,7 @@ ui-input-text input,
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 12px;
+    font-size: 14px;
     color: #999;
     pointer-events: none;
     transition: all 0.3s ease;
