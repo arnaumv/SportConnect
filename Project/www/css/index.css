@@ -2212,12 +2212,15 @@ span.error {
 
 .notification p {
     margin: 0;
-    color: #666;
+    color: #131313;
+    font-size: 13px;
+
 }
 
 .pNotification {
     text-align: left;
     color: #666;
+    
 }
 
 .headerNotify {
@@ -2250,7 +2253,7 @@ span.error {
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
-    margin-left: 90px;
+    margin-left: 106px;
     text-shadow: none;
 
 }
