@@ -835,7 +835,7 @@ ui-input-text input,
 
 
 
-/* 
+
 .events-buttons-Profile {
     display: flex;
     justify-content: center;
@@ -844,7 +844,7 @@ ui-input-text input,
     text-align: center !important;
 }
 
-.ButtonsEventsProfile {
+/* .ButtonsEventsProfile {
     width: 100px !important;
     height: 30px !important;
     padding: 5px !important;
@@ -853,7 +853,7 @@ ui-input-text input,
     text-shadow: none !important;
     border-radius: 35px !important;
     margin-left: 10px !important; /* Ajuste para centrar los botones */
-    /* font-size: larger !important;
+    /*font-size: larger !important;
     margin-bottom: 23px !important;
     text-decoration: none !important;
     font-weight: bold !important;
@@ -862,11 +862,11 @@ ui-input-text input,
 
 .ButtonsEventsProfile.active {
     outline: 3px solid rgb(0, 0, 0) !important; /* Estilo de foco para el botón activo */
-    /* background-color: rgba(43, 45, 66, 0.9) !important;
+     /* background-color: rgba(43, 45, 66, 0.9) !important;
 
-} */ */ */
+}  * */
 
-
+/* 
 
 .events-buttons-Profile {
     display: flex;
@@ -874,7 +874,7 @@ ui-input-text input,
     white-space: nowrap;
     margin-block: 20px !important;
     text-align: center !important;
-}
+}*/
 
 #active-events-btn.ButtonsEventsProfile,
 #finished-events-btn.ButtonsEventsProfile {
@@ -901,7 +901,7 @@ ui-input-text input,
     border-color: #ddd;
     color: #fff !important;
     text-shadow: 0 1px 0 #f3f3f3;
-}
+} 
 .pEvents {
     
         font-size: 1em;
@@ -1743,8 +1743,8 @@ input#customDateFilter {
     border-color: #fbfbfb00 !important;
     color: #000000 !important;
     text-shadow: none !important;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    /*margin-bottom: 60px;*/
     /*width: 290px; */
     /*margin-left: 70px; */
     /* width: 303px !important;
