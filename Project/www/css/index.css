@@ -1568,7 +1568,8 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    background-color: #ffffff00 !important;
+   /* background-color: #ffffff00 !important;*/
+    background-color: #ffffff57 !important;
 }
 
 /*FONDO PERFILE */
@@ -1577,7 +1578,8 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    background-color: #e5e5e5 !important;
+    /*background-color: #e5e5e5 !important;*/
+    background-color: #e3e3e345 !important;
 }
 
 
