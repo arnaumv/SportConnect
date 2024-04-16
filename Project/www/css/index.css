@@ -742,9 +742,18 @@ ui-input-text input,
     border-radius: 10px;
 }
 
+/* .hrclass {
+    border-color: black; /* Color más oscuro (negro) *//*
+    border-width: 0.7px; /* Grosor aumentado *//*
+} */
+
 .hrclass {
-    border-color: black; /* Color más oscuro (negro) */
-    border-width: 0.7px; /* Grosor aumentado */
+    border-color: #000000;
+    border-width: 1px;
+    width: 2000px;
+    margin-left: -25px;
+    margin-top: -28px;
+    margin-bottom: 25px;
 }
 
 .titulosprofile {
@@ -824,6 +833,9 @@ ui-input-text input,
 
 }
 
+
+
+/* 
 .events-buttons-Profile {
     display: flex;
     justify-content: center;
@@ -841,7 +853,7 @@ ui-input-text input,
     text-shadow: none !important;
     border-radius: 35px !important;
     margin-left: 10px !important; /* Ajuste para centrar los botones */
-    font-size: larger !important;
+    /* font-size: larger !important;
     margin-bottom: 23px !important;
     text-decoration: none !important;
     font-weight: bold !important;
@@ -850,10 +862,46 @@ ui-input-text input,
 
 .ButtonsEventsProfile.active {
     outline: 3px solid rgb(0, 0, 0) !important; /* Estilo de foco para el botón activo */
-    background-color: rgba(43, 45, 66, 0.9) !important;
+    /* background-color: rgba(43, 45, 66, 0.9) !important;
 
+} */ */ */
+
+
+
+.events-buttons-Profile {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin-block: 20px !important;
+    text-align: center !important;
 }
 
+#active-events-btn.ButtonsEventsProfile,
+#finished-events-btn.ButtonsEventsProfile {
+    height: 30px !important;
+    padding: 5px !important;
+    background-color: #5b5b5b00 !important;
+    text-shadow: none !important;
+    margin-left: 10px !important;
+    font-size: larger !important;
+    text-decoration: none !important;
+    border: 1px solid #000000d6 !important;
+    border-bottom: 0px solid #000000d6 !important;
+}
+
+#active-events-btn.ButtonsEventsProfile.active,
+#finished-events-btn.ButtonsEventsProfile.active {
+   background-color: rgb(60 62 79 / 85%) !important;
+   color: white !important;
+}
+
+
+.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover {
+    background-color: #ededed;
+    border-color: #ddd;
+    color: #fff !important;
+    text-shadow: 0 1px 0 #f3f3f3;
+}
 .pEvents {
     
         font-size: 1em;
