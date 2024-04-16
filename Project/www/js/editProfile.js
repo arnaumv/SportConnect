@@ -25,9 +25,10 @@ $(document).ready(function() {
 
 
     var storedUsername = localStorage.getItem('username');
-    if (storedUsername) {
-        $('#username').text(storedUsername);
-    }
+if (storedUsername) {
+    $('#username').text(storedUsername);
+}
+
 
     $('#email').on('focusout', function() {
         var email = $(this).val().trim();
@@ -89,11 +90,11 @@ $(document).ready(function() {
     
     $('#btnSave').on('click', function() {
         var hasErrors = false;
-
+    
         if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '') {
             hasErrors = true;
         }
-
+    
         // Si no hay errores, enviar los datos
         if(!hasErrors){
             console.log("Comprobacion perfecta...");
@@ -102,30 +103,37 @@ $(document).ready(function() {
             var password = $('#password').val();
             var description = $('#description').val();
             var birthdate = $('#birthdate').val();
-
+        
+            // Subir la imagen
+            var file = $('#profile-image-upload')[0].files[0];
+            var formData = new FormData();
+            formData.append('image', file);
+            formData.append('username', storedUsername);  // Añade el username al formData
+            formData.append('email', email);
+            formData.append('password', password);
+            formData.append('description', description);
+            formData.append('birthdate', birthdate);
+        
+            // Actualizar los datos del usuario
             $.ajax({
                 type: 'POST',
                 url: 'http://127.0.0.1:8000/update-user/' + storedUsername + '/',
-                data: {
-                    email: email,
-                    password: password,
-                    description: description,
-                    birthdate: birthdate
-                },
+                data: formData,
+                processData: false,
+                contentType: false,
                 success: function(response) {
                     // Manejar la respuesta de éxito
                     showPopup2(response.message);
-                    //alert(response.message);
+                    // Actualizar la imagen de perfil en la página
+                    $('#profile-image').attr('src', response.image_url);
                     setTimeout(function() {
                         window.location.href = 'Profile.html';
                     }, 2200);
                 },
                 error: function(xhr, status, error) {
                     // Manejar errores
-                    //console.error(error);
                     showPopup(error);
                 }
-                
             });    
         } else {
             console.log('Comprobacion Fallida...');
