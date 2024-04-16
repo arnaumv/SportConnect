@@ -695,6 +695,8 @@ ui-input-text input,
     width: 34px !important;
     height: 25px;
     filter: invert(1);
+    margin-left: -17px;
+
 
 
 }
@@ -978,7 +980,7 @@ ui-input-text input,
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 20%;
+    margin-left: 27%;
     text-shadow: none;
 }
 
