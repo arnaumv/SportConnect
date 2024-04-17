@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="./img/index/logo1.png">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <style>
+        /* For avoiding title truncation in wp8 */
+        .ui-header .ui-title {
+            overflow: visible !important;
+        }
+
+        /* For fixing the absolute position issue for the default cordova gen page*/
+        #cjp-accordion1 .app {
+            left: 5px !important;
+            margin: 5px !important;
+            position: relative !important;
+        }
+    </style>
+    <title>Sport Connect - Perfil</title>
+</head>
+<body class="profile-page-body">
+
+    <div class="profile-page-div" data-role="page">
+        <div class="headerProfile">
+            <img id="redirectToLanding" src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
+            <h1>Perfil</h1>
+            <a href="notify.html"><img src="./img/index/campana.png" id="redirectToNotify" alt="Icono de notificación"
+                class="notification-icon-profile"></a>
+            <a><img src="./img/Profile/options.png" id="options" class="options-icon"></a>
+        </div>
+
+        <div class="ui-content">
+            <div class="profile-container-2">
+                <div class="profile-image profile-image-2">
+                    <img id="profile-image" src="./img/Profile/User_photo.png" alt="Imagen de Usuario">
+                </div>
+                <div class="profile-info-2">
+                    <h2 id="username">Nombre de Usuario</h2>
+                    <p id="city">Ciudad</p>
+                    <h3 class="titulosprofile">Sobre Mi</h3>
+                    <p class="miniDescription" id="miniDescription">No hay descripción insertada</p>
+                </div>
+            </div>
+
+            <!-- SECCIÓN DE EVENTOS -->
+            <div class="events-section">
+                <div class="abautme">
+                    <h3 class="titulosprofile">Eventos</h3>
+                    <div class="events-buttons-Profile">
+                        <button id="active-events-btn" class="ButtonsEventsProfile">Activos</button>
+                        <button id="finished-events-btn" class="ButtonsEventsProfile">Finalizados</button>
+                    </div>
+                </div>
+                
+                <hr class="hrclass">
+                <!-- LISTA DE EVENTOS -->
+
+                    <ul class="events-list">
+                        <!-- Aquí se agregarán dinámicamente los eventos -->
+                    </ul>
+                    <div class="eventerror">
+
+                    </div>
+            </div>
+        </div><!-- end page 1 content -->
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="landingpage" >
+                        <img class="small-image" src="img/index/iconoHome.png" alt="Page 1">
+                        <p>Inicio</p>
+                    </a></li>
+                    <li><a id="create">
+                        <img class="small-image" src="img/index/iconoCreate.png" alt="Page 2">
+                        <p>Crear</p>
+                    </a></li>
+                    <li><a id="events" class="ui-btn-active ui-state-persist">
+                        <img class="small-image" src="img/index/calendar.png" alt="Page 3">
+                        <p>Eventos</p>
+                    </a></li>
+                    <li><a id="profile">
+                        <img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
+                        <p>Perfil</p>
+                    </a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+        
+
+        
+    </div><!-- /page 1 -->
+
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/userProfile.js"></script>
+    
+</body>
+</html>

@@ -649,6 +649,12 @@ ui-input-text input,
     border-radius: 15px;
 }
 
+.profile-container-2 {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+}
 
 
 .profile-image img {
@@ -658,6 +664,10 @@ ui-input-text input,
     margin-bottom: 10px;
     object-fit: cover;
     border: 2px solid #007bff;
+}
+
+.profile-image-2 {
+    margin-right: 15px; /* Ajusta el margen derecho según sea necesario */
 }
 
 .profile-info {
@@ -676,6 +686,27 @@ ui-input-text input,
     font-size: 15px;
     color: black;
     margin-bottom: 10px;
+}
+
+.profile-info-2 {
+    text-align: left;
+    margin-left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+.profile-info-2 h2 {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.profile-info-2 p {
+    text-align: left;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 0px;
+
 }
 
 #EditProfile {
@@ -946,6 +977,7 @@ ui-input-text input,
     font-style: unset;
     font-family: system-ui;
     margin-top: 30px;
+    font-weight: bolder;
 }
 
 /********** Edit Profile **********/
@@ -1336,16 +1368,35 @@ html head+body .ui-body-a.ui-focus {
 
 
 
-
 .ui-mobile label,
-div.ui-controlgroup-label {
+div.ui-controlgroup-label,
+#my-label-id.my-label.ui-mobile label,
+#my-label-id.my-label div.ui-controlgroup-label {
     font-weight: 400;
     font-size: 16px;
-    color: rgb(25, 88, 170) !important;
+    color: rgb(0, 0, 0) !important;
     margin-left: 8px;
-
     text-align: left !important;
 }
+
+label[for="profile-image-upload"].custom-label {
+    font-weight: normal !important;
+    font-size: medium !important;
+    color: rgb(21, 56, 109) !important;
+    margin-left: 0 !important;
+    text-align: start !important;
+    margin-block: -2px !important;
+}
+
+#my-label-id.my-label {
+    font-weight: normal !important;
+    font-size: medium !important;
+    color: black !important;
+    margin-left: 0 !important;
+    text-align: start !important;
+    margin-block: -2px !important;
+}
+
 
 .formNewUser input::placeholder {
     color: #333;

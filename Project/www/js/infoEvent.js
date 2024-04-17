@@ -176,6 +176,16 @@ $(document).ready(function () {
     });
   });
 
+  $(document).on('click', '.infoUser', function() {
+    var userId = $(this).data('user-id');
+    // Guardar el ID del usuario en el localStorage
+    console.log("userclick: " + userId);
+    localStorage.setItem('selecteduserId', userId);
+    // Redirigir al usuario a la página de perfil del usuario
+    window.location.href = 'userProfile.html';
+});
+
+
   // Controlador de eventos de clic para el botón "Cancelar"
   $("#cancelEventBtn").on("click", function (e) {
     e.preventDefault();
@@ -202,6 +212,8 @@ $(document).ready(function () {
       },
     });
   });
+
+  
 
   // Controlador de eventos de clic para los enlaces de navegación
   $("#landingpage").on("click", function () {
