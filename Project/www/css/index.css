@@ -704,6 +704,8 @@ ui-input-text input,
     font-size: 15px;
     color: black;
     margin-bottom: 10px;
+    margin-left: 0px;
+
 }
 
 #EditProfile {
