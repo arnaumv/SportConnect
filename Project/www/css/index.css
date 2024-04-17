@@ -902,7 +902,7 @@ ui-input-text input,
 .ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover {
     background-color: #ededed;
     border-color: #ddd;
-    color: #fff !important;
+    /*color: #fff !important;*/
     text-shadow: 0 1px 0 #f3f3f3;
 } 
 .pEvents {
@@ -1572,7 +1572,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
    /* background-color: #ffffff00 !important;*/
-    background-color: #ffffff57 !important;
+    background-color: #f0eded !important;
 }
 
 /*FONDO PERFILE */
@@ -1582,7 +1582,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e5e5e5 !important;*/
-    background-color: #e3e3e345 !important;
+    background-color: #f0eded !important;
 }
 
 
