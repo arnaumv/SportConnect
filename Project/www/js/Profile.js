@@ -48,6 +48,9 @@ $(document).ready(function () {
     function mostrarEventosPorCategoria(categoriaSeleccionada) {
         var eventsList = $('.events-list');
         eventsList.empty(); // Limpiar la lista antes de agregar los eventos
+        var eventosEncontrados = false;
+        var eventsError = $('.eventerror');
+        eventsError.empty(); // Limpiar la lista antes de agregar los eventos
 
         // Realizar una consulta AJAX para obtener los eventos del usuario
         $.ajax({
@@ -61,8 +64,13 @@ $(document).ready(function () {
                     if ((categoriaSeleccionada === "Activos" && eventDate >= currentDate) ||
                         (categoriaSeleccionada === "Finalizados" && eventDate < currentDate)) {
                         agregarEvento(evento);
+                        eventosEncontrados = true; // Se encontraron eventos
                     }
                 });
+                // Si no se encontraron eventos, mostrar un mensaje
+                if (!eventosEncontrados) {
+                    eventsError.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
+                }
             },
             error: function (xhr, status, error) {
                 console.error("Error al obtener los eventos del usuario:", error);
@@ -76,6 +84,8 @@ $(document).ready(function () {
 
     // Agregar evento al DOM
     function agregarEvento(evento) {
+        
+
         console.log("añadirlos");
         var currentDate = Date.now();
         var eventDate = new Date(evento.date).getTime();

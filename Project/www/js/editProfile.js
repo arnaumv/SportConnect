@@ -27,6 +27,29 @@ $(document).ready(function () {
     var storedUsername = localStorage.getItem('username');
     if (storedUsername) {
         $('#username').text(storedUsername);
+
+        // Fetch the current user's profile image from the server
+        fetch('http://127.0.0.1:8000/profile/' + storedUsername + '/')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data:', data);  // Imprimir los datos en la consola
+
+                var imageUrl;
+                if (data.image_path != null) {
+                    imageUrl = 'http://127.0.0.1:8000' + data.image_path;
+                } else {
+                    imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+                }
+                $('#profile-image').attr('src', imageUrl);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
 
     $('#email').on('focusout', function () {
@@ -89,11 +112,11 @@ $(document).ready(function () {
 
     $('#btnSave').on('click', function () {
         var hasErrors = false;
-
+    
         if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '') {
             hasErrors = true;
         }
-
+    
         // Si no hay errores, enviar los datos
         if (!hasErrors) {
             console.log("Comprobacion perfecta...");
@@ -102,31 +125,38 @@ $(document).ready(function () {
             var password = $('#password').val();
             var description = $('#description').val();
             var birthdate = $('#birthdate').val();
-
+        
+            // Subir la imagen
+            var file = $('#profile-image-upload')[0].files[0];
+            var formData = new FormData();
+            formData.append('image', file);
+            formData.append('username', storedUsername);  // Añade el username al formData
+            formData.append('email', email);
+            formData.append('password', password);
+            formData.append('description', description);
+            formData.append('birthdate', birthdate);
+        
+            // Actualizar los datos del usuario
             $.ajax({
                 type: 'POST',
                 url: 'http://127.0.0.1:8000/update-user/' + storedUsername + '/',
-                data: {
-                    email: email,
-                    password: password,
-                    description: description,
-                    birthdate: birthdate
-                },
-                success: function (response) {
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
                     // Manejar la respuesta de éxito
                     showPopup2(response.message);
-                    //alert(response.message);
-                    setTimeout(function () {
+                    // Actualizar la imagen de perfil en la página
+                    $('#profile-image').attr('src', response.image_url);
+                    setTimeout(function() {
                         window.location.href = 'Profile.html';
                     }, 2200);
                 },
                 error: function (xhr, status, error) {
                     // Manejar errores
-                    //console.error(error);
                     showPopup(error);
                 }
-
-            });
+            });    
         } else {
             console.log('Comprobacion Fallida...');
         }

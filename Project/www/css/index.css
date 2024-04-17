@@ -184,7 +184,7 @@ body label.ui-btn {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 13%;
+    margin-left: 16%;
     text-shadow: none;
 
 }
@@ -205,6 +205,7 @@ body label.ui-btn {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    margin-right: -7px;
 
 }
 
@@ -247,7 +248,7 @@ body label.ui-btn {
     align-items: center;
     padding: 13px;
     /* Reduced padding */
-    background-color: #2b2d4275;
+    /*background-color: #2b2d4275;*/
     padding-left: 15px;
     position: relative;
 }
@@ -282,7 +283,7 @@ body label.ui-btn {
     /* Reduced padding */
     background-color: rgba(43, 45, 66, 0.9);
     padding-left: 10px;
-    height: 45px;
+    height: 25px;
 }
 
 .headerResetPass .flecha-izquierda {
@@ -569,6 +570,7 @@ ui-input-text input,
     background-color: rgb(43, 165, 221);
     text-shadow: none;
     border-radius: 25px;
+    margin-top: -5px;
     /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
 }
 
@@ -636,6 +638,7 @@ ui-input-text input,
 
 .ui-content {
     padding: 10px;
+
 }
 
 .profile-container {
@@ -643,7 +646,7 @@ ui-input-text input,
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 
@@ -660,7 +663,6 @@ ui-input-text input,
 .profile-info {
     text-align: center;
     margin-top: -15px;
-
 }
 
 .profile-info h2 {
@@ -671,9 +673,13 @@ ui-input-text input,
 }
 
 .profile-info p {
-    font-size: 14px;
-    color: #777;
+    font-size: 15px;
+    color: black;
     margin-bottom: 10px;
+}
+
+#EditProfile {
+    background-color: white;
 }
 
 .edit-profile-btn {
@@ -690,6 +696,8 @@ ui-input-text input,
     width: 34px !important;
     height: 25px;
     filter: invert(1);
+    margin-left: -17px;
+
 
 
 }
@@ -724,7 +732,38 @@ ui-input-text input,
 /* Estilos para la sección de eventos */
 .events-section {
     margin-top: 20px;
+    
 }
+
+.abautme {
+    /* background-color: white !important; */
+    border-radius: 10px;
+}
+
+.events-section .events-list {
+    background-color: white !important;
+    border-radius: 10px;
+}
+
+/* .hrclass {
+    border-color: black; /* Color más oscuro (negro) *//*
+    border-width: 0.7px; /* Grosor aumentado *//*
+} */
+
+.hrclass {
+    border-color: #000000;
+    border-width: 1px;
+    width: 2000px;
+    margin-left: -25px;
+    margin-top: -28px;
+    margin-bottom: 25px;
+}
+
+.titulosprofile {
+    font-weight: bold !important; /* Hace que el texto sea más grueso */
+    color: black !important; /* Color más oscuro */
+}
+
 /* 
 .events-buttons {
     display: flex;
@@ -797,6 +836,9 @@ ui-input-text input,
 
 }
 
+
+
+
 .events-buttons-Profile {
     display: flex;
     justify-content: center;
@@ -805,7 +847,7 @@ ui-input-text input,
     text-align: center !important;
 }
 
-.ButtonsEventsProfile {
+/* .ButtonsEventsProfile {
     width: 100px !important;
     height: 30px !important;
     padding: 5px !important;
@@ -814,7 +856,7 @@ ui-input-text input,
     text-shadow: none !important;
     border-radius: 35px !important;
     margin-left: 10px !important; /* Ajuste para centrar los botones */
-    font-size: larger !important;
+    /*font-size: larger !important;
     margin-bottom: 23px !important;
     text-decoration: none !important;
     font-weight: bold !important;
@@ -823,10 +865,46 @@ ui-input-text input,
 
 .ButtonsEventsProfile.active {
     outline: 3px solid rgb(0, 0, 0) !important; /* Estilo de foco para el botón activo */
-    background-color: rgba(43, 45, 66, 0.9) !important;
+     /* background-color: rgba(43, 45, 66, 0.9) !important;
 
+}  * */
+
+/* 
+
+.events-buttons-Profile {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin-block: 20px !important;
+    text-align: center !important;
+}*/
+
+#active-events-btn.ButtonsEventsProfile,
+#finished-events-btn.ButtonsEventsProfile {
+    height: 30px !important;
+    padding: 5px !important;
+    background-color: #5b5b5b00 !important;
+    text-shadow: none !important;
+    margin-left: 10px !important;
+    font-size: larger !important;
+    text-decoration: none !important;
+    border: 1px solid #000000d6 !important;
+    border-bottom: 0px solid #000000d6 !important;
 }
 
+#active-events-btn.ButtonsEventsProfile.active,
+#finished-events-btn.ButtonsEventsProfile.active {
+   background-color: rgb(60 62 79 / 85%) !important;
+   color: white !important;
+}
+
+
+.ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover {
+    background-color: #ededed;
+    border-color: #ddd;
+    color: #fff !important;
+    text-shadow: 0 1px 0 #f3f3f3;
+} 
 .pEvents {
     
         font-size: 1em;
@@ -903,7 +981,7 @@ ui-input-text input,
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 20%;
+    margin-left: 27%;
     text-shadow: none;
 }
 
@@ -930,6 +1008,8 @@ ui-input-text input,
     height: 100px;
 }
 
+
+    
 
 .formINFO button {
     display: inline-block;
@@ -961,7 +1041,7 @@ ui-input-text input,
     /* Ajusta la altura del input */
     border: none;
     /* Quita el borde */
-    background-color: #c2c2c2 !important;
+    background-color: #e5e5e5 !important;
     /* Fondo gris */
     font-size: 16px;
     color: #333;
@@ -987,7 +1067,7 @@ ui-input-text input,
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 12px;
+    font-size: 14px;
     color: #999;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -1256,11 +1336,13 @@ html head+body .ui-body-a.ui-focus {
 
 
 
+
 .ui-mobile label,
 div.ui-controlgroup-label {
     font-weight: 400;
     font-size: 16px;
-    color: black !important;
+    color: rgb(25, 88, 170) !important;
+    margin-left: 8px;
 
     text-align: left !important;
 }
@@ -1489,9 +1571,20 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    background-color: #ffffff82 !important;
-    /* Add your custom styles here */
+   /* background-color: #ffffff00 !important;*/
+    background-color: #ffffff57 !important;
 }
+
+/*FONDO PERFILE */
+
+.profile-page-body, .profile-page-div{
+    display: block;
+    overflow: visible;
+    overflow-x: hidden;
+    /*background-color: #e5e5e5 !important;*/
+    background-color: #e3e3e345 !important;
+}
+
 
 /* .ui-content.events-page {
     border-width: 0;
@@ -1657,8 +1750,8 @@ input#customDateFilter {
     border-color: #fbfbfb00 !important;
     color: #000000 !important;
     text-shadow: none !important;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    /*margin-bottom: 60px;*/
     /*width: 290px; */
     /*margin-left: 70px; */
     /* width: 303px !important;
@@ -2209,12 +2302,15 @@ span.error {
 
 .notification p {
     margin: 0;
-    color: #666;
+    color: #131313;
+    font-size: 13px;
+
 }
 
 .pNotification {
     text-align: left;
     color: #666;
+    
 }
 
 .headerNotify {
@@ -2247,7 +2343,7 @@ span.error {
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
-    margin-left: 90px;
+    margin-left: 106px;
     text-shadow: none;
 
 }
@@ -2262,3 +2358,15 @@ span.error {
     /*margin-top: 10px !important;*/
     cursor: pointer;
 }
+
+
+/*FOOTEER FIJO*/
+
+.ui-header-fixed, .ui-footer-fixed {
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed !important;
+    z-index: 1000;
+}
+

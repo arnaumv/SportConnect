@@ -126,7 +126,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
       console.log(username, email, password, confirm_password, city, birthdate);
 
       // Variable para verificar si hay errores
-      var hasErrors = false;
+      var hasErrors = false;      var image_path = "./img/Profile/User_photo.png";
 
       // Verificar si hay mensajes de error
       if($('#error_username').text() !== '' || $('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_confirm_password').text() !== '' || $('#error_city').text() !== '' || $('#error_birthdate').text() !== ''){
@@ -144,7 +144,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
               password: password,
               city: city,
               birthdate: birthdate,
-              image_path: image_path,
+              image_path: image_path
             },
             success: function(data) {
               console.log('Usuario creado con éxito:', data);
