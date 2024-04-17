@@ -1367,18 +1367,25 @@ html head+body .ui-body-a.ui-focus {
 
 
 
-
 .ui-mobile label,
-div.ui-controlgroup-label {
+div.ui-controlgroup-label,
+#my-label-id.my-label.ui-mobile label,
+#my-label-id.my-label div.ui-controlgroup-label {
     font-weight: 400;
     font-size: 16px;
-    color: rgb(25, 88, 170) !important;
+    color: rgb(0, 0, 0) !important;
     margin-left: 8px;
-
     text-align: left !important;
 }
 
-
+label[for="profile-image-upload"].custom-label {
+    font-weight: normal !important;
+    font-size: medium !important;
+    color: rgb(21, 56, 109) !important;
+    margin-left: 0 !important;
+    text-align: start !important;
+    margin-block: -2px !important;
+}
 
 #my-label-id.my-label {
     font-weight: normal !important;
@@ -1388,6 +1395,7 @@ div.ui-controlgroup-label {
     text-align: start !important;
     margin-block: -2px !important;
 }
+
 
 .formNewUser input::placeholder {
     color: #333;
