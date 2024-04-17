@@ -6,42 +6,56 @@ $(document).ready(function () {
     url: 'http://127.0.0.1:8000/event-filter/' + eventId + '/get_event',  // URL de tu API
     type: 'GET',
     headers: {
-        'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
     },
-    beforeSend: function() {
-        console.log('Sending AJAX request');
+    beforeSend: function () {
+      console.log('Sending AJAX request');
     },
-    success: function(evento) {
-        console.log('AJAX request succeeded');
-        // Actualizar el HTML de la página con la información del evento
-        $('.evento img').attr('src', evento.image_path);
-        $('.evento h2').text(evento.title);
-        $('.evento p').first().text('Fecha: ' + evento.date);
-        $('.evento p').eq(1).text('Actividad: ' + evento.sport); // Usamos eq(1) para seleccionar el segundo párrafo
-        $('.evento p').last().text('Descripción:' + evento.description);
-        
-        // Obtener el nombre de usuario almacenado
-        var storedUsername = localStorage.getItem("username");
-        // Comprobar si el nombre de usuario del creador del evento es el mismo que el nombre de usuario almacenado
-        if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
-            // Si es el mismo, agregar el texto "Creado por ti"
-            $('.evento').append('<p>Creado por tí</p>');
-        } else {
-            // Si no es el mismo, agregar el texto "Creado por " seguido del nombre de usuario del creador del evento
-            $('.evento').append('<p>Creado por: ' + evento.creator_username + '</p>');
-        }
-      },
-    error: function(error) {
-        console.log('Error getting event:', error);
+    success: function (evento) {
+      console.log('AJAX request succeeded');
+      // Actualizar el HTML de la página con la información del evento
+      $('.evento img').attr('src', evento.image_path);
+      $('.evento h2').text(evento.title);
+      $('.evento p').first().text('Fecha: ' + evento.date);
+      $('.evento p').eq(1).text('Actividad: ' + evento.sport); // Usamos eq(1) para seleccionar el segundo párrafo
+      $('.evento p').last().text('Descripción:' + evento.description);
+
+      // Obtener el nombre de usuario almacenado
+      var storedUsername = localStorage.getItem("username");
+      // Comprobar si el nombre de usuario del creador del evento es el mismo que el nombre de usuario almacenado
+      if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
+        // Si es el mismo, agregar el texto "Creado por ti"
+        $('.evento').append('<p>Creado por tí</p>');
+      } else {
+        // Si no es el mismo, agregar el texto "Creado por " seguido del nombre de usuario del creador del evento
+        $('.evento').append('<p>Creado por: ' + evento.creator_username + '</p>');
+      }
+    },
+    error: function (error) {
+      console.log('Error getting event:', error);
     }
   });
+
   // Función para cargar la lista de participantes
   function loadParticipants() {
+    // Obtener el nombre de usuario almacenado
+    var storedUsername = localStorage.getItem("username");
+
+    // Verificar si se ha almacenado un nombre de usuario
+    if (!storedUsername) {
+      console.error("No se ha encontrado el nombre de usuario en localStorage");
+      return;
+    }
+
     $.ajax({
       url: "http://127.0.0.1:8000/event/" + eventId + "/participants",
       type: "GET",
       headers: {
         "Content-Type": "application/json",
+      },
+      // Enviar el nombre de usuario como parámetro en la URL
+      data: {
+        username: storedUsername,
       },
       success: function (participants) {
         console.log("Successfully got participants:", participants);
@@ -52,33 +66,55 @@ $(document).ready(function () {
         // Agregar cada participante a la lista
         participants.forEach(function (participant) {
           var listItem = $("<li></li>");
-          var img = $("<img>").attr("src", "./img/Profile/User_photo.png"); // Asume que todos los usuarios tienen la misma imagen de perfil
-          var infoDiv = $("<div></div>").addClass("info-participante");
-          var nameP = $("<p></p>").text(participant.username);
+          var img = $("<img>").addClass("participant-image");
 
-          // Crear un objeto Date a partir de la fecha de unión del participante
-          var joinDate = new Date(participant.join_date);
+          // Fetch the profile image for the participant from the server
+          fetch('http://127.0.0.1:8000/profile/' + participant.username + '/')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              var imageUrl;
+              if (data.image_path != null) {
+                imageUrl = 'http://127.0.0.1:8000' + data.image_path;
+              } else {
+                imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
+              }
+              img.attr('src', imageUrl);
 
-          // Formatear la fecha a día/mes/año
-          var formattedJoinDate =
-            joinDate.getDate() +
-            "/" +
-            (joinDate.getMonth() + 1) +
-            "/" +
-            joinDate.getFullYear();
+              // Agregar la imagen al elemento de lista del participante
+              var infoDiv = $("<div></div>").addClass("info-participante");
+              var nameP = $("<p></p>").text(participant.username);
 
-          var joinDateP = $("<p></p>").text("Se unió el " + formattedJoinDate);
+              var joinDate = new Date(participant.join_date);
+              var formattedJoinDate =
+                joinDate.getDate() +
+                "/" +
+                (joinDate.getMonth() + 1) +
+                "/" +
+                joinDate.getFullYear();
 
-          infoDiv.append(nameP, joinDateP);
-          listItem.append(img, infoDiv);
-          $(".participantes ul").append(listItem);
+              var joinDateP = $("<p></p>").text("Se unió el " + formattedJoinDate);
+
+              infoDiv.append(nameP, joinDateP);
+              listItem.append(img, infoDiv);
+              $(".participantes ul").append(listItem);
+            })
+            .catch(error => {
+              console.error('Error getting profile data for', participant.username + ':', error);
+            });
         });
       },
-      error: function (error) {
-        console.log("Error getting participants:", error);
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("Error getting participants:", textStatus, errorThrown);
       },
     });
   }
+
+
 
   // Función para verificar si el usuario ya está unido al evento
   function checkIfJoined() {
@@ -184,16 +220,16 @@ $(document).ready(function () {
     window.location.href = "Profile.html";
   });
 
-  $('#redirectToLanding').on('click', function() {
+  $('#redirectToLanding').on('click', function () {
     window.location.href = 'landingpage.html';
   });
 
-  $('#redirectToNotify').on('click', function() {
+  $('#redirectToNotify').on('click', function () {
     window.location.href = 'notify.html';
   });
 
-  $('#redirectToChat').on('click', function() {
+  $('#redirectToChat').on('click', function () {
     window.location.href = 'Chat.html';
-});
+  });
 
 });
