@@ -19,8 +19,14 @@ $(document).on('pagecreate', function () {
             if (data.description != null) {
                 console.log("no es null");
                 $('#miniDescription').text(data.description);
-            }            
-            
+            }
+            var imageUrl;
+            if (data.image_path != null) {
+                imageUrl = 'http://127.0.0.1:8000' + data.image_path;
+            } else {
+                imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+            }
+            $('#profile-image').attr('src', imageUrl);
         })
         .catch(error => {
             console.error('Error:', error);
