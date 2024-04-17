@@ -51,7 +51,7 @@ $(document).ready(function () {
 
         // Agregar cada participante a la lista
         participants.forEach(function (participant) {
-          var listItem = $("<li class='infoUser'></li>");
+          var listItem = $("<li></li>").addClass("infoUser");
           var img = $("<img>").attr("src", "./img/Profile/User_photo.png"); // Asume que todos los usuarios tienen la misma imagen de perfil
           var infoDiv = $("<div></div>").addClass("info-participante");
           var nameP = $('<p data-user-id="' + participant.id + '"></p>').text(participant.username);
@@ -140,6 +140,16 @@ $(document).ready(function () {
     });
   });
 
+  $(document).on('click', '.infoUser', function() {
+    var userId = $(this).data('user-id');
+    // Guardar el ID del usuario en el localStorage
+    console.log("userclick: " + userId);
+    localStorage.setItem('selecteduserId', userId);
+    // Redirigir al usuario a la página de perfil del usuario
+    window.location.href = 'userProfile.html';
+});
+
+
   // Controlador de eventos de clic para el botón "Cancelar"
   $("#cancelEventBtn").on("click", function (e) {
     e.preventDefault();
@@ -167,13 +177,7 @@ $(document).ready(function () {
     });
   });
 
-  $('.infoUser').on('click', function() {
-    var eventId = $(this).data('event-id');
-    // Guardar el ID del evento en el localStorage
-    localStorage.setItem('selectedEventId', eventId);
-    // Redirigir al usuario a la página de información del evento
-    window.location.href = 'InfoEvent.html';
-  });
+  
 
   // Controlador de eventos de clic para los enlaces de navegación
   $("#landingpage").on("click", function () {

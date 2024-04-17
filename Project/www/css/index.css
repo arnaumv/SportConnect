@@ -649,6 +649,12 @@ ui-input-text input,
     border-radius: 15px;
 }
 
+.profile-container-2 {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+}
 
 .profile-image img {
     width: 100px;
@@ -657,6 +663,10 @@ ui-input-text input,
     margin-bottom: 10px;
     object-fit: cover;
     border: 2px solid #007bff;
+}
+
+.profile-image-2 {
+    margin-right: 15px; /* Ajusta el margen derecho según sea necesario */
 }
 
 .profile-info {
@@ -672,6 +682,25 @@ ui-input-text input,
 }
 
 .profile-info p {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.profile-info-2 {
+    text-align: left;
+    margin-left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+.profile-info-2 h2 {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.profile-info-2 p {
+    text-align: left;
     font-size: 15px;
     color: black;
     margin-bottom: 10px;
