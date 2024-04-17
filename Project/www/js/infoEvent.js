@@ -51,10 +51,10 @@ $(document).ready(function () {
 
         // Agregar cada participante a la lista
         participants.forEach(function (participant) {
-          var listItem = $("<li></li>");
+          var listItem = $("<li class='infoUser'></li>");
           var img = $("<img>").attr("src", "./img/Profile/User_photo.png"); // Asume que todos los usuarios tienen la misma imagen de perfil
           var infoDiv = $("<div></div>").addClass("info-participante");
-          var nameP = $("<p></p>").text(participant.username);
+          var nameP = $('<p data-user-id="' + participant.id + '"></p>').text(participant.username);
 
           // Crear un objeto Date a partir de la fecha de unión del participante
           var joinDate = new Date(participant.join_date);
@@ -165,6 +165,14 @@ $(document).ready(function () {
         console.log("Error canceling event:", error);
       },
     });
+  });
+
+  $('.infoUser').on('click', function() {
+    var eventId = $(this).data('event-id');
+    // Guardar el ID del evento en el localStorage
+    localStorage.setItem('selectedEventId', eventId);
+    // Redirigir al usuario a la página de información del evento
+    window.location.href = 'InfoEvent.html';
   });
 
   // Controlador de eventos de clic para los enlaces de navegación
