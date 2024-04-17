@@ -65,7 +65,7 @@ $(document).ready(function () {
 
         // Agregar cada participante a la lista
         participants.forEach(function (participant) {
-          var listItem = $("<li></li>");
+          var listItem = $("<li></li>").addClass("infoUser");
           var img = $("<img>").addClass("participant-image");
 
           // Fetch the profile image for the participant from the server
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
               // Agregar la imagen al elemento de lista del participante
               var infoDiv = $("<div></div>").addClass("info-participante");
-              var nameP = $("<p></p>").text(participant.username);
+              var nameP = $('<p data-user-id="' + participant.id + '"></p>').text(participant.username);
 
               var joinDate = new Date(participant.join_date);
               var formattedJoinDate =
