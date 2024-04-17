@@ -177,13 +177,14 @@ $(document).ready(function () {
   });
 
   $(document).on('click', '.infoUser', function() {
-    var userId = $(this).data('user-id');
+    var userId = $(this).find('p[data-user-id]').data('user-id');
     // Guardar el ID del usuario en el localStorage
     console.log("userclick: " + userId);
     localStorage.setItem('selecteduserId', userId);
     // Redirigir al usuario a la página de perfil del usuario
     window.location.href = 'userProfile.html';
 });
+
 
 
   // Controlador de eventos de clic para el botón "Cancelar"

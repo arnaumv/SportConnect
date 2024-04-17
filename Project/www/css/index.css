@@ -679,7 +679,7 @@ ui-input-text input,
     right: 20px;
     transform: translateY(-50%);
     filter: invert();
-    margin-right: 38px;
+    margin-right: -2px;
 }
 
 /****************/
