@@ -958,7 +958,8 @@ ui-input-text input,
     text-align: center !important;
 }*/
 
-#active-events-btn.ButtonsEventsProfile,
+
+#active-events-btn.ButtonsEventsProfile, 
 #finished-events-btn.ButtonsEventsProfile {
     height: 30px !important;
     padding: 5px !important;
@@ -969,8 +970,8 @@ ui-input-text input,
     text-decoration: none !important;
     border: 1px solid #000000d6 !important;
     border-bottom: 0px solid #000000d6 !important;
+    border-radius: 10px 10px 0 0; /* Añade esta línea */
 }
-
 #active-events-btn.ButtonsEventsProfile.active,
 #finished-events-btn.ButtonsEventsProfile.active {
    background-color: rgb(60 62 79 / 85%) !important;
