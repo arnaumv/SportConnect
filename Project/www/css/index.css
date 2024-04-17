@@ -945,6 +945,7 @@ ui-input-text input,
     font-style: unset;
     font-family: system-ui;
     margin-top: 30px;
+    font-weight: bolder;
 }
 
 /********** Edit Profile **********/
@@ -1344,6 +1345,17 @@ div.ui-controlgroup-label {
     margin-left: 8px;
 
     text-align: left !important;
+}
+
+
+
+#my-label-id.my-label {
+    font-weight: normal !important;
+    font-size: medium !important;
+    color: black !important;
+    margin-left: 0 !important;
+    text-align: start !important;
+    margin-block: -2px !important;
 }
 
 .formNewUser input::placeholder {
