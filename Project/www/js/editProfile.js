@@ -25,10 +25,32 @@ $(document).ready(function() {
 
 
     var storedUsername = localStorage.getItem('username');
-if (storedUsername) {
-    $('#username').text(storedUsername);
-}
+    if (storedUsername) {
+        $('#username').text(storedUsername);
 
+        // Fetch the current user's profile image from the server
+        fetch('http://127.0.0.1:8000/profile/' + storedUsername + '/')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data:', data);  // Imprimir los datos en la consola
+
+                var imageUrl;
+                if (data.image_path != null) {
+                    imageUrl = 'http://127.0.0.1:8000' + data.image_path;
+                } else {
+                    imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+                }
+                $('#profile-image').attr('src', imageUrl);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 
     $('#email').on('focusout', function() {
         var email = $(this).val().trim();
