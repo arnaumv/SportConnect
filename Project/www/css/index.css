@@ -930,7 +930,7 @@ ui-input-text input,
 .ui-page-theme-a .ui-btn:hover, html .ui-bar-a .ui-btn:hover, html .ui-body-a .ui-btn:hover, html body .ui-group-theme-a .ui-btn:hover, html head+body .ui-btn.ui-btn-a:hover {
     background-color: #ededed;
     border-color: #ddd;
-    color: #fff !important;
+    /*color: #fff !important;*/
     text-shadow: 0 1px 0 #f3f3f3;
 } 
 .pEvents {
@@ -974,6 +974,7 @@ ui-input-text input,
     font-style: unset;
     font-family: system-ui;
     margin-top: 30px;
+    font-weight: bolder;
 }
 
 /********** Edit Profile **********/
@@ -1375,6 +1376,17 @@ div.ui-controlgroup-label {
     text-align: left !important;
 }
 
+
+
+#my-label-id.my-label {
+    font-weight: normal !important;
+    font-size: medium !important;
+    color: black !important;
+    margin-left: 0 !important;
+    text-align: start !important;
+    margin-block: -2px !important;
+}
+
 .formNewUser input::placeholder {
     color: #333;
     /* or any darker color you prefer */
@@ -1600,7 +1612,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
    /* background-color: #ffffff00 !important;*/
-    background-color: #ffffff57 !important;
+    background-color: #f0eded !important;
 }
 
 /*FONDO PERFILE */
@@ -1610,7 +1622,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e5e5e5 !important;*/
-    background-color: #e3e3e345 !important;
+    background-color: #f0eded !important;
 }
 
 
