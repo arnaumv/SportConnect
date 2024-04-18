@@ -1087,11 +1087,14 @@ ui-input-text input,
 
 /* .formINFO #description {
     height: 100px;
+}*/
+
+.formINFO{
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
-
     
-
+/*
 .formINFO button {
     display: inline-block;
     padding: 8px 16px;
