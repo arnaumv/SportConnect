@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+
+  $('#redirectToLandingpage').on('click', function() {
+    window.location.href = 'Events.html';
+  });
   // Obtener el ID del evento del localStorage
   var eventId = localStorage.getItem("selectedEventId");
   // Hacer una solicitud AJAX para obtener la información del evento
@@ -87,7 +92,7 @@ $(document).ready(function () {
 
               // Agregar la imagen al elemento de lista del participante
               var infoDiv = $("<div></div>").addClass("info-participante");
-              var nameP = $('<p data-user-id="' + participant.id + '"></p>').text(participant.username);
+              var nameP = $('<p data-user-id="' + participant.username + '"></p>').text(participant.username);
 
               var joinDate = new Date(participant.join_date);
               var formattedJoinDate =
