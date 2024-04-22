@@ -2066,7 +2066,7 @@ input#customDateFilter {
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
-
+    object-fit: cover;
 }
 
 
