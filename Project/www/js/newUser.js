@@ -136,7 +136,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
       // Si no hay errores, enviar los datos
       if(!hasErrors){
         $.ajax({
-            url: 'http://127.0.0.1:8000/usuario/', 
+            url: 'https://sportconnect.ieti.site/usuario/', 
             method: 'POST',
             data: {
               username: username,

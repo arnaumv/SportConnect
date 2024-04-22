@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     console.log('Realizando petición AJAX');  // Añadido para depuración
     $.ajax({
-        url: 'http://127.0.0.1:8000/api/eventscreated/',
+        url: 'https://sportconnect.ieti.site/api/eventscreated/',
         type: 'GET',
         data: {
             username: username
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
                     // Make an AJAX call to set deleted_notify to true
                     $.ajax({
-                        url: 'http://127.0.0.1:8000/api/deleteNotification/',
+                        url: 'https://sportconnect.ieti.site/api/deleteNotification/',
                         type: 'POST',
                         data: JSON.stringify({
                             username: username,  // Use the username variable
@@ -95,7 +95,7 @@ $(document).ready(function(){
     });
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/api/eventsjoined/',
+        url: 'https://sportconnect.ieti.site/api/eventsjoined/',
         type: 'GET',
         data: {
             username: username
@@ -148,7 +148,7 @@ $(document).ready(function(){
                 
                         // Make an AJAX call to set notify_deleted to true
                         $.ajax({
-                            url: 'http://127.0.0.1:8000/api/deleteNotification/',
+                            url: 'https://sportconnect.ieti.site/api/deleteNotification/',
                             type: 'POST',
                             data: JSON.stringify({
                                 username: username,  // Use the username variable
