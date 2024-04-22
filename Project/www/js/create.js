@@ -21,6 +21,10 @@ $(document).ready(function(){
         window.location.href = 'Create.html';
     });
     
+    $('#redirectToNotify').on('click', function() {
+        window.location.href = 'notify.html';
+    });
+    
     console.log("Script create.js loaded and deviceready fired.");
 
     $(document).on("mobileinit", function() {

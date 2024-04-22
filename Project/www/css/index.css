@@ -679,7 +679,7 @@ ui-input-text input,
     right: 20px;
     transform: translateY(-50%);
     filter: invert();
-    margin-right: 38px;
+    margin-right: -2px;
 }
 
 /****************/
@@ -1986,8 +1986,8 @@ input#customDateFilter {
 }
 
 .notification-icon-InfoEvents{
-    width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   position: absolute;
   top: 50%;
   right: 20px;
@@ -2434,8 +2434,12 @@ span.error {
     width: 25px !important;
     height: 25px !important;
 
+}
 
-
+.headerInfoEvents .flecha-izquierda-notify {
+    width: 25px !important;
+    height: 25px !important;
+    filter: invert(100%) !important;
 }
 
 .headerNotify h1 {
