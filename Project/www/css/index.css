@@ -1740,7 +1740,7 @@ element.style {
     position: fixed;
     bottom: 0;
     width: 420px;
-    height: 50%;
+    height: 43%;
     background-color: #ffffff;
     margin-left: -18px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 35%);
@@ -1838,11 +1838,14 @@ element.style {
 /* Clase personalizada para el div de filtrar por fecha*/
 
 html #customDateFilter {
-    /*background-color: #e70f0f00 !important;*/
-    border-color: #fbfbfb00 !important;
+    background-color: #0000004a !important;
+    border-color: #000000d6 !important;
     color: #000000 !important;
     text-shadow: none !important;
-
+    height: 35px;
+    width: 255px;
+    margin-bottom: 25px;
+    margin-left: 90px;
 }
 
 .ui-shadow-inset {
@@ -1857,10 +1860,13 @@ html #customDateFilter {
 }
 
 .imgDateFilter {
-    width: 50px;
-    height: 50px;
-} 
-
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 100px;
+    margin-top: 12px;
+    pointer-events: none;
+}
 
 
 
