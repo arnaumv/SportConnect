@@ -114,6 +114,9 @@ $('.formNewUser #birthdate').on('focusout', function() {
   $('.formNewUser #btnSubmit').on('click', function() {
       console.log("El botón ha sido presionado");
 
+      // Mostrar indicador de carga
+      $('#loader').show();
+
       // Obtener los valores de los campos del formulario
       var username = $('.formNewUser #username').val().trim();
       var email = $('.formNewUser #email').val().trim();
@@ -136,7 +139,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
       // Si no hay errores, enviar los datos
       if(!hasErrors){
         $.ajax({
-            url: 'http://127.0.0.1:8000/usuario/', 
+            url: 'https://sportconnect.ieti.site/usuario/', 
             method: 'POST',
             data: {
               username: username,
@@ -153,9 +156,13 @@ $('.formNewUser #birthdate').on('focusout', function() {
               setTimeout(function() {
                 window.location.href = 'login.html';
             }, 2200); // 2200 milisegundos = 2.2 segundos
+                // Ocultar indicador de carga después de completar la solicitud
+                $('#loader').hide();
             
             },
             error: function(error) {
+               // Ocultar indicador de carga después de completar la solicitud
+               $('#loader').hide();
               console.log('Error:', error.responseText);
               //showPopup("Debe rellenar todos los campos para poder crear un usuario");
               handleAjaxError(error);
