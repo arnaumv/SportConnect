@@ -8,6 +8,7 @@
     <content src="Index.html" />
     <platform name="android">
         <allow-intent href="mailto:*" />
+                <icon src="www/img/index/logo1.png" />
     </platform>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
