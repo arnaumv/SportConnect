@@ -838,6 +838,12 @@ ui-input-text input,
     margin-bottom: 25px;
 }
 
+.hrEvents  {
+    width: 2000px;
+
+
+}
+
 .titulosprofile {
     font-weight: bold !important; /* Hace que el texto sea más grueso */
     color: black !important; /* Color más oscuro */
@@ -2082,7 +2088,7 @@ html #customDateFilter {
     display: inline-block;
     padding: 10px 20px;
     background-color: rgb(43, 165, 221);
-    ;
+    width: 300px;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
