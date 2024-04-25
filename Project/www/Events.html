@@ -18,6 +18,7 @@
     <meta name="color-scheme" content="light dark">
     <link rel="icon" href="./img/index/logo1.png">
     <link rel="stylesheet" href="css/index.css">
+    
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
    
     <title>Sport Connect - Eventos</title>
@@ -34,6 +35,14 @@
         </div>
         <!-- page 1 -->
         <div class="ui-content events-page">
+            <div class="search-container">
+                <input type="text" id="locationSearch" placeholder="Buscar por ubicación">
+                <button id="locationSearchButton" class="waves-effect waves-light btn">
+                    <img src="./img/index/search.png" alt="Buscar">
+                </button>
+            </div>
+
+
             <button id="filterButton" class="waves-effect waves-light btn">Filtrar ▼</button>
             <button id="filterDateButton" class="waves-effect waves-light btn">Fecha ▼</button>
             
