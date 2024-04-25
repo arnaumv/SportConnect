@@ -1669,9 +1669,7 @@ body:has(.ui-content.events-page) {
     overflow-x: hidden;
     padding: 1em;
     
-    background-color: #d9d9d9b0 !important;
-   /* background-color: #d9d9d93b !important;*/
-    /* Add your custom styles here */
+   /* background-color: #d9d9d9b0 !important;*/
 }
 
 body.events-page-body, div.events-page-div {
