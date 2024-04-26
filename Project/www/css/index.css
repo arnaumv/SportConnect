@@ -936,8 +936,9 @@ ui-input-text input,
     flex-grow: 1;
     border: none;
     padding: 10px;
-}
-
+    margin-right: 25px;
+    width: 300px;
+  }
 #locationSearchButton {
     background-color: #ffffff00;
     color: #ffffff00;
@@ -945,7 +946,7 @@ ui-input-text input,
     border: none;
     padding: 10px;
     width: 50px;
-    margin-left: 130px;
+   /* margin-left: 130px; */
     height: 40px;
     margin-top: -1px;
     box-shadow: none;
