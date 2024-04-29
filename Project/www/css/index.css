@@ -2519,3 +2519,44 @@ span.error {
     z-index: 1000;
 }
 
+/* CSS LOGO REDES SOCIALES PERFIL*/
+
+#redessociales {
+    display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-left: 20px;
+}
+
+#redessociales a {
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+#redessociales img {
+    width: 25px; /* Ancho deseado para las imágenes */
+    height: auto; /* Mantiene la proporción */
+}
+
+#redessociales #img-instagram{
+    width: 36px; /* Ancho deseado para las imágenes */
+}
+
+/* CSS LOGO REDES SOCIALES USER*/
+
+#redessociales2 {
+    display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-left: -4px;
+}
+
+#redessociales2 a {
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+#redessociales2 img {
+    width: 25px; /* Ancho deseado para las imágenes */
+    height: auto; /* Mantiene la proporción */
+}
+
+#redessociales2 #img-instagram2{
+    width: 36px; /* Ancho deseado para las imágenes */
+}
