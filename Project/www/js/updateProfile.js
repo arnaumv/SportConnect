@@ -18,14 +18,14 @@ $(document).on('pagecreate', function () {
             $('#city').text(data.city);
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
-                $('#img-instagram').attr('src', './img/Profile/insta.png');
+                $('#img-instagram').attr('src', './img/Profile/insta.webp');
                 // Envolver la imagen en un enlace
                 $('#img-instagram').wrap('<a href="https://www.instagram.com/' + data.instagram + '" target="_blank"></a>');
             }
 
             if (data.twitter != null) {
                 // Establecer el atributo src de la imagen de Twitter
-                $('#img-twitter').attr('src', './img/Profile/twitter.png');
+                $('#img-twitter').attr('src', './img/Profile/twitter.webp');
                 // Envolver la imagen en un enlace
                 $('#img-twitter').wrap('<a href="https://twitter.com/' + data.twitter + '" target="_blank"></a>');
             }
