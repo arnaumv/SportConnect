@@ -82,18 +82,27 @@ $(document).ready(function () {
         }
     });
 
-    $('#description').on('focusout', function () {
+    $('#instagram').on('focusout', function () {
         var description = $(this).val().trim();
-        if (description === "" || description.length >= 10) {
-            $('#error_description').text('');
+        if (description === "" || !description.startsWith("@")) {
+            $('#error_instagram').text('');
             $(this).removeClass('error-input');
         } else {
-            $('#error_description').text('La descripción debe tener al menos 10 caracteres');
+            $('#error_instagram').text('El usuario debe estar sin @');
             $(this).addClass('error-input');
         }
     });
-
-
+    
+    $('#twitter').on('focusout', function () {
+        var description = $(this).val().trim();
+        if (description === "" || !description.startsWith("@")) {
+            $('#error_twitter').text('');
+            $(this).removeClass('error-input');
+        } else {
+            $('#error_twitter').text('El usuario debe estar sin @');
+            $(this).addClass('error-input');
+        }
+    });
 
     $('#birthdate').on('focusout', function () {
         var birthdate = $(this).val().trim();
@@ -113,7 +122,7 @@ $(document).ready(function () {
     $('#btnSave').on('click', function () {
         var hasErrors = false;
     
-        if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '') {
+        if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '' || $('#error_instagram').text() !== '' || $('#error_twitter').text() !== '') {
             hasErrors = true;
         }
     
@@ -125,6 +134,8 @@ $(document).ready(function () {
             var password = $('#password').val();
             var description = $('#description').val();
             var birthdate = $('#birthdate').val();
+            var instagram = $('#instagram').val();
+            var twitter = $('#twitter').val();
         
             // Subir la imagen
             var file = $('#profile-image-upload')[0].files[0];
@@ -135,6 +146,8 @@ $(document).ready(function () {
             formData.append('password', password);
             formData.append('description', description);
             formData.append('birthdate', birthdate);
+            formData.append('instagram', instagram);
+            formData.append('twitter', twitter);
         
             // Actualizar los datos del usuario
             $.ajax({
