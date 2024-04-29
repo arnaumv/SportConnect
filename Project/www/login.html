@@ -30,11 +30,28 @@
 				margin: 5px !important;
 				position: relative !important;
 		}
+		/* Estilos para el indicador de carga */
+        #loader {
+            position: fixed;
+            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #loader img {
+            width: 45px;
+            height: 45px;
+        }
 		</style>
         <title>Sport Connect - Create User</title>
 		
     </head>
     <body >
+		<!-- Indicador de carga -->
+		<div id="loader" style="display: none;">
+			<img src="./img/Login/cargando.gif" alt="Cargando...">
+		</div>
+
 		<!-- PAGE CREATE -->
 		<div data-role="page" class="colorLogin" >
 			<div class="headerLogin">

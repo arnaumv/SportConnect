@@ -838,6 +838,12 @@ ui-input-text input,
     margin-bottom: 25px;
 }
 
+.hrEvents  {
+    width: 2000px;
+
+
+}
+
 .titulosprofile {
     font-weight: bold !important; /* Hace que el texto sea más grueso */
     color: black !important; /* Color más oscuro */
@@ -915,6 +921,36 @@ ui-input-text input,
 
 }
 
+.search-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    overflow: hidden;
+    height: 50px;
+    background-color: #f7f7f7;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#locationSearch {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    margin-right: 25px;
+    width: 300px;
+  }
+#locationSearchButton {
+    background-color: #ffffff00;
+    color: #ffffff00;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 50px;
+   /* margin-left: 130px; */
+    height: 40px;
+    margin-top: -1px;
+    box-shadow: none;
+}
 
 
 
@@ -1669,17 +1705,27 @@ body:has(.ui-content.events-page) {
     overflow-x: hidden;
     padding: 1em;
     
-    background-color: #d9d9d9b0 !important;
-   /* background-color: #d9d9d93b !important;*/
-    /* Add your custom styles here */
+   /* background-color: #d9d9d9b0 !important;*/
 }
 
 body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-   /* background-color: #ffffff00 !important;*/
-    background-color: #f0eded !important;
+    background-color: #efefeff7 !important;
+    /*background-color: #f0eded !important;*/
+}
+
+
+.body-infoevents .ui-overlay-a, 
+.body-infoevents .ui-page-theme-a, 
+.body-infoevents .ui-page-theme-a .ui-panel-wrapper {
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    color: #333;
+    text-shadow: 0 1px 0 #f3f3f3;
+    /*background-color: #f0eded !important;*/
+    background-color: #f0eded54 !important;
 }
 
 /*FONDO PERFILE */
@@ -1688,8 +1734,8 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    /*background-color: #e5e5e5 !important;*/
-    background-color: #f0eded !important;
+    background-color: #f0eded54 !important;
+   /* background-color: #f0eded !important;*/
 }
 
 
@@ -1727,7 +1773,7 @@ element.style {
     display: none;
     position: fixed;
     bottom: 0;
-    width: 433px;
+    width: 425px;
     height: 70%;
     background-color: #ffffff;
     margin-left: -18px;
@@ -1740,7 +1786,7 @@ element.style {
     position: fixed;
     bottom: 0;
     width: 420px;
-    height: 35%;
+    height: 43%;
     background-color: #ffffff;
     margin-left: -18px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 35%);
@@ -1835,47 +1881,40 @@ element.style {
     height: 40px;
 } */
 
+/* Clase personalizada para el div de filtrar por fecha*/
 
-.customDateFilterClass {
-    background-color: #f7f7f700 !important;
-    border-color: #fbfbfb00 !important;
+html #customDateFilter {
+    background-color: #0000004a !important;
+    border-color: #000000d6 !important;
     color: #000000 !important;
     text-shadow: none !important;
-    width: 190px !important;
-    margin-left: 91px !important;
-    height: 40px !important;
+    height: 35px;
+    width: 255px;
+    margin-bottom: 25px;
+    margin-left: 90px;
 }
+
+.ui-shadow-inset {
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
 #customDateFilter {
-    background-color: #f7f7f700 !important;
-    border-color: #fbfbfb00 !important;
-    color: #000000 !important;
-    text-shadow: none !important;
-    margin-top: 100px; /* Ajusta este valor según tus necesidades */
-}
-input#customDateFilter {
-    background-color: #b7b7b7a8 !important;
-    border-color: #00000000 !important;
-    color: #000000 !important;
-    text-shadow: none !important;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /* margin-bottom: 60px; */
-    /* width: 290px; */
-    /* margin-left: 70px; */
+    margin-left: 80px;
+    background-color: #a9a9a947;
+    width: 250px;
 }
 
-/* #filterDateDiv.customDateFilterClass .ui-body-a,
-#filterDateDiv.customDateFilterClass .ui-page-theme-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html .ui-bar-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html .ui-body-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html body .ui-group-theme-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html .ui-panel-page-container-a {
-    background-color: #f7f7f700 !important;
-    border-color: #fbfbfb00 !important;
-    color: #000000 !important;
-    text-shadow: none !important;
-    margin-left: 20px;
-} */
+.imgDateFilter {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 100px;
+    margin-top: 12px;
+    pointer-events: none;
+}
+
+
 
 .events-buttons button {
     padding: 6px 5px !important;
@@ -2091,10 +2130,10 @@ input#customDateFilter {
     display: inline-block;
     padding: 10px 20px;
     background-color: rgb(43, 165, 221);
-    ;
-    color: #000;
+    width: 300px;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-weight: bold;
     text-shadow: none;
 }

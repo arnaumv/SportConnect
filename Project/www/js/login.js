@@ -1,23 +1,6 @@
 console.log('login.js loaded');
 $(document).on('pagecreate', function() {
 
-   /*  //Movilidad entre paginas
-    $('#landingpage').on('click', function() {
-        window.location.href = 'landingpage.html';
-    });
-
-    $('#create').on('click', function() {
-        window.location.href = 'Create.html';
-    });
-
-    $('#events').on('click', function() {
-        window.location.href = 'Events.html';
-    });
-
-    $('#profile').on('click', function() {
-        window.location.href = 'Profile.html';
-    }); */
-    
     // Validación del nombre de usuario mientras se está escribiendo y al perder el foco
     $('.formLogin #username').on('input focusout', function() {
         var username = $(this).val().trim();
@@ -45,6 +28,9 @@ $(document).on('pagecreate', function() {
     $('.formLogin #btnSubmit').on('click', function() {
         console.log("El botón ha sido presionado");
 
+        // Mostrar indicador de carga
+        $('#loader').show();
+
         // Obtener los valores de los campos del formulario
         var username = $('.formLogin #username').val().trim();
         var password = $('.formLogin #password').val().trim();
@@ -61,7 +47,7 @@ $(document).on('pagecreate', function() {
         // Si no hay errores, enviar los datos
         if(!hasErrors){
             $.ajax({
-                url: 'http://127.0.0.1:8000/login/',
+                url: 'https://sportconnect.ieti.site/login/',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
@@ -77,18 +63,24 @@ $(document).on('pagecreate', function() {
 
                     window.location.href = 'landingpage.html';
 
+                    // Ocultar indicador de carga después de completar la solicitud
+                    $('#loader').hide();
+
                     //showPopup2(data.message);
 
                 },
                 error: function(error) {
                     //console.log('Error:', error);
-                    showPopup("Nombre de usuario o contraseña incorectos");
+                    showPopup("Nombre de usuario o contraseña incorrectos");
+                    // Ocultar indicador de carga en caso de error
+                    $('#loader').hide();
                 }
             });
         } else {
             //console.log('Hubo un error al iniciar sesión');                    
             showPopup('Hubo un error al iniciar sesión');
-
+            // Ocultar indicador de carga en caso de error
+            $('#loader').hide();
         }
     });
 });

@@ -18,6 +18,7 @@
     <meta name="color-scheme" content="light dark">
     <link rel="icon" href="./img/index/logo1.png">
     <link rel="stylesheet" href="css/index.css">
+    
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
    
     <title>Sport Connect - Eventos</title>
@@ -34,14 +35,25 @@
         </div>
         <!-- page 1 -->
         <div class="ui-content events-page">
+            <div class="search-container">
+                <input type="text" id="locationSearch" placeholder="Buscar por ubicación">
+                <button id="locationSearchButton" class="waves-effect waves-light btn">
+                    <img src="./img/index/search.png" alt="Buscar">
+                </button>
+            </div>
+
+
             <button id="filterButton" class="waves-effect waves-light btn">Filtrar ▼</button>
             <button id="filterDateButton" class="waves-effect waves-light btn">Fecha ▼</button>
-            <hr>
+            
             <p class="pEvents">Encuentra eventos disponibles</p>
+            <!--<hr class="hrEvents">-->
             <div id="filterDateDiv" class="filterDiv">
                 <p class="pFilterSport">Filtra por fecha</p>
                 <br>
-                <input type="date" id="customDateFilter" class="customDateFilterClass">
+                <img src="./img/index/fecha.png" alt="Descripción de la imagen" class="imgDateFilter"> <!-- Añade tu imagen aquí -->
+                <input type="date" id="customDateFilter">
+                
                 <button id="acceptDateFilterButton" class="waves-effect waves-light btn">Ver resultados</button>
             </div>
             <div id="filterDiv" class="filterDiv">

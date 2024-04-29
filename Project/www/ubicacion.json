@@ -133,7 +133,7 @@
         },  
         
         {
-            "nombre de ubicacion": "Carrer del Marfull, 6, Cornellà de Llobregat",
+            "nombre de ubicacion": "C/ Marfull, 6, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.359108,
                 "longitude": 2.081566
@@ -173,7 +173,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de la Fontsanta, 48,Sant Joan Despí. Soccer and Basketball Court",
+            "nombre de ubicacion": "C/ La Fontsanta, 48,Sant Joan Despí. Soccer and Basketball Court",
             "ubicacion": {
                 "latitude":41.371874,
                 "longitude": 2.074016
@@ -213,7 +213,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer Josep Bastús i Planes, 1, Sant Joan Despí, Barcelona",
+            "nombre de ubicacion": "C/ Josep Bastús i Planes, 1, Sant Joan Despí, Barcelona",
             "ubicacion": {
                 "latitude":41.3706173,
                 "longitude": 2.0525969
@@ -223,7 +223,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer Sant Martí de l'Erm, 30, Sant Joan Despí, Barcelona",
+            "nombre de ubicacion": "C/ Sant Martí de l'Erm, 30, Sant Joan Despí, Barcelona",
             "ubicacion": {
                 "latitude":41.371445,
                 "longitude": 2.069749
@@ -233,7 +233,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Maria Montessori, 4, Sant Just Desvern, Barcelona",
+            "nombre de ubicacion": "C/ de Maria Montessori, 4, Sant Just Desvern, Barcelona",
             "ubicacion": {
                 "latitude":41.389112,
                 "longitude": 2.060393
@@ -243,7 +243,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Laureà Miró, 63, Esplugues de Llobregat, Barcelona",
+            "nombre de ubicacion": "C/ Laureà Miró, 63, Esplugues de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.376118,
                 "longitude": 2.097020
@@ -263,7 +263,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer Trepaderas, 3, L'Hospitalet de Llobregat, Barcelona",
+            "nombre de ubicacion": "C/ Trepaderas, 3, L'Hospitalet de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.368098,
                 "longitude": 2.115184
@@ -293,7 +293,7 @@
         }, 
 
         {
-            "nombre de ubicacion": "Carrer del Crom, 100, L'Hospitalet de Llobregat, Barcelona",
+            "nombre de ubicacion": "C/ del Crom, 100, L'Hospitalet de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.3499183,
                 "longitude": 2.0984353
@@ -334,7 +334,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Tenerife, Horta-Guinardó, 08024 Barcelona",
+            "nombre de ubicacion": "C/ Tenerife, Horta-Guinardó, 08024 Barcelona",
             "ubicacion": {
                 "latitude":41.385989,
                 "longitude": 2.101456

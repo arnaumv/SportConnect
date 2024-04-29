@@ -173,7 +173,7 @@ $('#btnEnviar').click(function(e){
                             //alert('Evento creado con éxito.');
                             showPopup2('Evento creado con éxito');
                             setTimeout(function() {
-                                window.location.href = 'landingpage.html';
+                                window.location.href = 'Events.html';
                             }, 2200); // 2200 milisegundos = 2.2 segundos
                                                     },
                         error: function(error) {
