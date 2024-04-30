@@ -57,7 +57,7 @@ $(document).ready(function () {
 
         // Realizar una consulta AJAX para obtener los eventos del usuario
         $.ajax({
-            url: "https://sportconnect.ieti.site/events/user_subscribed_events/?username=" + username,
+            url: "http://127.0.0.1:8000/events/user_subscribed_events/?username=" + username,
             type: "GET",
             success: function (eventos) {
                 eventos.forEach(function (evento) {
