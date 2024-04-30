@@ -1732,7 +1732,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ededed87 !important;
+    background-color: #ebebeb !important;
 }
 
 
@@ -1903,14 +1903,34 @@ html #customDateFilter {
     width: 250px;
 }
 
-.imgDateFilter {
+.imgDateNewuser {
     position: absolute;
     width: 25px;
     height: 25px;
-    margin-left: 100px;
-    margin-top: 12px;
+    margin-left: 149px;
+    margin-top: -38px;
     pointer-events: none;
 }
+
+.imgDateCreateEvent {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-left: 159px;
+    margin-top: 8px;
+    pointer-events: none;
+}
+
+
+.imgDateCreateEventReloj {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-left: 355px;
+    margin-top: 8px;
+    pointer-events: none;
+  }
+
 
 
 
