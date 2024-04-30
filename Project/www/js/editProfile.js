@@ -41,7 +41,7 @@ $(document).ready(function () {
 
                 var imageUrl;
                 if (data.image_path != null) {
-                    imageUrl = 'https://sportconnect.ieti.site' + data.image_path;
+                    imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
                 } else {
                     imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
                 }
