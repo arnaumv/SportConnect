@@ -120,27 +120,22 @@ body label.ui-btn {
     margin-left: -10px;
   }
 
-.headerIndex h1 {
+  .headerIndex h1 {
     margin: 0;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    /* Añadido la fuente Roboto */
+    /* font-family: 'Roboto', sans-serif; */
     font-size: 24px;
-    /* Aumentado el tamaño de la fuente para mayor impacto */
     font-weight: 545;
-    /* Aumentado el peso de la fuente para un aspecto más audaz */
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Aumentado el espaciado de las letras para una mejor legibilidad */
     line-height: 1.5;
-    /* Ajustado el interlineado para una mejor legibilidad */
     margin-top: 6px;
     font-stretch: normal;
-    /* Cambiado a normal para evitar la distorsión de la fuente */
     height: 40px;
-    /* Añadido altura a la letra */
     margin-left: 25px;
-}
+    font-family: revert;
+    text-shadow: none;
+  }
 
 /* map */
 
@@ -507,7 +502,7 @@ p {
     border-radius: 25px !important;
     display: inline-block;
     padding: 10px 20px !important;
-    color: #000 !important;
+    color: #fff !important;
     text-decoration: none !important;
     font-weight: bold !important;
     text-shadow: none !important;
@@ -560,7 +555,7 @@ ui-input-text input,
     border-radius: 25px !important;
     display: inline-block;
     padding: 10px 20px !important;
-    color: #000 !important;
+    color: #fff !important;
     text-decoration: none !important;
     font-weight: bold !important;
     text-shadow: none !important;
@@ -1737,7 +1732,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ededed !important;
+    background-color: #ededed87 !important;
 }
 
 
