@@ -563,13 +563,26 @@ ui-input-text input,
 }
 
 #btnSubmit {
-    background-color: rgb(43, 165, 221);
+    background-color: rgb(71 196 253 / 89%);
     text-shadow: none;
     border-radius: 25px;
-    margin-top: -5px;
-    /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+    width: 300px;
+    margin-left: 45px;
 }
-
+#btnSubmitRegister {
+    background-color: rgb(113 121 125);
+    text-shadow: none;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: -5px;
+    color: white;
+    width: 300px;
+    margin-left: 45px;
+}
 #btnEnviarMail {
     background-color: rgb(202 203 203);
     text-shadow: none;
@@ -1903,6 +1916,15 @@ html #customDateFilter {
     width: 250px;
 }
 
+.imgDateFilter {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 100px;
+    margin-top: 13px;
+    pointer-events: none;
+}
+
 .imgDateNewuser {
     position: absolute;
     width: 25px;
@@ -1929,7 +1951,11 @@ html #customDateFilter {
     margin-left: 355px;
     margin-top: 8px;
     pointer-events: none;
-  }
+}
+
+
+
+
 
 
 
