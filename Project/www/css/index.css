@@ -829,7 +829,7 @@ ui-input-text input,
 }
 
 .events-section .events-list {
-    background-color: white !important;
+    /*background-color: white !important;*/
     border-radius: 10px;
 }
 
