@@ -50,6 +50,10 @@ $(document).ready(function () {
                 if (data.description != null) {
                     $('#description').val(data.description);
                 }
+                 // Load the user's email into the HTML
+                if (data.email != null) {
+                    $('#email').val(data.email);
+                }
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -120,6 +124,10 @@ $(document).ready(function () {
         } else {
             $('#error_birthdate').text('');
             $(this).removeClass('error-input'); // Eliminar clase de error del input
+        }
+        if (data.birthdate != null) {
+            var date = new Date(data.birthdate);
+            $('#birthdate').val(date.toISOString().split('T')[0]);
         }
     });
 
