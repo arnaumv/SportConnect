@@ -46,6 +46,10 @@ $(document).ready(function () {
                     imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
                 }
                 $('#profile-image').attr('src', imageUrl);
+                 // Load the user's description into the HTML
+                if (data.description != null) {
+                    $('#description').val(data.description);
+                }
             })
             .catch(error => {
                 console.error('Error:', error);

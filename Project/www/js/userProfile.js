@@ -47,7 +47,7 @@ $(document).ready(function () {
 
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
-            $('#city').text(data.city);
+            $('#city').text("Ciudad: " + data.city);
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram2').attr('src', './img/Profile/insta.webp');
