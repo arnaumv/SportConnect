@@ -738,7 +738,7 @@ ui-input-text input,
     font-weight: bold !important;
     color: black !important;
     font-family: 'Roboto', sans-serif;
-    margin-left: -240px;
+    margin-left: -230px;
     margin-top: -20px;
 }
 
@@ -2114,6 +2114,7 @@ html #customDateFilter {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 20%;
+    text-shadow: none;
 }
 
 .notification-icon-InfoEvents{
