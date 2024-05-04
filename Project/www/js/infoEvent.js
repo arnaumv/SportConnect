@@ -84,7 +84,7 @@ $(document).ready(function () {
             .then(data => {
               var imageUrl;
               if (data.image_path != null) {
-                imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
+                imageUrl = 'http://127.0.0.1:8000' + data.image_path;
               } else {
                 imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
               }

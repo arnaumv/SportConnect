@@ -41,7 +41,7 @@ $(document).ready(function () {
 
                 var imageUrl;
                 if (data.image_path != null) {
-                    imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
+                    imageUrl = 'http://127.0.0.1:8000' + data.image_path;
                 } else {
                     imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
                 }
