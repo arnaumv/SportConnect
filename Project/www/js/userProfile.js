@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     var storedUsername = localStorage.getItem('selecteduserId');
     // Si no hay datos almacenados, haz la solicitud a la API
-    fetch('http://127.0.0.1:8000/profile/' + storedUsername + '/')
+    fetch('https://sportconnect.ieti.site/profile/' + storedUsername + '/')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
-            $('#city').text(data.city);
+            $('#city').text("Ciudad: " + data.city);
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram2').attr('src', './img/Profile/insta.webp');
@@ -67,9 +67,9 @@ $(document).ready(function () {
             }
             var imageUrl;
             if (data.image_path != null) {
-                imageUrl = 'http://127.0.0.1:8000' + data.image_path;
+                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
             } else {
-                imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+                imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
             }
             $('#profile-image').attr('src', imageUrl);
         })
@@ -97,7 +97,7 @@ $(document).ready(function () {
 
         // Realizar una consulta AJAX para obtener los eventos del usuario
         $.ajax({
-            url: "http://127.0.0.1:8000/events/user_subscribed_events/?username=" + username,
+            url: "https://sportconnect.ieti.site/events/user_subscribed_events/?username=" + username,
             type: "GET",
             success: function (eventos) {
                 eventos.forEach(function (evento) {

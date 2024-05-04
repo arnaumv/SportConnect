@@ -21,6 +21,10 @@ $(document).ready(function () {
         window.location.href = 'notify.html';
     });
 
+    $('.redirectToEvents').on('click', function () {
+        window.location.href = 'Events.html';
+    });
+
 
 
     // Map initialization script

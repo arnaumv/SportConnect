@@ -111,7 +111,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
     }
     });
 
-  $('.formNewUser #btnSubmit').on('click', function() {
+  $('.formNewUser #btnSubmitRegister').on('click', function() {
       console.log("El botón ha sido presionado");
 
       // Mostrar indicador de carga
