@@ -18,6 +18,51 @@ body label.ui-btn {
     border-style: none !important;
 }
 
+.my-google-btn {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .25) !important;
+    cursor: pointer !important;
+    height: 50px !important;
+    width: 240px !important;
+    border-radius: 25px !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #4285F4 !important;
+    background-color: #fff !important;
+    border: thin solid #888 !important;
+    font-size: 16px !important;
+    transition: background-color .218s, border-color .218s, box-shadow .218s !important;
+    margin-left: 75px;
+}
+
+.my-google-btn:hover {
+    box-shadow: 0 0 3px 3px rgba(66,133,244,.3) !important;
+    transition: background-color .218s, border-color .218s, box-shadow .218s !important;
+}
+
+.my-google-btn .google-icon-wrapper {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.my-google-btn .google-icon {
+    width: 36px !important;
+    height: 36px !important;
+    margin-left: 10px !important;
+}
+
+.my-google-btn .btn-text {
+    font-size: 14px !important;
+    letter-spacing: .2px !important;
+    font-weight: 500 !important;
+    padding: 0 15px 0 0 !important;
+}
+
 /********** INDEX **********/
 
 .colorIndex {
@@ -902,6 +947,24 @@ ui-input-text input,
     width: 2000px;
 
 
+}
+
+
+.custom-hr {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+}
+
+.custom-hr hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #888;
+}
+
+.custom-hr span {
+    padding: 0 10px;
 }
 
 .titulosprofile {

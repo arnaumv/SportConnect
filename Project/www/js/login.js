@@ -25,6 +25,21 @@ $(document).on('pagecreate', function() {
         }
     });
 
+    $('#btnGoogleLogin').on('click', function() {
+        window.plugins.googleplus.login(
+            {
+                'webClientId': '1038434820629-qd7sap5g4topbpfto2pcn1ntvstqcj01.apps.googleusercontent.com',
+                'offline': true,
+            },
+            function (obj) {
+                console.log(JSON.stringify(obj)); // Haz algo útil en lugar de solo registrar
+            },
+            function (msg) {
+                console.error('error: ' + msg);
+            }
+        );
+    });
+
     $('.formLogin #btnSubmit').on('click', function() {
         console.log("El botón ha sido presionado");
 

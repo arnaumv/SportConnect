@@ -20,10 +20,18 @@
     "platforms": [
       "browser",
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "1038434820629-qd7sap5g4topbpfto2pcn1ntvstqcj01.apps.googleusercontent.com",
+        "WEB_APPLICATION_CLIENT_ID": "1038434820629-qd7sap5g4topbpfto2pcn1ntvstqcj01.apps.googleusercontent.com",
+        "PLAY_SERVICES_VERSION": "15.0.1"
+      }
+    }
   },
   "dependencies": {
     "cordova-jquery": "^0.1.6",
+    "cordova-plugin-googleplus": "8.5.2",
     "jquery": "^3.7.1"
   }
 }
