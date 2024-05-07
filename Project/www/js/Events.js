@@ -56,10 +56,15 @@ $(document).on('pagecreate', function(){
         var eventsList = $('.events-list');
         eventsList.empty(); // Limpiar la lista antes de agregar los eventos
           // Verificar si la lista de eventos está vacía
-    if (eventos.length === 0) {
-        eventsList.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
-        return;
-    }
+          // Ordenar los eventos de más reciente a más antiguo
+        eventos.sort(function(a, b) {
+            var dateA = new Date(a.date), dateB = new Date(b.date);
+            return dateA - dateB;
+        });
+        if (eventos.length === 0) {
+            eventsList.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
+            return;
+        }
         // Agregar eventos al DOM
         eventos.forEach(function(evento) {
             var storedUsername = localStorage.getItem('username');
