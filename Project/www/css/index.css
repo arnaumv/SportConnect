@@ -879,10 +879,15 @@ ui-input-text input,
     /* filter: invert(1); */
     margin-left: -13px;
 
-
-
 }
 
+.flecha-izquierda-EditProfile {
+    width: 34px !important;
+    height: 25px;
+    filter: invert(1);
+    margin-left: -13px;
+
+}
 .events-section h3 {
     font-size: 1.5em;
     font-weight: lighter;

@@ -202,16 +202,18 @@ $(document).on('pagecreate', function(){
         // Get the events from the localStorage
         var eventos = JSON.parse(localStorage.getItem('eventos'));
 
-        // Filter the events by the selected date
-        var filteredEvents = eventos.filter(function(evento) {
-            return evento.date === selectedDate;
-        });
+        if (selectedDate) {
+            // Filter the events by the selected date
+            var filteredEvents = eventos.filter(function(evento) {
+                return evento.date === selectedDate;
+            });
 
-        // Show the filtered events
-        mostrarEventos(filteredEvents);
-
-         // Verificar si hay algún evento visible después de aplicar el filtro
-  
+            // Show the filtered events
+            mostrarEventos(filteredEvents);
+        } else {
+            // If no date is selected, show all events
+            mostrarEventos(eventos);
+        }
 
         // Hide the date filter div
         $('#filterDateDiv').slideToggle();
