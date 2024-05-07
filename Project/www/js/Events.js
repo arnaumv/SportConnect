@@ -207,16 +207,28 @@ $(document).on('pagecreate', function(){
         $('#filterDateDiv').slideToggle();
     });
 
-    // Add location search button click event
+    // Cargar los datos de ubicación del archivo JSON
+    $.getJSON('ubicacion.json', function(data) {
+        var availableLocations = $.map(data.locations, function(location) {
+            return location['nombre de ubicacion'];
+        });
+
+        // Configurar el autocompletado para el campo de búsqueda de ubicación
+        $('#locationSearch').autocomplete({
+            source: availableLocations
+        });
+    });
+
+    // Agregar evento de clic al botón de búsqueda de ubicación
     $('#locationSearchButton').on('click', function() {
         var location = $('#locationSearch').val();
         llamadaAjax(location);
     }); 
 
-    // Add input event handler to location search field
+    // Agregar controlador de eventos de entrada al campo de búsqueda de ubicación
     $('#locationSearch').on('input', function() {
         if ($(this).val() === '') {
-            // The search field is empty, reload all events
+            // El campo de búsqueda está vacío, recargar todos los eventos
             llamadaAjax();
         }
     });
