@@ -2200,7 +2200,6 @@ html #customDateFilter {
 
 
 
-
 .notification-icon-Chat{
     width: 30px;
   height: 30px;
@@ -2729,4 +2728,33 @@ span.error {
 
 #redessociales2 #img-instagram2{
     width: 36px; /* Ancho deseado para las imágenes */
+}
+
+
+
+/* Estilizar el contenedor del menú de autocompletado */
+.ui-autocomplete {
+    background-color: white !important;
+    border: 1px solid #c5c5c5 !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    width: 350px !important; /* Ajusta este valor a tu preferencia */
+    border-radius: 10px !important;
+    
+}
+
+/* Estilizar los elementos individuales del menú de autocompletado */
+.ui-menu-item {
+    padding: 5px 10px !important;
+    border-bottom: 1px solid #c5c5c5c7 !important; /* Añade una línea separadora */
+
+    
+}
+
+/* Estilizar el elemento del menú de autocompletado que está actualmente seleccionado o resaltado */
+.ui-menu-item.ui-state-focus {
+    background-color: #c5c5c5 !important;
+    color: white !important;
+     
 }
