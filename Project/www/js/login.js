@@ -25,42 +25,42 @@ $(document).on('pagecreate', function() {
         }
     });
 
-    // $('#btnGoogleLogin').on('click', function() {
-    //     window.plugins.googleplus.login(
-    //         {
-    //             'webClientId': '1038434820629-qd7sap5g4topbpfto2pcn1ntvstqcj01.apps.googleusercontent.com',
-    //             'offline': true,
-    //         },
-    //         function (obj) {
-    //             // Enviar el token de acceso a tu servidor para autenticar al usuario
-    //             $.ajax({
-    //                 url: 'http://127.0.0.1:8000/rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
-    //                 method: 'POST',
-    //                 contentType: 'application/json',
-    //                 data: JSON.stringify({
-    //                     access_token: obj.access_token
-    //                 }),
-    //                 success: function(data) {
-    //                     console.log('Login successful:', data);
-    //                     // Guarda los tokens y el correo electrónico en el almacenamiento local del navegador
-    //                     localStorage.setItem('refreshToken', data.refresh);
-    //                     localStorage.setItem('accessToken', data.access);
-    //                     localStorage.setItem('email', obj.email);
-    //                     localStorage.setItem('username', data.username); // Asegúrate de que tu API devuelva el nombre de usuario
+    $('#btnGoogleLogin').on('click', function() {
+        window.plugins.googleplus.login(
+            {
+                'webClientId': '1038434820629-rk4fbglu4h47b7045qcudod0jq1ct56l.apps.googleusercontent.com', // Nuevo ID de cliente
+                'offline': true,
+            },
+            function (obj) {
+                // Enviar el token de acceso a tu servidor para autenticar al usuario
+                $.ajax({
+                    url: 'https://sportconnect.ieti.site/rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        access_token: obj.access_token
+                    }),
+                    success: function(data) {
+                        console.log('Login successful:', data);
+                        // Guarda los tokens y el correo electrónico en el almacenamiento local del navegador
+                        localStorage.setItem('refreshToken', data.refresh);
+                        localStorage.setItem('accessToken', data.access);
+                        localStorage.setItem('email', obj.email);
+                        localStorage.setItem('username', data.username); // Asegúrate de que tu API devuelva el nombre de usuario
     
-    //                     window.location.href = 'landingpage.html';
-    //                 },
-    //                 error: function(error) {
-    //                     console.error('Error:', error);
-    //                     showPopup("Correo electrónico o contraseña incorrectos");
-    //                 }
-    //             });
-    //         },
-    //         function (msg) {
-    //             console.error('error: ' + msg);
-    //         }
-    //     );
-    // });
+                        window.location.href = 'landingpage.html';
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
+                        showPopup("Correo electrónico o contraseña incorrectos");
+                    }
+                });
+            },
+            function (msg) {
+                console.error('error: ' + msg);
+            }
+        );
+    });
 
     $('.formLogin #btnSubmit').on('click', function() {
         console.log("El botón ha sido presionado");
