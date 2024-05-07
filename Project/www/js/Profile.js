@@ -38,6 +38,14 @@ function onDeviceReady() {
     });
 
 }
+// Definir la función verEvento
+function verEvento(eventId) {
+    // Actualizar el localStorage con el nuevo eventId
+    localStorage.setItem("selectedEventId", eventId);
+    // Redirigir a la página InfoEvent.html
+    window.location.href = 'InfoEvent.html';
+}
+
 $(document).ready(function () {
     $("active-events-btn").addClass("active");
     // Obtener el nombre de usuario desde el localStorage
@@ -57,7 +65,7 @@ $(document).ready(function () {
 
         // Realizar una consulta AJAX para obtener los eventos del usuario
         $.ajax({
-            url: "https://sportconnect.ieti.site/events/user_subscribed_events/?username=" + username,
+            url: "http://127.0.0.1:8000/events/user_subscribed_events/?username=" + username,
             type: "GET",
             success: function (eventos) {
                 eventos.forEach(function (evento) {
@@ -87,8 +95,6 @@ $(document).ready(function () {
 
     // Agregar evento al DOM
     function agregarEvento(evento) {
-        
-
         console.log("añadirlos");
         var currentDate = Date.now();
         var eventDate = new Date(evento.date).getTime();
@@ -99,11 +105,12 @@ $(document).ready(function () {
         eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
         // Add "View" button for active events
         if (eventDate >= currentDate) {
-            eventHtml += '<button class="join-btn-profile" onclick="window.location.href=\'InfoEvent.html?eventId=' + evento.id + '\'">Ver</button>';
+            eventHtml += '<button class="join-btn-profile" onclick="verEvento(' + evento.id + ')">Ver</button>';
         }
         eventHtml += '</div>';
         $('.events-list').append(eventHtml);
     }
+
 
 
     // Manejar clic en botón "Activos"
