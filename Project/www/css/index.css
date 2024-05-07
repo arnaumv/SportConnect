@@ -2184,18 +2184,23 @@ html #customDateFilter {
     margin-left: 20%;
     text-shadow: none;
 }
-
-.notification-icon-InfoEvents{
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  margin-bottom: 900px;
-  margin-top: -432px;
-
+.notification-icon-InfoEvents {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    /* top: 50%; */
+    /* right: 20px; */
+    /* transform: translateY(-50%); */
+    /* margin-bottom: 900px; */
+    /* margin-top: -432px; */
+    margin-left: 140px;
+    margin-top: -13px;
 }
+
+
+
+
+
 .notification-icon-Chat{
     width: 30px;
   height: 30px;
