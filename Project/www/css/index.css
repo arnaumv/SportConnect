@@ -885,7 +885,7 @@ ui-input-text input,
     width: 34px !important;
     height: 25px;
     filter: invert(1);
-    margin-left: -13px;
+    margin-left: -23px;
 
 }
 .events-section h3 {
@@ -2206,7 +2206,7 @@ html #customDateFilter {
     /* transform: translateY(-50%); */
     /* margin-bottom: 900px; */
     /* margin-top: -432px; */
-    margin-left: 130px;
+    margin-left: 128px;
     margin-top: -15px;
 }
 
