@@ -2013,16 +2013,15 @@ element.style {
 /* Clase personalizada para el div de filtrar por fecha*/
 
 html #customDateFilter {
-    background-color: #0000004a !important;
+    background-color: #00000057 !important;
     border-color: #000000d6 !important;
     color: #000000 !important;
     text-shadow: none !important;
     height: 35px;
-    /* width: 255px; */
     margin-bottom: 25px;
-    /* margin-left: -0px; */
     margin-right: 200px !important;
-}
+    margin-left: 110px;
+  }
 
 .ui-shadow-inset {
     -moz-box-shadow: none !important;
@@ -2032,17 +2031,17 @@ html #customDateFilter {
 #customDateFilter {
     margin-left: 50px;
     background-color: #a9a9a947;
-    width: 250px;
+    width: 200px;
 }
 
 .imgDateFilter {
     position: absolute;
     width: 25px;
     height: 25px;
-    margin-left: 100px;
-    margin-top: 13px;
+    margin-left: 288px;
+    margin-top: 9px;
     pointer-events: none;
-}
+  }
 
 .imgDateNewuser {
     position: absolute;

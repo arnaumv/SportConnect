@@ -29,7 +29,7 @@ $(document).on('pagecreate', function(){
     function llamadaAjax(location){
         // Hacer una solicitud AJAX para obtener los eventos
         $.ajax({
-            url: 'http://127.0.0.1:8000/event-filter/',  // URL de tu API
+            url: 'https://sportconnect.ieti.site/event-filter/',  // URL de tu API
             type: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ $(document).on('pagecreate', function(){
             var storedUsername = localStorage.getItem('username');
             console.log("borrar evento: "+ eventIdBorrar+ "por: "+ storedUsername);
             $.ajax({
-                url: 'http://127.0.0.1:8000/delete_event/',
+                url: 'https://sportconnect.ieti.site/delete_event/',
                 type: 'POST',
                 dataType: 'json',
                 data: {
