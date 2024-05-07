@@ -1613,12 +1613,13 @@ label[for="profile-image-upload"].custom-label {
 
 #my-label-id.my-label {
     font-weight: normal !important;
-    font-size: medium !important;
+    font-size: 17px !important;
     color: black !important;
     margin-left: 0 !important;
     text-align: start !important;
     /* margin-block: -2px !important; */
     margin-left: 15px !important;
+    margin-top: 2px;
 }
 
 
@@ -2023,15 +2024,15 @@ element.style {
 /* Clase personalizada para el div de filtrar por fecha*/
 
 html #customDateFilter {
-    background-color: #00000057 !important;
-    border-color: #000000d6 !important;
-    color: #000000 !important;
+    background-color: #7777772e !important;
+    border-color: #9f9f9fd6 !important;
+    color: #0e0e0e !important;
     text-shadow: none !important;
     height: 35px;
     margin-bottom: 25px;
     margin-right: 200px !important;
     margin-left: 110px;
-  }
+}
 
 .ui-shadow-inset {
     -moz-box-shadow: none !important;
@@ -2042,6 +2043,7 @@ html #customDateFilter {
     margin-left: 50px;
     background-color: #a9a9a947;
     width: 200px;
+    border-radius: 11px;
 }
 
 .imgDateFilter {
@@ -2754,7 +2756,7 @@ span.error {
     max-height: 200px !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    width: 350px !important; /* Ajusta este valor a tu preferencia */
+    width: 370px !important; /* Ajusta este valor a tu preferencia */
     border-radius: 10px !important;
     
 }

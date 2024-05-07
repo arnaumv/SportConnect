@@ -18,10 +18,14 @@ $(document).ready(function () {
     },
     success: function (evento) {
       console.log('AJAX request succeeded');
+      // Convertir la fecha a formato 'dd-mm-yyyy'
+      var date = new Date(evento.date);
+      var formattedDate = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getFullYear();
+
       // Actualizar el HTML de la página con la información del evento
       $('.evento img').attr('src', evento.image_path);
       $('.evento h2').text(evento.title);
-      $('.evento p').first().text('Fecha: ' + evento.date);
+      $('.evento p').first().text('Fecha: ' + formattedDate);  // Usar la fecha formateada
       $('.evento p').eq(1).text('Actividad: ' + evento.sport); // Usamos eq(1) para seleccionar el segundo párrafo
       $('.evento p').last().text('Descripción:' + evento.description);
 

@@ -84,8 +84,8 @@ $(document).on('pagecreate', function() {
         // Si no hay errores, enviar los datos
         if(!hasErrors){
             $.ajax({
-                // url: 'https://sportconnect.ieti.site/login/',
-                url: 'http://127.0.0.1:8000/login/',
+                url: 'https://sportconnect.ieti.site/login/',
+                // url: 'http://127.0.0.1:8000/login/',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({

@@ -69,10 +69,14 @@ $(document).on('pagecreate', function(){
         eventos.forEach(function(evento) {
             var storedUsername = localStorage.getItem('username');
 
+             // Convertir la fecha a formato 'dd-mm-yyyy'
+            var date = new Date(evento.date);
+            var formattedDate = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getFullYear();
+
             var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
             eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
             eventHtml += '<h2>' + evento.title + '</h2>';
-            eventHtml += '<p>Fecha: ' + evento.date + '</p>';
+            eventHtml += '<p>Fecha: ' + formattedDate + '</p>';  // Usar la fecha formateada
             eventHtml += '<p>Actividad: ' + evento.sport + '</p>';
             eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
             if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
