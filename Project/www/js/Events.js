@@ -186,6 +186,11 @@ $(document).on('pagecreate', function(){
             $('#filterDateButton').text(selectedDate);
         } else {
             $('#filterDateButton').text('Fecha ▼');
+             // Get all events from the localStorage
+            var eventos = JSON.parse(localStorage.getItem('eventos'));
+
+            // Show all events
+            mostrarEventos(eventos);
         }
     });
 

@@ -34,7 +34,7 @@ $(document).on('pagecreate', function() {
         if (!hasErrors) {
             // Check if the email exists in the User table
             $.ajax({
-                url: 'http://127.0.0.1:8000/check_email/',  // URL of the view that checks if the email exists
+                url: 'https://sportconnect.ieti.site/check_email/',  // URL of the view that checks if the email exists
                 method: 'POST',
                 data: {
                     email: email,
@@ -43,7 +43,7 @@ $(document).on('pagecreate', function() {
                     if (response.exists) {
                         // If the email exists, send the password reset email
                         $.ajax({
-                            url: 'http://127.0.0.1:8000/reset_password/',  // URL of the view that sends the email
+                            url: 'https://sportconnect.ieti.site/reset_password/',  // URL of the view that sends the email
                             method: 'POST',
                             data: {
                                 email: email,
