@@ -1070,7 +1070,7 @@ ui-input-text input,
     border: none;
     padding: 10px;
     width: 50px;
-   /* margin-left: 130px; */
+    margin-left: -30px; 
     height: 40px;
     margin-top: -1px;
     box-shadow: none;
@@ -1612,7 +1612,8 @@ label[for="profile-image-upload"].custom-label {
     color: black !important;
     margin-left: 0 !important;
     text-align: start !important;
-    margin-block: -2px !important;
+    /* margin-block: -2px !important; */
+    margin-left: 15px !important;
 }
 
 
@@ -2016,9 +2017,10 @@ html #customDateFilter {
     color: #000000 !important;
     text-shadow: none !important;
     height: 35px;
-    width: 255px;
+    /* width: 255px; */
     margin-bottom: 25px;
-    margin-left: 90px;
+    /* margin-left: -0px; */
+    margin-right: 200px !important;
 }
 
 .ui-shadow-inset {
@@ -2027,7 +2029,7 @@ html #customDateFilter {
 }
 
 #customDateFilter {
-    margin-left: 80px;
+    margin-left: 50px;
     background-color: #a9a9a947;
     width: 250px;
 }
@@ -2306,13 +2308,13 @@ html #customDateFilter {
 .btnCancelar {
     display: inline-block;
     padding: 10px 20px !important;
-    background-color: rgb(221, 43, 43) !important;
+    background-color: rgb(59 150 223) !important;
     color: #ffffff !important;
     text-decoration: none !important;
     border-radius: 25px !important;
     font-weight: bold !important;
     text-shadow: none !important;
-    width: 83% !important;
+   /* width: 83% !important; */
 }
 
 /* Css Errores formularios */
@@ -2757,4 +2759,64 @@ span.error {
     background-color: #c5c5c5 !important;
     color: white !important;
      
+}
+
+
+
+
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+    border: 1px solid #c5c5c500 !important; 
+    background: #f6f6f600 !important; 
+    font-weight: normal !important;
+    /* color: #454545 !important; */
+    /* MARGIN-LEFT: 12PX !important; */
+}
+
+
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+    /* border: 1px solid #003eff !important; */
+    /* background: #007fff !important; */
+    font-weight: normal !important;
+    color: #ffffff !important;
+}
+
+.ui-button {
+    padding: .4em 1em !important;
+    /*display: inline-block !important;*/
+    position: relative !important;
+    /* line-height: normal !important; */
+    /* MARGIN-LEFT: 20PX !important; */
+    margin-right: .1em !important;
+    cursor: pointer !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    overflow: visible !important;
+}
+
+
+.ui-input-text input, .ui-input-search input {
+    margin: 0;
+    min-height: 2.2em;
+    text-align: left;
+    border: 0;
+    background: transparent none; 
+    -webkit-appearance: none;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    width: 330px !important;
 }
