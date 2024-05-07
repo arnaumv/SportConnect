@@ -1862,7 +1862,8 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ebebeb !important;
+   /* background-color: #ebebeb !important;*/
+    background-color: #f5f5f5 !important;
 }
 
 
@@ -2734,6 +2735,8 @@ span.error {
 
 
 
+/* ESTILOS JQUERY UI*/
+
 /* Estilizar el contenedor del menú de autocompletado */
 .ui-autocomplete {
     background-color: white !important;
@@ -2819,4 +2822,11 @@ a.ui-button:active,
     -webkit-border-radius: inherit;
     border-radius: inherit;
     width: 330px !important;
+}
+
+
+.ui-checkboxradio-label .ui-icon-background {
+    box-shadow: inset 0px 0px 10px #b9b9b9 !important;
+    border-radius: .12em;
+    border: none;
 }
