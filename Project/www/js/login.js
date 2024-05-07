@@ -1,25 +1,8 @@
 console.log('login.js loaded');
 $(document).on('pagecreate', function() {
 
-   /*  //Movilidad entre paginas
-    $('#landingpage').on('click', function() {
-        window.location.href = 'landingpage.html';
-    });
-
-    $('#create').on('click', function() {
-        window.location.href = 'Create.html';
-    });
-
-    $('#events').on('click', function() {
-        window.location.href = 'Events.html';
-    });
-
-    $('#profile').on('click', function() {
-        window.location.href = 'Profile.html';
-    }); */
-    
     // Validación del nombre de usuario mientras se está escribiendo y al perder el foco
-    $('.formLogin #username').on('input focusout', function() {
+    $('.formLogin #email').on('input focusout', function() {
         var username = $(this).val().trim();
         if(username === ''){
             $('#error_username').text('Por favor, introduce tu nombre de usuario');
@@ -42,13 +25,53 @@ $(document).on('pagecreate', function() {
         }
     });
 
+    $('#btnGoogleLogin').on('click', function() {
+        window.plugins.googleplus.login(
+            {
+                'webClientId': '1038434820629-qd7sap5g4topbpfto2pcn1ntvstqcj01.apps.googleusercontent.com',
+                'offline': true,
+            },
+            function (obj) {
+                // Enviar el token de acceso a tu servidor para autenticar al usuario
+                $.ajax({
+                    url: 'https://sportconnect.ieti.site/rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        access_token: obj.access_token
+                    }),
+                    success: function(data) {
+                        console.log('Login successful:', data);
+                        // Guarda los tokens y el correo electrónico en el almacenamiento local del navegador
+                        localStorage.setItem('refreshToken', data.refresh);
+                        localStorage.setItem('accessToken', data.access);
+                        localStorage.setItem('email', obj.email);
+                        localStorage.setItem('username', data.username); // Asegúrate de que tu API devuelva el nombre de usuario
+    
+                        window.location.href = 'landingpage.html';
+                    },
+                    error: function(error) {
+                        console.error('Error:', error);
+                        showPopup("Correo electrónico o contraseña incorrectos");
+                    }
+                });
+            },
+            function (msg) {
+                console.error('error: ' + msg);
+            }
+        );
+    });
+
     $('.formLogin #btnSubmit').on('click', function() {
         console.log("El botón ha sido presionado");
 
+        // Mostrar indicador de carga
+        $('#loader').show();
+
         // Obtener los valores de los campos del formulario
-        var username = $('.formLogin #username').val().trim();
+        var email = $('.formLogin #email').val().trim();
         var password = $('.formLogin #password').val().trim();
-        console.log(username, password);
+        console.log(email, password);
 
         // Variable para verificar si hay errores
         var hasErrors = false;
@@ -65,30 +88,38 @@ $(document).on('pagecreate', function() {
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    username: username,
+                    email: email,
                     password: password
                 }),
                 success: function(data) {
                     console.log('Login successful:', data);
-                    // Guarda los tokens y el nombre de usuario en el almacenamiento local del navegador
+                    // Guarda los tokens y el correo electrónico en el almacenamiento local del navegador
                     localStorage.setItem('refreshToken', data.refresh);
                     localStorage.setItem('accessToken', data.access);
-                    localStorage.setItem('username', username);
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('username', data.username); // Asegúrate de que tu API devuelva el nombre de usuario
+
 
                     window.location.href = 'landingpage.html';
+
+                    // Ocultar indicador de carga después de completar la solicitud
+                    $('#loader').hide();
 
                     //showPopup2(data.message);
 
                 },
                 error: function(error) {
                     //console.log('Error:', error);
-                    showPopup("Nombre de usuario o contraseña incorectos");
+                    showPopup("Correo electrónico o contraseña incorrectos");
+                    // Ocultar indicador de carga en caso de error
+                    $('#loader').hide();
                 }
             });
         } else {
             //console.log('Hubo un error al iniciar sesión');                    
             showPopup('Hubo un error al iniciar sesión');
-
+            // Ocultar indicador de carga en caso de error
+            $('#loader').hide();
         }
     });
 });

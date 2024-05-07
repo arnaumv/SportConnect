@@ -30,10 +30,28 @@
 				margin: 5px !important;
 				position: relative !important;
 		}
+		/* Estilos para el indicador de carga */
+        #loader {
+            position: fixed;
+            z-index: 9999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #loader img {
+            width: 50px;
+            height: 50px;
+        }
 		</style>
         <title>Sport Connect - Create User</title>
     </head>
     <body>
+
+		<!-- Indicador de carga -->
+		<div id="loader" style="display: none;">
+			<img src="./img/Login/cargando.gif" alt="Cargando...">
+		</div>
+
 		<!-- PAGE CREATE -->
 		<div data-role="page" >
 			<div class="headerNewUser">
@@ -70,9 +88,10 @@
 				
 					<label class="labelBirthdate" for="birthdate">Fecha de nacimiento:</label>
 					<input type="date" id="birthdate" placeholder="Fecha de Nacimiento">
+					<img src="./img/index/fecha.png" alt="Descripción de la imagen" class="imgDateNewuser">
 					<span class="error" id="error_birthdate"></span><br><br>
-				
-					<button id="btnSubmit">Crear una cuenta</button>
+									
+					<button id="btnSubmitRegister">Crear una cuenta</button>
 				</div>
 				
 

@@ -18,6 +18,51 @@ body label.ui-btn {
     border-style: none !important;
 }
 
+.my-google-btn {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .25) !important;
+    cursor: pointer !important;
+    height: 50px !important;
+    width: 240px !important;
+    border-radius: 25px !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #4285F4 !important;
+    background-color: #fff !important;
+    border: thin solid #888 !important;
+    font-size: 16px !important;
+    transition: background-color .218s, border-color .218s, box-shadow .218s !important;
+    margin-left: 75px;
+}
+
+.my-google-btn:hover {
+    box-shadow: 0 0 3px 3px rgba(66,133,244,.3) !important;
+    transition: background-color .218s, border-color .218s, box-shadow .218s !important;
+}
+
+.my-google-btn .google-icon-wrapper {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.my-google-btn .google-icon {
+    width: 36px !important;
+    height: 36px !important;
+    margin-left: 10px !important;
+}
+
+.my-google-btn .btn-text {
+    font-size: 14px !important;
+    letter-spacing: .2px !important;
+    font-weight: 500 !important;
+    padding: 0 15px 0 0 !important;
+}
+
 /********** INDEX **********/
 
 .colorIndex {
@@ -120,27 +165,22 @@ body label.ui-btn {
     margin-left: -10px;
   }
 
-.headerIndex h1 {
+  .headerIndex h1 {
     margin: 0;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    /* Añadido la fuente Roboto */
+    /* font-family: 'Roboto', sans-serif; */
     font-size: 24px;
-    /* Aumentado el tamaño de la fuente para mayor impacto */
     font-weight: 545;
-    /* Aumentado el peso de la fuente para un aspecto más audaz */
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Aumentado el espaciado de las letras para una mejor legibilidad */
     line-height: 1.5;
-    /* Ajustado el interlineado para una mejor legibilidad */
     margin-top: 6px;
     font-stretch: normal;
-    /* Cambiado a normal para evitar la distorsión de la fuente */
     height: 40px;
-    /* Añadido altura a la letra */
     margin-left: 25px;
-}
+    font-family: revert;
+    text-shadow: none;
+  }
 
 /* map */
 
@@ -217,13 +257,14 @@ body label.ui-btn {
     background-color: #f9f9f9;
     padding-left: 15px;
     position: relative;
+    height: 10px;
 }
 
 .headerNewUser .header-flecha {
-    width: 37px;
-    height: 37px;
+    width: 34px;
+    height: 35px;
     margin-right: 45px;
-
+    margin-top: 10px;
 }
 
 .headerNewUser h1 {
@@ -380,6 +421,7 @@ h2 {
     text-align: left;
     margin-left: 13px;
     color: black;
+    font-family: sans-serif;
 }
 
 h3 {
@@ -506,7 +548,7 @@ p {
     border-radius: 25px !important;
     display: inline-block;
     padding: 10px 20px !important;
-    color: #000 !important;
+    color: #fff !important;
     text-decoration: none !important;
     font-weight: bold !important;
     text-shadow: none !important;
@@ -559,7 +601,7 @@ ui-input-text input,
     border-radius: 25px !important;
     display: inline-block;
     padding: 10px 20px !important;
-    color: #000 !important;
+    color: #fff !important;
     text-decoration: none !important;
     font-weight: bold !important;
     text-shadow: none !important;
@@ -567,13 +609,30 @@ ui-input-text input,
 }
 
 #btnSubmit {
-    background-color: rgb(43, 165, 221);
+    background-color: rgb(71 196 253 / 89%);
     text-shadow: none;
     border-radius: 25px;
-    margin-top: -5px;
-    /* Ajusta este valor para cambiar cuánto quieres que se redondeen los bordes */
-}
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 16px;
+    width: 300px;
+    margin-left: 45px;
+    font-family: revert;
 
+}
+#btnSubmitRegister {
+    background-color: rgb(113 121 125);
+    text-shadow: none;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: -5px;
+    color: white;
+    width: 300px;
+    margin-left: 45px;
+    font-family: revert;
+
+}
 #btnEnviarMail {
     background-color: rgb(202 203 203);
     text-shadow: none;
@@ -642,7 +701,7 @@ ui-input-text input,
     display: flex;
     align-items: center;
     padding: 13px;
-    background-color: #f0eded !important;
+    background-color: #f0eded00 !important;
     padding-left: 25px;
     position: relative;
     height: 25px;
@@ -698,12 +757,46 @@ ui-input-text input,
 }
 
 .profile-container-2 {
-    display: flex;
+   /* display: flex; */
     align-items: center;
     padding: 15px;
     border-radius: 15px;
 }
 
+.profile-container-3 {
+    display: flex; 
+     align-items: center;
+     padding: 15px;
+     border-radius: 15px;
+ }
+
+.profile-container-4 {
+    /* display: flex; */
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    /* margin-top: 200px;*/
+    margin-left: -30px; 
+}
+
+.aboutme {
+   /* background-color: white;*/
+    border-radius: 10px;
+    margin-top: -30px;
+}
+.titulosprofile2 {
+    font-weight: bold !important;
+    color: black !important;
+    font-family: 'Roboto', sans-serif;
+    margin-left: -230px;
+    margin-top: -20px;
+}
+
+.titulosprofile1 {
+    font-weight: bold !important;
+    color: black !important;
+    font-family: 'Roboto', sans-serif;
+}
 
 .profile-image img {
     width: 100px;
@@ -714,8 +807,12 @@ ui-input-text input,
     border: 2px solid #007bff;
 }
 
-.profile-image-2 {
-    margin-right: 15px; /* Ajusta el margen derecho según sea necesario */
+
+.profile-image-2 img {
+    width: 80px;
+    height: 80px;
+    /* margin-right: 15px; */
+    margin-left: -10px;
 }
 
 .profile-info {
@@ -728,6 +825,8 @@ ui-input-text input,
     font-size: 18px;
     margin-bottom: 5px;
     margin-left: 0;
+    font-family: inherit;
+    font-weight: revert-layer;
 }
 
 .profile-info p {
@@ -738,7 +837,9 @@ ui-input-text input,
 
 .profile-info-2 {
     text-align: left;
-    margin-left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+    margin-left: 20px;
+    margin-top: -20px;
+    font-family: inherit;
 }
 
 .profile-info-2 h2 {
@@ -754,6 +855,7 @@ ui-input-text input,
     color: black;
     margin-bottom: 10px;
     margin-left: 0px;
+    margin-top: 1px;
 
 }
 
@@ -799,6 +901,9 @@ ui-input-text input,
     text-align: left;
     margin-left: 25px;
 }
+.minidecriptionContainer{
+
+}
 
 .events-buttons-Profile .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
     background-color: #f6f6f6;
@@ -820,7 +925,7 @@ ui-input-text input,
 }
 
 .events-section .events-list {
-    background-color: white !important;
+    /*background-color: white !important;*/
     border-radius: 10px;
 }
 
@@ -838,9 +943,34 @@ ui-input-text input,
     margin-bottom: 25px;
 }
 
+.hrEvents  {
+    width: 2000px;
+
+
+}
+
+
+.custom-hr {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+}
+
+.custom-hr hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #888;
+}
+
+.custom-hr span {
+    padding: 0 10px;
+}
+
 .titulosprofile {
     font-weight: bold !important; /* Hace que el texto sea más grueso */
     color: black !important; /* Color más oscuro */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* 
@@ -915,6 +1045,36 @@ ui-input-text input,
 
 }
 
+.search-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    overflow: hidden;
+    height: 50px;
+    background-color: #f7f7f7;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+#locationSearch {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    margin-right: 25px;
+    width: 300px;
+  }
+#locationSearchButton {
+    background-color: #ffffff00;
+    color: #ffffff00;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 50px;
+   /* margin-left: 130px; */
+    height: 40px;
+    margin-top: -1px;
+    box-shadow: none;
+}
 
 
 
@@ -1117,6 +1277,8 @@ ui-input-text input,
     position: relative;
     margin-bottom: 20px;
 }
+
+
 
 .custom-input input {
     width: 100%;
@@ -1669,17 +1831,27 @@ body:has(.ui-content.events-page) {
     overflow-x: hidden;
     padding: 1em;
     
-    background-color: #d9d9d9b0 !important;
-   /* background-color: #d9d9d93b !important;*/
-    /* Add your custom styles here */
+   /* background-color: #d9d9d9b0 !important;*/
 }
 
 body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-   /* background-color: #ffffff00 !important;*/
-    background-color: #f0eded !important;
+    /*background-color: #e8e8e8 !important;*/
+    background-color: #ebebeb !important;
+}
+
+
+.body-infoevents .ui-overlay-a, 
+.body-infoevents .ui-page-theme-a, 
+.body-infoevents .ui-page-theme-a .ui-panel-wrapper {
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    color: #333;
+    text-shadow: 0 1px 0 #f3f3f3;
+    /*background-color: #f0eded !important;*/
+    background-color: #f0eded54 !important;
 }
 
 /*FONDO PERFILE */
@@ -1688,9 +1860,10 @@ body.events-page-body, div.events-page-div {
     display: block;
     overflow: visible;
     overflow-x: hidden;
-    /*background-color: #e5e5e5 !important;*/
-    background-color: #f0eded !important;
+    /*background-color: #e8e8e8 !important;*/
+    background-color: #ebebeb !important;
 }
+
 
 
 /* .ui-content.events-page {
@@ -1727,7 +1900,7 @@ element.style {
     display: none;
     position: fixed;
     bottom: 0;
-    width: 433px;
+    width: 425px;
     height: 70%;
     background-color: #ffffff;
     margin-left: -18px;
@@ -1740,7 +1913,7 @@ element.style {
     position: fixed;
     bottom: 0;
     width: 420px;
-    height: 35%;
+    height: 43%;
     background-color: #ffffff;
     margin-left: -18px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 35%);
@@ -1835,47 +2008,73 @@ element.style {
     height: 40px;
 } */
 
+/* Clase personalizada para el div de filtrar por fecha*/
 
-.customDateFilterClass {
-    background-color: #f7f7f700 !important;
-    border-color: #fbfbfb00 !important;
+html #customDateFilter {
+    background-color: #0000004a !important;
+    border-color: #000000d6 !important;
     color: #000000 !important;
     text-shadow: none !important;
-    width: 190px !important;
-    margin-left: 91px !important;
-    height: 40px !important;
+    height: 35px;
+    width: 255px;
+    margin-bottom: 25px;
+    margin-left: 90px;
 }
+
+.ui-shadow-inset {
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
 #customDateFilter {
-    background-color: #f7f7f700 !important;
-    border-color: #fbfbfb00 !important;
-    color: #000000 !important;
-    text-shadow: none !important;
-    margin-top: 100px; /* Ajusta este valor según tus necesidades */
-}
-input#customDateFilter {
-    background-color: #b7b7b7a8 !important;
-    border-color: #00000000 !important;
-    color: #000000 !important;
-    text-shadow: none !important;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    /* margin-bottom: 60px; */
-    /* width: 290px; */
-    /* margin-left: 70px; */
+    margin-left: 80px;
+    background-color: #a9a9a947;
+    width: 250px;
 }
 
-/* #filterDateDiv.customDateFilterClass .ui-body-a,
-#filterDateDiv.customDateFilterClass .ui-page-theme-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html .ui-bar-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html .ui-body-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html body .ui-group-theme-a .ui-body-inherit,
-#filterDateDiv.customDateFilterClass html .ui-panel-page-container-a {
-    background-color: #f7f7f700 !important;
-    border-color: #fbfbfb00 !important;
-    color: #000000 !important;
-    text-shadow: none !important;
-    margin-left: 20px;
-} */
+.imgDateFilter {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 100px;
+    margin-top: 13px;
+    pointer-events: none;
+}
+
+.imgDateNewuser {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 149px;
+    margin-top: -38px;
+    pointer-events: none;
+}
+
+.imgDateCreateEvent {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-left: 159px;
+    margin-top: 8px;
+    pointer-events: none;
+}
+
+
+.imgDateCreateEventReloj {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-left: 355px;
+    margin-top: 8px;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
 
 .events-buttons button {
     padding: 6px 5px !important;
@@ -1983,6 +2182,7 @@ input#customDateFilter {
     font-stretch: expanded;
     text-align: center !important;
     margin-left: 20%;
+    text-shadow: none;
 }
 
 .notification-icon-InfoEvents{
@@ -2091,10 +2291,10 @@ input#customDateFilter {
     display: inline-block;
     padding: 10px 20px;
     background-color: rgb(43, 165, 221);
-    ;
-    color: #000;
+    width: 300px;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-weight: bold;
     text-shadow: none;
 }
@@ -2480,3 +2680,48 @@ span.error {
     z-index: 1000;
 }
 
+/* CSS LOGO REDES SOCIALES PERFIL*/
+
+#redessociales {
+    display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-left: 20px;
+    margin-bottom: -12px;
+    margin-top: -12PX;
+
+}
+
+#redessociales a {
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+#redessociales img {
+    width: 25px; /* Ancho deseado para las imágenes */
+    height: auto; /* Mantiene la proporción */
+}
+
+#redessociales #img-instagram{
+    width: 36px; /* Ancho deseado para las imágenes */
+}
+
+/* CSS LOGO REDES SOCIALES USER*/
+
+#redessociales2 {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+#redessociales2 a {
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+#redessociales2 img {
+    width: 25px; /* Ancho deseado para las imágenes */
+    height: auto; /* Mantiene la proporción */
+}
+
+#redessociales2 #img-instagram2{
+    width: 36px; /* Ancho deseado para las imágenes */
+}

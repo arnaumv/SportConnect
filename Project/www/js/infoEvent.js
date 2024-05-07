@@ -84,7 +84,7 @@ $(document).ready(function () {
             .then(data => {
               var imageUrl;
               if (data.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site' + data.image_path;
+                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
               } else {
                 imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
               }

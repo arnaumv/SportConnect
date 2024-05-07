@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "nombre de ubicacion": "C/ Miquel Roncali, Av. del Baix Llobregat",
+            "nombre de ubicacion": "C/ Miquel Roncali, Av. del Baix Llobregat, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.353403,
                 "longitude": 2.064821
@@ -21,7 +21,7 @@
         },
 
         {
-            "nombre de ubicacion": "Sampa, San Juan Despí",
+            "nombre de ubicacion": "Sampa, San Joan Despí",
             "ubicacion": {
                 "latitude": 41.365101,
                 "longitude": 2.0624128
@@ -32,7 +32,7 @@
         },
 
         {
-            "nombre de ubicacion": "La Jaula, Plaça de la Sardana",
+            "nombre de ubicacion": "La Jaula, Plaça de la Sardana, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.3512363,
                 "longitude": 2.072168
@@ -53,7 +53,7 @@
 
 
         {
-            "nombre de ubicacion": "C/ Verge de Montserrat, 48, Padel Delfos",
+            "nombre de ubicacion": "C/ Verge de Montserrat, 48, Padel Delfos, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.3484288,
                 "longitude": 2.0688359
@@ -63,7 +63,7 @@
         },
 
         {
-            "nombre de ubicacion": "C/ Verge de Montserrat, Centre Internacional de Tennis",
+            "nombre de ubicacion": "C/ Verge de Montserrat, Centre Internacional de Tennis, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.3490142,
                 "longitude": 2.0684062
@@ -83,7 +83,7 @@
         },
 
         {
-            "nombre de ubicacion": " Pg. dels Ferrocarrils Catalans, 177, Pista esportiva",
+            "nombre de ubicacion": " Pg. dels Ferrocarrils Catalans, 177, Pista esportiva, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.3531689,
                 "longitude": 2.0842169
@@ -93,7 +93,7 @@
         }, 
         
         {
-            "nombre de ubicacion": " C/ Bonavista, 70",
+            "nombre de ubicacion": " C/ Bonavista, 70, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.3559335,
                 "longitude": 2.0747592
@@ -103,7 +103,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Plaça de Josep Tarradellas",
+            "nombre de ubicacion": "Plaça de Josep Tarradellas, Cornellà de Llobregat ",
             "ubicacion": {
                 "latitude": 41.3623421,
                 "longitude": 2.0714046
@@ -123,7 +123,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Av. de Salvador Allende, 4, Pista esportiva",
+            "nombre de ubicacion": "Av. de Salvador Allende, 4, Pista esportiva, Cornellà de Llobregat ",
             "ubicacion": {
                 "latitude": 41.3571756,
                 "longitude": 2.078195
@@ -133,7 +133,7 @@
         },  
         
         {
-            "nombre de ubicacion": "Carrer del Marfull, 6, Cornellà de Llobregat",
+            "nombre de ubicacion": "C/ Marfull, 6, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.359108,
                 "longitude": 2.081566
@@ -143,7 +143,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Parque Can Mercader",
+            "nombre de ubicacion": "Parque Can Mercader, Cornellà de Llobregat",
             "ubicacion": {
                 "latitude": 41.358706,
                 "longitude": 2.0853477
@@ -153,7 +153,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Passatge dels Alps, Aurial Padel Cornellà by Marta Marrero ",
+            "nombre de ubicacion": "Passatge dels Alps, Aurial Padel Cornellà by Marta Marrero, Cornellà de Llobregat ",
             "ubicacion": {
                 "latitude": 41.356264,
                 "longitude": 2.081358
@@ -173,7 +173,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de la Fontsanta, 48,Sant Joan Despí. Soccer and Basketball Court",
+            "nombre de ubicacion": "C/ La Fontsanta, 48, Soccer and Basketball Court, Sant Joan Despí",
             "ubicacion": {
                 "latitude":41.371874,
                 "longitude": 2.074016
@@ -213,7 +213,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer Josep Bastús i Planes, 1, Sant Joan Despí, Barcelona",
+            "nombre de ubicacion": "C/ Josep Bastús i Planes, 1, Sant Joan Despí, Barcelona",
             "ubicacion": {
                 "latitude":41.3706173,
                 "longitude": 2.0525969
@@ -223,7 +223,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer Sant Martí de l'Erm, 30, Sant Joan Despí, Barcelona",
+            "nombre de ubicacion": "C/ Sant Martí de l'Erm, 30, Sant Joan Despí, Barcelona",
             "ubicacion": {
                 "latitude":41.371445,
                 "longitude": 2.069749
@@ -233,7 +233,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Maria Montessori, 4, Sant Just Desvern, Barcelona",
+            "nombre de ubicacion": "C/ de Maria Montessori, 4, Sant Just Desvern, Barcelona",
             "ubicacion": {
                 "latitude":41.389112,
                 "longitude": 2.060393
@@ -243,7 +243,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Laureà Miró, 63, Esplugues de Llobregat, Barcelona",
+            "nombre de ubicacion": "C/ Laureà Miró, 63, Esplugues de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.376118,
                 "longitude": 2.097020
@@ -263,7 +263,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer Trepaderas, 3, L'Hospitalet de Llobregat, Barcelona",
+            "nombre de ubicacion": "C/ Trepaderas, 3, L'Hospitalet de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.368098,
                 "longitude": 2.115184
@@ -293,7 +293,7 @@
         }, 
 
         {
-            "nombre de ubicacion": "Carrer del Crom, 100, L'Hospitalet de Llobregat, Barcelona",
+            "nombre de ubicacion": "C/ del Crom, 100, L'Hospitalet de Llobregat, Barcelona",
             "ubicacion": {
                 "latitude":41.3499183,
                 "longitude": 2.0984353
@@ -334,7 +334,7 @@
         }, 
         
         {
-            "nombre de ubicacion": "Carrer de Tenerife, Horta-Guinardó, 08024 Barcelona",
+            "nombre de ubicacion": "C/ Tenerife, Horta-Guinardó, 08024 Barcelona",
             "ubicacion": {
                 "latitude":41.385989,
                 "longitude": 2.101456

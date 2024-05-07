@@ -47,14 +47,27 @@ $(document).ready(function () {
 
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
-            $('#city').text(data.city);
+            $('#city').text("Ciudad: " + data.city);
+            if (data.instagram != null) {
+                // Establecer el atributo src de la imagen de Instagram
+                $('#img-instagram2').attr('src', './img/Profile/insta.webp');
+                // Envolver la imagen en un enlace
+                $('#img-instagram2').wrap('<a href="https://www.instagram.com/' + data.instagram + '" target="_blank"></a>');
+            }
+
+            if (data.twitter != null) {
+                // Establecer el atributo src de la imagen de Twitter
+                $('#img-twitter2').attr('src', './img/Profile/twitter.webp');
+                // Envolver la imagen en un enlace
+                $('#img-twitter2').wrap('<a href="https://twitter.com/' + data.twitter + '" target="_blank"></a>');
+            }
             if (data.description != null) {
                 console.log("no es null");
                 $('#miniDescription').text(data.description);
             }
             var imageUrl;
             if (data.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site' + data.image_path;
+                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
             } else {
                 imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
             }

@@ -30,11 +30,28 @@
 				margin: 5px !important;
 				position: relative !important;
 		}
+		/* Estilos para el indicador de carga */
+        #loader {
+            position: fixed;
+            z-index: 9999;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #loader img {
+            width: 45px;
+            height: 45px;
+        }
 		</style>
         <title>Sport Connect - Create User</title>
 		
     </head>
     <body >
+		<!-- Indicador de carga -->
+		<div id="loader" style="display: none;">
+			<img src="./img/Login/cargando.gif" alt="Cargando...">
+		</div>
+
 		<!-- PAGE CREATE -->
 		<div data-role="page" class="colorLogin" >
 			<div class="headerLogin">
@@ -47,12 +64,26 @@
 				<div class="loginDiv">
 					<div class="formLogin">
 						<h2>Identifícate</h2>
-						<input type="text" id="username" placeholder="Nombre de usuario" class="inputLogin">
+						<input type="text" id="email" placeholder="Correo electrónico" class="inputLogin">
 						<span class="error" id="error_username"></span><br>
 						<input type="password" id="password" placeholder="Contraseña" class="inputLogin">
 						<span class="error" id="error_password"></span><br>
 						<button id="btnSubmit">Iniciar Sesión</button>
 						<a class="toResetPassMail">¿Has olvidado la contraseña?</a><br><br>
+						<div class="custom-hr">
+							<hr>
+							<span>O</span>
+							<hr>
+						</div>
+					
+						<button id="btnGoogleLogin" class="google-btn my-google-btn">
+							<div class="google-icon-wrapper">
+								<img class="google-icon" src="./img/Login/google.png" alt="Google sign-in"/>
+							</div>
+							<p class="btn-text"><b>Iniciar sesión con Google</b></p>
+						</button>
+					
+						
 					</div>
 				</div>				
 			</div>

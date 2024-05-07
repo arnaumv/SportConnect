@@ -26,13 +26,16 @@ $(document).on('pagecreate', function(){
     });
     console.log("Heii");
     llamadaAjax();
-    function llamadaAjax(){
+    function llamadaAjax(location){
         // Hacer una solicitud AJAX para obtener los eventos
         $.ajax({
             url: 'https://sportconnect.ieti.site/event-filter/',  // URL de tu API
             type: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+            },
+            data: {
+                location: location,  // Agrega la ubicación como un parámetro de consulta
             },
             success: function(eventos) {
                 mostrarEventos(eventos);
@@ -203,6 +206,22 @@ $(document).on('pagecreate', function(){
         // Hide the date filter div
         $('#filterDateDiv').slideToggle();
     });
+
+    // Add location search button click event
+    $('#locationSearchButton').on('click', function() {
+        var location = $('#locationSearch').val();
+        llamadaAjax(location);
+    }); 
+
+    // Add input event handler to location search field
+    $('#locationSearch').on('input', function() {
+        if ($(this).val() === '') {
+            // The search field is empty, reload all events
+            llamadaAjax();
+        }
+    });
+    
+    
 
     function showPopup(message) {
         $('#popup-message').text(message);
