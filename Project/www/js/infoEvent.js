@@ -163,8 +163,8 @@ $(document).ready(function () {
     e.preventDefault();
     var username = localStorage.getItem("username");
     $.ajax({
-      // url: "https://sportconnect.ieti.site/join-event/",
-      url: "http://127.0.0.1:8000/join-event/",
+      url: "https://sportconnect.ieti.site/join-event/",
+      // url: "http://127.0.0.1:8000/join-event/",
       type: "POST",
       data: JSON.stringify({
         username: username,

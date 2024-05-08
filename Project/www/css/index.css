@@ -1175,6 +1175,7 @@ ui-input-text input,
     text-shadow: none;
     font-family: math;
     font-size: medium;
+    font-style: inherit;
 }
 
 .pFilterSport {
@@ -1838,7 +1839,7 @@ body:has(.ui-content.events-page) {
     overflow-x: hidden;
     padding: 1em;
     
-   /* background-color: #d9d9d9b0 !important;*/
+    background-color: #ffffff !important;
 }
 
 body.events-page-body, div.events-page-div {
@@ -1846,7 +1847,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ebebebb7 !important;
+    background-color: #adadad00 !important;
 }
 
 
@@ -2842,4 +2843,15 @@ a.ui-button:active,
     box-shadow: inset 0px 0px 10px #b9b9b9 !important;
     border-radius: .12em;
     border: none;
+}
+
+.pNotificationText {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    margin-top: 50px;
+    color: #000000b8;
+    text-shadow: none;
+    font-family: math;
+    font-size: medium;
+    font-family: system-ui;
 }
