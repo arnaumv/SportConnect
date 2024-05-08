@@ -1846,7 +1846,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ebebeb !important;
+    background-color: #ebebebb7 !important;
 }
 
 
@@ -2686,6 +2686,7 @@ span.error {
     float: right !important;
     /*margin-top: 10px !important;*/
     cursor: pointer;
+    margin-left: -110px;
 }
 
 
