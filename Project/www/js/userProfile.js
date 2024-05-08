@@ -83,7 +83,7 @@ $(document).ready(function () {
     // Añadir evento de clic al botón de seguir
 $('#follow-button').click(function() {
     var isFollowing = $('#follow-button').text() === 'Siguiendo';
-    var url = 'https://sportconnect.ieti.site/' + (isFollowing ? 'unfollow' : 'follow') + '/' + storedUsername + '/';
+    var url = 'http://127.0.0.1:8000/' + (isFollowing ? 'unfollow' : 'follow') + '/' + storedUsername + '/';
     var method = 'POST';  // Siempre enviar una solicitud POST
 
     // Hacer la solicitud a la API para seguir o dejar de seguir al usuario

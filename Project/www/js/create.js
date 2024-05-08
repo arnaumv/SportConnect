@@ -173,7 +173,7 @@ $('#btnEnviar').click(function(e){
 
                             // Hacer una solicitud AJAX para unirse al evento
                             $.ajax({
-                                url: 'https://sportconnect.ieti.site/join-event/',
+                                url: 'http://127.0.0.1:8000/join-event/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
