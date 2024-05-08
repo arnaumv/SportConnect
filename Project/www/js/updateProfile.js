@@ -13,9 +13,9 @@ $(document).on('pagecreate', function () {
         .then(data => {
             console.log('Data:', data);  // Imprimir los datos en la consola
 
-            localStorage.setItem('username', data.user.username);
-            $('#username').text(data.user.username);
-            $('#city').text(data.user.city);
+            localStorage.setItem('username', data.username);
+            $('#username').text(data.username);
+            $('#city').text(data.city);
             $('#followers-count').text(data.followers_count + ' seguidores');  // Mostrar el conteo de seguidores en el HTML
             $('#following-count').text(data.following_count + ' siguiendo');  // Mostrar el conteo de seguidos en el HTML
 
