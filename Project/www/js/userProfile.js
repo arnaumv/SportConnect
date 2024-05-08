@@ -81,46 +81,36 @@ $(document).ready(function () {
 
         
     // Añadir evento de clic al botón de seguir
-    $('#follow-button').click(function() {
-        var isFollowing = $('#follow-button').text() === 'Siguiendo';
-        var url = 'https://sportconnect.ieti.site/' + (isFollowing ? 'unfollow' : 'follow') + '/' + storedUsername + '/';
-        var method = 'POST';  // Siempre enviar una solicitud POST
-    
-        // Hacer la solicitud a la API para seguir o dejar de seguir al usuario
-        fetch(url, {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Cambiar el texto del botón a "Siguiendo" o "Seguir"
-            $('#follow-button').text(isFollowing ? 'Seguir' : 'Siguiendo');
-    
-            // Hacer una nueva solicitud a la API para obtener los datos actualizados del usuario
-            return fetch('https://sportconnect.ieti.site/profile/' + storedUsername + '/');
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Actualizar el número de seguidores y seguidos en la interfaz de usuario
-            $('#followers-count').text(data.followers_count);
-            $('#following-count').text(data.following_count);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+$('#follow-button').click(function() {
+    var isFollowing = $('#follow-button').text() === 'Siguiendo';
+    var url = 'https://sportconnect.ieti.site/' + (isFollowing ? 'unfollow' : 'follow') + '/' + storedUsername + '/';
+    var method = 'POST';  // Siempre enviar una solicitud POST
+
+    // Hacer la solicitud a la API para seguir o dejar de seguir al usuario
+    fetch(url, {
+        method: method,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Cambiar el texto del botón a "Siguiendo" o "Seguir"
+        $('#follow-button').text(isFollowing ? 'Seguir' : 'Siguiendo');
+
+        // Actualizar el número de seguidores y seguidos en la interfaz de usuario
+        $('#followers-count').text(data.followers_count);
+        $('#following-count').text(data.following_count);
+    })
+    .catch(error => {
+        console.error('Error:', error);
     });
+});
 
     /***   MOSTRAR EVENTO   ****/
 

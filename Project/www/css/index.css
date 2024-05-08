@@ -750,11 +750,12 @@ ui-input-text input,
 
 .profile-container {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column; */
     align-items: center;
     padding: 15px;
     border-radius: 15px;
-}
+    margin-top: -110px;
+  }
 
 .profile-container-2 {
    /* display: flex; */
@@ -818,7 +819,8 @@ ui-input-text input,
 .profile-info {
     text-align: center;
     margin-top: -15px;
-}
+    margin-left: 20px;
+  }
 
 .profile-info h2 {
     text-align: center;
@@ -2855,3 +2857,56 @@ a.ui-button:active,
     font-size: medium;
     font-family: system-ui;
 }
+
+
+.pTextSeguidores {
+    color: #000;
+}
+
+.divSeguidores {
+    color: #000;
+    text-align: left;
+    display: flex;
+    margin-top: 300px;
+    margin-left: -170px;
+    height: 60px;
+}
+
+.divSeguidores > div:not(:last-child) {
+    margin-right: 20px; /* Ajusta este valor según tus necesidades */
+    border-right: 1px solid #000; /* Añade una línea vertical a la derecha de cada div */
+    padding-right: 20px; /* Añade un poco de espacio a la derecha de cada div para separar el contenido de la línea */
+}
+
+.cantidad {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin: revert;
+      margin-left: revert;
+    margin-left: 27px;
+  }
+
+
+.cantidad1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin: revert;
+      margin-left: revert;
+    margin-left: revert;
+    margin-left: 25px;
+}
+.cantidad2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin: revert;
+      margin-left: revert;
+    margin-left: revert;
+    margin-left: revert;
+    margin-left: 18px;
+  }
