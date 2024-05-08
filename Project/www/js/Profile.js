@@ -47,23 +47,22 @@ function verEvento(eventId) {
 }
 
 $(document).ready(function () {
+    var categoriaActual = "Activos"; // Variable global para la categoría actualmente seleccionada
     $("active-events-btn").addClass("active");
-    // Obtener el nombre de usuario desde el localStorage
     var username = localStorage.getItem("username");
     if (!username) {
         console.error("Nombre de usuario no encontrado en el localStorage");
         return;
     }
 
-    // Función para mostrar eventos activos o finalizados según la categoría seleccionada
     function mostrarEventosPorCategoria(categoriaSeleccionada) {
+        categoriaActual = categoriaSeleccionada; // Actualizar la categoría actual
         var eventsList = $('.events-list');
-        eventsList.empty(); // Limpiar la lista antes de agregar los eventos
+        eventsList.empty();
         var eventosEncontrados = false;
         var eventsError = $('.eventerror');
-        eventsError.empty(); // Limpiar la lista antes de agregar los eventos
+        eventsError.empty();
 
-        // Realizar una consulta AJAX para obtener los eventos del usuario
         $.ajax({
             url: "https://sportconnect.ieti.site/events/user_subscribed_events/?username=" + username,
             type: "GET",
@@ -75,10 +74,9 @@ $(document).ready(function () {
                     if ((categoriaSeleccionada === "Activos" && eventDate >= currentDate) ||
                         (categoriaSeleccionada === "Finalizados" && eventDate < currentDate)) {
                         agregarEvento(evento);
-                        eventosEncontrados = true; // Se encontraron eventos
+                        eventosEncontrados = true;
                     }
                 });
-                // Si no se encontraron eventos, mostrar un mensaje
                 if (!eventosEncontrados) {
                     eventsError.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
                 }
@@ -88,29 +86,55 @@ $(document).ready(function () {
             }
         });
 
-        // Marcar el botón activo correspondiente
         $('.events-buttons button').removeClass('active');
         $('#' + categoriaSeleccionada.toLowerCase() + '-events-btn').addClass('active');
     }
 
-    // Agregar evento al DOM
     function agregarEvento(evento) {
-        console.log("añadirlos");
+        var storedUsername = localStorage.getItem('username');
         var currentDate = Date.now();
         var eventDate = new Date(evento.date).getTime();
+
         var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
         eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
         eventHtml += '<h2>' + evento.title + '</h2>';
         eventHtml += '<p>Fecha: ' + evento.date + '</p>';
         eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
-        // Add "View" button for active events
+
         if (eventDate >= currentDate) {
-            eventHtml += '<button class="join-btn-profile" onclick="verEvento(' + evento.id + ')">Ver</button>';
+            eventHtml += '<button class="join-btn-profile" data-event-id="' + evento.id + '" onclick="verEvento(' + evento.id + ')">Ver</button>';
         }
+
+        if (evento.creator_username.toLowerCase() == storedUsername.toLowerCase()) {
+            eventHtml += '<img class="borrarEvent" id="borrarEvent" src="img/Options/eliminarEvent.png">';
+        }
+
         eventHtml += '</div>';
         $('.events-list').append(eventHtml);
     }
 
+    $(document).on('click', '.borrarEvent', function() {
+        var eventIdBorrar = $(this).parent().find(".join-btn-profile").data("event-id"); 
+        var storedUsername = localStorage.getItem('username');
+        console.log("borrar evento: "+ eventIdBorrar+ "por: "+ storedUsername);
+        $.ajax({
+            url: 'https://sportconnect.ieti.site/delete_event/',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                username: storedUsername, 
+                event_id: eventIdBorrar
+            },
+            success: function(response) {
+                showPopup2(response.message);
+                mostrarEventosPorCategoria(categoriaActual); // Actualizar la lista de eventos
+            },
+            error: function(xhr, status, error) {
+                console.error("Error al intentar borrar el evento:", error);
+                showPopup("Error al intentar borrar el evento. Por favor, inténtalo de nuevo más tarde.");
+            }
+        });
+    });
 
 
     // Manejar clic en botón "Activos"
@@ -149,5 +173,16 @@ $(document).ready(function () {
             $('#active-events-btn').addClass('active');
             eventosCargados = true;
         }, 200);
+    }
+
+    
+    function showPopup(message) {
+        $('#popup-message').text(message);
+        $('#popup').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
+    }
+    
+    function showPopup2(message) {
+        $('#popup-message2').text(message);
+        $('#popup2').slideDown('slow').delay(5000).slideUp('slow'); // Transición más lenta
     }
 });
