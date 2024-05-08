@@ -13,29 +13,32 @@ $(document).on('pagecreate', function () {
         .then(data => {
             console.log('Data:', data);  // Imprimir los datos en la consola
 
-            localStorage.setItem('username', data.username);
-            $('#username').text(data.username);
-            $('#city').text(data.city);
-            if (data.instagram != null) {
+            localStorage.setItem('username', data.user.username);
+            $('#username').text(data.user.username);
+            $('#city').text(data.user.city);
+            $('#followers-count').text(data.followers_count + ' seguidores');  // Mostrar el conteo de seguidores en el HTML
+            $('#following-count').text(data.following_count + ' siguiendo');  // Mostrar el conteo de seguidos en el HTML
+
+            if (data.user.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram').attr('src', './img/Profile/insta.webp');
                 // Envolver la imagen en un enlace
-                $('#img-instagram').wrap('<a href="https://www.instagram.com/' + data.instagram + '" target="_blank"></a>');
+                $('#img-instagram').wrap('<a href="https://www.instagram.com/' + data.user.instagram + '" target="_blank"></a>');
             }
 
-            if (data.twitter != null) {
+            if (data.user.twitter != null) {
                 // Establecer el atributo src de la imagen de Twitter
                 $('#img-twitter').attr('src', './img/Profile/twitter.webp');
                 // Envolver la imagen en un enlace
-                $('#img-twitter').wrap('<a href="https://twitter.com/' + data.twitter + '" target="_blank"></a>');
+                $('#img-twitter').wrap('<a href="https://twitter.com/' + data.user.twitter + '" target="_blank"></a>');
             }
-            if (data.description != null) {
+            if (data.user.description != null) {
                 console.log("no es null");
-                $('#miniDescription').text(data.description);
+                $('#miniDescription').text(data.user.description);
             }
             var imageUrl;
-            if (data.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
+            if (data.user.image_path != null) {
+                imageUrl = 'https://sportconnect.ieti.site' + data.user.image_path;
             } else {
                 imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
             }

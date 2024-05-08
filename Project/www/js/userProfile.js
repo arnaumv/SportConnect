@@ -77,6 +77,35 @@ $(document).ready(function () {
             console.error('Error:', error);
         });
 
+        
+// Añadir evento de clic al botón de seguir
+$('#follow-button').click(function() {
+    // Hacer la solicitud a la API para seguir al usuario
+    fetch('https://sportconnect.ieti.site/follow/' + storedUsername + '/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            // Aquí debes incluir el token de autenticación de tu usuario
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            username: storedUsername
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Cambiar el texto del botón a "Siguiendo"
+        $('#follow-button').text('Siguiendo');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
     /***   MOSTRAR EVENTO   ****/
 
 
