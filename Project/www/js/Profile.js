@@ -64,7 +64,7 @@ $(document).ready(function () {
         eventsError.empty();
 
         $.ajax({
-            url: "https://sportconnect.ieti.site/events/user_subscribed_events/?username=" + username,
+            url: "http://127.0.0.1:8000/events/user_subscribed_events/?username=" + username,
             type: "GET",
             success: function (eventos) {
                 eventos.forEach(function (evento) {
@@ -118,7 +118,7 @@ $(document).ready(function () {
         var storedUsername = localStorage.getItem('username');
         console.log("borrar evento: "+ eventIdBorrar+ "por: "+ storedUsername);
         $.ajax({
-            url: 'https://sportconnect.ieti.site/delete_event/',
+            url: 'http://127.0.0.1:8000/delete_event/',
             type: 'POST',
             dataType: 'json',
             data: {

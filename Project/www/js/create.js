@@ -130,7 +130,7 @@ $('#btnEnviar').click(function(e){
             console.log('Username found:', username);
 
             $.ajax({
-                url: 'https://sportconnect.ieti.site/userid/' + username + '/',
+                url: 'http://127.0.0.1:8000/userid/' + username + '/',
                 type: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ $('#btnEnviar').click(function(e){
                     var imagePath = ubicacionData ? ubicacionData.imagen : '';
 
                     $.ajax({
-                        url: 'https://sportconnect.ieti.site/event/',
+                        url: 'http://127.0.0.1:8000/event/',
                         type: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -173,7 +173,7 @@ $('#btnEnviar').click(function(e){
 
                             // Hacer una solicitud AJAX para unirse al evento
                             $.ajax({
-                                url: 'https://sportconnect.ieti.site/join-event/',
+                                url: 'http://127.0.0.1:8000/join-event/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ $(document).ready(function () {
   var eventId = localStorage.getItem("selectedEventId");
   // Hacer una solicitud AJAX para obtener la información del evento
   $.ajax({
-    url: 'https://sportconnect.ieti.site/event-filter/' + eventId + '/get_event',  // URL de tu API
+    url: 'http://127.0.0.1:8000/event-filter/' + eventId + '/get_event',  // URL de tu API
     type: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-      url: "https://sportconnect.ieti.site/event/" + eventId + "/participants",
+      url: "http://127.0.0.1:8000/event/" + eventId + "/participants",
       type: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ $(document).ready(function () {
           var img = $("<img>").addClass("participant-image");
 
           // Fetch the profile image for the participant from the server
-          fetch('https://sportconnect.ieti.site/profile/' + participant.username + '/')
+          fetch('http://127.0.0.1:8000/profile/' + participant.username + '/')
             .then(response => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -88,7 +88,7 @@ $(document).ready(function () {
             .then(data => {
               var imageUrl;
               if (data.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
+                imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
               } else {
                 imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
               }
@@ -129,7 +129,7 @@ $(document).ready(function () {
   function checkIfJoined() {
     var username = localStorage.getItem("username");
     $.ajax({
-      url: "https://sportconnect.ieti.site/check-joined/",
+      url: "http://127.0.0.1:8000/check-joined/",
       type: "POST",
       data: JSON.stringify({
         username: username,
@@ -163,7 +163,7 @@ $(document).ready(function () {
     e.preventDefault();
     var username = localStorage.getItem("username");
     $.ajax({
-      url: "https://sportconnect.ieti.site/join-event/",
+      url: "http://127.0.0.1:8000/join-event/",
       // url: "http://127.0.0.1:8000/join-event/",
       type: "POST",
       data: JSON.stringify({
@@ -202,7 +202,7 @@ $(document).ready(function () {
     e.preventDefault();
     var username = localStorage.getItem("username");
     $.ajax({
-      url: "https://sportconnect.ieti.site/cancel-event/",
+      url: "http://127.0.0.1:8000/cancel-event/",
       type: "POST",
       data: JSON.stringify({
         username: username,
