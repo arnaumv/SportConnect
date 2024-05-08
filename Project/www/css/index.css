@@ -905,9 +905,11 @@ ui-input-text input,
     margin-bottom: 1rem;
     color: #000;
     text-align: left;
-   /* margin-left: 25px; */
+    margin-left: 25px;
     margin-bottom: 20px;
-  }
+    margin-top: 20px;
+}
+
 .minidecriptionContainer{
 
 }
@@ -1819,17 +1821,17 @@ label[for="profile-image-upload"].custom-label {
 
 .headerEvents h1 {
     margin: 0;
+      margin-left: 0px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    /* Reduced font size */
     font-weight: normal;
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 23%;
+    margin-left: 17%;
     text-shadow: none;
 }
 
@@ -2713,14 +2715,12 @@ span.error {
 /* CSS LOGO REDES SOCIALES PERFIL*/
 
 #redessociales {
-    display: flex; /* Utiliza flexbox para colocar los elementos en línea */
-    align-items: center; /* Centra los elementos verticalmente */
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
     margin-bottom: -12px;
     margin-top: -12PX;
-
-}
-
+  }
 #redessociales a {
     margin-right: 10px; /* Espacio entre las imágenes */
 }
@@ -2874,8 +2874,8 @@ a.ui-button:active,
     color: #000;
     text-align: left;
     display: flex;
-    margin-top: 380px;
-    margin-left: -120px;
+    margin-top: 420px;
+    margin-left: -140px;
     height: 60px;
   }
 

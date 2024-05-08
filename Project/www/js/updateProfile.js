@@ -21,18 +21,18 @@ $(document).on('pagecreate', function () {
             $('#events-count').text(data.events_count );  // Mostrar el conteo de eventos en el HTML
 
 
-            if (data.user.instagram != null) {
+            if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram').attr('src', './img/Profile/insta.webp');
                 // Envolver la imagen en un enlace
-                $('#img-instagram').wrap('<a href="https://www.instagram.com/' + data.user.instagram + '" target="_blank"></a>');
+                $('#img-instagram').wrap('<a href="https://www.instagram.com/' + data.instagram + '" target="_blank"></a>');
             }
-
-            if (data.user.twitter != null) {
+            
+            if (data.twitter != null) {
                 // Establecer el atributo src de la imagen de Twitter
                 $('#img-twitter').attr('src', './img/Profile/twitter.webp');
                 // Envolver la imagen en un enlace
-                $('#img-twitter').wrap('<a href="https://twitter.com/' + data.user.twitter + '" target="_blank"></a>');
+                $('#img-twitter').wrap('<a href="https://twitter.com/' + data.twitter + '" target="_blank"></a>');
             }
             if (data.user.description != null) {
                 console.log("no es null");
