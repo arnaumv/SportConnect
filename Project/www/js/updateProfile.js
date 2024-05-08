@@ -34,13 +34,13 @@ $(document).on('pagecreate', function () {
                 // Envolver la imagen en un enlace
                 $('#img-twitter').wrap('<a href="https://twitter.com/' + data.twitter + '" target="_blank"></a>');
             }
-            if (data.user.description != null) {
+            if (data.description != null) {
                 console.log("no es null");
-                $('#miniDescription').text(data.user.description);
+                $('#miniDescription').text(data.description);
             }
             var imageUrl;
-            if (data.user.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site' + data.user.image_path;
+            if (data.image_path != null) {
+                imageUrl = 'https://sportconnect.ieti.site' + data.image_path;
             } else {
                 imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
             }
