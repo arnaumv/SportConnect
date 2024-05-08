@@ -18,6 +18,51 @@ body label.ui-btn {
     border-style: none !important;
 }
 
+.my-google-btn {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .25) !important;
+    cursor: pointer !important;
+    height: 50px !important;
+    width: 240px !important;
+    border-radius: 25px !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #4285F4 !important;
+    background-color: #fff !important;
+    border: thin solid #888 !important;
+    font-size: 16px !important;
+    transition: background-color .218s, border-color .218s, box-shadow .218s !important;
+    margin-left: 75px;
+}
+
+.my-google-btn:hover {
+    box-shadow: 0 0 3px 3px rgba(66,133,244,.3) !important;
+    transition: background-color .218s, border-color .218s, box-shadow .218s !important;
+}
+
+.my-google-btn .google-icon-wrapper {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.my-google-btn .google-icon {
+    width: 36px !important;
+    height: 36px !important;
+    margin-left: 10px !important;
+}
+
+.my-google-btn .btn-text {
+    font-size: 14px !important;
+    letter-spacing: .2px !important;
+    font-weight: 500 !important;
+    padding: 0 15px 0 0 !important;
+}
+
 /********** INDEX **********/
 
 .colorIndex {
@@ -681,7 +726,7 @@ ui-input-text input,
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 28%;
+    margin-left: 35%;
     text-shadow: none;
 }
 
@@ -705,11 +750,12 @@ ui-input-text input,
 
 .profile-container {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column; */
     align-items: center;
     padding: 15px;
     border-radius: 15px;
-}
+    margin-top: -110px;
+  }
 
 .profile-container-2 {
    /* display: flex; */
@@ -773,7 +819,8 @@ ui-input-text input,
 .profile-info {
     text-align: center;
     margin-top: -15px;
-}
+    margin-left: 20px;
+  }
 
 .profile-info h2 {
     text-align: center;
@@ -828,16 +875,21 @@ ui-input-text input,
     text-shadow: none;
 }
 
-.headerEditProfile .flecha-izquierda-Edit {
+.flecha-izquierda-Edit {
     width: 34px !important;
     height: 25px;
-    filter: invert(1);
-    margin-left: -17px;
-
-
+    /* filter: invert(1); */
+    margin-left: -13px;
 
 }
 
+.flecha-izquierda-EditProfile {
+    width: 34px !important;
+    height: 25px;
+    filter: invert(1);
+    margin-left: -23px;
+
+}
 .events-section h3 {
     font-size: 1.5em;
     font-weight: lighter;
@@ -902,6 +954,24 @@ ui-input-text input,
     width: 2000px;
 
 
+}
+
+
+.custom-hr {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888;
+}
+
+.custom-hr hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #888;
+}
+
+.custom-hr span {
+    padding: 0 10px;
 }
 
 .titulosprofile {
@@ -1007,7 +1077,7 @@ ui-input-text input,
     border: none;
     padding: 10px;
     width: 50px;
-   /* margin-left: 130px; */
+    margin-left: -30px; 
     height: 40px;
     margin-top: -1px;
     box-shadow: none;
@@ -1107,6 +1177,7 @@ ui-input-text input,
     text-shadow: none;
     font-family: math;
     font-size: medium;
+    font-style: inherit;
 }
 
 .pFilterSport {
@@ -1186,10 +1257,10 @@ ui-input-text input,
     height: 100px;
 }*/
 
-.formINFO{
-    margin-left: 10px;
+.formINFO {
+    margin-left: 50px;
     margin-right: 10px;
-}
+  }
     
 /*
 .formINFO button {
@@ -1545,11 +1616,13 @@ label[for="profile-image-upload"].custom-label {
 
 #my-label-id.my-label {
     font-weight: normal !important;
-    font-size: medium !important;
+    font-size: 17px !important;
     color: black !important;
     margin-left: 0 !important;
     text-align: start !important;
-    margin-block: -2px !important;
+    /* margin-block: -2px !important; */
+    margin-left: 15px !important;
+    margin-top: 2px;
 }
 
 
@@ -1768,7 +1841,7 @@ body:has(.ui-content.events-page) {
     overflow-x: hidden;
     padding: 1em;
     
-   /* background-color: #d9d9d9b0 !important;*/
+    background-color: #ffffff !important;
 }
 
 body.events-page-body, div.events-page-div {
@@ -1776,7 +1849,7 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ebebeb !important;
+    background-color: #adadad00 !important;
 }
 
 
@@ -1791,6 +1864,11 @@ body.events-page-body, div.events-page-div {
     background-color: #f0eded54 !important;
 }
 
+.flecha-izquierda-InfoEvents{
+    margin-left: -22px;
+    filter: invert(1);
+}
+
 /*FONDO PERFILE */
 
 .profile-page-body, .profile-page-div{
@@ -1798,7 +1876,8 @@ body.events-page-body, div.events-page-div {
     overflow: visible;
     overflow-x: hidden;
     /*background-color: #e8e8e8 !important;*/
-    background-color: #ebebeb !important;
+   /* background-color: #ebebeb !important;*/
+    background-color: #f5f5f5 !important;
 }
 
 
@@ -1948,14 +2027,14 @@ element.style {
 /* Clase personalizada para el div de filtrar por fecha*/
 
 html #customDateFilter {
-    background-color: #0000004a !important;
-    border-color: #000000d6 !important;
-    color: #000000 !important;
+    background-color: #7777772e !important;
+    border-color: #9f9f9fd6 !important;
+    color: #0e0e0e !important;
     text-shadow: none !important;
     height: 35px;
-    width: 255px;
     margin-bottom: 25px;
-    margin-left: 90px;
+    margin-right: 200px !important;
+    margin-left: 110px;
 }
 
 .ui-shadow-inset {
@@ -1964,19 +2043,20 @@ html #customDateFilter {
 }
 
 #customDateFilter {
-    margin-left: 80px;
+    margin-left: 50px;
     background-color: #a9a9a947;
-    width: 250px;
+    width: 200px;
+    border-radius: 11px;
 }
 
 .imgDateFilter {
     position: absolute;
     width: 25px;
     height: 25px;
-    margin-left: 100px;
-    margin-top: 13px;
+    margin-left: 288px;
+    margin-top: 9px;
     pointer-events: none;
-}
+  }
 
 .imgDateNewuser {
     position: absolute;
@@ -2076,7 +2156,7 @@ html #customDateFilter {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
-    margin-left: -184px;
+    margin-left: -210px;
     width: 120px !important;
     margin-top: 5px;
 
@@ -2108,31 +2188,36 @@ html #customDateFilter {
 
 .headerInfoEvents h1 {
     margin: 0;
+    margin-left: 0px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    /* Reduced font size */
     font-weight: normal;
-    /*text-transform: uppercase;*/
+    /*text-transform: lowercase;  Cambiado de 'uppercase' a 'lowercase' */
     letter-spacing: 2px;
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 20%;
+    margin-left: 130px;
     text-shadow: none;
 }
 
-.notification-icon-InfoEvents{
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  margin-bottom: 900px;
-  margin-top: -432px;
-
+.notification-icon-InfoEvents {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    /* top: 50%; */
+    /* right: 20px; */
+    /* transform: translateY(-50%); */
+    /* margin-bottom: 900px; */
+    /* margin-top: -432px; */
+    margin-left: 128px;
+    margin-top: -15px;
 }
+
+
+
+
 .notification-icon-Chat{
     width: 30px;
   height: 30px;
@@ -2239,13 +2324,13 @@ html #customDateFilter {
 .btnCancelar {
     display: inline-block;
     padding: 10px 20px !important;
-    background-color: rgb(221, 43, 43) !important;
-    color: #000 !important;
+    background-color: rgb(59 150 223) !important;
+    color: #ffffff !important;
     text-decoration: none !important;
     border-radius: 25px !important;
     font-weight: bold !important;
     text-shadow: none !important;
-    width: 83% !important;
+   /* width: 83% !important; */
 }
 
 /* Css Errores formularios */
@@ -2604,6 +2689,7 @@ span.error {
     float: right !important;
     /*margin-top: 10px !important;*/
     cursor: pointer;
+    margin-left: -110px;
 }
 
 
@@ -2662,3 +2748,165 @@ span.error {
 #redessociales2 #img-instagram2{
     width: 36px; /* Ancho deseado para las imágenes */
 }
+
+
+
+/* ESTILOS JQUERY UI*/
+
+/* Estilizar el contenedor del menú de autocompletado */
+.ui-autocomplete {
+    background-color: white !important;
+    border: 1px solid #c5c5c5 !important;
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    width: 370px !important; /* Ajusta este valor a tu preferencia */
+    border-radius: 10px !important;
+    
+}
+
+/* Estilizar los elementos individuales del menú de autocompletado */
+.ui-menu-item {
+    padding: 5px 10px !important;
+    border-bottom: 1px solid #c5c5c5c7 !important; /* Añade una línea separadora */
+
+    
+}
+
+/* Estilizar el elemento del menú de autocompletado que está actualmente seleccionado o resaltado */
+.ui-menu-item.ui-state-focus {
+    background-color: #c5c5c5 !important;
+    color: white !important;
+     
+}
+
+
+
+
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+    border: 1px solid #c5c5c500 !important; 
+    background: #f6f6f600 !important; 
+    font-weight: normal !important;
+    /* color: #454545 !important; */
+    /* MARGIN-LEFT: 12PX !important; */
+}
+
+
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+    /* border: 1px solid #003eff !important; */
+    /* background: #007fff !important; */
+    font-weight: normal !important;
+    color: #ffffff !important;
+}
+
+.ui-button {
+    padding: .4em 1em !important;
+    /*display: inline-block !important;*/
+    position: relative !important;
+    /* line-height: normal !important; */
+    /* MARGIN-LEFT: 20PX !important; */
+    margin-right: .1em !important;
+    cursor: pointer !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    overflow: visible !important;
+}
+
+
+.ui-input-text input, .ui-input-search input {
+    margin: 0;
+    min-height: 2.2em;
+    text-align: left;
+    border: 0;
+    background: transparent none; 
+    -webkit-appearance: none;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    width: 330px !important;
+}
+
+
+.ui-checkboxradio-label .ui-icon-background {
+    box-shadow: inset 0px 0px 10px #b9b9b9 !important;
+    border-radius: .12em;
+    border: none;
+}
+
+.pNotificationText {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    margin-top: 50px;
+    color: #000000b8;
+    text-shadow: none;
+    font-family: math;
+    font-size: medium;
+    font-family: system-ui;
+}
+
+
+.pTextSeguidores {
+    color: #000;
+}
+
+.divSeguidores {
+    color: #000;
+    text-align: left;
+    display: flex;
+    margin-top: 300px;
+    margin-left: -170px;
+    height: 60px;
+}
+
+.divSeguidores > div:not(:last-child) {
+    margin-right: 20px; /* Ajusta este valor según tus necesidades */
+    border-right: 1px solid #000; /* Añade una línea vertical a la derecha de cada div */
+    padding-right: 20px; /* Añade un poco de espacio a la derecha de cada div para separar el contenido de la línea */
+}
+
+.cantidad {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin: revert;
+      margin-left: revert;
+    margin-left: 27px;
+  }
+
+
+.cantidad1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin: revert;
+      margin-left: revert;
+    margin-left: revert;
+    margin-left: 25px;
+}
+.cantidad2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    text-align: center;
+    margin: revert;
+      margin-left: revert;
+    margin-left: revert;
+    margin-left: revert;
+    margin-left: 18px;
+  }

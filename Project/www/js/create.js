@@ -119,11 +119,9 @@ $('#btnEnviar').click(function(e){
     var hasErrors = false;
     console.log('Button clicked.');  // Log the button click event
 
-
     if ($('#error_titulo').text() !== '' || $('#error_event_date').text() !== '' || $('#error_descripcion').text() !== '') {
         hasErrors = true;
     }
-    
     
     if(!hasErrors){
         var username = localStorage.getItem('username');
@@ -172,10 +170,30 @@ $('#btnEnviar').click(function(e){
                             console.log('AJAX request successful. Event created:', result);
                             //alert('Evento creado con éxito.');
                             showPopup2('Evento creado con éxito');
+
+                            // Hacer una solicitud AJAX para unirse al evento
+                            $.ajax({
+                                url: 'https://sportconnect.ieti.site/join-event/',
+                                type: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                data: JSON.stringify({
+                                    username: username,
+                                    event: result.id,  // Usar el ID del evento que acaba de ser creado
+                                }),
+                                success: function(result) {
+                                    console.log('AJAX request successful. Joined event:', result);
+                                },
+                                error: function(error) {
+                                    console.log('AJAX request failed. Error joining event:', error);
+                                }
+                            });
+
                             setTimeout(function() {
                                 window.location.href = 'Events.html';
                             }, 2200); // 2200 milisegundos = 2.2 segundos
-                                                    },
+                        },
                         error: function(error) {
                             console.log('AJAX request failed. Error creating event:', error);
                             //alert('Hubo un error al crear el evento.');
@@ -194,7 +212,6 @@ $('#btnEnviar').click(function(e){
         }
     }
 });
-
 });
 
 // Función para validar la fecha y hora del evento

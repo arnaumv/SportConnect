@@ -56,18 +56,27 @@ $(document).on('pagecreate', function(){
         var eventsList = $('.events-list');
         eventsList.empty(); // Limpiar la lista antes de agregar los eventos
           // Verificar si la lista de eventos está vacía
-    if (eventos.length === 0) {
-        eventsList.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
-        return;
-    }
+          // Ordenar los eventos de más reciente a más antiguo
+        eventos.sort(function(a, b) {
+            var dateA = new Date(a.date), dateB = new Date(b.date);
+            return dateA - dateB;
+        });
+        if (eventos.length === 0) {
+            eventsList.append('<p class="pEventsFilterError">No se encontraron eventos.</p>');
+            return;
+        }
         // Agregar eventos al DOM
         eventos.forEach(function(evento) {
             var storedUsername = localStorage.getItem('username');
 
+             // Convertir la fecha a formato 'dd-mm-yyyy'
+            var date = new Date(evento.date);
+            var formattedDate = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getFullYear();
+
             var eventHtml = '<div class="event" data-categoria="' + evento.sport + '">';
             eventHtml += '<img src="' + evento.image_path + '" alt="Imagen del Evento">';
             eventHtml += '<h2>' + evento.title + '</h2>';
-            eventHtml += '<p>Fecha: ' + evento.date + '</p>';
+            eventHtml += '<p>Fecha: ' + formattedDate + '</p>';  // Usar la fecha formateada
             eventHtml += '<p>Actividad: ' + evento.sport + '</p>';
             eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
             if (evento.creator_username.toLowerCase() === storedUsername.toLowerCase()) {
@@ -181,6 +190,11 @@ $(document).on('pagecreate', function(){
             $('#filterDateButton').text(selectedDate);
         } else {
             $('#filterDateButton').text('Fecha ▼');
+             // Get all events from the localStorage
+            var eventos = JSON.parse(localStorage.getItem('eventos'));
+
+            // Show all events
+            mostrarEventos(eventos);
         }
     });
 
@@ -192,31 +206,45 @@ $(document).on('pagecreate', function(){
         // Get the events from the localStorage
         var eventos = JSON.parse(localStorage.getItem('eventos'));
 
-        // Filter the events by the selected date
-        var filteredEvents = eventos.filter(function(evento) {
-            return evento.date === selectedDate;
-        });
+        if (selectedDate) {
+            // Filter the events by the selected date
+            var filteredEvents = eventos.filter(function(evento) {
+                return evento.date === selectedDate;
+            });
 
-        // Show the filtered events
-        mostrarEventos(filteredEvents);
-
-         // Verificar si hay algún evento visible después de aplicar el filtro
-  
+            // Show the filtered events
+            mostrarEventos(filteredEvents);
+        } else {
+            // If no date is selected, show all events
+            mostrarEventos(eventos);
+        }
 
         // Hide the date filter div
         $('#filterDateDiv').slideToggle();
     });
 
-    // Add location search button click event
+    // Cargar los datos de ubicación del archivo JSON
+    $.getJSON('ubicacion.json', function(data) {
+        var availableLocations = $.map(data.locations, function(location) {
+            return location['nombre de ubicacion'];
+        });
+
+        // Configurar el autocompletado para el campo de búsqueda de ubicación
+        $('#locationSearch').autocomplete({
+            source: availableLocations
+        });
+    });
+
+    // Agregar evento de clic al botón de búsqueda de ubicación
     $('#locationSearchButton').on('click', function() {
         var location = $('#locationSearch').val();
         llamadaAjax(location);
     }); 
 
-    // Add input event handler to location search field
+    // Agregar controlador de eventos de entrada al campo de búsqueda de ubicación
     $('#locationSearch').on('input', function() {
         if ($(this).val() === '') {
-            // The search field is empty, reload all events
+            // El campo de búsqueda está vacío, recargar todos los eventos
             llamadaAjax();
         }
     });

@@ -48,6 +48,8 @@ $(document).ready(function () {
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
             $('#city').text("Ciudad: " + data.city);
+            $('#followers-count').text("Seguidores: " + data.followers_count);  // Actualizar el número de seguidores
+            $('#following-count').text("Seguidos: " + data.following_count);  // Actualizar el número de seguidos
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram2').attr('src', './img/Profile/insta.webp');
@@ -76,6 +78,39 @@ $(document).ready(function () {
         .catch(error => {
             console.error('Error:', error);
         });
+
+        
+    // Añadir evento de clic al botón de seguir
+$('#follow-button').click(function() {
+    var isFollowing = $('#follow-button').text() === 'Siguiendo';
+    var url = 'https://sportconnect.ieti.site/' + (isFollowing ? 'unfollow' : 'follow') + '/' + storedUsername + '/';
+    var method = 'POST';  // Siempre enviar una solicitud POST
+
+    // Hacer la solicitud a la API para seguir o dejar de seguir al usuario
+    fetch(url, {
+        method: method,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Cambiar el texto del botón a "Siguiendo" o "Seguir"
+        $('#follow-button').text(isFollowing ? 'Seguir' : 'Siguiendo');
+
+        // Actualizar el número de seguidores y seguidos en la interfaz de usuario
+        $('#followers-count').text(data.followers_count);
+        $('#following-count').text(data.following_count);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
 
     /***   MOSTRAR EVENTO   ****/
 

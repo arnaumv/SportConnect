@@ -13,17 +13,21 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^12.0.1",
     "cordova-browser": "^7.0.0"
   },
   "cordova": {
     "platforms": [
-      "browser",
-      "android"
-    ]
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "1038434820629-rk4fbglu4h47b7045qcudod0jq1ct56l.apps.googleusercontent.com"
+      }
+    }
   },
   "dependencies": {
     "cordova-jquery": "^0.1.6",
+    "cordova-plugin-googleplus": "8.5.2",
     "jquery": "^3.7.1"
   }
 }
