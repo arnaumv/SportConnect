@@ -214,6 +214,21 @@ $(document).ready(function () {
         $('#' + categoriaSeleccionada.toLowerCase() + '-events-btn').addClass('active');
     }
 
+    // Agrega un evento de clic a los botones
+    document.querySelector('#active-events-btn').addEventListener('click', setActiveState);
+    document.querySelector('#finished-events-btn').addEventListener('click', setActiveState);
+
+    function setActiveState() {
+        // Elimina la clase activa de los botones y la línea hr
+        document.querySelector('#active-events-btn').classList.remove('active');
+        document.querySelector('#finished-events-btn').classList.remove('active');
+        document.querySelector('.hrclass').classList.remove('active');
+
+        // Agrega la clase activa al botón clicado y la línea hr
+        this.classList.add('active');
+        document.querySelector('.hrclass').classList.add('active');
+    }
+
     // Agregar evento al DOM
     function agregarEvento(evento) {
         

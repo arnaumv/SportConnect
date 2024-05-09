@@ -924,7 +924,7 @@ ui-input-text input,
 }
 /* Estilos para la sección de eventos */
 .events-section {
-    margin-top: 20px;
+    margin-top: 60px;
     
 }
 
@@ -943,14 +943,7 @@ ui-input-text input,
     border-width: 0.7px; /* Grosor aumentado *//*
 } */
 
-.hrclass {
-    border-color: #000000;
-    border-width: 1px;
-    width: 2000px;
-    margin-left: -25px;
-    margin-top: -28px;
-    margin-bottom: 25px;
-}
+
 
 .hrEvents  {
     width: 2000px;
@@ -1096,11 +1089,15 @@ ui-input-text input,
 
 .events-buttons-Profile {
     display: flex;
-    justify-content: center;
     white-space: nowrap;
     margin-block: 20px !important;
     text-align: center !important;
+    justify-content: stretch !important;
+    /* width: 200px; */
+    margin-left: -24px;
+    margin-right: -25px;
 }
+
 
 /* .ButtonsEventsProfile {
     width: 100px !important;
@@ -1137,21 +1134,41 @@ ui-input-text input,
 
 #active-events-btn.ButtonsEventsProfile, 
 #finished-events-btn.ButtonsEventsProfile {
-    height: 30px !important;
-    padding: 5px !important;
-    background-color: #5b5b5b00 !important;
-    text-shadow: none !important;
-    margin-left: 10px !important;
-    font-size: larger !important;
-    text-decoration: none !important;
-    border: 1px solid #000000d6 !important;
-    border-bottom: 0px solid #000000d6 !important;
-    border-radius: 10px 10px 0 0; /* Añade esta línea */
+    height: 30px;
+    padding: 5px;
+    background-color: transparent;
+    text-shadow: none;
+    margin-left: 10px;
+    font-size: larger;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-shadow: none;
+    border: none;
+    color: #232222b8;
+    border-radius: 0; /* Hace que el borde sea plano */
+
+    transition: color 0.3s ease;
 }
+
 #active-events-btn.ButtonsEventsProfile.active,
 #finished-events-btn.ButtonsEventsProfile.active {
-   background-color: rgb(60 62 79 / 85%) !important;
-   color: white !important;
+   color: #000000; /* Cambia el color del texto a negro cuando el botón está activo */
+   border-bottom: 1px solid #000000 !important;
+   background-color: transparent !important;
+}
+
+.hrclass {
+    /*border-color: #000000d6;*/
+    border-width: 1px;
+    width: 2000px;
+    margin-left: -25px;
+    margin-top: -28px;
+    margin-bottom: 25px;
+    transition: border-color 0.3s ease;
+}
+
+.hrclass.active {
+   /* border-color: #000000;*/
 }
 
 
@@ -2962,6 +2979,7 @@ button.my-custom-button-class {
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
+    margin-left: 25px !important;
 }
 
 body button.my-custom-button-class {
