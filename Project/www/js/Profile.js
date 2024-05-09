@@ -136,6 +136,16 @@ $(document).ready(function () {
         });
     });
 
+    $('#ShareProfile').click(function() {
+        var username = localStorage.getItem("username");
+        if (!username) {
+            console.error("Nombre de usuario no encontrado en el localStorage");
+            return;
+        }
+        var profileUrl = 'http://miaplicacion.com/profile/' + username; // Reemplaza esto con la URL correcta
+        window.plugins.socialsharing.share('Mira este perfil: ' + profileUrl);
+    });
+
 
     // Manejar clic en botón "Activos"
     $("#active-events-btn").click(function(){

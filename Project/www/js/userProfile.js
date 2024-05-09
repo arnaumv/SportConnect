@@ -121,31 +121,53 @@ $(document).ready(function () {
         console.log('data:', data);
     
         // Si el texto del botón es "Seguir", hacer la solicitud POST para seguir
-        if ($('#follow-button').text() === "Seguir") {
-            fetch('http://127.0.0.1:8000/follow/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Actualizar la interfaz de usuario
-                $('#followers-count').text( data.followers_count);
-                //$('#following-count').text("Seguidos: " + data.following_count);
-    
-                // Cambiar el texto del botón a "Dejar de seguir"
-                $('#follow-button').text("Dejar de seguir");
-    
-                // Agregar la clase 'unfollow' al botón
-                $('#follow-button').addClass('unfollow');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-        }
+if ($('#follow-button').text() === "Seguir") {
+    fetch('http://127.0.0.1:8000/follow/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Actualizar la interfaz de usuario
+        $('#followers-count').text( data.followers_count);
+        //$('#following-count').text("Seguidos: " + data.following_count);
+
+        // Cambiar el texto del botón a "Dejar de seguir"
+        $('#follow-button').text("Dejar de seguir");
+
+        // Agregar la clase 'unfollow' al botón
+        $('#follow-button').addClass('unfollow');
+
+        // Crear una notificación
+        var notificationData = {
+            type: 'follow',
+            username: currentUserId,
+            message: currentUserId + " ha empezado a seguirte."
+        };
+
+        fetch('http://127.0.0.1:8000/notification/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(notificationData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Notification created:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
         // Si el texto del botón es "Dejar de seguir", hacer la solicitud POST para dejar de seguir
         else if ($('#follow-button').text() === "Dejar de seguir") {
             fetch('http://127.0.0.1:8000/unfollow/' + currentUserId + '/' + selectedUserId + '/', {
