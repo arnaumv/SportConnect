@@ -749,11 +749,7 @@ ui-input-text input,
 }
 
 .profile-container {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 15px;
-    margin-top: -150px;
+    
   }
 
 .profile-container-2 {
@@ -785,7 +781,7 @@ ui-input-text input,
     margin-top: -30px;
 }
 .titulosprofile2 {
-    font-weight: bold !important;
+    font-weight: 400;
     color: black !important;
     font-family: 'Roboto', sans-serif;
     margin-left: -230px;
@@ -805,6 +801,9 @@ ui-input-text input,
     margin-bottom: 10px;
     object-fit: cover;
     border: 2px solid #007bff;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
 
@@ -817,23 +816,26 @@ ui-input-text input,
 
 .profile-info {
     text-align: center;
-    margin-top: -15px;
+    margin-top: -105px;
     margin-left: 20px;
-  }
-
+    margin-bottom: 40px;
+}
 .profile-info h2 {
-    text-align: center;
+    text-align: left;
     font-size: 18px;
     margin-bottom: 5px;
     margin-left: 0;
     font-family: inherit;
     font-weight: revert-layer;
+    margin-left: 140px;
 }
 
 .profile-info p {
     font-size: 15px;
     color: black;
     margin-bottom: 10px;
+    text-align: left;
+    margin-left: 140px;
 }
 
 .profile-info-2 {
@@ -900,14 +902,10 @@ ui-input-text input,
 }
 
 .miniDescription {
-    font-size: 1em;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    color: #000;
+    color: black;
+    margin-left: 45px;
+    margin-right: 20px;
     text-align: left;
-    margin-left: 25px;
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .minidecriptionContainer{
@@ -977,11 +975,11 @@ ui-input-text input,
 
 
 .titulosprofile4 {
-    font-weight: bold !important;
-    color: black !important;
-    font-family: 'Roboto', sans-serif;
-    margin-left: -100px;
-  }
+    color: black;
+    text-align: left;
+    margin-left: 45px;
+    font-weight: 400;
+}
 /* 
 .events-buttons {
     display: flex;
@@ -2734,10 +2732,10 @@ span.error {
 #redessociales {
     display: flex;
     align-items: center;
-    margin-left: 6px;
+    margin-left: 38px;
     margin-bottom: -12px;
     margin-top: -12PX;
-  }
+}
 #redessociales a {
     margin-right: 10px; /* Espacio entre las imágenes */
 }
@@ -2891,10 +2889,10 @@ a.ui-button:active,
     color: #000;
     text-align: left;
     display: flex;
-    margin-top: 420px;
-    margin-left: -140px;
+    margin-top: 60px;
+    margin-left: 160px;
     height: 60px;
-  }
+}
 
 .divSeguidores > div:not(:last-child) {
     margin-right: 20px; /* Ajusta este valor según tus necesidades */
@@ -2936,9 +2934,7 @@ a.ui-button:active,
   }
 
 .abautme1 {
-    border-radius: 10px;
-    margin-top: 230px;
-    margin-left: -200px;
+  
 }
 
 
