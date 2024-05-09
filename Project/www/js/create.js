@@ -130,7 +130,7 @@ $('#btnEnviar').click(function(e){
             console.log('Username found:', username);
 
             $.ajax({
-                url: 'https://sportconnect.ieti.site/userid/' + username + '/',
+                url: 'http://127.0.0.1:8000/userid/' + username + '/',
                 type: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ $('#btnEnviar').click(function(e){
                     var imagePath = ubicacionData ? ubicacionData.imagen : '';
 
                     $.ajax({
-                        url: 'https://sportconnect.ieti.site/event/',
+                        url: 'http://127.0.0.1:8000//event/',
                         type: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -189,7 +189,7 @@ $('#btnEnviar').click(function(e){
                                             fechaHoraObj.getSeconds().toString().padStart(2, '0');
                         
                             $.ajax({
-                                url: 'https://sportconnect.ieti.site/notification/',
+                                url: 'http://127.0.0.1:8000//notification/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -202,7 +202,8 @@ $('#btnEnviar').click(function(e){
                                     event_location: ubicacion,
                                     event_date: fechaHoraFormatted,
                                     event_time: eventTime,
-                                    message: 'Has creado un evento de "' + tipoDeporte + '"'
+                                    message: 'Has creado un evento de "' + tipoDeporte + '"\nUbicacion: ' + ubicacion + '\nFecha y hora: ' + fechaHoraFormatted
+
                                 }),
                                 success: function(notificationResult) {
                                     console.log('Notification created successfully');
@@ -214,7 +215,7 @@ $('#btnEnviar').click(function(e){
                         
                             // Hacer una solicitud AJAX para unirse al evento
                             $.ajax({
-                                url: 'https://sportconnect.ieti.site/join-event/',
+                                url: 'http://127.0.0.1:8000//join-event/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -228,7 +229,7 @@ $('#btnEnviar').click(function(e){
                         
                                     // Create a notification for joining the event
                                     $.ajax({
-                                        url: 'https://sportconnect.ieti.site/notification/',
+                                        url: 'http://127.0.0.1:8000//notification/',
                                         type: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json',
