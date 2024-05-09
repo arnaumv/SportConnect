@@ -8,7 +8,7 @@ $(document).ready(function(){
     console.log('Usuario:', username);  // Añadido para depuración
 
     // Hacer una petición GET para obtener las notificaciones del usuario
-    fetch('http://127.0.0.1:8000/notification/?username=' + username)
+    fetch('https://sportconnect.ieti.site/notification/?username=' + username)
     .then(response => response.json())
     .then(data => {
         console.log('te ha seguido:', data);  // Unique text added here
@@ -39,7 +39,7 @@ $(document).ready(function(){
                 // Eliminar la notificación de la página
                 notificationElement.remove();
                 // Enviar una petición DELETE al servidor para eliminar la notificación
-                fetch('http://127.0.0.1:8000/notifications/' + notification.id, {
+                fetch('https://sportconnect.ieti.site/notifications/' + notification.id, {
                     method: 'DELETE',
                 })
             });

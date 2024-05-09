@@ -608,6 +608,21 @@ ui-input-text input,
     width: 83% !important;
 }
 
+
+#btnSaveEditProfile {
+    background-color: rgb(43, 165, 221);
+    text-shadow: none;
+    border-radius: 25px !important;
+    display: inline-block;
+    padding: 10px 20px !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+    width: 83% !important;
+    margin-left: 60px;
+  }
+
 #btnSubmit {
     background-color: rgb(71 196 253 / 89%);
     text-shadow: none;
@@ -1256,6 +1271,7 @@ ui-input-text input,
     text-align: center !important;
     margin-left: 27%;
     text-shadow: none;
+    margin-left: 29%;
 }
 
 /* **************************************** */
@@ -1266,7 +1282,8 @@ ui-input-text input,
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 5px;
-}
+    margin-top: -29px;
+  }
 
 .EditProfile-container img {
     width: 100px;
@@ -1283,8 +1300,8 @@ ui-input-text input,
 }*/
 
 .formINFO {
-    margin-left: 50px;
-    margin-right: 10px;
+    margin-left: 39px;
+    margin-right: 110px;
   }
     
 /*
@@ -2891,9 +2908,9 @@ a.ui-button:active,
     text-align: left;
     display: flex;
     margin-top: 60px;
-    margin-left: 160px;
+    margin-left: 70px;
     height: 60px;
-}
+  }
 
 .divSeguidores > div:not(:last-child) {
     margin-right: 20px; /* Ajusta este valor según tus necesidades */
