@@ -920,7 +920,7 @@ ui-input-text input,
     color: #333;
     text-shadow: 0 1px 0 #f3f3f3;
     margin-left: 10px !important;
-    margin-right: 10px !important;
+    margin-right: 1px !important;
 }
 /* Estilos para la sección de eventos */
 .events-section {
@@ -2962,9 +2962,9 @@ a.ui-button:active,
 }
 
 button.my-custom-button-class {
-    font-weight: 700 !important;
+    font-weight: 200 !important;
     border-width: 1px !important;
-    border-style: none !important;
+    border-style: solid !important;
     font-size: 16px !important;
     margin: .5em 0 !important;
     padding: .7em 1em !important;
@@ -2980,6 +2980,7 @@ button.my-custom-button-class {
     -ms-user-select: none !important;
     user-select: none !important;
     margin-left: 25px !important;
+    font-family: sans-serif;    
 }
 
 body button.my-custom-button-class {
@@ -2990,4 +2991,12 @@ body button.my-custom-button-class {
     width: 140px;
     border-radius: 29px !important;
     text-shadow: none;
+    height: 42px !important;
+}
+
+
+body button.my-custom-button-class.unfollow {
+    background-color: #fff !important;
+    color: #000 !important; /* Cambiado de #fff a #000 para hacer el texto negro */
+    border-color: #757575 !important;
 }

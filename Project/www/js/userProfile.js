@@ -138,7 +138,9 @@ $(document).ready(function () {
     
                 // Cambiar el texto del botón a "Dejar de seguir"
                 $('#follow-button').text("Dejar de seguir");
-                
+    
+                // Agregar la clase 'unfollow' al botón
+                $('#follow-button').addClass('unfollow');
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -154,10 +156,12 @@ $(document).ready(function () {
                 // Si la solicitud fue exitosa, cambiar el texto del botón a "Seguir"
                 if (data.success) {
                     $('#follow-button').text("Seguir");
-                     // Actualizar la interfaz de usuario
+                    // Actualizar la interfaz de usuario
                     $('#followers-count').text( data.followers_count);
-                   // $('#following-count').text("Seguidos: " + data.following_count);
-                
+                    //$('#following-count').text("Seguidos: " + data.following_count);
+    
+                    // Quitar la clase 'unfollow' del botón
+                    $('#follow-button').removeClass('unfollow');
                 }
             })
             .catch((error) => {
