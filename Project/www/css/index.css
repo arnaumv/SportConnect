@@ -2924,3 +2924,52 @@ a.ui-button:active,
     margin-left: -200px;
 }
 
+
+
+/**** USER PROFILE ***/
+
+
+.divSeguidores2 {
+    color: #000;
+    text-align: left;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 120px;
+    height: 60px;
+}
+
+.divSeguidores2 > div:not(:last-child) {
+    margin-right: 20px; /* Ajusta este valor según tus necesidades */
+    border-right: 1px solid #000; /* Añade una línea vertical a la derecha de cada div */
+    padding-right: 20px; /* Añade un poco de espacio a la derecha de cada div para separar el contenido de la línea */
+}
+
+button.my-custom-button-class {
+    font-weight: 700 !important;
+    border-width: 1px !important;
+    border-style: none !important;
+    font-size: 16px !important;
+    margin: .5em 0 !important;
+    padding: .7em 1em !important;
+    display: block !important;
+    position: relative !important;
+    text-align: center !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+body button.my-custom-button-class {
+    background-color: #585a68 !important;
+    border-color: #fff !important;
+    color: #fff !important; /* Cambiado de #333 a #fff para hacer el texto blanco */
+    text-shadow: none !important;
+    width: 140px;
+    border-radius: 29px !important;
+    text-shadow: none;
+}

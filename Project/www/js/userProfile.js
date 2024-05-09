@@ -48,8 +48,10 @@ $(document).ready(function () {
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
             $('#city').text("Ciudad: " + data.city);
-            $('#followers-count').text("Seguidores: " + data.followers_count);  // Actualizar el número de seguidores
-            $('#following-count').text("Seguidos: " + data.following_count);  // Actualizar el número de seguidos
+            $('#followers-count').text( data.followers_count);  // Actualizar el número de seguidores
+            $('#following-count').text(  data.following_count);  // Actualizar el número de seguidos
+            $('#events-count').text(data.events_count );  // Mostrar el conteo de eventos en el HTML
+
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram2').attr('src', './img/Profile/insta.webp');
@@ -131,11 +133,12 @@ $(document).ready(function () {
             .then(data => {
                 console.log('Success:', data);
                 // Actualizar la interfaz de usuario
-                $('#followers-count').text("Seguidores: " + data.followers_count);
+                $('#followers-count').text( data.followers_count);
                 //$('#following-count').text("Seguidos: " + data.following_count);
     
                 // Cambiar el texto del botón a "Dejar de seguir"
                 $('#follow-button').text("Dejar de seguir");
+                
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -152,7 +155,7 @@ $(document).ready(function () {
                 if (data.success) {
                     $('#follow-button').text("Seguir");
                      // Actualizar la interfaz de usuario
-                    $('#followers-count').text("Seguidores: " + data.followers_count);
+                    $('#followers-count').text( data.followers_count);
                    // $('#following-count').text("Seguidos: " + data.following_count);
                 
                 }
