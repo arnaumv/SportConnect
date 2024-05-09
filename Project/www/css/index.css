@@ -1275,6 +1275,7 @@ ui-input-text input,
     margin-bottom: 10px;
     object-fit: cover;
     border: 2px solid #007bff;
+    margin-left: 12px;
 }
 
 /* .formINFO #description {
