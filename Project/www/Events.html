@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
    
     <title>Sport Connect - Eventos</title>
+   
 </head>
-
 <body class="events-page-body">
     <div data-role="page"  class="events-page-div">
         <div class="headerEvents">
@@ -36,6 +36,8 @@
         </div>
         <!-- page 1 -->
         <div class="ui-content events-page">
+            <div id="overlay" style="display: none;"></div>
+
             <div class="search-container">
                 <input type="text" id="locationSearch" placeholder="Buscar por ubicación">
                 <button id="locationSearchButton" class="waves-effect waves-light btn">
@@ -108,6 +110,19 @@
 					<span id="popup-message2"></span>
 				</div>
 			</div>
+
+            
+            <!-- <div id="overlay"></div>
+            <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <h4>Confirmación</h4>
+                <p>¿Estás seguro de que quieres borrar este evento?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelButton">Cancelar</button>
+                <button id="confirmButton">Aceptar</button>
+            </div>
+            </div> -->
             
                 <div data-role="footer" data-position="fixed">
                     <div data-role="navbar">

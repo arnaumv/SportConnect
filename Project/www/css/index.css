@@ -920,7 +920,7 @@ ui-input-text input,
     color: #333;
     text-shadow: 0 1px 0 #f3f3f3;
     margin-left: 10px !important;
-    margin-right: 1px !important;
+    margin-right: 12px !important;
 }
 /* Estilos para la sección de eventos */
 .events-section {
@@ -3000,3 +3000,45 @@ body button.my-custom-button-class.unfollow {
     color: #000 !important; /* Cambiado de #fff a #000 para hacer el texto negro */
     border-color: #757575 !important;
 }
+
+
+
+
+
+
+/* 
+
+#overlay {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-footer {
+    padding: 10px;
+} */
