@@ -7,6 +7,8 @@ $(document).ready(function () {
   // Obtener el ID del evento del localStorage
   var eventId = localStorage.getItem("selectedEventId");
   // Hacer una solicitud AJAX para obtener la información del evento
+  var eventTitle, eventSport, eventLocation, eventDate, eventTime;
+
   $.ajax({
     url: 'http://127.0.0.1:8000/event-filter/' + eventId + '/get_event',  // URL de tu API
     type: 'GET',
@@ -21,6 +23,11 @@ $(document).ready(function () {
       // Convertir la fecha a formato 'dd-mm-yyyy'
       var date = new Date(evento.date);
       var formattedDate = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getFullYear();
+      eventTitle = evento.title;
+      eventSport = evento.sport;
+      eventLocation = evento.location; // Asegúrate de que 'location' es el nombre correcto del campo
+      eventDate = evento.date;
+      eventTime = evento.time; // Asegúrate de que 'time' es el nombre correcto del campo
 
       // Actualizar el HTML de la página con la información del evento
       $('.evento img').attr('src', evento.image_path);
@@ -179,6 +186,12 @@ $(document).ready(function () {
         $("#joinEventBtn").hide();
         $("#cancelEventBtn").show();
 
+        // Convertir eventDate a un objeto Date de JavaScript
+        var eventDateObj = new Date(eventDate);
+
+        // Convertir el objeto Date a una cadena de texto en el formato ISO 8601
+        var eventDateISO = eventDateObj.toISOString();
+
         // Nueva llamada AJAX para crear una notificación
         $.ajax({
           url: "http://127.0.0.1:8000/notification/",
@@ -186,13 +199,14 @@ $(document).ready(function () {
           data: JSON.stringify({
             type: 'join',
             username: username,
-            recipient_username: 'default_username', // Añade el nombre de usuario del destinatario aquí
+            recipient_username: 'default_username',
             event_title: eventTitle,
             event_sport: eventSport,
             event_location: eventLocation,
-            event_date: eventDate,
+            event_date: eventDateISO, // Usar eventDateISO en el formato ISO 8601
             event_time: eventTime,
-            message: "You have joined an event",
+            message: 'Te has unido a un evento de "' + eventSport + '".\nUbicación: ' + eventLocation + '.\nFecha y Hora: ' + eventDateISO + ' ' + eventTime,
+
           }),
           headers: {
             "Content-Type": "application/json",
