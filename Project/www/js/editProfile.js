@@ -29,7 +29,7 @@ $(document).ready(function () {
         $('#username').text(storedUsername);
 
         // Fetch the current user's profile image from the server
-        fetch('http://127.0.0.1:8000//profile/' + storedUsername + '/')
+        fetch('http://127.0.0.1:8000/profile/' + storedUsername + '/')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -41,18 +41,27 @@ $(document).ready(function () {
 
                 var imageUrl;
                 if (data.image_path != null) {
-                    imageUrl = 'http://127.0.0.1:8000//' + data.image_path;
+                    imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
                 } else {
-                    imageUrl = 'http://127.0.0.1:8000//Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+                    imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
                 }
                 $('#profile-image').attr('src', imageUrl);
-                 // Load the user's description into the HTML
+                // Load the user's description into the HTML
                 if (data.description != null) {
                     $('#description').val(data.description);
                 }
-                 // Load the user's email into the HTML
+                // Load the user's email into the HTML
                 if (data.email != null) {
                     $('#email').val(data.email);
+                }
+
+                // Load the user's Instagram username into the HTML
+                if (data.instagram != null) {
+                    $('#instagram').val(data.instagram);
+                }
+                // Load the user's Twitter username into the HTML
+                if (data.twitter != null) {
+                    $('#twitter').val(data.twitter);
                 }
             })
             .catch(error => {
@@ -131,7 +140,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#btnSave').on('click', function () {
+    $('#btnSaveEditProfile').on('click', function () {
         var hasErrors = false;
     
         if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '' || $('#error_instagram').text() !== '' || $('#error_twitter').text() !== '') {
@@ -164,7 +173,7 @@ $(document).ready(function () {
             // Actualizar los datos del usuario
             $.ajax({
                 type: 'POST',
-                url: 'http://127.0.0.1:8000//update-user/' + storedUsername + '/',
+                url: 'http://127.0.0.1:8000/update-user/' + storedUsername + '/',
                 data: formData,
                 processData: false,
                 contentType: false,

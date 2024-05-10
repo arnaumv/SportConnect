@@ -47,7 +47,7 @@ $(document).ready(function () {
 
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
-            $('#city').text("Ciudad: " + data.city);
+            $('#city').text("Vive en " + data.city);
             $('#followers-count').text( data.followers_count);  // Actualizar el número de seguidores
             $('#following-count').text(  data.following_count);  // Actualizar el número de seguidos
             $('#events-count').text(data.events_count );  // Mostrar el conteo de eventos en el HTML
