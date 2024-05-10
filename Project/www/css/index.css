@@ -2357,7 +2357,8 @@ html #customDateFilter {
 .participantes h3 {
     font-size: 18px;
     margin-bottom: 10px;
-
+    font-family: system-ui;
+    font-weight: 600;
 }
 
 .participantes ul {
