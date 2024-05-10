@@ -159,12 +159,12 @@ $(document).ready(function () {
   checkIfJoined();
 
   // Controlador de eventos de clic para el botón "Unirme al evento"
+  // JavaScript
   $("#joinEventBtn").on("click", function (e) {
     e.preventDefault();
     var username = localStorage.getItem("username");
     $.ajax({
       url: "http://127.0.0.1:8000/join-event/",
-      // url: "http://127.0.0.1:8000//join-event/",
       type: "POST",
       data: JSON.stringify({
         username: username,
@@ -178,6 +178,33 @@ $(document).ready(function () {
         loadParticipants();
         $("#joinEventBtn").hide();
         $("#cancelEventBtn").show();
+
+        // Nueva llamada AJAX para crear una notificación
+        $.ajax({
+          url: "http://127.0.0.1:8000/notification/",
+          type: "POST",
+          data: JSON.stringify({
+            type: 'join',
+            username: username,
+            recipient_username: 'default_username', // Añade el nombre de usuario del destinatario aquí
+            event_title: eventTitle,
+            event_sport: eventSport,
+            event_location: eventLocation,
+            event_date: eventDate,
+            event_time: eventTime,
+            message: "You have joined an event",
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          success: function (response) {
+            console.log("Successfully created notification:", response);
+          },
+          error: function (error) {
+            console.log("Error creating notification:", error);
+          },
+        });
+
         // Aquí puedes agregar redirecciones o acciones adicionales después de unirse
       },
       error: function (error) {

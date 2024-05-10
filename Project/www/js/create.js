@@ -151,7 +151,7 @@ $('#btnEnviar').click(function(e){
                     var imagePath = ubicacionData ? ubicacionData.imagen : '';
 
                     $.ajax({
-                        url: 'http://127.0.0.1:8000//event/',
+                        url: 'http://127.0.0.1:8000/event/',
                         type: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ $('#btnEnviar').click(function(e){
                                             fechaHoraObj.getSeconds().toString().padStart(2, '0');
 
                             $.ajax({
-                                url: 'http://127.0.0.1:8000//notification/',
+                                url: 'http://127.0.0.1:8000/notification/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ $('#btnEnviar').click(function(e){
                                     event_location: ubicacion,
                                     event_date: fechaHoraObj.toISOString(), // Keep the ISO string for the event_date field
                                     event_time: eventTime,
-                                    message: 'Has creado un evento de "' + tipoDeporte + '   "\nUbicacion: ' + ubicacion + '    \nFecha y hora: ' + fechaFormateada + ' ' + horaFormateada
+                                    message: 'Has creado un evento de "' + tipoDeporte + '.   "\nUbicacion: ' + ubicacion + '.    \nFecha y hora: ' + fechaFormateada + ' ' + horaFormateada
                                 }),
                         
                                 success: function(notificationResult) {
@@ -218,7 +218,7 @@ $('#btnEnviar').click(function(e){
                         
                             // Hacer una solicitud AJAX para unirse al evento
                             $.ajax({
-                                url: 'http://127.0.0.1:8000//join-event/',
+                                url: 'http://127.0.0.1:8000/join-event/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -232,7 +232,7 @@ $('#btnEnviar').click(function(e){
                         
                                     // Create a notification for joining the event
                                     $.ajax({
-                                        url: 'http://127.0.0.1:8000//notification/',
+                                        url: 'http://127.0.0.1:8000/notification/',
                                         type: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json',
