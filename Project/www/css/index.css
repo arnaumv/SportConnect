@@ -918,7 +918,7 @@ ui-input-text input,
 .miniDescription {
     color: black;
     margin-left: 45px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     text-align: left;
 }
 
@@ -961,6 +961,16 @@ ui-input-text input,
     width: 2000px;
 
 
+}
+
+.hrEvents2 {
+    /* width: 2000px; */
+    margin-left: -20px;
+    margin-right: -20px;
+    border: none; /* Elimina el borde predeterminado */
+    border-top: 1px solid #ccc; /* Añade un borde superior */
+    color: #ccc; /* El color del borde */
+    background-color: #ccc; /* El color de fondo del borde */
 }
 
 
@@ -2160,10 +2170,11 @@ html #customDateFilter {
 }
 
 .event {
-    background-color: #f9f9f9;
+    background-color: #d7d7d766;
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 .event img {
@@ -2683,6 +2694,14 @@ span.error {
     
 }
 
+
+.MessageNotification {
+    color: #000 !important;
+    font-family: system-ui;
+    margin-top: 50px;
+}
+
+
 .headerNotify {
     display: flex;
     align-items: center;
@@ -2712,7 +2731,7 @@ span.error {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     /* Reduced font size */
-    font-weight: normal;
+    font-weight: 500;
     /*text-transform: uppercase;*/
     letter-spacing: 2px;
     line-height: 1.2;

@@ -172,22 +172,25 @@ $('#btnEnviar').click(function(e){
                         
                             // Combine date and time into a single string and replace space with 'T'
                             let fechaHora = fecha + 'T' + hora;
-                        
+
                             // Check if fechaHora can be converted to a Date object
                             if (isNaN(Date.parse(fechaHora))) {
                                 console.error('Fecha y hora no son válidas:', fechaHora);
                                 return;
                             }
-                        
+
                             // Create a notification for the event creation
                             let fechaHoraObj = new Date(fechaHora);
-                            let fechaHoraFormatted = fechaHoraObj.toISOString();
-                        
+
+                            // Format the date and time for the message
+                            let fechaFormateada = fechaHoraObj.toLocaleDateString();
+                            let horaFormateada = fechaHoraObj.toLocaleTimeString();
+
                             // Format the time for the event_time field
                             let eventTime = fechaHoraObj.getHours().toString().padStart(2, '0') + ':' +
                                             fechaHoraObj.getMinutes().toString().padStart(2, '0') + ':' +
                                             fechaHoraObj.getSeconds().toString().padStart(2, '0');
-                        
+
                             $.ajax({
                                 url: 'http://127.0.0.1:8000//notification/',
                                 type: 'POST',
@@ -200,11 +203,11 @@ $('#btnEnviar').click(function(e){
                                     event_title: titulo,
                                     event_sport: tipoDeporte,
                                     event_location: ubicacion,
-                                    event_date: fechaHoraFormatted,
+                                    event_date: fechaHoraObj.toISOString(), // Keep the ISO string for the event_date field
                                     event_time: eventTime,
-                                    message: 'Has creado un evento de "' + tipoDeporte + '"\nUbicacion: ' + ubicacion + '\nFecha y hora: ' + fechaHoraFormatted
-
+                                    message: 'Has creado un evento de "' + tipoDeporte + '   "\nUbicacion: ' + ubicacion + '    \nFecha y hora: ' + fechaFormateada + ' ' + horaFormateada
                                 }),
+                        
                                 success: function(notificationResult) {
                                     console.log('Notification created successfully');
                                 },
