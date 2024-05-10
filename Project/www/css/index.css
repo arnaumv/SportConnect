@@ -530,13 +530,12 @@ p {
 }
 
 .mapa {
-
-    height: 230px;
+    height: 270px;
     width: 92%;
     margin: 0 auto;
     border: 1px solid #0000003d;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /************** CREATE **************/
@@ -1134,6 +1133,8 @@ textarea.description-input[id='description'] {
     margin-left: -24px;
     margin-right: -25px;
 }
+
+
 
 
 /* .ButtonsEventsProfile {
@@ -1799,6 +1800,7 @@ label[for="profile-image-upload"].custom-label {
     background-color: #eeeeeef2 !important;
     border: 2px solid rgb(97, 97, 97) !important; /* Cambia el color del borde a azul cuando está enfocado */
     border-radius: 10px !important;
+    height: 80px !important;
 }
 
 
