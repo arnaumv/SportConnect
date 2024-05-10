@@ -829,10 +829,10 @@ ui-input-text input,
 
 .profile-info {
     text-align: center;
-    margin-top: -105px;
+    margin-top: -95px;
     margin-left: 20px;
     margin-bottom: 40px;
-}
+  }
 
 .profile-info h2 {
     text-align: left;
@@ -841,19 +841,19 @@ ui-input-text input,
     margin-left: 0;
     font-family: system-ui;
     font-weight: 700;
-    margin-left: 140px;
+    margin-left: 134px;
     letter-spacing: 1px;
     margin-top: 20px;
   }
-.profile-info p {
-    font-size: 15px;
-    color: #636363;
-    margin-bottom: 50px;
-    text-align: left;
-    margin-left: 142px;
-    /* margin-top: 2px; */
-}
 
+.profile-info p {
+  font-size: 15px;
+  color: #636363;
+  margin-bottom: 50px;
+  text-align: left;
+  margin-left: 132px;
+  margin-top: 1px;
+}
 .profile-info-2 {
     text-align: left;
     margin-left: 20px;
