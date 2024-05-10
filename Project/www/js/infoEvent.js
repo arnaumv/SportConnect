@@ -10,7 +10,7 @@ $(document).ready(function () {
   var eventTitle, eventSport, eventLocation, eventDate, eventTime;
 
   $.ajax({
-    url: 'http://127.0.0.1:8000/event-filter/' + eventId + '/get_event',  // URL de tu API
+    url: 'https://sportconnect.ieti.site/event-filter/' + eventId + '/get_event',  // URL de tu API
     type: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ $(document).ready(function () {
     }
 
     $.ajax({
-      url: "http://127.0.0.1:8000/event/" + eventId + "/participants",
+      url: "https://sportconnect.ieti.site/event/" + eventId + "/participants",
       type: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ $(document).ready(function () {
           var img = $("<img>").addClass("participant-image");
 
           // Fetch the profile image for the participant from the server
-          fetch('http://127.0.0.1:8000/profile/' + participant.username + '/')
+          fetch('https://sportconnect.ieti.site/profile/' + participant.username + '/')
             .then(response => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -100,7 +100,7 @@ $(document).ready(function () {
             .then(data => {
               var imageUrl;
               if (data.image_path != null) {
-                imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
+                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
               } else {
                 imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
               }
@@ -141,7 +141,7 @@ $(document).ready(function () {
   function checkIfJoined() {
     var username = localStorage.getItem("username");
     $.ajax({
-      url: "http://127.0.0.1:8000/check-joined/",
+      url: "https://sportconnect.ieti.site/check-joined/",
       type: "POST",
       data: JSON.stringify({
         username: username,
@@ -176,7 +176,7 @@ $(document).ready(function () {
     e.preventDefault();
     var username = localStorage.getItem("username");
     $.ajax({
-      url: "http://127.0.0.1:8000/join-event/",
+      url: "https://sportconnect.ieti.site/join-event/",
       type: "POST",
       data: JSON.stringify({
         username: username,
@@ -199,7 +199,7 @@ $(document).ready(function () {
 
         // Nueva llamada AJAX para crear una notificación
         $.ajax({
-          url: "http://127.0.0.1:8000/notification/",
+          url: "https://sportconnect.ieti.site/notification/",
           type: "POST",
           data: JSON.stringify({
             type: 'join',
@@ -248,7 +248,7 @@ $(document).ready(function () {
     e.preventDefault();
     var username = localStorage.getItem("username");
     $.ajax({
-      url: "http://127.0.0.1:8000/cancel-event/",
+      url: "https://sportconnect.ieti.site/cancel-event/",
       type: "POST",
       data: JSON.stringify({
         username: username,

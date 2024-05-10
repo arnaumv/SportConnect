@@ -816,8 +816,8 @@ ui-input-text input,
     border: 2px solid #007bff;
     display: flex;
     margin-top: 40px;
-    margin-left: 40px;
-}
+    margin-left: 38px;
+  }
 
 
 .profile-image-2 img {
@@ -833,6 +833,7 @@ ui-input-text input,
     margin-left: 20px;
     margin-bottom: 40px;
 }
+
 .profile-info h2 {
     text-align: left;
     font-size: 23px;
@@ -841,8 +842,9 @@ ui-input-text input,
     font-family: system-ui;
     font-weight: 700;
     margin-left: 140px;
-    /* letter-spacing: 1px; */
-}
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
 .profile-info p {
     font-size: 15px;
     color: #636363;
@@ -3029,7 +3031,6 @@ a.ui-button:active,
     border-right: 1px solid #000; /* Añade una línea vertical a la derecha de cada div */
     padding-right: 20px; /* Añade un poco de espacio a la derecha de cada div para separar el contenido de la línea */
 }
-
 button.my-custom-button-class {
     font-weight: 200 !important;
     border-width: 1px !important;
@@ -3037,6 +3038,7 @@ button.my-custom-button-class {
     font-size: 16px !important;
     margin: .5em 0 !important;
       margin-left: 0px;
+    margin-left: 0px;
     padding: .7em 1em !important;
     display: block !important;
     position: relative !important;
@@ -3049,20 +3051,20 @@ button.my-custom-button-class {
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
-    margin-left: 40px !important;
+    margin-left: 102px !important;
     font-family: sans-serif;
   }
 
-body button.my-custom-button-class {
+  body button.my-custom-button-class {
     background-color: #585a68 !important;
     border-color: #fff !important;
-    color: #fff !important; /* Cambiado de #333 a #fff para hacer el texto blanco */
+    color: #fff !important;
     text-shadow: none !important;
-    width: 140px;
+    width: 190px;
     border-radius: 29px !important;
     text-shadow: none;
     height: 42px !important;
-}
+  }
 
 
 body button.my-custom-button-class.unfollow {

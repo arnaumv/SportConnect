@@ -8,7 +8,7 @@ function createDeleteCallback(notification, notificationElement, username) {
         console.log('Deleting notification:', notification);
 
         // Imprimir la URL y los datos de la petición DELETE
-        var deleteUrl = 'http://127.0.0.1:8000/notification/' + notification.id + '?username=' + username;
+        var deleteUrl = 'https://sportconnect.ieti.site/notification/' + notification.id + '?username=' + username;
         console.log('DELETE request to:', deleteUrl);
 
         // Eliminar la notificación de la página
@@ -44,7 +44,7 @@ $(document).ready(function(){
     console.log('Usuario:', username);  // Añadido para depuración
 
     // Hacer una petición GET para obtener las notificaciones del usuario
-    fetch('http://127.0.0.1:8000/notification/?username=' + username)
+    fetch('https://sportconnect.ieti.site/notification/?username=' + username)
     .then(response => response.json())
     .then(data => {
         console.log('te ha seguido:', data);
