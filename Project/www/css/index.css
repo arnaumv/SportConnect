@@ -2230,7 +2230,6 @@ html #customDateFilter {
     display: inline-block;
     padding: 8px 20px;
     background-color: rgb(43, 165, 221);
-
     color: white;
     border: none;
     border-radius: 5px;
@@ -2240,7 +2239,7 @@ html #customDateFilter {
     margin-left: -210px;
     width: 120px !important;
     margin-top: 5px;
-
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .join-btn:hover {
