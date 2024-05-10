@@ -880,6 +880,20 @@ ui-input-text input,
     background-color: white;
 }
 
+textarea.description-input[id='description'] {
+    width: 330px !important;
+    /* padding: 20px !important; */
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    color: #333 !important;
+    height: 100px !important;
+    resize: none !important;
+    background-color: #e5e5e5 !important;
+    /* margin-top: 220px !important; */
+    padding-top: 29px;
+    padding-left: 10px;
+}
+
 .edit-profile-btn {
     display: inline-block;
     padding: 8px 16px;
@@ -1290,7 +1304,7 @@ ui-input-text input,
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 5px;
-    margin-top: -29px;
+    margin-top: -45px;
 }
 
 .EditProfile-container img {
@@ -1378,6 +1392,16 @@ ui-input-text input,
     pointer-events: none;
     transition: all 0.3s ease;
 }
+
+/* .custom-input .input-text2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+} */
 
 .custom-input input:focus+.input-text,
 .custom-input input:not(:placeholder-shown)+.input-text {
@@ -2290,6 +2314,8 @@ html #customDateFilter {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #d7d7d729;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .evento img {
