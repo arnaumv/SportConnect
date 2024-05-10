@@ -85,7 +85,7 @@ $(document).on('pagecreate', function(){
              else {
                 eventHtml += '<p>Creado por: ' + evento.creator_username + '</p>';  // Agregamos el nombre de usuario del creador del evento
             };
-            eventHtml += '<hr>';
+            eventHtml += '<hr class="hrEvents2">';
             eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Ver Evento</button>';
 
             if (evento.creator_username.toLowerCase()==storedUsername.toLowerCase()){

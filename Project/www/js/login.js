@@ -35,7 +35,7 @@ $(document).on('pagecreate', function() {
 //         function (obj) {
 //             // Enviar el token de acceso a tu servidor para autenticar al usuario
 //             $.ajax({
-//                 url: 'https://sportconnect.ieti.site/rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
+//                 url: 'http://127.0.0.1:8000//rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
 //                 method: 'POST',
 //                 contentType: 'application/json',
 //                 data: JSON.stringify({
@@ -74,7 +74,7 @@ $(document).on('pagecreate', function() {
         var password = $('.formLogin #password').val().trim();
         console.log(email, password);
 
-        // Variable para verificar si hay errores
+        // Variable para verificar si hay erroress
         var hasErrors = false;
 
         // Verificar si hay mensajes de error
@@ -86,6 +86,7 @@ $(document).on('pagecreate', function() {
         if(!hasErrors){
             $.ajax({
                 url: 'http://127.0.0.1:8000/login/',
+                // url: 'http://127.0.0.1:8000//login/',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
