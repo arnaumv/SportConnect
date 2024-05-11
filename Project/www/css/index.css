@@ -942,6 +942,7 @@ textarea.description-input[id='description'] {
     margin-left: 45px;
     /* margin-right: 20px; */
     text-align: left;
+    padding-right: 12px !important;
 }
 
 .minidecriptionContainer{

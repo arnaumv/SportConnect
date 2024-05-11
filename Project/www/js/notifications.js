@@ -55,7 +55,7 @@ $(document).ready(function(){
             let notification = data[i];
     
             // Verificar si el usuario en la notificación es el usuario actual
-            if (notification.recipient_username !== username) {
+            if (notification.username !== username && notification.recipient_username !== username) {
                 continue;  // Saltar esta notificación
             }
     
