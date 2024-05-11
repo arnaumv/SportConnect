@@ -130,7 +130,7 @@ $('#btnEnviar').click(function(e){
             console.log('Username found:', username);
 
             $.ajax({
-                url: 'http://127.0.0.1:8000/userid/' + username + '/',
+                url: 'https://sportconnect.ieti.site/userid/' + username + '/',
                 type: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ $('#btnEnviar').click(function(e){
                     var imagePath = ubicacionData ? ubicacionData.imagen : '';
 
                     $.ajax({
-                        url: 'http://127.0.0.1:8000/event/',
+                        url: 'https://sportconnect.ieti.site/event/',
                         type: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ $('#btnEnviar').click(function(e){
                                             fechaHoraObj.getSeconds().toString().padStart(2, '0');
 
                             $.ajax({
-                                url: 'http://127.0.0.1:8000/notification/',
+                                url: 'https://sportconnect.ieti.site/notification/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -218,7 +218,7 @@ $('#btnEnviar').click(function(e){
                         
                             // Hacer una solicitud AJAX para unirse al evento
                             $.ajax({
-                                url: 'http://127.0.0.1:8000/join-event/',
+                                url: 'https://sportconnect.ieti.site/join-event/',
                                 type: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -232,7 +232,7 @@ $('#btnEnviar').click(function(e){
                         
                                     // Create a notification for joining the event
                                     $.ajax({
-                                        url: 'http://127.0.0.1:8000/notification/',
+                                        url: 'https://sportconnect.ieti.site/notification/',
                                         type: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json',

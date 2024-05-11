@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     var storedUsername = localStorage.getItem('selecteduserId');
     // Si no hay datos almacenados, haz la solicitud a la API
-    fetch('http://127.0.0.1:8000/profile/' + storedUsername + '/')
+    fetch('https://sportconnect.ieti.site/profile/' + storedUsername + '/')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -71,9 +71,9 @@ $(document).ready(function () {
             }
             var imageUrl;
             if (data.image_path != null) {
-                imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
+                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
             } else {
-                imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+                imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
             }
             $('#profile-image').attr('src', imageUrl);
         })
@@ -90,7 +90,7 @@ $(document).ready(function () {
         var selectedUserId = localStorage.getItem('selecteduserId');
 
         // Hacer la solicitud GET al servidor para verificar si el usuario actual está siguiendo al usuario seleccionado
-        fetch('http://127.0.0.1:8000/isFollowing/' + currentUserId + '/' + selectedUserId + '/')
+        fetch('https://sportconnect.ieti.site/isFollowing/' + currentUserId + '/' + selectedUserId + '/')
             .then(response => response.json())
             .then(data => {
                 // Si el usuario actual está siguiendo al usuario seleccionado, cambiar el texto del botón a "Dejar de seguir"
@@ -122,7 +122,7 @@ $(document).ready(function () {
     
         // Si el texto del botón es "Seguir", hacer la solicitud POST para seguir
 if ($('#follow-button').text() === "Seguir") {
-    fetch('http://127.0.0.1:8000/follow/', {
+    fetch('https://sportconnect.ieti.site/follow/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ if ($('#follow-button').text() === "Seguir") {
             message: currentUserId + " ha empezado a seguirte."
         };
 
-        fetch('http://127.0.0.1:8000/notification/', {
+        fetch('https://sportconnect.ieti.site/notification/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -171,7 +171,7 @@ if ($('#follow-button').text() === "Seguir") {
 }
         // Si el texto del botón es "Dejar de seguir", hacer la solicitud POST para dejar de seguir
         else if ($('#follow-button').text() === "Dejar de seguir") {
-            fetch('http://127.0.0.1:8000/unfollow/' + currentUserId + '/' + selectedUserId + '/', {
+            fetch('https://sportconnect.ieti.site/unfollow/' + currentUserId + '/' + selectedUserId + '/', {
                 method: 'POST',
             })
             .then(response => response.json())
@@ -213,7 +213,7 @@ if ($('#follow-button').text() === "Seguir") {
 
         // Realizar una consulta AJAX para obtener los eventos del usuario
         $.ajax({
-            url: "http://127.0.0.1:8000/events/user_subscribed_events/?username=" + username,
+            url: "https://sportconnect.ieti.site/events/user_subscribed_events/?username=" + username,
             type: "GET",
             success: function (eventos) {
                 eventos.forEach(function (evento) {

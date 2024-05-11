@@ -29,7 +29,7 @@ $(document).ready(function () {
         $('#username').text(storedUsername);
 
         // Fetch the current user's profile image from the server
-        fetch('http://127.0.0.1:8000/profile/' + storedUsername + '/')
+        fetch('https://sportconnect.ieti.site/profile/' + storedUsername + '/')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -41,9 +41,9 @@ $(document).ready(function () {
 
                 var imageUrl;
                 if (data.image_path != null) {
-                    imageUrl = 'http://127.0.0.1:8000/' + data.image_path;
+                    imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
                 } else {
-                    imageUrl = 'http://127.0.0.1:8000/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
+                    imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
                 }
                 $('#profile-image').attr('src', imageUrl);
                 // Load the user's description into the HTML
@@ -173,7 +173,7 @@ $(document).ready(function () {
             // Actualizar los datos del usuario
             $.ajax({
                 type: 'POST',
-                url: 'http://127.0.0.1:8000/update-user/' + storedUsername + '/',
+                url: 'https://sportconnect.ieti.site/update-user/' + storedUsername + '/',
                 data: formData,
                 processData: false,
                 contentType: false,

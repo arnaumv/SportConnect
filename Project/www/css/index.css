@@ -816,8 +816,8 @@ ui-input-text input,
     border: 2px solid #007bff;
     display: flex;
     margin-top: 40px;
-    margin-left: 40px;
-}
+    margin-left: 38px;
+  }
 
 
 .profile-image-2 img {
@@ -829,10 +829,11 @@ ui-input-text input,
 
 .profile-info {
     text-align: center;
-    margin-top: -105px;
+    margin-top: -95px;
     margin-left: 20px;
     margin-bottom: 40px;
-}
+  }
+
 .profile-info h2 {
     text-align: left;
     font-size: 23px;
@@ -840,18 +841,19 @@ ui-input-text input,
     margin-left: 0;
     font-family: system-ui;
     font-weight: 700;
-    margin-left: 140px;
-    /* letter-spacing: 1px; */
-}
-.profile-info p {
-    font-size: 15px;
-    color: #636363;
-    margin-bottom: 50px;
-    text-align: left;
-    margin-left: 142px;
-    margin-top: 2px;
-}
+    margin-left: 134px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
 
+.profile-info p {
+  font-size: 15px;
+  color: #636363;
+  margin-bottom: 50px;
+  text-align: left;
+  margin-left: 132px;
+  margin-top: 1px;
+}
 .profile-info-2 {
     text-align: left;
     margin-left: 20px;
@@ -899,10 +901,16 @@ textarea.description-input[id='description'] {
     padding: 8px 16px;
     font-size: 14px;
     color: black !important;
-    border-radius: 10px;
-    border: 1px solid black;
+    border-radius: 19px;
+    border: 1.9px solid black;
     text-shadow: none;
-}
+    margin-top: 30px;
+    width: 140px;
+    margin-left: 23px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
 
 .flecha-izquierda-Edit {
     width: 34px !important;
@@ -930,10 +938,11 @@ textarea.description-input[id='description'] {
 }
 
 .miniDescription {
-    color: black;
+    color: #4b4b4bf2;
     margin-left: 45px;
     /* margin-right: 20px; */
     text-align: left;
+    padding-right: 12px !important;
 }
 
 .minidecriptionContainer{
@@ -2726,7 +2735,7 @@ span.error {
 }
 
 .pNotificationTime {
-    margin-right: -300px !important;
+    margin-right: -280px !important;
     color: #919191 !important;
     margin-top: 10px !important;
 }
@@ -2963,7 +2972,7 @@ a.ui-button:active,
     color: #000;
     text-align: left;
     display: flex;
-    margin-top: 60px;
+    margin-top: 48px;
     margin-left: 70px;
     height: 60px;
 }
@@ -3029,7 +3038,6 @@ a.ui-button:active,
     border-right: 1px solid #000; /* Añade una línea vertical a la derecha de cada div */
     padding-right: 20px; /* Añade un poco de espacio a la derecha de cada div para separar el contenido de la línea */
 }
-
 button.my-custom-button-class {
     font-weight: 200 !important;
     border-width: 1px !important;
@@ -3037,6 +3045,7 @@ button.my-custom-button-class {
     font-size: 16px !important;
     margin: .5em 0 !important;
       margin-left: 0px;
+    margin-left: 0px;
     padding: .7em 1em !important;
     display: block !important;
     position: relative !important;
@@ -3049,20 +3058,20 @@ button.my-custom-button-class {
     -moz-user-select: none !important;
     -ms-user-select: none !important;
     user-select: none !important;
-    margin-left: 40px !important;
+    margin-left: 102px !important;
     font-family: sans-serif;
   }
 
-body button.my-custom-button-class {
+  body button.my-custom-button-class {
     background-color: #585a68 !important;
     border-color: #fff !important;
-    color: #fff !important; /* Cambiado de #333 a #fff para hacer el texto blanco */
+    color: #fff !important;
     text-shadow: none !important;
-    width: 140px;
+    width: 190px;
     border-radius: 29px !important;
     text-shadow: none;
     height: 42px !important;
-}
+  }
 
 
 body button.my-custom-button-class.unfollow {
