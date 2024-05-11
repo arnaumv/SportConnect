@@ -938,7 +938,7 @@ textarea.description-input[id='description'] {
 }
 
 .miniDescription {
-    color: black;
+    color: #4b4b4bf2;
     margin-left: 45px;
     /* margin-right: 20px; */
     text-align: left;

@@ -17,6 +17,7 @@ $(document).on('pagecreate', function () {
             $('#username').text(data.username);
             // $('#city').text(data.city);
             $('#city').text("Ciudad: " + data.city);
+            $('.titulosprofile4').text('Sobre Mí');
 
             $('#followers-count').text(data.followers_count );  // Mostrar el conteo de seguidores en el HTML
             $('#following-count').text(data.following_count );  // Mostrar el conteo de seguidos en el HTML
