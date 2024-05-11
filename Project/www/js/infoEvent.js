@@ -37,9 +37,9 @@ $(document).ready(function () {
       // Actualizar el HTML de la página con la información del evento
       $('.evento img').attr('src', evento.image_path);
       $('.evento h2').text(evento.title);
-      $('.evento p').first().text('Fecha: ' + formattedDate + ' Hora: ' + formattedTime+'H' );  
-      $('.evento p').eq(1).text('Actividad: ' + evento.sport); // Usamos eq(1) para seleccionar el segundo párrafo
-      $('.evento p').last().text('Descripción:' + evento.description);
+      $('.evento p').first().text('Fecha: ' + formattedDate + '   Hora: ' + formattedTime+'' );  
+      $('.evento p').eq(1).text('Actividad:  ' + evento.sport); // Usamos eq(1) para seleccionar el segundo párrafo
+      $('.evento p').last().text('Descripción: ' +  evento.description);
 
       // Obtener el nombre de usuario almacenado
       var storedUsername = localStorage.getItem("username");

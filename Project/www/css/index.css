@@ -842,7 +842,7 @@ ui-input-text input,
     font-family: system-ui;
     font-weight: 700;
     margin-left: 134px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     margin-top: 20px;
   }
 
