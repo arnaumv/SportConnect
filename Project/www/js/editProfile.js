@@ -63,6 +63,8 @@ $(document).ready(function () {
                 if (data.twitter != null) {
                     $('#twitter').val(data.twitter);
                 }
+                  // Set a placeholder in the password field
+                $('#password').val('********');
             })
             .catch(error => {
                 console.error('Error:', error);
