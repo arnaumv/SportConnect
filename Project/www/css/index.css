@@ -1250,7 +1250,7 @@ textarea.description-input[id='description'] {
     margin-top: 80px;
     color: #000000b8;
     text-shadow: none;
-    font-family: math;
+    font-family: sans-serif;
     font-size: medium;
     font-style: inherit;
 }

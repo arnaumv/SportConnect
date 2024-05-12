@@ -175,6 +175,7 @@ $(document).ready(function () {
   $("#joinEventBtn").on("click", function (e) {
     e.preventDefault();
     var username = localStorage.getItem("username");
+    console.log("Event time before join-event request:", eventTime); // Log event time
     $.ajax({
       url: "https://sportconnect.ieti.site/join-event/",
       type: "POST",
@@ -190,16 +191,12 @@ $(document).ready(function () {
         loadParticipants();
         $("#joinEventBtn").hide();
         $("#cancelEventBtn").show();
-
-        // Convertir eventDate a un objeto Date de JavaScript
-        // Convertir eventDate a un objeto Date de JavaScript
+  
         var eventDateObj = new Date(eventDate);
-
-        // Format the date and time in a more human-readable format for the message
         var eventDateFormatted = eventDateObj.toLocaleDateString();
         var eventTimeFormatted = eventDateObj.toLocaleTimeString();
-
-        // Nueva llamada AJAX para crear una notificación
+  
+        console.log("Event time before notification request:", eventTime); // Log event time
         $.ajax({
           url: "https://sportconnect.ieti.site/notification/",
           type: "POST",
@@ -210,9 +207,9 @@ $(document).ready(function () {
             event_title: eventTitle,
             event_sport: eventSport,
             event_location: eventLocation,
-            event_date: eventDateObj.toISOString(), // Keep this as a datetime object
+            event_date: eventDateObj.toISOString(),
             event_time: eventTime,
-            message: 'Te has unido a un evento de "' + eventSport + '".\nUbicación: ' + eventLocation + '.\nFecha y Hora: ' + eventDateFormatted + ' ' + eventTimeFormatted,
+            message: 'Te has unido a un evento de "' + eventSport + '".\nUbicación: ' + eventLocation + '.\nFecha y Hora: ' + eventDateFormatted + ' ' + eventTime,
           }),
           headers: {
             "Content-Type": "application/json",

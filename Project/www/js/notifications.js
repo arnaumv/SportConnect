@@ -66,7 +66,7 @@ $(document).ready(function(){
                 
             // Crear y mostrar la hora de creación de la notificación
             var date = new Date(notification.created_at);
-            var formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            var formattedDate = date.toLocaleString('es-ES', { timeZone: 'Europe/Madrid' });
             var createTime = $('<p class="pNotificationTime"></p>').text(formattedDate);
     
             var deleteButton = $('<button></button>').css({
