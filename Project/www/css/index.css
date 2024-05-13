@@ -3067,6 +3067,7 @@ button.my-custom-button-class {
     border-radius: 29px !important;
     text-shadow: none;
     height: 42px !important;
+    font-weight: 900 !important;
   }
 
 
