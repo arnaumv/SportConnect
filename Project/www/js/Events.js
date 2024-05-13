@@ -86,7 +86,7 @@ $(document).on('pagecreate', function(){
                 eventHtml += '<p>Creado por: ' + evento.creator_username + '</p>';  // Agregamos el nombre de usuario del creador del evento
             };
             eventHtml += '<hr class="hrEvents2">';
-            eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Ver Evento</button>';
+            eventHtml += '<button class="join-btn" data-event-id="' + evento.id + '">Ver actividad</button>';
 
             if (evento.creator_username.toLowerCase()==storedUsername.toLowerCase()){
                 eventHtml += '<img class="borrarEvent" id="borrarEvent" src="img/Options/eliminarEvent.png">';

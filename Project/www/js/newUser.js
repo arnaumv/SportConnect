@@ -53,7 +53,7 @@ $(document).ready(function() {
     $('.formNewUser #password').on('input focusout', function() {
         var password = $(this).val().trim();
         if(password.length < 8 || password.length > 128){
-            $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');
+            $('#error_password').text('Contraseña no valida. Longitud mínima de 8 caracteres.');
             $(this).addClass('error-input'); // Agregar clase de error al input
         } else {
             $('#error_password').text('');
