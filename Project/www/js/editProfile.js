@@ -46,14 +46,25 @@ $(document).ready(function () {
                     imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
                 }
                 $('#profile-image').attr('src', imageUrl);
-                 // Load the user's description into the HTML
+                // Load the user's description into the HTML
                 if (data.description != null) {
                     $('#description').val(data.description);
                 }
-                 // Load the user's email into the HTML
+                // Load the user's email into the HTML
                 if (data.email != null) {
                     $('#email').val(data.email);
                 }
+
+                // Load the user's Instagram username into the HTML
+                if (data.instagram != null) {
+                    $('#instagram').val(data.instagram);
+                }
+                // Load the user's Twitter username into the HTML
+                if (data.twitter != null) {
+                    $('#twitter').val(data.twitter);
+                }
+                  // Set a placeholder in the password field
+                $('#password').val('********');
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -131,7 +142,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#btnSave').on('click', function () {
+    $('#btnSaveEditProfile').on('click', function () {
         var hasErrors = false;
     
         if ($('#error_email').text() !== '' || $('#error_password').text() !== '' || $('#error_description').text() !== '' || $('#error_birthdate').text() !== '' || $('#error_instagram').text() !== '' || $('#error_twitter').text() !== '') {

@@ -43,7 +43,7 @@
     <div data-role="page">
         <div class="headerEditProfile">
             <img id="flecha-izquierda" src="./img/index/flecha-izquierda.png" alt="Image 1"
-                class="flecha-izquierda-Edit">
+                class="flecha-izquierda-EditProfile">
             <h1>Editar Perfil</h1>
             <!-- <a href=""><img src="./img/index/campana.png" alt="Icono de notificación" class="notification-icon"></a> -->
         </div>
@@ -63,7 +63,7 @@
 
 
             <div class="formINFO">
-                <h3 class="info_user_editProfile">Información Personal de <span id="username"></span></h3>
+                <h3 class="info_user_editProfile">Información Personal</h3>
                 <div class="custom-input">
                     <input type="email" id="email" placeholder=" ">
                     <span class="input-text">Email</span>
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="custom-input">
-                    <input type="text" id="description" placeholder=" ">
+                    <textarea type="text" id="description" class="description-input" placeholder=" "></textarea>
                     <span class="input-text">Descripción</span>
                     <span class="error" id="error_description"></span>
                 </div>
@@ -100,7 +100,7 @@
                     <span class="error" id="error_twitter"></span>
                 </div>
 
-                <button id="btnSave">Guardar cambios</button>
+                <button id="btnSaveEditProfile">Guardar cambios</button>
             </div>
 
 
@@ -136,7 +136,7 @@
                         </a></li>
                     <li><a id="events">
                             <img class="small-image" src="img/index/calendar.png" alt="Page 3">
-                            <p>Eventos</p>
+                            <p>Actividades</p>
                         </a></li>
                     <li><a id="profile" class="ui-btn-active ui-state-persist">
                             <img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">

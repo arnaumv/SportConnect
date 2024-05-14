@@ -47,7 +47,11 @@ $(document).ready(function () {
 
             localStorage.setItem('selecteduserId', data.username);
             $('#username').text(data.username);
-            $('#city').text("Ciudad: " + data.city);
+            $('#city').text("Vive en " + data.city);
+            $('#followers-count').text( data.followers_count);  // Actualizar el número de seguidores
+            $('#following-count').text(  data.following_count);  // Actualizar el número de seguidos
+            $('#events-count').text(data.events_count );  // Mostrar el conteo de eventos en el HTML
+
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram2').attr('src', './img/Profile/insta.webp');
@@ -76,6 +80,118 @@ $(document).ready(function () {
         .catch(error => {
             console.error('Error:', error);
         });
+
+
+
+        // Obtener el nombre de usuario del usuario que está actualmente conectado
+        var currentUserId = localStorage.getItem('username');
+
+        // Obtener el nombre de usuario del usuario que se está visualizando
+        var selectedUserId = localStorage.getItem('selecteduserId');
+
+        // Hacer la solicitud GET al servidor para verificar si el usuario actual está siguiendo al usuario seleccionado
+        fetch('https://sportconnect.ieti.site/isFollowing/' + currentUserId + '/' + selectedUserId + '/')
+            .then(response => response.json())
+            .then(data => {
+                // Si el usuario actual está siguiendo al usuario seleccionado, cambiar el texto del botón a "Dejar de seguir"
+                if (data.isFollowing) {
+                    $('#follow-button').text("Dejar de seguir");
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    // Añadir evento de clic al botón de seguir
+
+    $('#follow-button').click(function() {
+        // Obtener el nombre de usuario del usuario que está actualmente conectado
+        var currentUserId = localStorage.getItem('username');
+        console.log('currentUserId:', currentUserId);
+    
+        // Obtener el nombre de usuario del usuario que se está visualizando
+        var selectedUserId = localStorage.getItem('selecteduserId');
+        console.log('selectedUserId:', selectedUserId);
+    
+        // Crear el objeto con los datos a enviar al servidor
+        var data = {
+            current_username: currentUserId,
+            following_username: selectedUserId
+        };
+    
+        console.log('data:', data);
+    
+        // Si el texto del botón es "Seguir", hacer la solicitud POST para seguir
+if ($('#follow-button').text() === "Seguir") {
+    fetch('https://sportconnect.ieti.site/follow/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Actualizar la interfaz de usuario
+        $('#followers-count').text( data.followers_count);
+        //$('#following-count').text("Seguidos: " + data.following_count);
+
+        // Cambiar el texto del botón a "Dejar de seguir"
+        $('#follow-button').text("Dejar de seguir");
+
+        // Agregar la clase 'unfollow' al botón
+        $('#follow-button').addClass('unfollow');
+
+        // Crear una notificación
+        var notificationData = {
+            type: 'follow',
+            username: currentUserId,  // El usuario que realiza la acción
+            recipient_username: selectedUserId,  // El usuario que recibe la notificación
+            message: currentUserId + " ha empezado a seguirte."
+        };
+
+        fetch('https://sportconnect.ieti.site/notification/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(notificationData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Notification created:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+        // Si el texto del botón es "Dejar de seguir", hacer la solicitud POST para dejar de seguir
+        else if ($('#follow-button').text() === "Dejar de seguir") {
+            fetch('https://sportconnect.ieti.site/unfollow/' + currentUserId + '/' + selectedUserId + '/', {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Si la solicitud fue exitosa, cambiar el texto del botón a "Seguir"
+                if (data.success) {
+                    $('#follow-button').text("Seguir");
+                    // Actualizar la interfaz de usuario
+                    $('#followers-count').text( data.followers_count);
+                    //$('#following-count').text("Seguidos: " + data.following_count);
+    
+                    // Quitar la clase 'unfollow' del botón
+                    $('#follow-button').removeClass('unfollow');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    });
 
     /***   MOSTRAR EVENTO   ****/
 
@@ -123,6 +239,21 @@ $(document).ready(function () {
         // Marcar el botón activo correspondiente
         $('.events-buttons button').removeClass('active');
         $('#' + categoriaSeleccionada.toLowerCase() + '-events-btn').addClass('active');
+    }
+
+    // Agrega un evento de clic a los botones
+    document.querySelector('#active-events-btn').addEventListener('click', setActiveState);
+    document.querySelector('#finished-events-btn').addEventListener('click', setActiveState);
+
+    function setActiveState() {
+        // Elimina la clase activa de los botones y la línea hr
+        document.querySelector('#active-events-btn').classList.remove('active');
+        document.querySelector('#finished-events-btn').classList.remove('active');
+        document.querySelector('.hrclass').classList.remove('active');
+
+        // Agrega la clase activa al botón clicado y la línea hr
+        this.classList.add('active');
+        document.querySelector('.hrclass').classList.add('active');
     }
 
     // Agregar evento al DOM

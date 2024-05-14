@@ -40,7 +40,7 @@
 	<div data-role="page" id="create-page">
 		<div class="headerCreate">
 			<img id="redirectToLanding" src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-			<h1>Crear evento</h1>
+			<h1>Nueva actividad</h1>
 			<a href=""><img src="./img/index/campana.png" alt="Icono de notificación" id="redirectToNotify" class="notification-icon"></a>
 		</div>
 
@@ -48,7 +48,7 @@
 			<br><br>
 			<div class="form">
 				<label for="titulo">Título:</label>
-				<input type="text" id="titulo" class="input-text" placeholder="Título del evento">
+				<input type="text" id="titulo" class="input-text" placeholder="Añade un título">
 				<span id="error_titulo" class="error"></span><br>
 				<label for="tipoDeporte">Deporte:</label>
 				<select id="tipoDeporte" class="input-text">
@@ -63,7 +63,7 @@
 			
 				<label for="fecha">Fecha y hora:</label>
 				<div class="timeDate">
-					<input type="date" id="fecha" class="custom-input input-text">
+					<input type="date" id="fecha" placeholder="dd/mm/aaaa" class="custom-input input-text">
 					<input type="time" id="hora" class="custom-input input-text">
 					<img src="./img/index/fecha.png" alt="Descripción de la imagen" class="imgDateCreateEvent">
 					<img src="./img/index/reloj.png" alt="Descripción de la imagen" class="imgDateCreateEventReloj">
@@ -78,10 +78,10 @@
 				</select><br>
 			
 				<label for="descripcion">Descripción:</label>
-				<textarea id="descripcion" class="text-area-create" rows="4" cols="50" placeholder="Descripción del evento"></textarea>
+				<textarea id="descripcion" class="text-area-create" rows="4" cols="50" placeholder="Pon una descripción"></textarea>
 				<span class="error" id="error_descripcion"></span><br>
 
-				<button id="btnEnviar">Crear evento</button>
+				<button id="btnEnviar">Crear actividad</button>
 			</div>
 		</div>
 
@@ -112,7 +112,7 @@
 					</a></li>
 					<li><a id="events">
 						<img class="small-image" src="img/index/calendar.png" alt="Page 3">
-						<p>Eventos</p>
+						<p>Actividades</p>
 					</a></li>
 					<li><a id="profile">
 						<img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">

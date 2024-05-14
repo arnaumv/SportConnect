@@ -139,7 +139,7 @@
                 "longitude": 2.081566
             },  
             "actividad": ["Futbol", "Baloncesto"],
-            "imagen": "./www/img/Places/Futbol_Predef.jpg"
+            "imagen": "./img/Places/Futbol_Predef.jpg"
         }, 
         
         {

@@ -15,14 +15,22 @@ $(document).on('pagecreate', function () {
 
             localStorage.setItem('username', data.username);
             $('#username').text(data.username);
-            $('#city').text(data.city);
+            // $('#city').text(data.city);
+            $('#city').text("Ciudad: " + data.city);
+            $('.titulosprofile4').text('Sobre Mí');
+
+            $('#followers-count').text(data.followers_count );  // Mostrar el conteo de seguidores en el HTML
+            $('#following-count').text(data.following_count );  // Mostrar el conteo de seguidos en el HTML
+            $('#events-count').text(data.events_count );  // Mostrar el conteo de eventos en el HTML
+
+
             if (data.instagram != null) {
                 // Establecer el atributo src de la imagen de Instagram
                 $('#img-instagram').attr('src', './img/Profile/insta.webp');
                 // Envolver la imagen en un enlace
                 $('#img-instagram').wrap('<a href="https://www.instagram.com/' + data.instagram + '" target="_blank"></a>');
             }
-
+            
             if (data.twitter != null) {
                 // Establecer el atributo src de la imagen de Twitter
                 $('#img-twitter').attr('src', './img/Profile/twitter.webp');
@@ -35,7 +43,7 @@ $(document).on('pagecreate', function () {
             }
             var imageUrl;
             if (data.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
+                imageUrl = 'https://sportconnect.ieti.site' + data.image_path;
             } else {
                 imageUrl = 'https://sportconnect.ieti.site/Media/profile_photos/User_photo.png'; // Ruta a la imagen predeterminada
             }

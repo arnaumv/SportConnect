@@ -119,11 +119,9 @@ $('#btnEnviar').click(function(e){
     var hasErrors = false;
     console.log('Button clicked.');  // Log the button click event
 
-
     if ($('#error_titulo').text() !== '' || $('#error_event_date').text() !== '' || $('#error_descripcion').text() !== '') {
         hasErrors = true;
     }
-    
     
     if(!hasErrors){
         var username = localStorage.getItem('username');
@@ -170,18 +168,108 @@ $('#btnEnviar').click(function(e){
                         }),
                         success: function(result) {
                             console.log('AJAX request successful. Event created:', result);
-                            //alert('Evento creado con éxito.');
                             showPopup2('Evento creado con éxito');
+                        
+                            // Combine date and time into a single string and replace space with 'T'
+                            let fechaHora = fecha + 'T' + hora;
+
+                            // Check if fechaHora can be converted to a Date object
+                            if (isNaN(Date.parse(fechaHora))) {
+                                console.error('Fecha y hora no son válidas:', fechaHora);
+                                return;
+                            }
+
+                            // Create a notification for the event creation
+                            let fechaHoraObj = new Date(fechaHora);
+
+                            // Format the date and time for the message
+                            let fechaFormateada = fechaHoraObj.toLocaleDateString();
+                            let horaFormateada = fechaHoraObj.toLocaleTimeString();
+
+                            // Format the time for the event_time field
+                            let eventTime = fechaHoraObj.getHours().toString().padStart(2, '0') + ':' +
+                                            fechaHoraObj.getMinutes().toString().padStart(2, '0') + ':' +
+                                            fechaHoraObj.getSeconds().toString().padStart(2, '0');
+
+                            $.ajax({
+                                url: 'https://sportconnect.ieti.site/notification/',
+                                type: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                data: JSON.stringify({
+                                    type: 'create',
+                                    username: username,
+                                    event_title: titulo,
+                                    event_sport: tipoDeporte,
+                                    event_location: ubicacion,
+                                    event_date: fechaHoraObj.toISOString(), // Keep the ISO string for the event_date field
+                                    event_time: eventTime,
+                                    message: 'Has creado un evento de "' + tipoDeporte + '.   "\nUbicacion: ' + ubicacion + '.    \nFecha y hora: ' + fechaFormateada + ' ' + horaFormateada
+                                }),
+                        
+                                success: function(notificationResult) {
+                                    console.log('Notification created successfully');
+                                },
+                                error: function(notificationError) {
+                                    console.error('Error creating notification:', notificationError);
+                                }
+                            });
+                        
+                            // Hacer una solicitud AJAX para unirse al evento
+                            $.ajax({
+                                url: 'https://sportconnect.ieti.site/join-event/',
+                                type: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                data: JSON.stringify({
+                                    username: username,
+                                    event: result.id,  // Usar el ID del evento que acaba de ser creado
+                                }),
+                                success: function(result) {
+                                    console.log('AJAX request successful. Joined event:', result);
+                        
+                                    // Create a notification for joining the event
+                                    $.ajax({
+                                        url: 'https://sportconnect.ieti.site/notification/',
+                                        type: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                        },
+                                        data: JSON.stringify({
+                                            type: 'join',
+                                            username: username,
+                                            event_title: titulo,
+                                            event_sport: tipoDeporte,
+                                            event_location: ubicacion,
+                                            event_date: fechaHoraFormatted,
+                                            event_time: eventTime,
+                                            message: 'Te has unido al evento de "' + tipoDeporte + '"'
+                                        }),
+                                        success: function(notificationResult) {
+                                            console.log('Notification created successfully');
+                                        },
+                                        error: function(notificationError) {
+                                            console.error('Error creating notification:', notificationError);
+                                        }
+                                    });
+                                },
+                                error: function(error) {
+                                    console.log('AJAX request failed. Error joining event:', error);
+                                }
+                            });
+                        
+                            
                             setTimeout(function() {
                                 window.location.href = 'Events.html';
                             }, 2200); // 2200 milisegundos = 2.2 segundos
-                                                    },
-                        error: function(error) {
-                            console.log('AJAX request failed. Error creating event:', error);
-                            //alert('Hubo un error al crear el evento.');
-                            showPopup('Hubo un error al crear el evento');
-                        }
-                    });
+                            },
+                            error: function(error) {
+                                console.log('AJAX request failed. Error creating event:', error);
+                                showPopup('Hubo un error al crear el evento');
+                            }
+                            });
                 },
                 error: function(error) {
                     console.log('AJAX request failed. Error retrieving user ID:', error);
@@ -194,7 +282,6 @@ $('#btnEnviar').click(function(e){
         }
     }
 });
-
 });
 
 // Función para validar la fecha y hora del evento

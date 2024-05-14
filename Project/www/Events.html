@@ -19,22 +19,25 @@
     <link rel="icon" href="./img/index/logo1.png">
     <link rel="stylesheet" href="css/index.css">
     
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
    
     <title>Sport Connect - Eventos</title>
+   
 </head>
-
 <body class="events-page-body">
     <div data-role="page"  class="events-page-div">
         <div class="headerEvents">
             <img id="redirectToLanding" src="./img/index/LOGO.png" alt="Image 1" class="header-logo">
-            <h1>Eventos</h1>
+            <h1>Actividades</h1>
             <a href=""><img src="./img/index/campana.png" alt="Icono de notificación" id="redirectToNotify" class="notification-icon"></a>
 
             
         </div>
         <!-- page 1 -->
         <div class="ui-content events-page">
+            <div id="overlay" style="display: none;"></div>
+
             <div class="search-container">
                 <input type="text" id="locationSearch" placeholder="Buscar por ubicación">
                 <button id="locationSearchButton" class="waves-effect waves-light btn">
@@ -46,13 +49,13 @@
             <button id="filterButton" class="waves-effect waves-light btn">Filtrar ▼</button>
             <button id="filterDateButton" class="waves-effect waves-light btn">Fecha ▼</button>
             
-            <p class="pEvents">Encuentra eventos disponibles</p>
+            <p class="pEvents">Encuentra actividades disponibles</p>
             <!--<hr class="hrEvents">-->
             <div id="filterDateDiv" class="filterDiv">
                 <p class="pFilterSport">Filtra por fecha</p>
                 <br>
                 <img src="./img/index/fecha.png" alt="Descripción de la imagen" class="imgDateFilter"> <!-- Añade tu imagen aquí -->
-                <input type="date" id="customDateFilter">
+                <input type="date" id="customDateFilter" data-role="none">
                 
                 <button id="acceptDateFilterButton" class="waves-effect waves-light btn">Ver resultados</button>
             </div>
@@ -107,6 +110,19 @@
 					<span id="popup-message2"></span>
 				</div>
 			</div>
+
+            
+            <!-- <div id="overlay"></div>
+            <div id="confirmModal" class="modal">
+            <div class="modal-content">
+                <h4>Confirmación</h4>
+                <p>¿Estás seguro de que quieres borrar este evento?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelButton">Cancelar</button>
+                <button id="confirmButton">Aceptar</button>
+            </div>
+            </div> -->
             
                 <div data-role="footer" data-position="fixed">
                     <div data-role="navbar">
@@ -121,7 +137,7 @@
                             </a></li>
                             <li><a id="events" class="ui-btn-active ui-state-persist">
                                 <img class="small-image" src="img/index/calendar.png" alt="Page 3">
-                                <p>Eventos</p>
+                                <p>Actividades</p>
                             </a></li>
                             <li><a id="profile">
                                 <img class="small-image" src="img/index/iconoProfile.png" alt="Page 4">
@@ -135,6 +151,7 @@
     <script src="cordova.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/Events.js"></script>
 </body>
 

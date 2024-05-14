@@ -17,7 +17,7 @@ $(document).on('pagecreate', function() {
     $('.formLogin #password').on('input', function() {
         var password = $(this).val().trim();
         if(password.length < 8 || password.length > 128){
-            $('#error_password').text('La contraseña debe tener entre 8 y 128 caracteres');
+            $('#error_password').text('Contraseña no valida. Longitud mínima de 8 caracteres.');
             $(this).addClass('error-input'); // Agregar clase de error al input
         } else {
             $('#error_password').text('');
@@ -25,42 +25,43 @@ $(document).on('pagecreate', function() {
         }
     });
 
-    $('#btnGoogleLogin').on('click', function() {
-        window.plugins.googleplus.login(
-            {
-                'webClientId': '1038434820629-qd7sap5g4topbpfto2pcn1ntvstqcj01.apps.googleusercontent.com',
-                'offline': true,
-            },
-            function (obj) {
-                // Enviar el token de acceso a tu servidor para autenticar al usuario
-                $.ajax({
-                    url: 'https://sportconnect.ieti.site/rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
-                    method: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        access_token: obj.access_token
-                    }),
-                    success: function(data) {
-                        console.log('Login successful:', data);
-                        // Guarda los tokens y el correo electrónico en el almacenamiento local del navegador
-                        localStorage.setItem('refreshToken', data.refresh);
-                        localStorage.setItem('accessToken', data.access);
-                        localStorage.setItem('email', obj.email);
-                        localStorage.setItem('username', data.username); // Asegúrate de que tu API devuelva el nombre de usuario
-    
-                        window.location.href = 'landingpage.html';
-                    },
-                    error: function(error) {
-                        console.error('Error:', error);
-                        showPopup("Correo electrónico o contraseña incorrectos");
-                    }
-                });
-            },
-            function (msg) {
-                console.error('error: ' + msg);
-            }
-        );
-    });
+//     // Cordova
+// $('#btnGoogleLogin').on('click', function() {
+//     window.plugins.googleplus.login(
+//         {
+//             'webClientId': '1038434820629-rk4fbglu4h47b7045qcudod0jq1ct56l.apps.googleusercontent.com', // Nuevo ID de cliente
+//             'offline': true,
+//         },
+//         function (obj) {
+//             // Enviar el token de acceso a tu servidor para autenticar al usuario
+//             $.ajax({
+//                 url: 'https://sportconnect.ieti.site//rest-auth/google/', // Cambia esto por la URL de tu endpoint de Google Login
+//                 method: 'POST',
+//                 contentType: 'application/json',
+//                 data: JSON.stringify({
+//                     access_token: obj.access_token
+//                 }),
+//                 success: function(data) {
+//                     console.log('Login successful:', data);
+//                     // Guarda los tokens y el correo electrónico en el almacenamiento local del navegador
+//                     localStorage.setItem('refreshToken', data.refresh);
+//                     localStorage.setItem('accessToken', data.access);
+//                     localStorage.setItem('email', obj.email);
+//                     localStorage.setItem('username', data.username); // Asegúrate de que tu API devuelva el nombre de usuario
+
+//                     window.location.href = 'landingpage.html';
+//                 },
+//                 error: function(error) {
+//                     console.error('Error:', error);
+//                     showPopup("Correo electrónico o contraseña incorrectos");
+//                 }
+//             });
+//         },
+//         function (msg) {
+//             console.error('error: ' + msg);
+//         }
+//     );
+// });
 
     $('.formLogin #btnSubmit').on('click', function() {
         console.log("El botón ha sido presionado");
@@ -73,7 +74,7 @@ $(document).on('pagecreate', function() {
         var password = $('.formLogin #password').val().trim();
         console.log(email, password);
 
-        // Variable para verificar si hay errores
+        // Variable para verificar si hay erroress
         var hasErrors = false;
 
         // Verificar si hay mensajes de error
@@ -85,6 +86,7 @@ $(document).on('pagecreate', function() {
         if(!hasErrors){
             $.ajax({
                 url: 'https://sportconnect.ieti.site/login/',
+                // url: 'https://sportconnect.ieti.site//login/',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
