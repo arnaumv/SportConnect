@@ -12,4 +12,8 @@
     </platform>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+
+    <preference name="AndroidWindowSplashScreenAnimatedIcon"  value="www/img/index/LOGO.png" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#2b2d42" />
 </widget>

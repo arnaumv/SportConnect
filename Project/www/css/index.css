@@ -815,7 +815,7 @@ ui-input-text input,
 
 
   .profile-image-2 img {
-    width: 80px;
+    width: 87px;
     height: 80px;
     /* margin-right: 15px; */
     margin-left: -10px;
@@ -1907,7 +1907,7 @@ label[for="profile-image-upload"].custom-label {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 17%;
+    margin-left: 19%;
     text-shadow: none;
 }
 
@@ -3067,6 +3067,7 @@ button.my-custom-button-class {
     border-radius: 29px !important;
     text-shadow: none;
     height: 42px !important;
+    font-weight: 900 !important;
   }
 
 

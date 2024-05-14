@@ -34,7 +34,6 @@ function createDeleteCallback(notification, notificationElement, username) {
         .catch(error => console.error('There has been a problem with your fetch operation:', error));
     };
 }
-
 $(document).ready(function(){
     $('#redirectToLandingpage').on('click', function() {
         window.location.href = 'landingpage.html';
@@ -44,10 +43,10 @@ $(document).ready(function(){
     console.log('Usuario:', username);  // Añadido para depuración
 
     // Hacer una petición GET para obtener las notificaciones del usuario
-    fetch('https://sportconnect.ieti.site/notification/?username=' + username)
+    fetch('https://sportconnect.ieti.site/notification/')
     .then(response => response.json())
     .then(data => {
-        console.log('te ha seguido:', data);
+        console.log('Notificaciones:', data);
     
         let userNotificationCount = 0;  // Contador para las notificaciones del usuario actual
 
@@ -55,7 +54,8 @@ $(document).ready(function(){
             let notification = data[i];
     
             // Verificar si el usuario en la notificación es el usuario actual
-            if (notification.username !== username && notification.recipient_username !== username) {
+            if ((notification.type === 'follow' && notification.recipient_username !== username) || 
+                (notification.type !== 'follow' && notification.username !== username)) {
                 continue;  // Saltar esta notificación
             }
     
