@@ -115,7 +115,7 @@ $('.formNewUser #birthdate').on('focusout', function() {
       console.log("El botón ha sido presionado");
 
       // Mostrar indicador de carga
-      $('#loader').show();
+     // $('#loader').show();
 
       // Obtener los valores de los campos del formulario
       var username = $('.formNewUser #username').val().trim();
@@ -157,12 +157,12 @@ $('.formNewUser #birthdate').on('focusout', function() {
                 window.location.href = 'login.html';
             }, 2200); // 2200 milisegundos = 2.2 segundos
                 // Ocultar indicador de carga después de completar la solicitud
-                $('#loader').hide();
+               // $('#loader').hide();
             
             },
             error: function(error) {
                // Ocultar indicador de carga después de completar la solicitud
-               $('#loader').hide();
+               //$('#loader').hide();
               console.log('Error:', error.responseText);
               //showPopup("Debe rellenar todos los campos para poder crear un usuario");
               handleAjaxError(error);

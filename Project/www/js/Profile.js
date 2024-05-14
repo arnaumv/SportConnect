@@ -170,7 +170,7 @@ $(document).ready(function () {
     }
 
     $(document).on('click', '.borrarEvent', function() {
-        var eventIdBorrar = $(this).parent().find(".join-btn-profile").data("event-id"); 
+        var eventIdBorrar = $(this).parent().find(".join-btn-profile2").data("event-id"); 
         var storedUsername = localStorage.getItem('username');
         console.log("borrar evento: "+ eventIdBorrar+ "por: "+ storedUsername);
         $.ajax({
