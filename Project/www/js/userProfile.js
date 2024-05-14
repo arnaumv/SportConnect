@@ -96,6 +96,7 @@ $(document).ready(function () {
                 // Si el usuario actual está siguiendo al usuario seleccionado, cambiar el texto del botón a "Dejar de seguir"
                 if (data.isFollowing) {
                     $('#follow-button').text("Dejar de seguir");
+                    $('#follow-button').addClass('unfollow');
                 }
             })
             .catch((error) => {

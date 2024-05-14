@@ -18,12 +18,7 @@
   "cordova": {
     "platforms": [
       "browser"
-    ],
-    "plugins": {
-      "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "1038434820629-rk4fbglu4h47b7045qcudod0jq1ct56l.apps.googleusercontent.com"
-      }
-    }
+    ]
   },
   "dependencies": {
     "cordova-jquery": "^0.1.6",
