@@ -32,6 +32,25 @@ $(document).ready(function(){
         $.mobile.autoInitializePage = false; // Disable automatic initialization
     });
 
+// Encuentra el pie de página
+var footer = document.querySelector('.ui-footer-fixed');
+
+// Encuentra todos los campos de entrada
+var inputs = document.querySelectorAll('input, textarea, select');
+
+// Añade un evento de foco a cada campo de entrada
+inputs.forEach(function(input) {
+    input.addEventListener('focus', function() {
+        // Cuando el campo de entrada tiene el foco, cambia la posición del pie de página a 'absolute'
+        footer.style.position = 'absolute';
+    });
+
+    input.addEventListener('blur', function() {
+        // Cuando el campo de entrada pierde el foco, cambia la posición del pie de página a 'fixed'
+        footer.style.position = 'fixed';
+    });
+});
+
     var selectUbicacion = document.getElementById("ubicacion");
 var selectDeporte = document.getElementById("tipoDeporte");
 var data;  // Declare data variable outside fetch to access it later

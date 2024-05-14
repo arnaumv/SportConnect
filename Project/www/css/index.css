@@ -177,7 +177,7 @@ body label.ui-btn {
     margin-top: 6px;
     font-stretch: normal;
     height: 40px;
-    margin-left: 25px;
+    margin-left: 28px;
     font-family: revert;
     text-shadow: none;
   }
@@ -1299,7 +1299,7 @@ textarea.description-input[id='description'] {
     line-height: 1.2;
     font-stretch: expanded;
     text-align: center !important;
-    margin-left: 27%;
+    margin-left: 30%;
     text-shadow: none;
 }
 
@@ -2797,12 +2797,11 @@ span.error {
 
 
 /*FOOTEER FIJO*/
-
 .ui-header-fixed, .ui-footer-fixed {
     left: 0;
     right: 0;
     width: 100%;
-    position: fixed !important;
+    position: fixed;
     z-index: 1000;
 }
 
