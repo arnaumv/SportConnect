@@ -1095,6 +1095,20 @@ textarea.description-input[id='description'] {
 
 }
 
+.join-btn-profile2 {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgb(43, 165, 221);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-left: -190px;
+    width: 120px !important;
+  }
+
 .search-container {
     display: flex;
     border: 1px solid #ccc;
@@ -2786,14 +2800,15 @@ span.error {
 
 /*CSS ICONO BORRAR */
 
-.borrarEvent{
+.borrarEvent {
     width: 36px !important;
     height: 35px !important;
     float: right !important;
-    /*margin-top: 10px !important;*/
+    margin-top: 10px !important;
     cursor: pointer;
     margin-left: -110px;
-}
+    margin-top: 15px;
+  }
 
 
 /*FOOTEER FIJO*/

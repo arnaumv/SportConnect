@@ -158,7 +158,7 @@ $(document).ready(function () {
         eventHtml += '<p>Ubicación: ' + evento.location + '</p>';
 
         if (eventDate >= currentDate) {
-            eventHtml += '<button class="join-btn-profile" data-event-id="' + evento.id + '" onclick="verEvento(' + evento.id + ')">Ver</button>';
+            eventHtml += '<button class="join-btn-profile2" data-event-id="' + evento.id + '" onclick="verEvento(' + evento.id + ')">Ver</button>';
         }
 
         if (evento.creator_username.toLowerCase() == storedUsername.toLowerCase()) {
