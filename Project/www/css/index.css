@@ -2166,6 +2166,15 @@ html #customDateFilter {
     pointer-events: none;
 }
 
+.imgDateEditUser {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 159px;
+    margin-top: -49px;
+    pointer-events: none;
+}
+
 .imgDateCreateEvent {
     position: absolute;
     width: 23px;
