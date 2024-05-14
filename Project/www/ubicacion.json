@@ -279,7 +279,7 @@
                 "longitude": 2.113111
             }, 
             "actividad": ["Futbol"],
-            "imagen":"./img/Places/PauRedo.jpeg"
+            "imagen":"./img/Places/PauRedo.jpeg" 
         }, 
         
         {
@@ -289,7 +289,7 @@
                 "longitude": 2.1115648
             }, 
             "actividad": ["Tenis","Padel"],
-            "imagen":"./img/Places/tenis_redo.jpeg"
+            "imagen":"./img/Places/tenis_redo.jpg"
         }, 
 
         {
