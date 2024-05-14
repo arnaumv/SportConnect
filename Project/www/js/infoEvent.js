@@ -58,82 +58,86 @@ $(document).ready(function () {
   });
 
   // Función para cargar la lista de participantes
-  function loadParticipants() {
-    // Obtener el nombre de usuario almacenado
-    var storedUsername = localStorage.getItem("username");
+// Función para cargar la lista de participantes
+function loadParticipants() {
+  // Obtener el nombre de usuario almacenado
+  var storedUsername = localStorage.getItem("username");
 
-    // Verificar si se ha almacenado un nombre de usuario
-    if (!storedUsername) {
-      console.error("No se ha encontrado el nombre de usuario en localStorage");
-      return;
-    }
-
-    $.ajax({
-      url: "https://sportconnect.ieti.site/event/" + eventId + "/participants",
-      type: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Enviar el nombre de usuario como parámetro en la URL
-      data: {
-        username: storedUsername,
-      },
-      success: function (participants) {
-        console.log("Successfully got participants:", participants);
-
-        // Limpiar la lista de participantes
-        $(".participantes ul").empty();
-
-        // Agregar cada participante a la lista
-        participants.forEach(function (participant) {
-          var listItem = $("<li></li>").addClass("infoUser");
-          var img = $("<img>").addClass("participant-image");
-
-          // Fetch the profile image for the participant from the server
-          fetch('https://sportconnect.ieti.site/profile/' + participant.username + '/')
-            .then(response => {
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              return response.json();
-            })
-            .then(data => {
-              var imageUrl;
-              if (data.image_path != null) {
-                imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
-              } else {
-                imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
-              }
-              img.attr('src', imageUrl);
-
-              // Agregar la imagen al elemento de lista del participante
-              var infoDiv = $("<div></div>").addClass("info-participante");
-              var nameP = $('<p data-user-id="' + participant.username + '"></p>').text(participant.username);
-
-              var joinDate = new Date(participant.join_date);
-              var formattedJoinDate =
-                joinDate.getDate() +
-                "/" +
-                (joinDate.getMonth() + 1) +
-                "/" +
-                joinDate.getFullYear();
-
-              var joinDateP = $("<p></p>").text("Se unió el " + formattedJoinDate);
-
-              infoDiv.append(nameP, joinDateP);
-              listItem.append(img, infoDiv);
-              $(".participantes ul").append(listItem);
-            })
-            .catch(error => {
-              console.error('Error getting profile data for', participant.username + ':', error);
-            });
-        });
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        console.log("Error getting participants:", textStatus, errorThrown);
-      },
-    });
+  // Verificar si se ha almacenado un nombre de usuario
+  if (!storedUsername) {
+    console.error("No se ha encontrado el nombre de usuario en localStorage");
+    return;
   }
+
+  $.ajax({
+    url: "https://sportconnect.ieti.site/event/" + eventId + "/participants",
+    type: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    // Enviar el nombre de usuario como parámetro en la URL
+    data: {
+      username: storedUsername,
+    },
+    success: function (participants) {
+      console.log("Successfully got participants:", participants);
+
+      // Limpiar la lista de participantes
+      $(".participantes ul").empty();
+
+      // Ordenar los participantes por fecha de unión
+      participants.sort((a, b) => new Date(b.join_date).getTime() - new Date(a.join_date).getTime());
+
+      // Agregar cada participante a la lista
+      participants.forEach(function (participant) {
+        var listItem = $("<li></li>").addClass("infoUser");
+        var img = $("<img>").addClass("participant-image");
+
+        // Fetch the profile image for the participant from the server
+        fetch('https://sportconnect.ieti.site/profile/' + participant.username + '/')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            var imageUrl;
+            if (data.image_path != null) {
+              imageUrl = 'https://sportconnect.ieti.site/' + data.image_path;
+            } else {
+              imageUrl = './img/Profile/User_photo.png'; // Ruta a la imagen predeterminada
+            }
+            img.attr('src', imageUrl);
+
+            // Agregar la imagen al elemento de lista del participante
+            var infoDiv = $("<div></div>").addClass("info-participante");
+            var nameP = $('<p data-user-id="' + participant.username + '"></p>').text(participant.username);
+
+            var joinDate = new Date(participant.join_date);
+            var formattedJoinDate =
+              joinDate.getDate() +
+              "/" +
+              (joinDate.getMonth() + 1) +
+              "/" +
+              joinDate.getFullYear();
+
+            var joinDateP = $("<p></p>").text("Se unió el " + formattedJoinDate);
+
+            infoDiv.append(nameP, joinDateP);
+            listItem.append(img, infoDiv);
+            $(".participantes ul").append(listItem);
+          })
+          .catch(error => {
+            console.error('Error getting profile data for', participant.username + ':', error);
+          });
+      });
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.log("Error getting participants:", textStatus, errorThrown);
+    },
+  });
+}
 
 
 
